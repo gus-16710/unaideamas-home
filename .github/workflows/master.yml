@@ -1,0 +1,41 @@
+name: 🚀 Deploy website on push
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    name: ⚙️ Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v4
+
+      - name: ➕ Install dependecies
+        run: npm ci
+
+      - name: ⭐ Build website
+        run: npm run build
+
+      - name: ⬆️ Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: out
+          path: out
+  deploy:
+    needs: build
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+        - name: 🚚 Get build artifacts
+          uses: actions/download-artifact@v4
+          with:
+            name: out
+            path: out
+
+        - name: 📂 Sync files
+          uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+          with:
+            server: ftp.unaideamas.com
+            username: ${{ secrets.ftp_username }}
+            password: ${{ secrets.ftp_password }}
