@@ -39,3 +39,5 @@ jobs:
             server: ftp.unaideamas.com
             username: ${{ secrets.ftp_username }}
             password: ${{ secrets.ftp_password }}
+            local-dir: out
+            server-dir: /public_html
