@@ -1,20 +1,3 @@
-// "use client";
-
-// import { AiFillProduct } from "react-icons/ai";
-
-// export default function Categories() {
-//   return (
-//     <div className="relative flex min-h-screen items-center justify-center font-sans overflow-hidden">
-//       <div className="flex justify-center items-center flex-col gap-6">
-//         <AiFillProduct size={70} className="text-blue-600" />
-//         <h1 className="relative z-10 text-white text-4xl font-bold text-center">
-//           Categorías de Productos
-//         </h1>
-//       </div>
-//     </div>
-//   );
-// }
-
 "use client";
 
 import { AiFillProduct } from "react-icons/ai";
@@ -22,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function Categories() {
   return (
-    <div className="relative flex min-h-screen items-center justify-center font-sans overflow-hidden bg-black">
+    <div className="flex min-h-screen items-center justify-center font-sans overflow-hidden bg-black">
       <div className="flex justify-center items-center flex-col gap-6">
         {/* Icono con animación */}
         <motion.div
