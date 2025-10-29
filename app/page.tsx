@@ -4,10 +4,13 @@ import Image from "next/image";
 import { Button } from "@heroui/react";
 import { AiFillProduct } from "react-icons/ai";
 import { motion } from "framer-motion";
-import Link from "next/link";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function Home() {
+  const router = useRouter();
+
   const [stars, setStars] = useState<
     { x: number; y: number; size: number; delay: number }[]
   >([]);
@@ -85,18 +88,17 @@ export default function Home() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.6, ease: "easeOut" }}
-        >
-          <Link href="/categories" passHref>
+        >          
             <Button
               className="border-white"
               color="default"
               variant="ghost"
               radius="full"
               startContent={<AiFillProduct size={24} />}
+              onClick={() => router.push("/categories")}
             >
               Ver productos
-            </Button>
-          </Link>
+            </Button>         
         </motion.div>
       </motion.main>
     </div>
