@@ -6,19 +6,19 @@ import { BreadcrumbItem, Breadcrumbs, Card, CardBody } from "@heroui/react";
 import { useRouter } from "next/navigation";
 
 const categoriesList = [
-  { id: 1, name: "Termos", img: "/img/categories/termos.jpg", url: "/termos" },
+  { id: 1, name: "Termos", img: "/img/categories/termos.jpg", url: "termos" },
   {
     id: 2,
     name: "Agendas y Libretas",
     img: "/img/categories/agendas.jpg",
-    url: "/agendas",
+    url: "agendas",
   },
-  { id: 3, name: "Bolsas", img: "/img/categories/bolsas.jpg", url: "/bolsas" },
+  { id: 3, name: "Bolsas", img: "/img/categories/bolsas.jpg", url: "bolsas" },
   {
     id: 4,
     name: "Lapiceros",
     img: "/img/categories/lapiceros.jpg",
-    url: "/lapiceros",
+    url: "lapiceros",
   },
 ];
 
