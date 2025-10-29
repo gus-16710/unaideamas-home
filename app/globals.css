@@ -1,4 +1,11 @@
 @import "tailwindcss";
+@plugin "./hero.ts"; /* ajusta la ruta si tu hero.ts está en otra carpeta */
+
+/* Esto permite que Tailwind lea los estilos del tema HeroUI */
+@source "../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}";
+
+/* Soporte para modo oscuro */
+@custom-variant dark (&:is(.dark *));
 
 :root {
   --background: #ffffff;
