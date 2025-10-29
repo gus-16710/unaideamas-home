@@ -5,27 +5,60 @@ import { Button } from "@heroui/react";
 import { AiFillProduct } from "react-icons/ai";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function Home() {
-  console.log("Rendering Home Page");
+  const [stars, setStars] = useState<
+    { x: number; y: number; size: number; delay: number }[]
+  >([]);
+
+  useEffect(() => {
+    const generatedStars = Array.from({ length: 100 }).map(() => ({
+      x: Math.random() * 100,
+      y: Math.random() * 100,
+      size: Math.random() * 2 + 1,
+      delay: Math.random() * 5,
+    }));
+    setStars(generatedStars);
+  }, []);
+
   return (
-    <div className="relative flex min-h-screen items-center justify-center font-sans overflow-hidden">
-      {/* Fondo animado (zoom in/out lento) */}
-      <motion.div
-        className="absolute inset-0 bg-[url('/img/background.png')] bg-cover bg-center"
-        animate={{ scale: [1, 1.5, 1] }}
-        transition={{
-          repeat: Infinity,
-          repeatType: "loop",
-          duration: 60, // muy lento, casi imperceptible
-          ease: "easeInOut",
-        }}
-      />
+    <div className="relative flex min-h-screen items-center justify-center font-sans overflow-hidden bg-black">
+      {/* Fondo de estrellas */}
+      {stars.map((_, i) => {
+        const size = Math.random() * 2 + 1; // tamaño estrella
+        const posX = Math.random() * 100; // posición horizontal %
+        const posY = Math.random() * 100; // posición vertical %
+        const delay = Math.random() * 5; // delay aleatorio
+        const duration = Math.random() * 5 + 5; // duración animación
+
+        return (
+          <motion.div
+            key={i}
+            className="absolute rounded-full bg-white"
+            style={{
+              width: size,
+              height: size,
+              top: `${posY}%`,
+              left: `${posX}%`,
+              opacity: 0.8,
+            }}
+            animate={{ opacity: [0.2, 1, 0.2] }}
+            transition={{
+              repeat: Infinity,
+              repeatType: "loop",
+              duration,
+              delay,
+              ease: "easeInOut",
+            }}
+          />
+        );
+      })}
 
       {/* Gradiente overlay */}
-      <div className="absolute inset-0 bg-linear-to-t from-blue-700 via-zinc-950 to-gray-900 opacity-70"></div>
+      <div className="absolute inset-0 bg-linear-to-t from-blue-900 via-black to-black opacity-70"></div>
 
-      {/* Contenido centrado con animaciones */}
+      {/* Contenido centrado */}
       <motion.main
         className="relative z-10 flex flex-col items-center justify-center w-full max-w-3xl p-16"
         initial={{ opacity: 0, y: 50 }}
@@ -56,7 +89,6 @@ export default function Home() {
           <Link href="/categories" passHref>
             <Button
               className="border-white"
-              target="_blank"
               color="default"
               variant="ghost"
               radius="full"
