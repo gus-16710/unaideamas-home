@@ -3,10 +3,9 @@
 import Image from "next/image";
 import { Button } from "@heroui/react";
 import { AiFillProduct } from "react-icons/ai";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { useProductStore } from "@/store/product.store";
 
 export default function Home() {
   const router = useRouter();
@@ -14,26 +13,6 @@ export default function Home() {
   const [stars, setStars] = useState<
     { x: number; y: number; size: number; delay: number; opacity: number }[]
   >([]);
-
-  const [currentCategoryIndex, setCurrentCategoryIndex] = useState(0);
-
-  const { getCategories } = useProductStore();
-  const categories = getCategories();
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentCategoryIndex((current) =>
-        current === categories.length - 1 ? 0 : current + 1
-      );
-    }, 3000); // Cambia cada 3 segundos
-
-    return () => clearInterval(interval);
-  }, [categories.length]);
-
-  const currentCategory = categories[currentCategoryIndex];
-  const formattedCategory = currentCategory
-    ? currentCategory.charAt(0).toUpperCase() + currentCategory.slice(1)
-    : "";
 
   useEffect(() => {
     const generatedStars = Array.from({ length: 80 }).map(() => ({
@@ -168,24 +147,6 @@ export default function Home() {
         >
           Donde las ideas cobran vida
         </motion.p>
-
-        <div className="h-28 flex items-center justify-center">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={currentCategory}
-              initial={{ opacity: 0, y: 50, scale: 0.8 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: -50, scale: 1.2 }}
-              transition={{
-                duration: 0.8,
-                ease: "easeInOut",
-              }}
-              className="text-2xl text-white/50"
-            >
-              {formattedCategory}
-            </motion.div>
-          </AnimatePresence>
-        </div>
       </motion.main>
     </div>
   );
