@@ -1,4 +1,4 @@
-import { initialProducts } from "@/store/product.store";
+import { initialProducts } from "@/data";
 
 // Función que puede usarse en Server Components
 export function getProductById(id: string) {
