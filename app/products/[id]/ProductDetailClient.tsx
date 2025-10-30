@@ -192,6 +192,11 @@ export default function ProductDetailClient({
                 src: url,
               }))}
               index={selectedImage}
+              controller={{
+                closeOnBackdropClick: true,
+                closeOnPullDown: true,
+                closeOnPullUp: true,
+              }}
             />
 
             {/* Miniaturas mejoradas */}
