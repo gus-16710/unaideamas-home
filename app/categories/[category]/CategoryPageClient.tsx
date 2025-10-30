@@ -23,13 +23,16 @@ export default function CategoryPageClient({
   category,
 }: CategoryPageClientProps) {
   const router = useRouter();
-  const { getProductsByCategory } = useProductStore();
+  const { getProductsByCategory, getCategoryByUrl } = useProductStore();
 
   const products = getProductsByCategory(category);
+  const categoryDetails = getCategoryByUrl(category);
 
   const handleProductClick = (productId: string) => {
     router.push(`/products/${productId}`);
   };
+
+  console.log({ categoryDetails });
 
   return (
     // FONDO PRINCIPAL - Tailwind v4 compatible
@@ -76,7 +79,8 @@ export default function CategoryPageClient({
                 background: "linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%)",
               }}
             >
-              <AiFillProduct size={32} className="text-white" />
+              {/* <AiFillProduct size={32} className="text-white" /> */}
+              {categoryDetails?.icon && categoryDetails.icon}
             </div>
           </motion.div>
 
