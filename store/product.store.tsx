@@ -1863,7 +1863,7 @@ export const initialProducts: CategoryProducts = {
       id: "A2867",
       nombre: "Nayad Neo - Tapa Giratoria con Seguro",
       descripcion:
-        "Termo NAYAD NEO de 16 Oz (≈ 480 ml) de doble pared, la interna es de acero inoxidable y la externa de granos de café reciclado. Mantiene bebidas calientes por 3 horas y frías por 5 horas. Cuenta con cintillo metálico color bronce, botón de seguridad dorado, tapa de rosca hermética anti-derrames y anti-escurrimiento. :contentReference[oaicite:1]{index=1}",
+        "Termo NAYAD NEO de 16 Oz (≈ 480 ml) de doble pared, la interna es de acero inoxidable y la externa de granos de café reciclado. Mantiene bebidas calientes por 3 horas y frías por 5 horas. Cuenta con cintillo metálico color bronce, botón de seguridad dorado, tapa de rosca hermética anti-derrames y anti-escurrimiento.",
       capacidad: "480 ml",
       material: {
         exterior: "Granos de café reciclado",
@@ -1892,7 +1892,7 @@ export const initialProducts: CategoryProducts = {
       id: "A2954",
       nombre: "MUGLY",
       descripcion:
-        "Termo con exterior de acero inoxidable con interior de plástico y asa de plástico. Incluye tapa transparente con cierre a presión y seguro giratorio en color del termo, con ranura para popote de color. CAP. 1,200 ml. :contentReference[oaicite:1]{index=1}",
+        "Termo con exterior de acero inoxidable con interior de plástico y asa de plástico. Incluye tapa transparente con cierre a presión y seguro giratorio en color del termo, con ranura para popote de color. CAP. 1,200 ml.",
       capacidad: "1,200 ml",
       material: {
         exterior: "Acero inoxidable",
@@ -1921,7 +1921,7 @@ export const initialProducts: CategoryProducts = {
       id: "A3049",
       nombre: "KARRY",
       descripcion:
-        "Termo de doble pared insulado al alto vacío, mantiene la temperatura caliente por 12 horas y fría por 24. Cuenta con acabado de polvo plástico. La parte inferior es más angosta para poder usarse en el porta vasos del coche. Tiene tapa de rosca con doble apertura: una con seguro elevable para bebidas calientes y otra con pivote desplegable y popote interno. :contentReference[oaicite:1]{index=1}",
+        "Termo de doble pared insulado al alto vacío, mantiene la temperatura caliente por 12 horas y fría por 24. Cuenta con acabado de polvo plástico. La parte inferior es más angosta para poder usarse en el porta vasos del coche. Tiene tapa de rosca con doble apertura: una con seguro elevable para bebidas calientes y otra con pivote desplegable y popote interno.",
       capacidad: "900 ml",
       material: {
         exterior: "Acero inoxidable",
@@ -1959,7 +1959,7 @@ export const initialProducts: CategoryProducts = {
       id: "A3119",
       nombre: "CARIBE",
       descripcion:
-        "Termo de plástico de doble pared con asa. Cuenta con tapa transparente con cierre de rosca y sobre tapa giratoria en color del termo, con ranura para popote. Incluye popote de color. :contentReference[oaicite:1]{index=1}",
+        "Termo de plástico de doble pared con asa. Cuenta con tapa transparente con cierre de rosca y sobre tapa giratoria en color del termo, con ranura para popote. Incluye popote de color. ",
       capacidad: "770 ml",
       material: {
         exterior: "Plástico PP / Plástico AS",
@@ -1988,7 +1988,7 @@ export const initialProducts: CategoryProducts = {
       id: "A3124",
       nombre: "VANILLA",
       descripcion:
-        "Termo con exterior de plástico e interior de acero inoxidable. Cuenta con tapa de rosca anti-derrames con seguro abatible. :contentReference[oaicite:1]{index=1}",
+        "Termo con exterior de plástico e interior de acero inoxidable. Cuenta con tapa de rosca anti-derrames con seguro abatible. ",
       capacidad: "350 ml",
       material: {
         exterior: "Plástico",
@@ -2063,7 +2063,7 @@ export const initialProducts: CategoryProducts = {
       id: "TMPS-111",
       nombre: "TERMO JAUNE",
       descripcion:
-        "Doble pared. Pared interna plástico, pared externa acero inoxidable. Base de termo con forma hexagonal. Tapa de plástico con boquilla y sobre tapa de cierre a presión. Terminado mate. Incluye caja individual. :contentReference[oaicite:1]{index=1}",
+        "Doble pared. Pared interna plástico, pared externa acero inoxidable. Base de termo con forma hexagonal. Tapa de plástico con boquilla y sobre tapa de cierre a presión. Terminado mate. Incluye caja individual.",
       capacidad: "520 ml",
       material: {
         exterior: "Acero inoxidable",
@@ -2092,7 +2092,7 @@ export const initialProducts: CategoryProducts = {
       id: "TMPS-82",
       nombre: "TERMO BURGO",
       descripcion:
-        "Doble pared. Pared interna plástico, pared externa acero inoxidable. Base de corcho. Tapa en dos posiciones. No usar en microondas ni lavavajillas. Incluye caja individual. :contentReference[oaicite:1]{index=1}",
+        "Doble pared. Pared interna plástico, pared externa acero inoxidable. Base de corcho. Tapa en dos posiciones. No usar en microondas ni lavavajillas. Incluye caja individual.",
       capacidad: "480 ml",
       material: {
         exterior: "Acero inoxidable",
@@ -2477,7 +2477,7 @@ export const initialProducts: CategoryProducts = {
       id: "A2144",
       nombre: "REFLEX",
       descripcion:
-        "Práctica bolsa de poliéster con jaretas y ojal metálico, acabado fosforescente con cinta reflejante. Ideal para ciclistas. :contentReference[oaicite:0]{index=0}",
+        "Práctica bolsa de poliéster con jaretas y ojal metálico, acabado fosforescente con cinta reflejante. Ideal para ciclistas. ",
       capacidad: null,
       material: {
         exterior: "Poliéster",
