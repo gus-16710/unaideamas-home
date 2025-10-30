@@ -14,9 +14,8 @@ import { useRouter } from "next/navigation";
 import { useProductStore } from "@/store/product.store";
 import {
   FiArrowLeft,
-  FiShoppingCart,
   FiPackage,
-  FiMapPin,  
+  FiMapPin,
   FiBox,
   FiLayers,
 } from "react-icons/fi";
@@ -24,6 +23,9 @@ import { TbRulerMeasure2 } from "react-icons/tb";
 import { MdOutlineColorLens } from "react-icons/md";
 import { useEffect, useState } from "react";
 import WhatsAppButton from "@/components/WhatsAppButton";
+
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
 
 interface ProductDetailClientProps {
   product: any;
@@ -36,6 +38,8 @@ export default function ProductDetailClient({
   const { setSelectedProduct } = useProductStore();
   const [selectedImage, setSelectedImage] = useState(0);
 
+  const [openGallery, setOpenGallery] = useState(false);
+
   useEffect(() => {
     setSelectedProduct(product);
   }, [product, setSelectedProduct]);
@@ -45,9 +49,9 @@ export default function ProductDetailClient({
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1
-      }
-    }
+        staggerChildren: 0.1,
+      },
+    },
   };
 
   const itemVariants = {
@@ -57,9 +61,9 @@ export default function ProductDetailClient({
       y: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
-      }
-    }
+        ease: "easeOut",
+      },
+    },
   };
 
   const imageVariants = {
@@ -69,9 +73,9 @@ export default function ProductDetailClient({
       scale: 1,
       transition: {
         duration: 0.8,
-        ease: "easeOut"
-      }
-    }
+        ease: "easeOut",
+      },
+    },
   };
 
   return (
@@ -149,10 +153,13 @@ export default function ProductDetailClient({
               variants={imageVariants as any}
               className="group relative"
             >
-              <Card 
+              <Card
                 className="overflow-hidden border-none shadow-xl rounded-3xl bg-white/90 backdrop-blur-sm"
                 isPressable
-                onPress={() => window.open(product.imagenes_urls[selectedImage], "_blank")}
+                onPress={() =>
+                  //window.open(product.imagenes_urls[selectedImage], "_blank")
+                  setOpenGallery(true)
+                }
               >
                 <CardBody className="p-0">
                   <div className="relative overflow-hidden">
@@ -161,16 +168,16 @@ export default function ProductDetailClient({
                       alt={product.nombre}
                       className="w-full h-96 object-cover transition-transform duration-700 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute inset-0 bg-linear-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
                 </CardBody>
               </Card>
-              
+
               {/* Badge flotante */}
               <div className="absolute top-4 left-4 z-10">
-                <Badge 
-                  color="primary" 
-                  variant="solid" 
+                <Badge
+                  color="primary"
+                  variant="solid"
                   className="backdrop-blur-sm bg-white/20 text-white border-none shadow-lg"
                 >
                   ID: {product.id}
@@ -178,9 +185,18 @@ export default function ProductDetailClient({
               </div>
             </motion.div>
 
+            <Lightbox
+              open={openGallery}
+              close={() => setOpenGallery(false)}
+              slides={product.imagenes_urls.map((url: string) => ({
+                src: url,
+              }))}
+              index={selectedImage}
+            />
+
             {/* Miniaturas mejoradas */}
             {product.imagenes_urls.length > 1 && (
-              <motion.div 
+              <motion.div
                 variants={itemVariants as any}
                 className="grid grid-cols-4 gap-3"
               >
@@ -190,11 +206,11 @@ export default function ProductDetailClient({
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    <Card 
-                      isPressable 
+                    <Card
+                      isPressable
                       className={`overflow-hidden rounded-2xl border-2 transition-all duration-300 ${
-                        selectedImage === index 
-                          ? "border-blue-500 shadow-lg shadow-blue-500/20" 
+                        selectedImage === index
+                          ? "border-blue-500 shadow-lg shadow-blue-500/20"
                           : "border-transparent hover:border-gray-300"
                       }`}
                       onPress={() => setSelectedImage(index)}
@@ -218,28 +234,28 @@ export default function ProductDetailClient({
             {/* Header del producto */}
             <div className="space-y-4">
               <div className="flex items-center gap-3 flex-wrap">
-                <Chip 
-                  color="primary" 
-                  variant="flat" 
+                <Chip
+                  color="primary"
+                  variant="flat"
                   className="bg-blue-50 text-blue-700 border-blue-200"
                 >
                   {product.categoria}
                 </Chip>
-                <Chip 
-                  color="success" 
-                  variant="flat" 
+                <Chip
+                  color="success"
+                  variant="flat"
                   className="bg-green-50 text-green-700 border-green-200"
                   startContent={<FiMapPin size={12} />}
                 >
                   {product.origen}
                 </Chip>
               </div>
-              
+
               <h1 className="text-4xl font-bold text-gray-900 leading-tight">
                 {product.nombre}
               </h1>
-              
-              <motion.p 
+
+              <motion.p
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.3 }}
@@ -311,7 +327,10 @@ export default function ProductDetailClient({
                   <CardBody className="p-6">
                     <div className="flex items-center gap-3 mb-4">
                       <div className="p-2 bg-purple-100 rounded-xl">
-                        <MdOutlineColorLens className="text-purple-600" size={20} />
+                        <MdOutlineColorLens
+                          className="text-purple-600"
+                          size={20}
+                        />
                       </div>
                       <h3 className="text-xl font-semibold text-gray-800">
                         Colores Disponibles
@@ -373,7 +392,7 @@ export default function ProductDetailClient({
             </motion.div>
 
             {/* Acciones mejoradas */}
-            <motion.div 
+            <motion.div
               variants={itemVariants as any}
               className="flex gap-4 pt-2"
             >
@@ -384,7 +403,7 @@ export default function ProductDetailClient({
                 className="flex-1 h-14 text-base font-semibold rounded-xl bg-white/80 backdrop-blur-sm border border-gray-300/50 hover:bg-white transition-all duration-300"
               >
                 Volver
-              </Button>              
+              </Button>
             </motion.div>
           </motion.div>
         </motion.div>
