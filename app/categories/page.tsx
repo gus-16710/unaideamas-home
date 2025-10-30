@@ -6,6 +6,7 @@ import { BreadcrumbItem, Breadcrumbs, Card, CardBody, Badge, Chip } from "@herou
 import { useRouter } from "next/navigation";
 import { useProductStore } from "@/store/product.store";
 import { FiPackage, FiGrid, FiArrowRight } from "react-icons/fi";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 export default function Categories() {
   const router = useRouter();
@@ -256,6 +257,7 @@ export default function Categories() {
           </div>
         </div>
       </div>
+      <WhatsAppButton />
     </div>
   );
 }

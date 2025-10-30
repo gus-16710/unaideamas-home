@@ -23,6 +23,7 @@ import {
 import { TbRulerMeasure2 } from "react-icons/tb";
 import { MdOutlineColorLens } from "react-icons/md";
 import { useEffect, useState } from "react";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 interface ProductDetailClientProps {
   product: any;
@@ -388,6 +389,7 @@ export default function ProductDetailClient({
           </motion.div>
         </motion.div>
       </div>
+      <WhatsAppButton />
     </div>
   );
 }

@@ -6,6 +6,7 @@ import { AiFillProduct } from "react-icons/ai";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 export default function Home() {
   const router = useRouter();
@@ -148,6 +149,8 @@ export default function Home() {
           Donde las ideas cobran vida
         </motion.p>
       </motion.main>
+
+      <WhatsAppButton />
     </div>
   );
 }
