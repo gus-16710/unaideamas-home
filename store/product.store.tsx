@@ -1,99 +1,101 @@
-import { create } from 'zustand'
+import { create } from "zustand";
 
 export interface Product {
-  id: string
-  nombre: string
-  descripcion: string
-  capacidad: string | null
+  id: string;
+  nombre: string;
+  descripcion: string;
+  capacidad: string | null;
   material: {
-    exterior: string | null
-    interior: string | null
-  }
+    exterior: string | null;
+    interior: string | null;
+  };
   medidas: {
-    [key: string]: string | null
-  }
+    [key: string]: string | null;
+  };
   empaque: {
-    [key: string]: string | null
-  }
-  colores_disponibles: string[]
-  origen: string
-  precio_lista: string
-  disponibilidad: string
-  url_producto: string
-  imagenes_urls: string[]
-  categoria?: string // Campo opcional para enlace directo
+    [key: string]: string | null;
+  };
+  colores_disponibles: string[];
+  origen: string;
+  precio_lista: string;
+  disponibilidad: string;
+  url_producto: string;
+  imagenes_urls: string[];
+  categoria?: string; // Campo opcional para enlace directo
 }
 
 export interface Category {
-  id: number
-  name: string
-  img: string
-  url: string
-  description?: string
-  productCount?: number
+  id: number;
+  name: string;
+  img: string;
+  url: string;
+  description?: string;
+  productCount?: number;
 }
 
 export interface CategoryProducts {
-  [category: string]: Product[]
+  [category: string]: Product[];
 }
 
 interface ProductState {
   // Estado
-  productsByCategory: CategoryProducts
-  categories: Category[]
-  selectedCategory: string
-  selectedProduct: Product | null
-  loading: boolean
-  
+  productsByCategory: CategoryProducts;
+  categories: Category[];
+  selectedCategory: string;
+  selectedProduct: Product | null;
+  loading: boolean;
+
   // Acciones
-  setSelectedCategory: (category: string) => void
-  setSelectedProduct: (product: Product | null) => void
-  setLoading: (loading: boolean) => void
-  getProductsByCategory: (category: string) => Product[]
-  getProductsByCategoryUrl: (categoryUrl: string) => Product[]
-  searchProducts: (query: string) => Product[]
-  getProductById: (id: string) => Product | undefined
-  getCategories: () => string[]
-  getCategoryByUrl: (url: string) => Category | undefined
-  getCategoryInfo: (category: string) => Category | undefined
-  getProductsCountByCategory: (category: string) => number
+  setSelectedCategory: (category: string) => void;
+  setSelectedProduct: (product: Product | null) => void;
+  setLoading: (loading: boolean) => void;
+  getProductsByCategory: (category: string) => Product[];
+  getProductsByCategoryUrl: (categoryUrl: string) => Product[];
+  searchProducts: (query: string) => Product[];
+  getProductById: (id: string) => Product | undefined;
+  getCategories: () => string[];
+  getCategoryByUrl: (url: string) => Category | undefined;
+  getCategoryInfo: (category: string) => Category | undefined;
+  getProductsCountByCategory: (category: string) => number;
 }
 
 // Datos extendidos de categorías
 const categoriesList: Category[] = [
-  { 
-    id: 1, 
-    name: "Termos", 
-    img: "/img/categories/termos.jpg", 
+  {
+    id: 1,
+    name: "Termos",
+    img: "/img/categories/termos.jpg",
     url: "termos",
-    description: "Termos de alta calidad para mantener tus bebidas a la temperatura ideal"
+    description:
+      "Termos de alta calidad para mantener tus bebidas a la temperatura ideal",
   },
   {
     id: 2,
     name: "Agendas y Libretas",
     img: "/img/categories/agendas.jpg",
     url: "agendas",
-    description: "Organiza tu tiempo con nuestras agendas y libretas de diseño único"
+    description:
+      "Organiza tu tiempo con nuestras agendas y libretas de diseño único",
   },
-  { 
-    id: 3, 
-    name: "Bolsas", 
-    img: "/img/categories/bolsas.jpg", 
+  {
+    id: 3,
+    name: "Bolsas",
+    img: "/img/categories/bolsas.jpg",
     url: "bolsas",
-    description: "Bolsas ecológicas y prácticas para el día a día"
+    description: "Bolsas ecológicas y prácticas para el día a día",
   },
   {
     id: 4,
     name: "Lapiceros",
     img: "/img/categories/lapiceros.jpg",
     url: "lapiceros",
-    description: "Bolígrafos de calidad premium para escribir con estilo"
+    description: "Bolígrafos de calidad premium para escribir con estilo",
   },
 ];
 
 // Datos iniciales de productos
 export const initialProducts: CategoryProducts = {
-   lapiceros: [
+  lapiceros: [
     {
       id: "A3157",
       nombre: "Bolígrafo Quadrati",
@@ -117,8 +119,11 @@ export const initialProducts: CategoryProducts = {
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
       url_producto: "https://doblevela.com/items/index/A3157",
-      imagenes_urls: ["https://doblevela.com/images/large/A3157_lrg.jpg"],
-      categoria: "lapiceros"
+      imagenes_urls: [
+        "https://doblevela.com/images/large/A3157_lrg.jpg",
+        "https://doblevela.com/images/large/A3157_blanco_lrg.jpg?v=2",
+      ],
+      categoria: "lapiceros",
     },
     {
       id: "A2671A",
@@ -143,8 +148,11 @@ export const initialProducts: CategoryProducts = {
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
       url_producto: "https://doblevela.com/items/index/A2671A",
-      imagenes_urls: ["https://doblevela.com/images/large/A2671A_lrg.jpg"],
-      categoria: "lapiceros"
+      imagenes_urls: [
+        "https://doblevela.com/images/large/A2671A_lrg.jpg",
+        "https://doblevela.com/images/large/A2671A_blanco_lrg.jpg?v=2",
+      ],
+      categoria: "lapiceros",
     },
     {
       id: "A2113A",
@@ -184,8 +192,11 @@ export const initialProducts: CategoryProducts = {
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
       url_producto: "https://doblevela.com/items/index/A2113A",
-      imagenes_urls: ["https://doblevela.com/images/large/A2113A_lrg.jpg"],
-      categoria: "lapiceros"
+      imagenes_urls: [
+        "https://doblevela.com/images/large/A2113A_lrg.jpg",
+        "https://doblevela.com/images/large/A2113A_blanco_lrg.jpg?v=2",
+      ],
+      categoria: "lapiceros",
     },
     {
       id: "A3197",
@@ -212,9 +223,9 @@ export const initialProducts: CategoryProducts = {
       url_producto: "https://doblevela.com/items/index/A3197",
       imagenes_urls: [
         "https://doblevela.com/images/large/A3197_lrg.jpg",
-        "https://doblevela.com/images/adicionales/_A3197_4.jpg",
+        "https://doblevela.com/images/adicionales/_A3197_1.jpg",
       ],
-      categoria: "lapiceros"
+      categoria: "lapiceros",
     },
     {
       id: "A2567",
@@ -250,8 +261,11 @@ export const initialProducts: CategoryProducts = {
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
       url_producto: "https://doblevela.com/items/index/A2567",
-      imagenes_urls: ["https://doblevela.com/images/large/A2567_lrg.jpg"],
-        categoria: "lapiceros"
+      imagenes_urls: [
+        "https://doblevela.com/images/large/A2567_lrg.jpg",
+        "https://doblevela.com/images/large/A2567_blanco_lrg.jpg?v=2",
+      ],
+      categoria: "lapiceros",
     },
     {
       id: "A2602",
@@ -276,8 +290,11 @@ export const initialProducts: CategoryProducts = {
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
       url_producto: "https://doblevela.com/items/index/A2602",
-      imagenes_urls: ["https://doblevela.com/images/large/A2602_lrg.jpg"],
-        categoria: "lapiceros"
+      imagenes_urls: [
+        "https://doblevela.com/images/large/A2602_lrg.jpg",
+        "https://doblevela.com/images/large/A2602_cafe_lrg.jpg?v=2",
+      ],
+      categoria: "lapiceros",
     },
     {
       id: "BIOP01",
@@ -302,8 +319,11 @@ export const initialProducts: CategoryProducts = {
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
       url_producto: "https://doblevela.com/items/index/BIOP01",
-      imagenes_urls: ["https://doblevela.com/images/large/BIOP01_lrg.jpg"],
-        categoria: "lapiceros"
+      imagenes_urls: [
+        "https://doblevela.com/images/large/BIOP01_lrg.jpg",
+        "https://doblevela.com/images/large/BIOP01_rojo_lrg.jpg?v=2",
+      ],
+      categoria: "lapiceros",
     },
     {
       id: "A2919",
@@ -328,8 +348,11 @@ export const initialProducts: CategoryProducts = {
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
       url_producto: "https://doblevela.com/items/index/A2919",
-      imagenes_urls: ["https://doblevela.com/images/large/A2919_lrg.jpg"],
-        categoria: "lapiceros"
+      imagenes_urls: [
+        "https://doblevela.com/images/large/A2919_lrg.jpg",
+        "https://doblevela.com/images/large/A2919_verdeclaro_lrg.jpg?v=2",
+      ],
+      categoria: "lapiceros",
     },
     {
       id: "A2987",
@@ -360,8 +383,11 @@ export const initialProducts: CategoryProducts = {
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
       url_producto: "https://doblevela.com/items/index/A2987",
-      imagenes_urls: ["https://doblevela.com/images/large/A2987_lrg.jpg"],
-        categoria: "lapiceros"
+      imagenes_urls: [
+        "https://doblevela.com/images/large/A2987_lrg.jpg",
+        "https://doblevela.com/images/large/A2987_rojo_lrg.jpg?v=2",
+      ],
+      categoria: "lapiceros",
     },
   ],
   agendas: [
@@ -394,8 +420,11 @@ export const initialProducts: CategoryProducts = {
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
       url_producto: "https://doblevela.com/items/index/AD2026",
-      imagenes_urls: ["https://doblevela.com/images/large/AD2026_lrg.jpg?v=2"],
-      categoria: "agendas"
+      imagenes_urls: [
+        "https://doblevela.com/images/large/AD2026_lrg.jpg?v=2",
+        "https://doblevela.com/images/large/AD2026_naranja_lrg.jpg?v=2",
+      ],
+      categoria: "agendas",
     },
     {
       id: "ADS2026",
@@ -428,8 +457,11 @@ export const initialProducts: CategoryProducts = {
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
       url_producto: "https://doblevela.com/items/index/ADS2026",
-      imagenes_urls: ["https://doblevela.com/images/large/ADS2026_lrg.jpg?v=2"],
-      categoria: "agendas"
+      imagenes_urls: [
+        "https://doblevela.com/images/large/ADS2026_lrg.jpg?v=2",
+        "https://doblevela.com/images/large/ADS2026_negro_lrg.jpg?v=2",
+      ],
+      categoria: "agendas",
     },
     {
       id: "A2428",
@@ -462,8 +494,11 @@ export const initialProducts: CategoryProducts = {
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
       url_producto: "https://doblevela.com/items/index/A2428",
-      imagenes_urls: ["https://doblevela.com/images/large/A2428_lrg.jpg?v=2"],
-      categoria: "agendas"
+      imagenes_urls: [
+        "https://doblevela.com/images/large/A2428_lrg.jpg?v=2",
+        "https://doblevela.com/images/large/A2428_negro_lrg.jpg?v=2",
+      ],
+      categoria: "agendas",
     },
     {
       id: "A3167",
@@ -489,8 +524,11 @@ export const initialProducts: CategoryProducts = {
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
       url_producto: "https://doblevela.com/items/index/A3167",
-      imagenes_urls: ["https://doblevela.com/images/large/A3167_lrg.jpg?v=2"],
-      categoria: "agendas"
+      imagenes_urls: [
+        "https://doblevela.com/images/large/A3167_lrg.jpg?v=2",
+        "https://doblevela.com/images/large/A3167_azul_lrg.jpg?v=2",
+      ],
+      categoria: "agendas",
     },
     {
       id: "A2570",
@@ -516,8 +554,11 @@ export const initialProducts: CategoryProducts = {
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
       url_producto: "https://doblevela.com/items/index/A2570",
-      imagenes_urls: ["https://doblevela.com/images/large/A2570_lrg.jpg?v=2"],
-      categoria: "agendas"
+      imagenes_urls: [
+        "https://doblevela.com/images/large/A2570_lrg.jpg?v=2",
+        "https://doblevela.com/images/large/A2570_negro_lrg.jpg?v=2",
+      ],
+      categoria: "agendas",
     },
     {
       id: "A2776",
@@ -543,8 +584,11 @@ export const initialProducts: CategoryProducts = {
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
       url_producto: "https://doblevela.com/items/index/A2776",
-      imagenes_urls: ["https://doblevela.com/images/large/A2776_lrg.jpg?v=2"],
-      categoria: "agendas"
+      imagenes_urls: [
+        "https://doblevela.com/images/large/A2776_lrg.jpg?v=2",
+        "https://doblevela.com/images/large/A2776_rojo_lrg.jpg?v=2",
+      ],
+      categoria: "agendas",
     },
     {
       id: "A2922",
@@ -570,8 +614,11 @@ export const initialProducts: CategoryProducts = {
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
       url_producto: "https://doblevela.com/items/index/A2922",
-      imagenes_urls: ["https://doblevela.com/images/large/A2922_lrg.jpg?v=2"],
-      categoria: "agendas"
+      imagenes_urls: [
+        "https://doblevela.com/images/large/A2922_lrg.jpg?v=2",
+        "https://doblevela.com/images/large/A2922_negro_lrg.jpg?v=2",
+      ],
+      categoria: "agendas",
     },
     {
       id: "A3018",
@@ -604,8 +651,11 @@ export const initialProducts: CategoryProducts = {
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
       url_producto: "https://doblevela.com/items/index/A3018",
-      imagenes_urls: ["https://doblevela.com/images/large/A3018_lrg.jpg"],
-      categoria: "agendas"
+      imagenes_urls: [
+        "https://doblevela.com/images/large/A3018_lrg.jpg",
+        "https://doblevela.com/images/large/A3018_negro_lrg.jpg?v=2",
+      ],
+      categoria: "agendas",
     },
   ],
   termos: [
@@ -632,8 +682,11 @@ export const initialProducts: CategoryProducts = {
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
       url_producto: "https://doblevela.com/items/index/A2198",
-      imagenes_urls: ["https://doblevela.com/images/large/A2198_lrg.jpg?v=2"],
-      categoria: "termos"
+      imagenes_urls: [
+        "https://doblevela.com/images/large/A2198_lrg.jpg?v=2",
+        "https://doblevela.com/images/large/A2198_negro_lrg.jpg?v=2",
+      ],
+      categoria: "termos",
     },
     {
       id: "A2337",
@@ -658,8 +711,11 @@ export const initialProducts: CategoryProducts = {
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
       url_producto: "https://doblevela.com/items/index/A2337",
-      imagenes_urls: ["https://doblevela.com/images/large/A2337_lrg.jpg?v=2"],
-      categoria: "termos"
+      imagenes_urls: [
+        "https://doblevela.com/images/large/A2337_lrg.jpg?v=2",
+        "https://doblevela.com/images/large/A2337_negro_lrg.jpg?v=2",
+      ],
+      categoria: "termos",
     },
     {
       id: "A2334",
@@ -684,8 +740,11 @@ export const initialProducts: CategoryProducts = {
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
       url_producto: "https://doblevela.com/items/index/A2334",
-      imagenes_urls: ["https://doblevela.com/images/large/A2334_lrg.jpg?v=2"],
-      categoria: "termos"
+      imagenes_urls: [
+        "https://doblevela.com/images/large/A2334_lrg.jpg?v=2",
+        "https://doblevela.com/images/large/A2334_negro_lrg.jpg?v=2",
+      ],
+      categoria: "termos",
     },
     {
       id: "A2430",
@@ -710,8 +769,11 @@ export const initialProducts: CategoryProducts = {
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
       url_producto: "https://doblevela.com/items/index/A2430",
-      imagenes_urls: ["https://doblevela.com/images/large/A2430_lrg.jpg?v=2"],
-      categoria: "termos"
+      imagenes_urls: [
+        "https://doblevela.com/images/large/A2430_lrg.jpg?v=2",
+        "https://doblevela.com/images/large/A2430_amarillo_lrg.jpg?v=2",
+      ],
+      categoria: "termos",
     },
     {
       id: "A2524",
@@ -736,8 +798,11 @@ export const initialProducts: CategoryProducts = {
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
       url_producto: "https://doblevela.com/items/index/A2524",
-      imagenes_urls: ["https://doblevela.com/images/large/A2524_lrg.jpg?v=2"],
-      categoria: "termos"
+      imagenes_urls: [
+        "https://doblevela.com/images/large/A2524_lrg.jpg?v=2",
+        "https://doblevela.com/images/large/A2524_negro_lrg.jpg?v=2",
+      ],
+      categoria: "termos",
     },
     {
       id: "A2525",
@@ -762,8 +827,11 @@ export const initialProducts: CategoryProducts = {
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
       url_producto: "https://doblevela.com/items/index/A2525",
-      imagenes_urls: ["https://doblevela.com/images/large/A2525_lrg.jpg?v=2"],
-      categoria: "termos"
+      imagenes_urls: [
+        "https://doblevela.com/images/large/A2525_lrg.jpg?v=2",
+        "https://doblevela.com/images/large/A2525_negro_lrg.jpg?v=2",
+      ],
+      categoria: "termos",
     },
     {
       id: "A2631",
@@ -788,8 +856,11 @@ export const initialProducts: CategoryProducts = {
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
       url_producto: "https://doblevela.com/items/index/A2631",
-      imagenes_urls: ["https://doblevela.com/images/large/A2631_lrg.jpg?v=2"],
-      categoria: "termos"
+      imagenes_urls: [
+        "https://doblevela.com/images/large/A2631_lrg.jpg?v=2",
+        "https://doblevela.com/images/large/A2631_blanco_lrg.jpg?v=2",
+      ],
+      categoria: "termos",
     },
     {
       id: "A2645",
@@ -820,8 +891,11 @@ export const initialProducts: CategoryProducts = {
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
       url_producto: "https://doblevela.com/items/index/A2645",
-      imagenes_urls: ["https://doblevela.com/images/large/A2645_lrg.jpg?v=2"],
-      categoria: "termos"
+      imagenes_urls: [
+        "https://doblevela.com/images/large/A2645_lrg.jpg?v=2",
+        "https://doblevela.com/images/large/A2645_blanco_lrg.jpg?v=2",
+      ],
+      categoria: "termos",
     },
     {
       id: "A2636",
@@ -857,8 +931,11 @@ export const initialProducts: CategoryProducts = {
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
       url_producto: "https://doblevela.com/items/index/A2636",
-      imagenes_urls: ["https://doblevela.com/images/large/A2636_lrg.jpg?v=2"],
-      categoria: "termos"
+      imagenes_urls: [
+        "https://doblevela.com/images/large/A2636_lrg.jpg?v=2",
+        "https://doblevela.com/images/large/A2636_blanco_lrg.jpg?v=2",
+      ],
+      categoria: "termos",
     },
     {
       id: "A2704",
@@ -884,7 +961,7 @@ export const initialProducts: CategoryProducts = {
       disponibilidad: "Consultar inventario",
       url_producto: "https://doblevela.com/items/index/A2704",
       imagenes_urls: ["https://doblevela.com/images/large/A2704_lrg.jpg?v=2"],
-      categoria: "termos"
+      categoria: "termos",
     },
   ],
   bolsas: [
@@ -912,8 +989,11 @@ export const initialProducts: CategoryProducts = {
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
       url_producto: "https://doblevela.com/items/index/A2478",
-      imagenes_urls: ["https://doblevela.com/images/large/A2478_lrg.jpg"],
-      categoria: "bolsas"
+      imagenes_urls: [
+        "https://doblevela.com/images/large/A2478_lrg.jpg",
+        "https://doblevela.com/images/large/A2704_unico_lrg.jpg?v=2",
+      ],
+      categoria: "bolsas",
     },
     {
       id: "A2479",
@@ -939,8 +1019,11 @@ export const initialProducts: CategoryProducts = {
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
       url_producto: "https://doblevela.com/items/index/A2479",
-      imagenes_urls: ["https://doblevela.com/images/large/A2479_lrg.jpg"],
-      categoria: "bolsas"
+      imagenes_urls: [
+        "https://doblevela.com/images/large/A2479_lrg.jpg",
+        "https://doblevela.com/images/large/A2479_negro_lrg.jpg?v=2",
+      ],
+      categoria: "bolsas",
     },
     {
       id: "A2542",
@@ -967,8 +1050,11 @@ export const initialProducts: CategoryProducts = {
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
       url_producto: "https://doblevela.com/items/index/A2542",
-      imagenes_urls: ["https://doblevela.com/images/large/A2542_lrg.jpg"],
-      categoria: "bolsas"
+      imagenes_urls: [
+        "https://doblevela.com/images/large/A2542_lrg.jpg",
+        "https://doblevela.com/images/large/A2542_negro_lrg.jpg?v=2",
+      ],
+      categoria: "bolsas",
     },
     {
       id: "NONW01",
@@ -1005,8 +1091,11 @@ export const initialProducts: CategoryProducts = {
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
       url_producto: "https://doblevela.com/items/index/NONW01",
-      imagenes_urls: ["https://doblevela.com/images/large/NONW01_lrg.jpg"],
-      categoria: "bolsas"
+      imagenes_urls: [
+        "https://doblevela.com/images/large/NONW01_lrg.jpg",
+        "https://doblevela.com/images/large/NONW01_amarillo_lrg.jpg?v=2",
+      ],
+      categoria: "bolsas",
     },
     {
       id: "A2144",
@@ -1031,14 +1120,16 @@ export const initialProducts: CategoryProducts = {
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
       url_producto: "https://doblevela.com/items/index/A2144",
-      imagenes_urls: ["https://doblevela.com/images/large/A2144_lrg.jpg"],
-      categoria: "bolsas"
+      imagenes_urls: [
+        "https://doblevela.com/images/large/A2144_lrg.jpg",
+        "https://doblevela.com/images/large/A2144_amarillo_lrg.jpg?v=2",
+      ],
+      categoria: "bolsas",
     },
     {
       id: "A3188",
       nombre: "GLEAM",
-      descripcion:
-        "Bolsa de Non Woven metalizado.",
+      descripcion: "Bolsa de Non Woven metalizado.",
       capacidad: null,
       material: {
         exterior: "Non Woven metalizado",
@@ -1062,76 +1153,77 @@ export const initialProducts: CategoryProducts = {
         "https://doblevela.com/images/large/A3188_lrg.jpg",
         "https://doblevela.com/images/adicionales/_A3188_3.jpg",
       ],
-      categoria: "bolsas"
+      categoria: "bolsas",
     },
   ],
-}
+};
 
 export const useProductStore = create<ProductState>((set, get) => ({
   // Estado inicial
   productsByCategory: initialProducts,
   categories: categoriesList,
-  selectedCategory: '',
+  selectedCategory: "",
   selectedProduct: null,
   loading: false,
 
   // Acciones
   setSelectedCategory: (category: string) => {
-    set({ selectedCategory: category })
+    set({ selectedCategory: category });
   },
 
   setSelectedProduct: (product: Product | null) => {
-    set({ selectedProduct: product })
+    set({ selectedProduct: product });
   },
 
   setLoading: (loading: boolean) => {
-    set({ loading })
+    set({ loading });
   },
 
   getProductsByCategory: (category: string) => {
-    const state = get()
-    return state.productsByCategory[category] || []
+    const state = get();
+    return state.productsByCategory[category] || [];
   },
 
   getProductsByCategoryUrl: (categoryUrl: string) => {
-    const state = get()
-    return state.productsByCategory[categoryUrl] || []
+    const state = get();
+    return state.productsByCategory[categoryUrl] || [];
   },
 
   searchProducts: (query: string) => {
-    const state = get()
-    const allProducts = Object.values(state.productsByCategory).flat()
-    
-    return allProducts.filter(product =>
-      product.nombre.toLowerCase().includes(query.toLowerCase()) ||
-      product.descripcion.toLowerCase().includes(query.toLowerCase()) ||
-      product.id.toLowerCase().includes(query.toLowerCase())
-    )
+    const state = get();
+    const allProducts = Object.values(state.productsByCategory).flat();
+
+    return allProducts.filter(
+      (product) =>
+        product.nombre.toLowerCase().includes(query.toLowerCase()) ||
+        product.descripcion.toLowerCase().includes(query.toLowerCase()) ||
+        product.id.toLowerCase().includes(query.toLowerCase())
+    );
   },
 
   getProductById: (id: string) => {
-    const state = get()
-    const allProducts = Object.values(state.productsByCategory).flat()
-    return allProducts.find(product => product.id === id)
+    const state = get();
+    const allProducts = Object.values(state.productsByCategory).flat();
+    return allProducts.find((product) => product.id === id);
   },
 
   getCategories: () => {
-    const state = get()
-    return Object.keys(state.productsByCategory)
+    const state = get();
+    return Object.keys(state.productsByCategory);
   },
 
   getCategoryByUrl: (url: string) => {
-    const state = get()
-    return state.categories.find(category => category.url === url)
+    const state = get();
+    return state.categories.find((category) => category.url === url);
   },
 
   getCategoryInfo: (category: string) => {
-    const state = get()
-    return state.categories.find(cat => cat.url === category)
+    const state = get();
+    return state.categories.find((cat) => cat.url === category);
   },
 
   getProductsCountByCategory: (category: string) => {
-    const state = get()
-    return state.productsByCategory[category]?.length || 0
+    const state = get();
+    return state.productsByCategory[category]?.length || 0;
   },
-}))
+}));

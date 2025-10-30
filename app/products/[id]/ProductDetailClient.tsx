@@ -383,15 +383,7 @@ export default function ProductDetailClient({
                 className="flex-1 h-14 text-base font-semibold rounded-xl bg-white/80 backdrop-blur-sm border border-gray-300/50 hover:bg-white transition-all duration-300"
               >
                 Volver
-              </Button>
-              <Button
-                onPress={() => window.open(product.url_producto, "_blank")}
-                color="primary"
-                startContent={<FiShoppingCart size={18} />}
-                className="flex-1 h-14 text-base font-semibold rounded-xl bg-gradient-to-r from-blue-600 to-blue-700 shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/30 transition-all duration-300"
-              >
-                Ver en Tienda
-              </Button>
+              </Button>              
             </motion.div>
           </motion.div>
         </motion.div>
