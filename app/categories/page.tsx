@@ -2,28 +2,19 @@
 
 import { AiFillProduct } from "react-icons/ai";
 import { motion } from "framer-motion";
-import { BreadcrumbItem, Breadcrumbs, Card, CardBody } from "@heroui/react";
+import { BreadcrumbItem, Breadcrumbs, Card, CardBody, Badge, Chip } from "@heroui/react";
 import { useRouter } from "next/navigation";
-
-const categoriesList = [
-  { id: 1, name: "Termos", img: "/img/categories/termos.jpg", url: "termos" },
-  {
-    id: 2,
-    name: "Agendas y Libretas",
-    img: "/img/categories/agendas.jpg",
-    url: "agendas",
-  },
-  { id: 3, name: "Bolsas", img: "/img/categories/bolsas.jpg", url: "bolsas" },
-  {
-    id: 4,
-    name: "Lapiceros",
-    img: "/img/categories/lapiceros.jpg",
-    url: "lapiceros",
-  },
-];
+import { useProductStore } from "@/store/product.store";
+import { FiPackage, FiGrid, FiArrowRight } from "react-icons/fi";
 
 export default function Categories() {
   const router = useRouter();
+  const { categories, getProductsCountByCategory } = useProductStore();
+
+  const totalCategories = categories.length;
+  const totalProducts = categories.reduce((total, category) => {
+    return total + getProductsCountByCategory(category.url);
+  }, 0);
 
   return (
     // FONDO PRINCIPAL - Tailwind v4 compatible
@@ -50,13 +41,13 @@ export default function Categories() {
       ></div>
 
       {/* Contenido */}
-      <div className="relative z-10 max-w-3xl mx-auto shadow-2xl p-6">
+      <div className="relative z-10 max-w-3xl mx-auto px-4 py-8">
         {/* Header Section */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="flex flex-col items-center text-center mb-8 max-w-6xl mx-auto"
+          className="flex flex-col items-center text-center mb-8"
         >
           <motion.div
             initial={{ scale: 0, rotate: -180 }}
@@ -93,18 +84,38 @@ export default function Categories() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-gray-600 text-lg max-w-2xl px-4"
+            className="text-gray-600 text-lg max-w-2xl px-4 mb-4"
           >
-            Descubre nuestra cuidadosa selección de productos organizados por
-            categorías
+            Descubre nuestra cuidadosa selección de productos organizados por categorías
           </motion.p>
+
+          {/* Estadísticas generales */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="flex flex-wrap justify-center gap-6 mb-2"
+          >
+            <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm rounded-xl px-4 py-2 shadow-sm border border-white/50">
+              <FiGrid className="text-blue-500" size={18} />
+              <span className="text-sm font-medium text-gray-700">
+                {totalCategories} Categorías
+              </span>
+            </div>
+            <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm rounded-xl px-4 py-2 shadow-sm border border-white/50">
+              <FiPackage className="text-green-500" size={18} />
+              <span className="text-sm font-medium text-gray-700">
+                {totalProducts} Productos
+              </span>
+            </div>
+          </motion.div>
         </motion.div>
 
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="mb-12 max-w-6xl mx-auto"
+          className="mb-12"
         >
           <Breadcrumbs
             classNames={{
@@ -124,89 +135,126 @@ export default function Categories() {
         </motion.div>
 
         {/* Categories Grid */}
-        <div className="w-full max-w-6xl mx-auto mb-10">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 sm:gap-6 w-full">
-            {categoriesList.map((category, index) => (
-              <motion.div
-                key={category.id}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.5,
-                  ease: "easeOut",
-                  delay: index * 0.1,
-                }}
-                whileHover={{
-                  y: -8,
-                  transition: { duration: 0.3, ease: "easeOut" },
-                }}
-                className="w-full"
-              >
-                <Card
-                  isPressable
-                  onPress={() => router.push(`/categories/${category.url}`)}
-                  className="group rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden w-full h-full border"
-                  style={{
-                    background: "rgba(255, 255, 255, 0.8)",
-                    backdropFilter: "blur(8px)",
-                    borderColor: "rgba(255, 255, 255, 0.6)",
+        <div className="w-full mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6 w-full">
+            {categories.map((category, index) => {
+              const productCount = getProductsCountByCategory(category.url);
+              
+              return (
+                <motion.div
+                  key={category.id}
+                  initial={{ opacity: 0, y: 30, scale: 0.95 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  transition={{
+                    duration: 0.5,
+                    ease: "easeOut",
+                    delay: index * 0.1,
                   }}
+                  whileHover={{
+                    y: -6,
+                    scale: 1.02,
+                    transition: { duration: 0.3, ease: "easeOut" },
+                  }}
+                  className="w-full"
                 >
-                  <CardBody className="p-0 w-full">
-                    <div className="relative overflow-hidden w-full">
-                      <motion.img
-                        src={category.img}
-                        alt={category.name}
-                        className="w-full h-60 object-cover"
-                        whileHover={{
-                          scale: 1.05,
-                          transition: { duration: 0.4, ease: "easeOut" },
-                        }}
-                      />
-
-                      {/* Título mejorado */}
-                      <div className="absolute bottom-0 left-0 right-0 p-4">
-                        <div
-                          className="rounded-xl p-3 transform transition-all duration-300"
-                          style={{
-                            background:
-                              "linear-gradient(135deg, rgba(59, 130, 246, 0.9) 0%, rgba(139, 92, 246, 0.8) 100%)",
-                            backdropFilter: "blur(8px)",
-                          }}
-                        >
-                          <h3 className="text-white text-lg font-semibold text-center drop-shadow-lg">
-                            {category.name}
-                          </h3>
-                        </div>
-                      </div>
-
-                      {/* Hover Indicator */}
-                      <motion.div
-                        className="absolute top-4 right-4 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transform scale-0 group-hover:scale-100 transition-all duration-300"
-                        style={{
-                          width: "40px",
-                          height: "40px",
-                          background: "rgba(255, 255, 255, 0.9)",
-                          backdropFilter: "blur(8px)",
-                        }}
-                        whileHover={{ rotate: 90 }}
-                      >
-                        <div
-                          className="rounded-full"
-                          style={{
-                            width: "8px",
-                            height: "8px",
-                            background: "#3b82f6",
+                  <Card
+                    isPressable
+                    onPress={() => router.push(`/categories/${category.url}`)}
+                    className="group rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden w-full h-full border border-gray-100 bg-white/90 backdrop-blur-sm"
+                  >
+                    <CardBody className="p-0 w-full">
+                      <div className="relative overflow-hidden w-full">
+                        {/* Imagen de la categoría */}
+                        <motion.img
+                          src={category.img}
+                          alt={category.name}
+                          className="w-full h-48 object-cover"
+                          whileHover={{
+                            scale: 1.05,
+                            transition: { duration: 0.4, ease: "easeOut" },
                           }}
                         />
-                      </motion.div>
-                    </div>
-                  </CardBody>
-                </Card>
-              </motion.div>
-            ))}
+
+                        {/* Badge de cantidad de productos */}
+                        <div className="absolute top-4 left-4">
+                          <Chip 
+                            variant="flat" 
+                            className="bg-black/50 text-white backdrop-blur-sm"
+                            startContent={<AiFillProduct className="text-sm" />}
+                          >                            
+                            {productCount} {productCount === 1 ? 'producto' : 'productos'}
+                          </Chip>
+                        </div>                       
+
+                        {/* Título principal (siempre visible) */}
+                        <div className="absolute bottom-0 left-0 right-0 p-4">
+                          <div
+                            className="rounded-xl p-1 transform transition-all duration-300 group-hover:bg-white/10 group-hover:backdrop-blur-sm"
+                            style={{
+                              background: "linear-gradient(135deg, rgba(59, 130, 246, 0.95) 0%, rgba(139, 92, 246, 0.9) 100%)",
+                              backdropFilter: "blur(0.5px)",
+                            }}
+                          >
+                            <h3 className="text-white text-lg font-semibold text-center drop-shadow-lg mb-1">
+                              {category.name}
+                            </h3>                            
+                          </div>
+                        </div>
+
+                        {/* Indicador de hover */}
+                        <motion.div
+                          className="absolute top-4 right-4 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transform scale-0 group-hover:scale-100 transition-all duration-300"
+                          style={{
+                            width: "40px",
+                            height: "40px",
+                            background: "rgba(255, 255, 255, 0.9)",
+                            backdropFilter: "blur(8px)",
+                          }}
+                          whileHover={{ rotate: 90 }}
+                        >
+                          <div
+                            className="rounded-full"
+                            style={{
+                              width: "8px",
+                              height: "8px",
+                              background: "#3b82f6",
+                            }}
+                          />
+                        </motion.div>
+                      </div>
+
+                      {/* Información adicional debajo de la imagen */}
+                      <div className="p-4">
+                        <div className="flex items-center justify-between mb-2">
+                          <span className="text-xs font-medium text-gray-500 uppercase tracking-wide">
+                            Categoría
+                          </span>
+                          <Badge variant="flat" color="primary" size="sm">
+                            ID: {category.id}
+                          </Badge>
+                        </div>
+                        
+                        <p className="text-gray-600 text-sm line-clamp-2 leading-relaxed">
+                          {category.description}
+                        </p>
+                        
+                        <div className="flex items-center justify-between mt-3 pt-3 border-t border-gray-100">
+                          <span className="text-xs text-gray-500">
+                            {productCount} productos
+                          </span>
+                          <div className="flex items-center text-blue-600 text-xs font-medium">
+                            Explorar
+                            <FiArrowRight size={12} className="ml-1" />
+                          </div>
+                        </div>
+                      </div>
+                    </CardBody>
+                  </Card>
+                </motion.div>
+              );
+            })}
           </div>
-        </div>        
+        </div>
       </div>
     </div>
   );

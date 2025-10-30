@@ -178,25 +178,33 @@
 //   );
 // }
 
-
 "use client";
 
 import { AiFillProduct } from "react-icons/ai";
 import { motion } from "framer-motion";
-import { BreadcrumbItem, Breadcrumbs, Card, CardBody, CardFooter, Button } from "@heroui/react";
+import {
+  BreadcrumbItem,
+  Breadcrumbs,
+  Card,
+  CardBody,
+  CardFooter,
+  Button,
+} from "@heroui/react";
 import { useRouter } from "next/navigation";
 import { FiExternalLink } from "react-icons/fi";
+import { useProductStore } from "@/store/product.store";
 
 interface CategoryPageClientProps {
   category: string;
-  products: any[];
 }
 
 export default function CategoryPageClient({
   category,
-  products,
 }: CategoryPageClientProps) {
   const router = useRouter();
+  const { getProductsByCategory } = useProductStore();
+
+  const products = getProductsByCategory(category);
 
   const handleProductClick = (productId: string) => {
     router.push(`/products/${productId}`);
@@ -227,7 +235,7 @@ export default function CategoryPageClient({
       ></div>
 
       {/* Contenido */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 py-8">
+      <div className="relative z-10 max-w-3xl mx-auto px-4 py-8">
         {/* Header Section */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -321,7 +329,10 @@ export default function CategoryPageClient({
               className="text-center py-16"
             >
               <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 max-w-md mx-auto shadow-lg border border-white/50">
-                <AiFillProduct size={48} className="text-gray-400 mx-auto mb-4" />
+                <AiFillProduct
+                  size={48}
+                  className="text-gray-400 mx-auto mb-4"
+                />
                 <h3 className="text-xl font-semibold text-gray-700 mb-2">
                   No hay productos disponibles
                 </h3>
@@ -349,12 +360,12 @@ export default function CategoryPageClient({
                   }}
                   className="w-full"
                 >
-                  <Card 
+                  <Card
                     className="w-full h-full border-none shadow-md hover:shadow-xl transition-all duration-300 bg-white/90 backdrop-blur-sm"
                     // Removemos isPressable para evitar el conflicto de botones anidados
                   >
                     {/* Imagen del producto */}
-                    <div 
+                    <div
                       className="relative overflow-hidden cursor-pointer"
                       onClick={() => handleProductClick(product.id)}
                     >
@@ -376,7 +387,7 @@ export default function CategoryPageClient({
                       <h3 className="font-bold text-lg text-gray-800 line-clamp-2 mb-2">
                         {product.nombre}
                       </h3>
-                      
+
                       {/* Descripción */}
                       <p className="text-gray-600 text-sm line-clamp-3 leading-relaxed">
                         {product.descripcion}

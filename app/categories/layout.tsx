@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Categorías - unaidea+",
-  description: "Categorías de productos",
+  title: "Categorías",
+  description: "Categorías",
 };
 
 export default function RootLayout({
