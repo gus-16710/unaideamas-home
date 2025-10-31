@@ -481,7 +481,7 @@ export default function Categories() {
                         <motion.img
                           src={category.img}
                           alt={category.name}
-                          className="w-full h-48 object-cover"
+                          className="w-full h-56 object-cover"
                           whileHover={{
                             scale: 1.05,
                             transition: { duration: 0.4, ease: "easeOut" },
@@ -501,9 +501,9 @@ export default function Categories() {
                         </div>
 
                         {/* Título principal (siempre visible) */}
-                        <div className="absolute bottom-0 left-0 right-0 p-4">
+                        <div className="absolute bottom-0 left-0 right-0 p4">
                           <div
-                            className="rounded-xl p-1 transform transition-all duration-300 group-hover:bg-white/10 group-hover:backdrop-blur-sm"
+                            className="p-1 transform transition-all duration-300 group-hover:bg-white/10 group-hover:backdrop-blur-sm"
                             style={{
                               background:
                                 "linear-gradient(135deg, rgba(59, 130, 246, 0.95) 0%, rgba(139, 92, 246, 0.9) 100%)",
