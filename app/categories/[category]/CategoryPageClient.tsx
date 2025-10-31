@@ -29,16 +29,6 @@ export default function CategoryPageClient({
   const products = getProductsByCategory(category);
   const categoryDetails = getCategoryByUrl(category);
 
-  const [hasAnimated, setHasAnimated] = useState(false);
-
-  useEffect(() => {
-    setHasAnimated(true); // Marca que ya se mostró la animación inicial
-  }, []);
-
-  const handleProductClick = (productId: string) => {
-    router.push(`/products/${productId}`);
-  };
-
   return (
     <div
       className="min-h-screen font-sans w-full relative overflow-hidden"
@@ -172,11 +162,14 @@ export default function CategoryPageClient({
           >
             {products.map((product) => (
               <div key={product.id}>
-                <Card className="w-full h-full border-none shadow-md hover:shadow-xl transition-all duration-300 bg-white/90 backdrop-blur-sm">
-                  <div
-                    className="relative overflow-hidden cursor-pointer"
-                    onClick={() => handleProductClick(product.id)}
-                  >
+                <Card
+                  isPressable
+                  className="w-full h-full border-none shadow-md hover:shadow-xl transition-all duration-300 bg-white/90 backdrop-blur-sm"
+                  onPress={() => {
+                    router.push(`/products/${product.id}`);
+                  }}
+                >
+                  <div className="relative overflow-hidden cursor-pointer">
                     <img
                       src={product.imagenes_urls[0]}
                       alt={product.nombre}
@@ -187,7 +180,7 @@ export default function CategoryPageClient({
                         ID: {product.id}
                       </span>
                     </div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute inset-0 bg-linear-to-t from-black/10 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
                   </div>
 
                   <CardBody className="p-4">
@@ -209,15 +202,10 @@ export default function CategoryPageClient({
                           {product.colores_disponibles.length} colores
                         </span>
                       </div>
-                      <Button
-                        fullWidth
-                        size="sm"
-                        className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-medium shadow-lg shadow-blue-500/25"
-                        endContent={<FiExternalLink size={14} />}
-                        onPress={() => handleProductClick(product.id)}
-                      >
+                      <div className="w-full text-sm bg-linear-to-r from-blue-500 to-cyan-500 text-white font-medium py-2 px-4 rounded-lg shadow-lg shadow-blue-500/25 flex items-center justify-center gap-2">
                         Ver detalles
-                      </Button>
+                        <FiExternalLink size={14} />
+                      </div>
                     </div>
                   </CardFooter>
                 </Card>
