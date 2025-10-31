@@ -27,9 +27,9 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="relative flex min-h-screen items-center justify-center font-sans overflow-hidden bg-black">
+    <div className="relative flex min-h-screen items-center justify-center font-sans overflow-hidden bg-black bg-[url('/img/background4.png')] bg-cover bg-center">
       {/* Fondo de galaxia sutil */}
-      <div className="absolute inset-0 bg-linear-to-br from-black via-blue-900 to-black opacity-90"></div>
+      {/* <div className="absolute inset-0 bg-linear-to-br from-black via-blue-900 to-black opacity-90"></div> */}
 
       {/* Nebulosa central */}
       <motion.div
@@ -108,8 +108,7 @@ export default function Home() {
             width={280}
             height={60}
             priority
-            className="relative z-10 drop-shadow-2xl"
-            style={{ filter: "drop-shadow(0 0 10px rgba(0, 0, 0, 0.5))" }}
+            className="relative z-10"            
           />
         </motion.div>
 
@@ -121,7 +120,7 @@ export default function Home() {
         >
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Button
-              className="relative overflow-hidden border border-white/30 bg-black/40 backdrop-blur-md text-white px-8 py-6 text-lg font-light tracking-wider"
+              className="relative overflow-hidden border border-white/80 bg-emerald-700/40 backdrop-blur-md text-white px-8 py-6 text-lg font-light tracking-wider"
               radius="full"
               startContent={<AiFillProduct className="text-xl" />}
               onPress={() => router.push("/categories")}
@@ -141,7 +140,7 @@ export default function Home() {
 
         {/* Texto descriptivo minimalista */}
         <motion.p
-          className="text-white/60 text-sm mt-6 text-center tracking-wide font-light"
+          className="text-zinc/60 mt-6 text-center tracking-wide font-light"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.9, duration: 0.5 }}
