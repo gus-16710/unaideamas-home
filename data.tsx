@@ -696,7 +696,7 @@ export const initialProducts: CategoryProducts = {
       url_producto: "https://www.promoopcion.com/eco-065.html",
       imagenes_urls: [
         "https://www.promoopcion.com/media/catalog/product/E/C/ECO-065.jpg?store=default&image-type=image",
-        "https://www.promoopcion.com/media/catalog/product/E/C/ECO-065_20.jpg?store=default&image-type=image"
+        "https://www.promoopcion.com/media/catalog/product/E/C/ECO-065_20.jpg?store=default&image-type=image",
       ],
       categoria: "lapiceros",
     },
@@ -2280,6 +2280,268 @@ export const initialProducts: CategoryProducts = {
     },
   ],
   bolsas: [
+    {
+      id: "BO8",
+      nombre: "Bolsa Boutique",
+      descripcion:
+        "Bolsa boutique, área de personalizar 21 x 29 cm. PET Non Woven 80 gramos.",
+      capacidad: null,
+      material: {
+        exterior: "Non Woven",
+        interior: null,
+      },
+      medidas: {
+        alto: "40 cm",
+        ancho: "35 cm",        
+      },
+      empaque: {
+        tipo: null,
+        color: null,
+      },
+      colores_disponibles: ["Blanca"],
+      origen: "Hecho en México",
+      precio_lista: "",
+      disponibilidad: "",
+      url_producto: "#",
+      imagenes_urls: [
+        "https://http2.mlstatic.com/D_NQ_NP_2X_976086-MLM75559255393_042024-F.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_2X_639963-MLM75404506986_042024-F.webp"
+      ],
+      categoria: "bolsas",
+    },
+    
+    {
+      id: "BO7",
+      nombre: "Bolsa Blanca",
+      descripcion:
+        "Bolsa blanca, área de personalizar 29 x 20 cm. PET Non Woven 80 gramos.",
+      capacidad: null,
+      material: {
+        exterior: "Non Woven",
+        interior: null,
+      },
+      medidas: {
+        alto: "34 cm",
+        ancho: "38 cm",
+        profundidad: "12 cm",
+      },
+      empaque: {
+        tipo: null,
+        color: null,
+      },
+      colores_disponibles: ["Blanca"],
+      origen: "Hecho en México",
+      precio_lista: "",
+      disponibilidad: "",
+      url_producto: "#",
+      imagenes_urls: [
+        "https://takka.mx/wp-content/uploads/2024/11/SIN-962-B.jpg",
+        "https://takka.mx/wp-content/uploads/2024/11/SIN-962-1.jpg",
+      ],
+      categoria: "bolsas",
+    },
+    {
+      id: "BO6",
+      nombre: "Mochila con cordón",
+      descripcion:
+        "Mochila con cordón fabricada en poliéster, acabado con costuras y ojillos de metal. Area de publicidad 21 x 29 cm.",
+      capacidad: null,
+      material: {
+        exterior: "Poliéster",
+        interior: null,
+      },
+      medidas: {
+        alto: "43 cm",
+        ancho: "35 cm",
+      },
+      empaque: {
+        tipo: null,
+        color: null,
+      },
+      colores_disponibles: [
+        "Rojo",
+        "Negra",
+        "Azul",
+        "Blanca",
+        "Naranja",
+        "Amarillo",
+      ],
+      origen: "Hecho en México",
+      precio_lista: "",
+      disponibilidad: "",
+      url_producto: "#",
+      imagenes_urls: [
+        "https://calendariosymas.com/wp-content/uploads/2024/07/Tu-publicidad-Aqui-2024-07-15T165425.114.png",
+        "https://calendariosymas.com/wp-content/uploads/2024/07/Diseno-sin-titulo-83.png",
+      ],
+      categoria: "bolsas",
+    },
+    {
+      id: "BO5",
+      nombre: "Bolsa Confort",
+      descripcion:
+        "Cómoda y versatil bolsa confort fabricada de Non Woven, de 80 gramos, área de publicidad 20 x 29 cm.",
+      capacidad: null,
+      material: {
+        exterior: "Now Woven",
+        interior: null,
+      },
+      medidas: {
+        alto: "34 cm",
+        ancho: "38 cm",
+        profundidad: "12 cm",
+      },
+      empaque: {
+        tipo: null,
+        color: null,
+      },
+      colores_disponibles: ["Rojo", "Azul", "Verde", "Negra", "Blanca", "Vino"],
+      origen: "Hecho en México",
+      precio_lista: "",
+      disponibilidad: "",
+      url_producto: "#",
+      imagenes_urls: [
+        "https://calendariosymas.com/wp-content/uploads/2023/07/BC02.jpg",
+        "https://calendariosymas.com/wp-content/uploads/2024/07/Diseno-sin-titulo-82.png",
+      ],
+      categoria: "bolsas",
+    },
+    {
+      id: "BO4",
+      nombre: "Bolsa Ecológica",
+      descripcion:
+        "Bolsa promocional reutilizable 100% polipropileno (Non Woven) de 90gr y termosellada",
+      capacidad: null,
+      material: {
+        exterior: "Polipropileno",
+        interior: null,
+      },
+      medidas: {
+        alto: "42 cm",
+        ancho: "33 cm",
+        profundidad: "17 cm",
+      },
+      empaque: {
+        tipo: null,
+        color: null,
+      },
+      colores_disponibles: [
+        "Amarillo",
+        "Rojo",
+        "Morado",
+        "Azul",
+        "Verde",
+        "Negra",
+        "Blanca",
+        "Naranja",
+        "Marino",
+      ],
+      origen: "Hecho en México",
+      precio_lista: "",
+      disponibilidad: "",
+      url_producto: "#",
+      imagenes_urls: [
+        "https://calendariosymas.com/wp-content/uploads/2020/08/BE05.jpg",
+        "https://calendariosymas.com/wp-content/uploads/2020/08/BE02.jpg",
+        "https://calendariosymas.com/wp-content/uploads/2020/08/BE03-600x600.jpg",
+        "https://calendariosymas.com/wp-content/uploads/2023/07/BE01-1.jpg",
+      ],
+      categoria: "bolsas",
+    },
+    {
+      id: "BO3",
+      nombre: "Bolsa Metalizada",
+      descripcion:
+        "Bolsa metalizada 100% Polipropileno. Área de publicidad 29x21cm. Resistencia 15 kg.",
+      capacidad: null,
+      material: {
+        exterior: "Polipropileno",
+        interior: null,
+      },
+      medidas: {
+        alto: "35 cm",
+        ancho: "40 cm",
+        profundidad: "16 cm",
+      },
+      empaque: {
+        tipo: null,
+        color: null,
+      },
+      colores_disponibles: ["Plata", "Azul", "Dorada", "Oro Rosa"],
+      origen: "Hecho en México",
+      precio_lista: "",
+      disponibilidad: "",
+      url_producto: "#",
+      imagenes_urls: [
+        "https://calendariosymas.com/wp-content/uploads/2024/08/M22-69.png",
+        "https://calendariosymas.com/wp-content/uploads/2024/09/M22-70.png",
+        "https://calendariosymas.com/wp-content/uploads/2024/09/Escanee-para-ver-a-detalle-los-colores.png",
+      ],
+      categoria: "bolsas",
+    },
+    {
+      id: "BO2",
+      nombre: "Bolsa Mandadera Plus",
+      descripcion:
+        "Bolsa mandadera promocional de polipropelino reutilizable, con asa de Non Woven, resistente al agua con una resistencia 7 Kg.",
+      capacidad: null,
+      material: {
+        exterior: "Polipropileno",
+        interior: null,
+      },
+      medidas: {
+        alto: "30 cm",
+        ancho: "34.5 cm",
+        profundidad: "15 cm",
+      },
+      empaque: {
+        tipo: null,
+        color: null,
+      },
+      colores_disponibles: ["Varios modelos"],
+      origen: "Hecho en México",
+      precio_lista: "",
+      disponibilidad: "",
+      url_producto: "#",
+      imagenes_urls: [
+        "https://calendariosymas.com/wp-content/uploads/2023/07/BMP07.jpg",
+        "https://calendariosymas.com/wp-content/uploads/2024/07/Diseno-sin-titulo-78.png",
+        "https://calendariosymas.com/wp-content/uploads/2024/07/Diseno-sin-titulo-79.png",
+        "https://calendariosymas.com/wp-content/uploads/2024/07/Diseno-sin-titulo-80.png",
+        "https://calendariosymas.com/wp-content/uploads/2024/07/Diseno-sin-titulo-81.png",
+      ],
+      categoria: "bolsas",
+    },
+    {
+      id: "BO1",
+      nombre: "Bolsa Mandadera Asa Popote",
+      descripcion:
+        "Prácticas y coloridas bolas mandaderas con asa y espacio para popote. Ideales para bebidas frías o calientes, perfectas para llevar al trabajo, la escuela o de paseo. Fabricadas en material resistente y reutilizable.",
+      capacidad: null,
+      material: {
+        exterior: "PVC",
+        interior: null,
+      },
+      medidas: {
+        alto: "35 cm",
+        ancho: "40 cm",
+        profundidad: "12 cm",
+      },
+      empaque: {
+        tipo: null,
+        color: null,
+      },
+      colores_disponibles: ["Rojo", "Azul", "Verde", "Naranja", "Amarillo"],
+      origen: "Hecho en México",
+      precio_lista: "",
+      disponibilidad: "",
+      url_producto: "#",
+      imagenes_urls: [
+        "https://http2.mlstatic.com/D_NQ_NP_2X_674256-MLM71094386536_082023-F.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_2X_968003-MLM49942677236_052022-F.webp",
+      ],
+      categoria: "bolsas",
+    },
     {
       id: "A2478",
       nombre: "Bolsa Ecológica STAR L",

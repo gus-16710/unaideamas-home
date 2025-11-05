@@ -27,10 +27,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="relative flex min-h-screen items-center justify-center font-sans overflow-hidden bg-black bg-[url('/img/backgroundhome.jpg')] bg-cover bg-center">
-      {/* Fondo de galaxia sutil */}
-      {/* <div className="absolute inset-0 bg-linear-to-br from-black via-blue-900 to-black opacity-90"></div> */}
-
+    <div className="relative flex min-h-screen items-center justify-center font-sans overflow-hidden bg-black bg-[url('/img/backgroundhome.jpg')] bg-cover bg-center">      
       {/* Nebulosa central */}
       <motion.div
         className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full opacity-20 blur-3xl"
