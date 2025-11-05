@@ -1077,14 +1077,7 @@ export default function Categories() {
             <div className="flex items-center gap-2 text-amber-900">
               <span>
                 Descubre los productos más recientes para tu negocio o evento.
-              </span>
-              <motion.span
-                className="font-semibold cursor-pointer hover:underline"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                ¡Explora las nuevas categorías!
-              </motion.span>
+              </span>              
             </div>
           }
           isVisible={isVisible}
