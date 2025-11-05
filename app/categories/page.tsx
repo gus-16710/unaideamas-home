@@ -82,7 +82,7 @@ const Carousel = () => {
         modules={[
           Navigation,
           Pagination,
-          //Autoplay,
+          Autoplay,
           EffectFade,
         ]}
         className="w-full h-full shadow-lg md:shadow-2xl"
