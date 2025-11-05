@@ -59,10 +59,8 @@ const Carousel = () => {
     transition: { duration: 0.6, ease: "easeOut" },
   };
 
-
-
   return (
-    <div className="w-full h-screen lg:h-[650px] flex items-center justify-center relative overflow-hidden">
+    <div className="w-full h-screen lg:h-[650px] flex items-center justify-center relative overflow-hidden shadow">
       <Swiper
         spaceBetween={0}
         slidesPerView={1}
@@ -84,7 +82,7 @@ const Carousel = () => {
         modules={[
           Navigation,
           Pagination,
-          Autoplay,
+          //Autoplay,
           EffectFade,
         ]}
         className="w-full h-full shadow-lg md:shadow-2xl"
@@ -125,8 +123,8 @@ const Carousel = () => {
               />
             </motion.div>
 
-            <div className="relative z-10 w-full h-full flex flex-col lg:flex-row items-center justify-center lg:justify-between px-4 md:px-8 lg:px-16 py-6">
-              <div className="text-white space-y-4 lg:space-y-6 text-center lg:text-left mb-6 lg:mb-0 lg:flex-1">
+            <div className="relative z-10 w-full h-full flex flex-col lg:flex-row items-center justify-center lg:justify-around px-4 md:px-8 lg:px-16 py-6">
+              <div className="text-white space-y-4 lg:space-y-6 text-center lg:text-left mb-6 lg:mb-0 ">
                 <div className="flex items-center justify-center lg:justify-start gap-2 md:gap-3">
                   <div>
                     <FaBusinessTime className="text-2xl md:text-3xl lg:text-4xl text-cyan-400" />
@@ -163,11 +161,11 @@ const Carousel = () => {
                 </div>
               </div>
 
-              <div className="lg:flex-1 flex justify-center lg:justify-end mt-10">
+              <div className="flex justify-center lg:justify-end mt-10">
                 <div className="relative">
                   <div className="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 bg-linear-to-br from-cyan-400/20 to-blue-500/20 rounded-full flex items-center justify-center backdrop-blur-sm border border-cyan-400/30">
                     <div>
-                      <RiTeamFill className="text-4xl md:text-6xl lg:text-8xl text-cyan-400" />
+                      <RiTeamFill className="text-7xl md:text-6xl lg:text-8xl text-cyan-400" />
                     </div>
                   </div>
                   <div className="absolute -top-2 -right-2 md:-top-4 md:-right-4 bg-yellow-400 text-blue-900 px-2 py-1 md:px-4 md:py-2 rounded-full font-bold rotate-12 shadow-lg text-xs md:text-sm">
@@ -202,7 +200,7 @@ const Carousel = () => {
                   ease: "easeInOut",
                 }}
               >
-                <IoShirt className="text-4xl md:text-5xl lg:text-6xl text-purple-800" />
+                <IoShirt className="text-7xl md:text-5xl lg:text-6xl text-purple-800" />
               </motion.div>
               <motion.div
                 className="absolute bottom-8 right-8 md:bottom-20 md:right-32"
@@ -217,59 +215,11 @@ const Carousel = () => {
                   delay: 0.5,
                 }}
               >
-                <IoBook className="text-3xl md:text-4xl lg:text-5xl text-pink-500" />
+                <IoBook className="text-6xl md:text-4xl lg:text-5xl text-pink-500" />
               </motion.div>
             </motion.div>
 
-            <div className="relative z-10 w-full h-full flex flex-col lg:flex-row items-center justify-center px-4 md:px-8 lg:px-16 py-6">
-              {/* <div className="lg:flex-1 mb-6 lg:mb-0">
-                <div className="grid grid-cols-2 gap-3 md:gap-4 lg:gap-6 max-w-sm mx-auto lg:max-w-none">
-                  {[
-                    {
-                      icon: IoShirt,
-                      color: "purple",
-                      title: "Textiles",
-                      desc: "Playeras, gorras",
-                    },
-                    {
-                      icon: FaPen,
-                      color: "pink",
-                      title: "Escritura",
-                      desc: "Lápices, plumas",
-                    },
-                    {
-                      icon: IoBook,
-                      color: "yellow",
-                      title: "Papelería",
-                      desc: "Libretas, agendas",
-                    },
-                    {
-                      icon: IoBag,
-                      color: "green",
-                      title: "Bolsas",
-                      desc: "Ecológicas, promocionales",
-                    },
-                  ].map((item, index) => (
-                    <div
-                      key={index}
-                      className={`bg-white rounded-xl md:rounded-2xl p-3 md:p-4 lg:p-6 shadow-lg md:shadow-xl border border-${item.color}-200 transition-all duration-300`}
-                    >
-                      <div>
-                        <item.icon
-                          className={`text-2xl md:text-3xl lg:text-4xl text-${item.color}-500 mb-2 md:mb-3 `}
-                        />
-                      </div>
-                      <h3 className="font-bold text-gray-800 text-sm md:text-base">
-                        {item.title}
-                      </h3>
-                      <p className="text-xs md:text-sm text-gray-600">
-                        {item.desc}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </div> */}
-
+            <div className="relative z-10 w-full h-full flex flex-col lg:flex-row items-center justify-center px-4 md:px-8 lg:px-16 py-6">             
               <div className="lg:flex-1 mb-6 lg:mb-0">
                 <div className="grid grid-cols-2 gap-3 md:gap-4 lg:gap-6 max-w-sm mx-auto lg:max-w-none">
                   {[
@@ -413,14 +363,14 @@ const Carousel = () => {
                 </motion.div>
               </div>
 
-              <h2 className="text-xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-800 mb-4 md:mb-6">
-                Personaliza Tus <br className="hidden sm:block" />
+              <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-800 mb-4 md:mb-6 ">
+                Personaliza Tus <br className="hidden" />
                 <span className="bg-linear-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent">
                   Eventos
                 </span>
               </h2>
 
-              <p className="text-sm md:text-lg lg:text-xl xl:text-2xl text-gray-600 mb-6 md:mb-8 max-w-2xl">
+              <p className="text-sm lg:text-lg xl:text-xl text-gray-600 mb-6 md:mb-8 max-w-2xl">
                 Bodas, aniversarios, conferencias - creamos productos únicos
                 para cada ocasión especial
               </p>
@@ -458,7 +408,7 @@ const Carousel = () => {
                 ].map((item, index) => (
                   <div key={index}>
                     <div
-                      className={`bg-white rounded-xl md:rounded-2xl p-4 md:p-6 shadow-lg border ${item.colorClass} hover:shadow-xl transition-shadow`}
+                      className={`bg-white rounded-xl md:rounded-2xl p-4 md:p-5 shadow-lg border ${item.colorClass} hover:shadow-xl transition-shadow`}
                     >
                       <motion.div
                         className="text-2xl md:text-3xl mb-2"
@@ -523,8 +473,8 @@ const Carousel = () => {
               <div className="text-3xl md:text-4xl lg:text-5xl">🏷️</div>
             </motion.div>
 
-            <div className="relative z-10 w-full h-full flex flex-col lg:flex-row items-center justify-center px-4 md:px-8 lg:px-16 py-6">
-              <div className="text-gray-800 space-y-4 lg:space-y-6 text-center lg:text-left mb-6 lg:mb-0 lg:flex-1">
+            <div className="relative z-10 w-full h-full flex flex-col lg:flex-row items-center justify-around px-4 md:px-8 lg:px-16 py-6">
+              <div className="text-gray-800 space-y-4 lg:space-y-6 text-center lg:text-left mb-6 lg:mb-0 ">
                 <div className="flex items-center justify-center lg:justify-start gap-2 md:gap-3">
                   <div>
                     <IoCafe className="text-xl md:text-2xl lg:text-3xl text-emerald-500" />
@@ -613,7 +563,7 @@ const Carousel = () => {
                 </button>
               </div>
 
-              <div className="lg:flex-1 flex justify-center lg:justify-end">
+              <div className="flex justify-center lg:justify-end">
                 <div className="relative">
                   <div className="w-44 h-44 md:w-52 md:h-52 lg:w-72 lg:h-72 xl:w-80 xl:h-80 bg-linear-to-br from-emerald-400/30 to-teal-500/30 rounded-2xl md:rounded-3xl flex flex-col items-center justify-center backdrop-blur-sm border border-emerald-400/30 shadow-xl md:shadow-2xl p-6 md:p-8">
                     <div className="text-4xl md:text-5xl lg:text-6xl mb-3 md:mb-4">
@@ -674,8 +624,8 @@ const Carousel = () => {
               />
             </motion.div>
 
-            <div className="relative z-10 w-full h-full flex flex-col lg:flex-row items-center justify-center px-4 md:px-8 lg:px-16 py-6">
-              <div className="text-white space-y-4 lg:space-y-6 text-center lg:text-left mb-6 lg:mb-0 lg:flex-1">
+            <div className="relative z-10 w-full h-full flex flex-col lg:flex-row items-center justify-around px-4 md:px-8 lg:px-16 py-6">
+              <div className="text-white space-y-4 lg:space-y-6 text-center lg:text-left mb-6 lg:mb-0 ">
                 <div className="flex items-center justify-center lg:justify-start gap-2 md:gap-3">
                   <motion.div
                     animate={{
@@ -748,7 +698,7 @@ const Carousel = () => {
               </div>
 
               <motion.div
-                className="lg:flex-1 flex justify-center lg:justify-end"
+                className="flex justify-center lg:justify-end"
                 variants={fadeInRight}
                 initial="initial"
                 animate="animate"
