@@ -17,7 +17,6 @@ import { FiPackage, FiGrid, FiArrowRight, FiTag } from "react-icons/fi";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { useState } from "react";
 import { MdOutlineSell } from "react-icons/md";
-
 import { SwiperSlide, Swiper } from "swiper/react";
 import { Navigation, Pagination, Autoplay, EffectFade } from "swiper/modules";
 import {
@@ -83,7 +82,7 @@ const Carousel = () => {
           Navigation,
           Pagination,
           Autoplay,
-          EffectFade,
+          EffectFade,          
         ]}
         className="w-full h-full shadow-lg md:shadow-2xl"
       >
