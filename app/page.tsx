@@ -27,7 +27,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="relative flex min-h-screen items-center justify-center font-sans overflow-hidden bg-black bg-[url('/img/background_main.png')] bg-cover bg-center">
+    <div className="relative flex min-h-screen items-center justify-center font-sans overflow-hidden bg-black bg-[url('/img/backgroundhome.jpg')] bg-cover bg-center">
       {/* Fondo de galaxia sutil */}
       {/* <div className="absolute inset-0 bg-linear-to-br from-black via-blue-900 to-black opacity-90"></div> */}
 
