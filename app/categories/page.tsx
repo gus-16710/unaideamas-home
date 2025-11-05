@@ -422,11 +422,10 @@ export default function Categories() {
             </div>
             <div>
               <h3 className="text-xl md:text-2xl font-semibold leading-tight">
-                🎁 ¡Promoción del mes!
+                🎁 ¿Tienes dudas?
               </h3>
               <p className="text-sm md:text-base text-blue-50 mt-1">
-                Personaliza tus productos desde{" "}
-                <span className="font-bold">50 piezas</span> con tu logo.
+                Escríbenos y te ayudamos a personalizar tu pedido.
               </p>
             </div>
           </div>

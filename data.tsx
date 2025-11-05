@@ -2279,37 +2279,37 @@ export const initialProducts: CategoryProducts = {
       categoria: "termos",
     },
   ],
-  bolsas: [
-    {
-      id: "BO8",
-      nombre: "Bolsa Boutique",
+  bolsas: [   
+     {
+      id: "BO1",
+      nombre: "Bolsa Mandadera Asa Popote",
       descripcion:
-        "Bolsa boutique, área de personalizar 21 x 29 cm. PET Non Woven 80 gramos.",
+        "Prácticas y coloridas bolas mandaderas con asa y espacio para popote. Ideales para bebidas frías o calientes, perfectas para llevar al trabajo, la escuela o de paseo. Fabricadas en material resistente y reutilizable.",
       capacidad: null,
       material: {
-        exterior: "Non Woven",
+        exterior: "PVC",
         interior: null,
       },
       medidas: {
-        alto: "40 cm",
-        ancho: "35 cm",        
+        alto: "35 cm",
+        ancho: "40 cm",
+        profundidad: "12 cm",
       },
       empaque: {
         tipo: null,
         color: null,
       },
-      colores_disponibles: ["Blanca"],
+      colores_disponibles: ["Rojo", "Azul", "Verde", "Naranja", "Amarillo"],
       origen: "Hecho en México",
       precio_lista: "",
       disponibilidad: "",
       url_producto: "#",
       imagenes_urls: [
-        "https://http2.mlstatic.com/D_NQ_NP_2X_976086-MLM75559255393_042024-F.webp",
-        "https://http2.mlstatic.com/D_NQ_NP_2X_639963-MLM75404506986_042024-F.webp"
+        "https://http2.mlstatic.com/D_NQ_NP_2X_674256-MLM71094386536_082023-F.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_2X_968003-MLM49942677236_052022-F.webp",
       ],
       categoria: "bolsas",
-    },
-    
+    },   
     {
       id: "BO7",
       nombre: "Bolsa Blanca",
@@ -2403,6 +2403,35 @@ export const initialProducts: CategoryProducts = {
       imagenes_urls: [
         "https://calendariosymas.com/wp-content/uploads/2023/07/BC02.jpg",
         "https://calendariosymas.com/wp-content/uploads/2024/07/Diseno-sin-titulo-82.png",
+      ],
+      categoria: "bolsas",
+    },
+      {
+      id: "BO8",
+      nombre: "Bolsa Boutique",
+      descripcion:
+        "Bolsa boutique, área de personalizar 21 x 29 cm. PET Non Woven 80 gramos.",
+      capacidad: null,
+      material: {
+        exterior: "Non Woven",
+        interior: null,
+      },
+      medidas: {
+        alto: "40 cm",
+        ancho: "35 cm",        
+      },
+      empaque: {
+        tipo: null,
+        color: null,
+      },
+      colores_disponibles: ["Blanca"],
+      origen: "Hecho en México",
+      precio_lista: "",
+      disponibilidad: "",
+      url_producto: "#",
+      imagenes_urls: [
+        "https://http2.mlstatic.com/D_NQ_NP_2X_976086-MLM75559255393_042024-F.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_2X_639963-MLM75404506986_042024-F.webp"
       ],
       categoria: "bolsas",
     },
@@ -2511,37 +2540,7 @@ export const initialProducts: CategoryProducts = {
         "https://calendariosymas.com/wp-content/uploads/2024/07/Diseno-sin-titulo-81.png",
       ],
       categoria: "bolsas",
-    },
-    {
-      id: "BO1",
-      nombre: "Bolsa Mandadera Asa Popote",
-      descripcion:
-        "Prácticas y coloridas bolas mandaderas con asa y espacio para popote. Ideales para bebidas frías o calientes, perfectas para llevar al trabajo, la escuela o de paseo. Fabricadas en material resistente y reutilizable.",
-      capacidad: null,
-      material: {
-        exterior: "PVC",
-        interior: null,
-      },
-      medidas: {
-        alto: "35 cm",
-        ancho: "40 cm",
-        profundidad: "12 cm",
-      },
-      empaque: {
-        tipo: null,
-        color: null,
-      },
-      colores_disponibles: ["Rojo", "Azul", "Verde", "Naranja", "Amarillo"],
-      origen: "Hecho en México",
-      precio_lista: "",
-      disponibilidad: "",
-      url_producto: "#",
-      imagenes_urls: [
-        "https://http2.mlstatic.com/D_NQ_NP_2X_674256-MLM71094386536_082023-F.webp",
-        "https://http2.mlstatic.com/D_NQ_NP_2X_968003-MLM49942677236_052022-F.webp",
-      ],
-      categoria: "bolsas",
-    },
+    },   
     {
       id: "A2478",
       nombre: "Bolsa Ecológica STAR L",
