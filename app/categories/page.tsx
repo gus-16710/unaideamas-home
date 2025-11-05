@@ -53,31 +53,13 @@ const Carousel = () => {
     transition: { duration: 0.6, ease: "easeOut" },
   };
 
-  const fadeInLeft = {
-    initial: { opacity: 0, x: -30 },
-    animate: { opacity: 1, x: 0 },
-    transition: { duration: 0.6, ease: "easeOut" },
-  };
-
   const fadeInRight = {
     initial: { opacity: 0, x: 30 },
     animate: { opacity: 1, x: 0 },
     transition: { duration: 0.6, ease: "easeOut" },
   };
 
-  const scaleIn = {
-    initial: { opacity: 0, scale: 0.8 },
-    animate: { opacity: 1, scale: 1 },
-    transition: { duration: 0.5, ease: "easeOut" },
-  };
 
-  const staggerContainer = {
-    animate: {
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
 
   return (
     <div className="w-full h-screen lg:h-[650px] flex items-center justify-center relative overflow-hidden">
@@ -102,7 +84,7 @@ const Carousel = () => {
         modules={[
           Navigation,
           Pagination,
-          //Autoplay,
+          Autoplay,
           EffectFade,
         ]}
         className="w-full h-full shadow-lg md:shadow-2xl"
