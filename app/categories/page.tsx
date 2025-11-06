@@ -38,6 +38,7 @@ import {
   RiTeamFill,
   RiCalendarEventFill,
   RiCustomerService2Fill,
+  RiDiscountPercentLine,
 } from "react-icons/ri";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -81,7 +82,7 @@ const Carousel = () => {
         modules={[
           Navigation,
           Pagination,
-          Autoplay,
+          //Autoplay,
           EffectFade,
         ]}
         className="w-full h-full shadow-lg md:shadow-2xl"
@@ -565,8 +566,8 @@ const Carousel = () => {
               <div className="flex justify-center lg:justify-end">
                 <div className="relative">
                   <div className="w-44 h-44 md:w-52 md:h-52 lg:w-72 lg:h-72 xl:w-80 xl:h-80 bg-linear-to-br from-emerald-400/30 to-teal-500/30 rounded-2xl md:rounded-3xl flex flex-col items-center justify-center backdrop-blur-sm border border-emerald-400/30 shadow-xl md:shadow-2xl p-6 md:p-8">
-                    <div className="hidden lg:block text-4xl md:text-5xl lg:text-6xl mb-3 md:mb-4">
-                      💼
+                    <div className="hidden lg:block text-4xl md:text-5xl lg:text-8xl mb-3 md:mb-4">
+                      <RiDiscountPercentLine className="text-emerald-500"/>
                     </div>
                     <div className="text-center">
                       <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-emerald-700">
@@ -797,7 +798,7 @@ export default function Categories() {
       <div className="relative bg-linear-to-r from-amber-500 to-orange-500 shadow-lg">
         <Alert
           description={
-            <div className="flex items-center gap-2 text-amber-900">
+            <div className="items-center gap-2 text-amber-900 hidden sm:flex">
               <span>
                 Descubre los productos más recientes para tu negocio o evento.
               </span>
@@ -824,7 +825,7 @@ export default function Categories() {
           }
           variant="solid"
           onClose={() => setIsVisible(false)}
-          className="max-w-6xl mx-auto bg-transparent border-none shadow-none"
+          className="max-w-4xl mx-auto bg-transparent border-none shadow-none"
           icon={
             <motion.div
               animate={{
