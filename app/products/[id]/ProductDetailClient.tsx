@@ -101,7 +101,7 @@ export default function ProductDetailClient({
         }}
       ></div>
 
-      <div className="max-w-3xl mx-auto px-4 py-8 relative z-10">
+      <div className="max-w-4xl mx-auto px-4 py-8 relative z-10">
         {/* Breadcrumbs mejorado */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}

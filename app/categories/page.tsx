@@ -134,7 +134,7 @@ const Carousel = () => {
                 </div>
 
                 <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold leading-tight">
-                  Marca Tu <br className="hidden sm:block" />
+                  Marca Tu <br className="hidden" />
                   <span className="bg-linear-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
                     Empresa
                   </span>
@@ -501,7 +501,7 @@ const Carousel = () => {
                     {
                       icon: "🎨",
                       title: "Diseño Incluido",
-                      desc: "Asesoría gratuita en personalización",
+                      desc: "Asesoría en personalización",
                       emoji: "✨",
                     },
                     {
@@ -857,7 +857,7 @@ export default function Categories() {
 
       {/* Contenido */}
       <div
-        className="relative z-10 max-w-3xl mx-auto px-4 py-8"
+        className="relative z-10 max-w-4xl mx-auto px-4 py-8"
         id="grid-categories"
       >
         {/* Header */}
@@ -1062,7 +1062,7 @@ export default function Categories() {
             },
             {
               icon: <AiFillProduct size={28} />,
-              title: "Más de 90 productos",
+              title: "Más de 100 productos",
               desc: "Catálogo en constante crecimiento",
             },
             {

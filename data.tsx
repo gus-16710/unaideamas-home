@@ -3,10 +3,21 @@ import { FaBook } from "react-icons/fa";
 import { FaPenClip } from "react-icons/fa6";
 import { IoBagOutline } from "react-icons/io5";
 import { Category, CategoryProducts } from "@/types";
+import { GiWaterBottle } from "react-icons/gi";
+import { LuCupSoda } from "react-icons/lu";
 
 export const categoriesList: Category[] = [
   {
     id: 1,
+    name: "Cilindros",
+    img: "/img/categories/cilindros.jpg",
+    url: "cilindros",
+    description:
+      "Refresca tu marca con cilindros personalizados. Ideales para eventos, promociones o regalos corporativos, disponibles en una amplia variedad de estilos y colores.",
+    icon: <GiWaterBottle size={32} className="text-white" />,
+  },
+  {
+    id: 2,
     name: "Termos",
     img: "/img/categories/termos.jpg",
     url: "termos",
@@ -15,7 +26,7 @@ export const categoriesList: Category[] = [
     icon: <FaMugHot size={32} className="text-white" />,
   },
   {
-    id: 2,
+    id: 3,
     name: "Agendas y Libretas",
     img: "/img/categories/agendas.jpg",
     url: "agendas",
@@ -24,7 +35,7 @@ export const categoriesList: Category[] = [
     icon: <FaBook size={32} className="text-white" />,
   },
   {
-    id: 3,
+    id: 4,
     name: "Bolsas",
     img: "/img/categories/bolsas.jpg",
     url: "bolsas",
@@ -32,12 +43,21 @@ export const categoriesList: Category[] = [
     icon: <IoBagOutline size={32} className="text-white" />,
   },
   {
-    id: 4,
+    id: 5,
     name: "Lapiceros",
     img: "/img/categories/lapiceros.jpg",
     url: "lapiceros",
     description: "Bolígrafos de calidad premium para escribir con estilo",
     icon: <FaPenClip size={32} className="text-white" />,
+  },
+  {
+    id: 6,
+    name: "Vasos",
+    img: "/img/categories/vasos.jpg",
+    url: "vasos",
+    description:
+      "Vasos personalizados ideales para eventos, promociones y uso diario. Diseños modernos y resistentes.",
+    icon: <LuCupSoda size={32} className="text-white" />,
   },
 ];
 
@@ -2279,8 +2299,8 @@ export const initialProducts: CategoryProducts = {
       categoria: "termos",
     },
   ],
-  bolsas: [   
-     {
+  bolsas: [
+    {
       id: "BO1",
       nombre: "Bolsa Mandadera Asa Popote",
       descripcion:
@@ -2309,7 +2329,7 @@ export const initialProducts: CategoryProducts = {
         "https://http2.mlstatic.com/D_NQ_NP_2X_968003-MLM49942677236_052022-F.webp",
       ],
       categoria: "bolsas",
-    },   
+    },
     {
       id: "BO7",
       nombre: "Bolsa Blanca",
@@ -2406,7 +2426,7 @@ export const initialProducts: CategoryProducts = {
       ],
       categoria: "bolsas",
     },
-      {
+    {
       id: "BO8",
       nombre: "Bolsa Boutique",
       descripcion:
@@ -2418,7 +2438,7 @@ export const initialProducts: CategoryProducts = {
       },
       medidas: {
         alto: "40 cm",
-        ancho: "35 cm",        
+        ancho: "35 cm",
       },
       empaque: {
         tipo: null,
@@ -2431,7 +2451,7 @@ export const initialProducts: CategoryProducts = {
       url_producto: "#",
       imagenes_urls: [
         "https://http2.mlstatic.com/D_NQ_NP_2X_976086-MLM75559255393_042024-F.webp",
-        "https://http2.mlstatic.com/D_NQ_NP_2X_639963-MLM75404506986_042024-F.webp"
+        "https://http2.mlstatic.com/D_NQ_NP_2X_639963-MLM75404506986_042024-F.webp",
       ],
       categoria: "bolsas",
     },
@@ -2540,7 +2560,7 @@ export const initialProducts: CategoryProducts = {
         "https://calendariosymas.com/wp-content/uploads/2024/07/Diseno-sin-titulo-81.png",
       ],
       categoria: "bolsas",
-    },   
+    },
     {
       id: "A2478",
       nombre: "Bolsa Ecológica STAR L",
@@ -2923,6 +2943,314 @@ export const initialProducts: CategoryProducts = {
         "https://www.promoopcion.com/media/catalog/product/s/i/sin-765-b_2.jpg?store=default&image-type=image",
       ],
       categoria: "bolsas",
+    },
+  ],
+  cilindros: [
+    {
+      id: "ANF-006",
+      nombre: "CILINDRO LAKE",
+      descripcion:
+        "Sistema de rosca twist-off que permite abrir y cerrar la tapa en un giro. Mantener en su empaque individual antes y después de su transformación. No apto para bebidas calientes. No introducir en microondas ni lavavajillas. :contentReference[oaicite:0]{index=0}",
+      capacidad: "850 ml",
+      material: {
+        exterior: "PET",
+        interior: null,
+      },
+      medidas: {
+        diametro: "7.4 cm",
+        altura: "24.5 cm",
+      },
+      empaque: {
+        tipo: "Bolsa individual",
+        color: "No especificado",
+      },
+      colores_disponibles: [
+        "Amarillo",
+        "Azul",
+        "Negro",
+        "Verde",
+        "Transparente",
+        "Naranja",
+        "Rosa",
+        "Morado",
+      ],
+      origen: "Hecho en México",
+      precio_lista: "Consultar precio",
+      disponibilidad:
+        "Disponibles unidades en stock (verificar) :contentReference[oaicite:1]{index=1}",
+      url_producto: "https://www.promoopcion.com/anf-006.html",
+      imagenes_urls: [
+        "https://www.promoopcion.com/media/catalog/product/a/n/anf-006_2.jpg",
+        "https://www.promoopcion.com/media/catalog/product/A/N/ANF-006_20_6.jpg",
+      ],
+      categoria: "cilindros",
+    },
+    {
+      id: "ANF-009",
+      nombre: "CILINDRO SINKER",
+      descripcion:
+        "Sistema de rosca twist-off que permite abrir y cerrar la tapa en un giro. Incluye válvula de seguridad. No exponer el cilindro a temperaturas mayores a 40 °C y revisar que la tapa no esté cerrada completamente para su almacenamiento y transportación. No apto para bebidas calientes. No introducir en microondas ni lavavajillas. :contentReference[oaicite:0]{index=0}",
+      capacidad: "575 ml",
+      material: {
+        exterior: "PET",
+        interior: null,
+      },
+      medidas: {
+        diametro: "6 cm",
+        altura: "18.9 cm",
+      },
+      empaque: {
+        tipo: "Bolsa individual",
+        color: "No especificado",
+      },
+      colores_disponibles: [
+        "Azul translúcido",
+        "Naranja translúcido",
+        "Blanco translúcido",
+        "Negro",
+        "Rojo translúcido",
+        "Amarillo translúcido",
+        "Plata sólido",
+        "Verde translúcido",
+      ],
+      origen: "Hecho en México",
+      precio_lista: "Consultar precio",
+      disponibilidad: "Consultar inventario",
+      url_producto: "https://www.promoopcion.com/anf-009.html",
+      imagenes_urls: [
+        "https://www.promoopcion.com/media/catalog/product/a/n/anf-009_ico.jpg",
+        "https://www.promoopcion.com/media/catalog/product/A/N/ANF-009_20_1.jpg",
+        "https://www.promoopcion.com/media/catalog/product/A/N/ANF-009_3.jpg",
+      ],
+      categoria: "cilindros",
+    },
+    {
+      id: "ANF-041",
+      nombre: "CILINDRO ODESA",
+      descripcion:
+        "Sistema de rosca twist-off que permite abrir y cerrar la tapa en un giro. Incluye válvula de seguridad. Mantener el linner en el interior de la tapa en todo momento, se debe retirar hasta su uso final. No exponer el cilindro a temperaturas mayores a 40 °C y revisar que la tapa no esté cerrada completamente para su almacenamiento y transportación. Mantener en su empaque individual antes y después de su transformación. No apto para bebidas calientes. No introducir en microondas ni lavavajillas. :contentReference[oaicite:0]{index=0}",
+      capacidad: "500 ml",
+      material: {
+        exterior: "PET",
+        interior: null,
+      },
+      medidas: {
+        diametro: "6.8 cm",
+        altura: "17 cm",
+      },
+      empaque: {
+        tipo: "Bolsa individual",
+        color: "No especificado",
+      },
+      colores_disponibles: ["No especificado"],
+      origen: "Hecho en México",
+      precio_lista: "Consultar precio",
+      disponibilidad:
+        "Consultar inventario (existencias sujetas a cambio) :contentReference[oaicite:1]{index=1}",
+      url_producto: "https://www.promoopcion.com/anf-041.html",
+      imagenes_urls: [
+        "https://www.promoopcion.com/media/catalog/product/a/n/anf-041_icon.jpg",
+        "https://www.promoopcion.com/media/catalog/product/a/n/anf-041-m_7.jpg",
+        "https://www.promoopcion.com/media/catalog/product/a/n/anf-041-vec.jpg?store=default&image-type=image",
+      ],
+      categoria: "cilindros",
+    },
+    {
+      id: "ANF-072",
+      nombre: "CILINDRO PARVO",
+      descripcion:
+        "Sistema de rosca twist-off que permite abrir y cerrar la tapa en un giro. Mantener el linner en el interior de la tapa en todo momento, se debe retirar hasta su uso final. No exponer el cilindro a temperaturas mayores a 40 °C y revisar que la tapa no esté cerrada completamente para su almacenamiento y transportación. Mantener en su empaque individual antes y después de su transformación. No apto para bebidas calientes. No introducir en microondas ni lavavajillas. :contentReference[oaicite:0]{index=0}",
+      capacidad: "750 ml",
+      material: {
+        exterior: "Plástico",
+        interior: null,
+      },
+      medidas: {
+        diametro: "7 cm",
+        altura: "22.5 cm",
+      },
+      empaque: {
+        tipo: "Bolsa individual",
+        color: "No especificado",
+      },
+      colores_disponibles: [
+        "Amarillo",
+        "Rosa pastel",
+        "Verde pastel",
+        "Negro",
+        "Azul marino",
+        "Blanco",
+      ],
+      origen: "Hecho en México",
+      precio_lista: "Consultar precio",
+      disponibilidad:
+        "Consultar inventario (existencias sujetas a cambio) :contentReference[oaicite:1]{index=1}",
+      url_producto: "https://www.promoopcion.com/anf-072.html",
+      imagenes_urls: [
+        "https://www.promoopcion.com/media/catalog/product/a/n/anf-072_1_13.jpg",
+        "https://www.promoopcion.com/media/catalog/product/a/n/anf-072_1.jpg",
+        "https://www.promoopcion.com/media/catalog/product/a/n/anf-072_1_2.jpg",
+      ],
+      categoria: "cilindros",
+    },
+  ],
+  vasos: [
+    {
+      id: "TMPS255",
+      nombre: "VASO LODY",
+      descripcion:
+        "Vaso de plástico de una pared. Cuenta con una tapa tipo domo con cierre a presión, incluye un popote ancho, lo que lo hace ideal para disfrutar una gran variedad de bebidas con diferentes toppings o incluso crema batida.",
+      capacidad: "500 ml",
+      material: {
+        exterior: "Plástico",
+        interior: null,
+      },
+      medidas: {
+        diametro: "6.3 cm",
+        altura: "15.8 cm",
+      },
+      empaque: {
+        tipo: "Caja colectiva",
+        color: "No especificado",
+      },
+      colores_disponibles: [
+        "Blanco",
+        "Rojo",
+        "Rosa",
+        "Naranja",
+        "Amarillo-Neón",
+        "Humo",
+        "Blanco Fiesta",
+      ],
+      origen: "Hecho en México",
+      precio_lista: "Consultar precio",
+      disponibilidad: "Consultar inventario (stock variable) ",
+      url_producto: "https://www.promoopcion.com/tmps-255.html",
+      imagenes_urls: [
+        "https://www.promoopcion.com/media/catalog/product/t/m/tmps-255_3.jpg",
+        "https://www.promoopcion.com/media/catalog/product/t/m/tmps-255-vn_7.jpg",
+        "https://www.promoopcion.com/media/catalog/product/t/m/tmps-255-pn_2_1.jpg?store=default&image-type=image",
+      ],
+      categoria: "vasos",
+    },
+    {
+      id: "TMPS-237",
+      nombre: "VASO BLUR",
+      descripcion:
+        "Vaso de plástico de una pared. Añade fantasía y diversión, con este vaso que cambia de color al verter bebidas frías. Su tapa y popote coinciden con el tono que el vaso revelará al enfriarse. Perfecto para quienes buscan una experiencia refrescante y visualmente atractiva en cada bebida. :contentReference[oaicite:0]{index=0}",
+      capacidad: "800 ml",
+      material: {
+        exterior: "Plástico",
+        interior: null,
+      },
+      medidas: {
+        diametro: "6.4 cm (base)",
+        altura: "18 cm",
+        otra_medida: "10.8 × 18 cm",
+      },
+      empaque: {
+        tipo: "Caja master (200 piezas)",
+        color: "No especificado",
+        medida_caja: "55 × 43 × 44 cm",
+        peso_caja: "12.20 kg",
+      },
+      colores_disponibles: ["Azul", "Rosa", "Amarillo", "Verde", "Morado"],
+      origen: "Hecho en México",
+      precio_lista: "Consultar precio",
+      disponibilidad: "Consultar inventario",
+      url_producto: "https://www.promoopcion.com/tmps-237.html",
+      imagenes_urls: [
+        "https://www.promoopcion.com/media/catalog/product/t/m/tmps-237--e_.jpg",
+        "https://www.promoopcion.com/media/catalog/product/t/m/tmps-237-a_3.jpg",
+        "https://www.promoopcion.com/media/catalog/product/t/m/tmps-237.jpg",
+      ],
+      categoria: "vasos",
+    },
+    {
+      id: "TMPS-744",
+      nombre: "VASO JAS",
+      descripcion:
+        "Vaso de plástico con tapa tipo push y popote. Capacidad 27 oz (≈800 ml). Base de 6.4 cm de diámetro. Área de impresión apta para serigrafía. :contentReference[oaicite:0]{index=0}",
+      capacidad: "800 ml",
+      material: {
+        exterior: "Plástico",
+        interior: null,
+      },
+      medidas: {
+        diametro: "6.4 cm",
+        altura: "18 cm",
+      },
+      empaque: {
+        tipo: "Caja colectiva (200 piezas)",
+        color: "No especificado",
+      },
+      colores_disponibles: [
+        "Azul",
+        "Azul pastel",
+        "Blanco",
+        "Blanco fiesta",
+        "Morado",
+        "Negro",
+        "Naranja",
+        "Naranja neón",
+        "Rosa neón",
+        "Rosa pastel",
+        "Rojo",
+        "Verde neón",
+        "Amarillo neón",
+      ],
+      origen: "Hecho en México",
+      precio_lista: "Consultar precio",
+      disponibilidad:
+        "Consultar inventario (existencias sujetas a cambio) :contentReference[oaicite:1]{index=1}",
+      url_producto: "https://www.promoopcion.com/tmps-744.html",
+      imagenes_urls: [
+        "https://www.promoopcion.com/media/catalog/product/t/m/tmps_744.jpg",
+        "https://www.promoopcion.com/media/catalog/product/t/m/tmps-744.jpg",
+        "https://www.promoopcion.com/media/catalog/product/t/m/tmps_744_n_accesorios.jpg",
+      ],
+      categoria: "vasos",
+    },
+    {
+      id: "TMPS-74",
+      nombre: "VASO TIRICH",
+      descripcion:
+        "Vaso de plástico. Incluye tapa con ranura. :contentReference[oaicite:0]{index=0}",
+      capacidad: "475 ml",
+      material: {
+        exterior: "Plástico",
+        interior: null,
+      },
+      medidas: {
+        diametro: "No especificado",
+        altura: "16 cm",
+        otra_medida: "9 × 16 cm",
+      },
+      empaque: {
+        tipo: "Caja colectiva (200 piezas)",
+        color: "No especificado",
+      },
+      colores_disponibles: [
+        "Negro",
+        "Rosa",
+        "Rosa pastel",
+        "Blanco fiesta",
+        "Naranja",
+        "Rojo",
+        "Gris",
+        "Azul",
+      ],
+      origen: "Hecho en México",
+      precio_lista: "Consultar precio",
+      disponibilidad:
+        "Consultar inventario (existencias sujetas a cambio) :contentReference[oaicite:1]{index=1}",
+      url_producto: "https://www.promoopcion.com/tmps-74.html",
+      imagenes_urls: [
+        "https://www.promoopcion.com/media/catalog/product/t/m/tmps_74.jpg",
+        "https://www.promoopcion.com/media/catalog/product/t/m/tmps-74-v_1.jpg",
+        "https://www.promoopcion.com/media/catalog/product/t/m/tmps-74-a_1.jpg",
+      ],
+      categoria: "vasos",
     },
   ],
 };

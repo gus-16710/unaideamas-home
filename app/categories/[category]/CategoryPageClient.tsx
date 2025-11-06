@@ -8,13 +8,11 @@ import {
   Card,
   CardBody,
   CardFooter,
-  Button,
 } from "@heroui/react";
 import { useRouter } from "next/navigation";
 import { FiExternalLink } from "react-icons/fi";
 import { useProductStore } from "@/store/product.store";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import { useState, useEffect } from "react";
 
 interface CategoryPageClientProps {
   category: string;
@@ -51,7 +49,7 @@ export default function CategoryPageClient({
         }}
       ></div>
 
-      <div className="relative z-10 max-w-3xl mx-auto px-4 py-8">
+      <div className="relative z-10 max-w-4xl mx-auto px-4 py-8">
         {/* Header Section */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
