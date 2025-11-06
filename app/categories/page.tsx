@@ -66,6 +66,7 @@ const Carousel = () => {
         slidesPerView={1}
         centeredSlides={true}
         effect="cube"
+        loop={true}
         cubeEffect={{
           shadow: false,         
         }}
