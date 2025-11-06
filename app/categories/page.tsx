@@ -59,7 +59,7 @@ const Carousel = () => {
   };
 
   return (
-    <div className="w-full h-screen lg:h-[650px] flex items-center justify-center relative overflow-hidden shadow">
+    <div className="w-full h-[calc(100vh-95px)] lg:h-[650px] flex items-center justify-center relative overflow-hidden shadow">
       <Swiper
         spaceBetween={0}
         slidesPerView={1}
@@ -82,7 +82,7 @@ const Carousel = () => {
           Navigation,
           Pagination,
           Autoplay,
-          EffectFade,          
+          EffectFade,
         ]}
         className="w-full h-full shadow-lg md:shadow-2xl"
       >
@@ -218,7 +218,7 @@ const Carousel = () => {
               </motion.div>
             </motion.div>
 
-            <div className="relative z-10 w-full h-full flex flex-col lg:flex-row items-center justify-center px-4 md:px-8 lg:px-16 py-6">             
+            <div className="relative z-10 w-full h-full flex flex-col lg:flex-row items-center justify-center px-4 md:px-8 lg:px-16 py-6">
               <div className="lg:flex-1 mb-6 lg:mb-0">
                 <div className="grid grid-cols-2 gap-3 md:gap-4 lg:gap-6 max-w-sm mx-auto lg:max-w-none">
                   {[
@@ -516,7 +516,7 @@ const Carousel = () => {
                       className="flex items-center gap-3 p-3 md:p-4 bg-white/80 rounded-xl backdrop-blur-sm border border-emerald-200"
                     >
                       <motion.div
-                        className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 bg-emerald-100 rounded-full flex items-center justify-center shrink-0"
+                        className=" w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 bg-emerald-100 rounded-full flex items-center justify-center shrink-0"
                         whileHover={{ scale: 1.1 }}
                       >
                         <span className="text-emerald-600 font-bold text-sm md:text-base">
@@ -565,7 +565,7 @@ const Carousel = () => {
               <div className="flex justify-center lg:justify-end">
                 <div className="relative">
                   <div className="w-44 h-44 md:w-52 md:h-52 lg:w-72 lg:h-72 xl:w-80 xl:h-80 bg-linear-to-br from-emerald-400/30 to-teal-500/30 rounded-2xl md:rounded-3xl flex flex-col items-center justify-center backdrop-blur-sm border border-emerald-400/30 shadow-xl md:shadow-2xl p-6 md:p-8">
-                    <div className="text-4xl md:text-5xl lg:text-6xl mb-3 md:mb-4">
+                    <div className="hidden lg:block text-4xl md:text-5xl lg:text-6xl mb-3 md:mb-4">
                       💼
                     </div>
                     <div className="text-center">
@@ -1126,7 +1126,13 @@ export default function Categories() {
         </motion.div>
 
         <footer className="text-center text-gray-500 text-sm py-6">
-          © {new Date().getFullYear()} Unaidea+ · Diversidad Publicitaria
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-2">
+            <span>© {new Date().getFullYear()} Unaidea+</span>
+            <span className="hidden sm:block">•</span>
+            <span>Diversidad Publicitaria</span>
+            <span className="hidden sm:block">•</span>
+            <span>Todos los derechos reservados</span>
+          </div>
         </footer>
       </div>
 
