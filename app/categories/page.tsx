@@ -18,7 +18,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import { useState } from "react";
 import { MdOutlineSell } from "react-icons/md";
 import { SwiperSlide, Swiper } from "swiper/react";
-import { Navigation, Pagination, Autoplay, EffectFade } from "swiper/modules";
+import { Navigation, Pagination, Autoplay, EffectCube } from "swiper/modules";
 import {
   FaBusinessTime,
   FaPen,
@@ -43,7 +43,7 @@ import {
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "swiper/css/effect-fade";
+import "swiper/css/effect-cube";
 
 const Carousel = () => {
   // Animaciones reutilizables
@@ -60,12 +60,15 @@ const Carousel = () => {
   };
 
   return (
-    <div className="w-full h-[calc(100vh-95px)] lg:h-[650px] flex items-center justify-center relative overflow-hidden shadow">
+    <div className="w-full h-[calc(100vh-100px)] lg:h-[650px] flex items-center justify-center relative overflow-hidden">
       <Swiper
         spaceBetween={0}
         slidesPerView={1}
         centeredSlides={true}
-        effect="fade"
+        effect="cube"
+        cubeEffect={{
+          shadow: false,         
+        }}
         autoplay={{
           delay: 5000,
           disableOnInteraction: false,
@@ -82,10 +85,10 @@ const Carousel = () => {
         modules={[
           Navigation,
           Pagination,
-          //Autoplay,
-          EffectFade,
+          Autoplay,
+          EffectCube,
         ]}
-        className="w-full h-full shadow-lg md:shadow-2xl"
+        className="w-full h-full"
       >
         {/* Slide 1 - Personalización Empresarial */}
         <SwiperSlide>
