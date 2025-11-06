@@ -798,7 +798,7 @@ export default function Categories() {
       <div className="relative bg-linear-to-r from-amber-500 to-orange-500 shadow-lg">
         <Alert
           description={
-            <div className="items-center gap-2 text-amber-900 hidden sm:flex">
+            <div className="items-center gap-2 text-amber-900 flex">
               <span>
                 Descubre los productos más recientes para tu negocio o evento.
               </span>
