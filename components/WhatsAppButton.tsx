@@ -5,11 +5,12 @@ function WhatsAppButton() {
   return (
     <Button
       color="success"
-      className="fixed bottom-0 right-0 m-5 rounded-full z-10 h-14 w-14 p-0 shadow-lg hover:shadow-xl transition-shadow "
+      className="fixed bottom-0 right-0 m-5 rounded-full z-10 p-0 shadow-lg hover:shadow-xl transition-shadow "
+      style={{marginBottom: "70px"}}
       isIconOnly
       onPress={() => window.open("https://wa.link/3gvbx3", "_blank")}
     >
-      <FaWhatsapp size={34} color="white" />
+      <FaWhatsapp size={24} color="white" />
     </Button>
   );
 }

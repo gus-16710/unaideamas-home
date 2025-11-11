@@ -2950,7 +2950,7 @@ export const initialProducts: CategoryProducts = {
       id: "ANF-006",
       nombre: "CILINDRO LAKE",
       descripcion:
-        "Sistema de rosca twist-off que permite abrir y cerrar la tapa en un giro. Mantener en su empaque individual antes y después de su transformación. No apto para bebidas calientes. No introducir en microondas ni lavavajillas. :contentReference[oaicite:0]{index=0}",
+        "Sistema de rosca twist-off que permite abrir y cerrar la tapa en un giro. Mantener en su empaque individual antes y después de su transformación. No apto para bebidas calientes. No introducir en microondas ni lavavajillas.",
       capacidad: "850 ml",
       material: {
         exterior: "PET",
@@ -2989,7 +2989,7 @@ export const initialProducts: CategoryProducts = {
       id: "ANF-009",
       nombre: "CILINDRO SINKER",
       descripcion:
-        "Sistema de rosca twist-off que permite abrir y cerrar la tapa en un giro. Incluye válvula de seguridad. No exponer el cilindro a temperaturas mayores a 40 °C y revisar que la tapa no esté cerrada completamente para su almacenamiento y transportación. No apto para bebidas calientes. No introducir en microondas ni lavavajillas. :contentReference[oaicite:0]{index=0}",
+        "Sistema de rosca twist-off que permite abrir y cerrar la tapa en un giro. Incluye válvula de seguridad. No exponer el cilindro a temperaturas mayores a 40 °C y revisar que la tapa no esté cerrada completamente para su almacenamiento y transportación. No apto para bebidas calientes. No introducir en microondas ni lavavajillas.",
       capacidad: "575 ml",
       material: {
         exterior: "PET",
@@ -3028,7 +3028,7 @@ export const initialProducts: CategoryProducts = {
       id: "ANF-041",
       nombre: "CILINDRO ODESA",
       descripcion:
-        "Sistema de rosca twist-off que permite abrir y cerrar la tapa en un giro. Incluye válvula de seguridad. Mantener el linner en el interior de la tapa en todo momento, se debe retirar hasta su uso final. No exponer el cilindro a temperaturas mayores a 40 °C y revisar que la tapa no esté cerrada completamente para su almacenamiento y transportación. Mantener en su empaque individual antes y después de su transformación. No apto para bebidas calientes. No introducir en microondas ni lavavajillas. :contentReference[oaicite:0]{index=0}",
+        "Sistema de rosca twist-off que permite abrir y cerrar la tapa en un giro. Incluye válvula de seguridad. Mantener el linner en el interior de la tapa en todo momento, se debe retirar hasta su uso final. No exponer el cilindro a temperaturas mayores a 40 °C y revisar que la tapa no esté cerrada completamente para su almacenamiento y transportación. Mantener en su empaque individual antes y después de su transformación. No apto para bebidas calientes. No introducir en microondas ni lavavajillas. ",
       capacidad: "500 ml",
       material: {
         exterior: "PET",
@@ -3059,7 +3059,7 @@ export const initialProducts: CategoryProducts = {
       id: "ANF-072",
       nombre: "CILINDRO PARVO",
       descripcion:
-        "Sistema de rosca twist-off que permite abrir y cerrar la tapa en un giro. Mantener el linner en el interior de la tapa en todo momento, se debe retirar hasta su uso final. No exponer el cilindro a temperaturas mayores a 40 °C y revisar que la tapa no esté cerrada completamente para su almacenamiento y transportación. Mantener en su empaque individual antes y después de su transformación. No apto para bebidas calientes. No introducir en microondas ni lavavajillas. :contentReference[oaicite:0]{index=0}",
+        "Sistema de rosca twist-off que permite abrir y cerrar la tapa en un giro. Mantener el linner en el interior de la tapa en todo momento, se debe retirar hasta su uso final. No exponer el cilindro a temperaturas mayores a 40 °C y revisar que la tapa no esté cerrada completamente para su almacenamiento y transportación. Mantener en su empaque individual antes y después de su transformación. No apto para bebidas calientes. No introducir en microondas ni lavavajillas. ",
       capacidad: "750 ml",
       material: {
         exterior: "Plástico",
@@ -3083,8 +3083,7 @@ export const initialProducts: CategoryProducts = {
       ],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
-      disponibilidad:
-        "Consultar inventario (existencias sujetas a cambio) :contentReference[oaicite:1]{index=1}",
+      disponibilidad: "Consultar inventario (existencias sujetas a cambio)",
       url_producto: "https://www.promoopcion.com/anf-072.html",
       imagenes_urls: [
         "https://www.promoopcion.com/media/catalog/product/a/n/anf-072_1_13.jpg",
@@ -3093,8 +3092,503 @@ export const initialProducts: CategoryProducts = {
       ],
       categoria: "cilindros",
     },
+    {
+      id: "ANF-075",
+      nombre: "CILINDRO LEMN",
+      descripcion:
+        "Cilindro de plástico con tapa de bambú. No exponer el cilindro a temperaturas mayores a 40 °C y revisar que la tapa no esté cerrada completamente para su almacenamiento y transportación. Mantener en su empaque individual antes y después de su transformación. No apto para bebidas calientes. No introducir en microondas ni lavavajillas. El bambú es un producto natural el cual puede presentar variaciones en tonalidades y vetas.",
+      capacidad: "600 ml",
+      material: {
+        exterior: "Plástico",
+        interior: null,
+        //tapa: "Bambú",
+      },
+      medidas: {
+        diametro: "7 cm",
+        altura: "18.9 cm",
+      },
+      empaque: {
+        tipo: "Unidad individual",
+      },
+      colores_disponibles: [
+        "Negro",
+        "Azul translúcido",
+        "Tinto translúcido",
+        "Blanco sólido",
+        "Verde translúcido",
+        "Rosa pastel sólido",
+      ],
+      origen: "Importado",
+      precio_lista: "Consultar precio",
+      disponibilidad:
+        "En stock (existencias sujetas a cambio) :contentReference[oaicite:1]{index=1}",
+      url_producto: "https://www.promoopcion.com/anf-075.html",
+      imagenes_urls: [
+        "https://www.promoopcion.com/media/catalog/product/a/n/anf-075_2_1.jpg",
+        "https://www.promoopcion.com/media/catalog/product/a/n/anf-075-b_7.jpg",
+        "https://www.promoopcion.com/media/catalog/product/a/n/anf-075--.jpg",
+      ],
+      categoria: "cilindros",
+    },
+    {
+      id: "ANF-088",
+      nombre: "CILINDRO FESTY",
+      descripcion:
+        "Sistema de rosca twist-off que permite abrir y cerrar la tapa en un giro. Incluye válvula de seguridad. No exponer el cilindro a temperaturas mayores a 40 °C y revisar que la tapa no esté cerrada completamente para su almacenamiento y transportación. Mantener en su empaque individual antes y después de su transformación. No apto para bebidas calientes. No introducir en microondas ni lavavajillas.",
+      capacidad: "500 ml",
+      material: {
+        exterior: "PET",
+        interior: null,
+      },
+      medidas: {
+        diametro: "7.6 cm",
+        altura: "15.7 cm",
+      },
+      empaque: {
+        tipo: "Bolsa individual",
+      },
+      colores_disponibles: [
+        "Azul",
+        "Amarillo",
+        "Morado",
+        "Naranja",
+        "Negro",
+        "Rojo",
+        "Verde",
+      ],
+      origen: "Importado",
+      precio_lista: "Consultar precio",
+      disponibilidad: "En stock (existencias sujetas a cambio)",
+      url_producto: "https://www.promoopcion.com/anf-088.html",
+      imagenes_urls: [
+        "https://www.promoopcion.com/media/catalog/product/a/n/anf-088_icon.jpg",
+        "https://www.promoopcion.com/media/catalog/product/a/n/anf-088_ambiente_1.jpg",
+        "https://www.promoopcion.com/media/catalog/product/a/n/anf-088_2_7.jpg",
+      ],
+      categoria: "cilindros",
+    },
+    {
+      id: "A2339",
+      nombre: "CILINDRO RIVER",
+      descripcion:
+        "Cilindro de plástico PET con tapa de rosca abatible y boquilla. Su diseño es ergonómico, se ajusta perfectamente a la mano al sostenerlo. CAP. 750 ml. *BPA FREE.",
+      capacidad: "750 ml",
+      material: {
+        exterior: "Plástico PET",
+        interior: null,
+      },
+      medidas: {
+        diametro: "7.5 cm",
+        altura: "23 cm",
+      },
+      empaque: {
+        tipo: "Bolsa individual",
+      },
+      colores_disponibles: ["Humo", "Rojo", "Verde", "Azul"],
+      origen: "Hecho en México",
+      precio_lista: "Consultar precio",
+      disponibilidad: "Consultar inventario (existencias sujetas a cambio)",
+      url_producto: "https://doblevela.com/items/index/A2339",
+      imagenes_urls: [
+        "https://doblevela.com/images/large/A2339_lrg.jpg?v=1894994337",
+        "https://doblevela.com/images/large/A2339_humo_lrg.jpg?v=91702438",
+        "https://doblevela.com/images/large/A2339_rojo_lrg.jpg?v=1073927767",
+        "https://doblevela.com/images/adicionales/_A2339_1.jpg",
+      ],
+      categoria: "cilindros",
+    },
+    {
+      id: "A2470",
+      nombre: "CILINDRO BOWLING",
+      descripcion:
+        "Cilindro de Tritan con tapa de rosca con asa. Capacidad 750 ml. *BPA FREE.",
+      capacidad: "750 ml",
+      material: {
+        exterior: "Tritan",
+        interior: null,
+      },
+      medidas: {
+        diametro: "7.5 cm",
+        altura: "27.5 cm",
+      },
+      empaque: {
+        tipo: "Bolsa individual",
+      },
+      colores_disponibles: ["Naranja transparente", "Humo"],
+      origen: "Hecho en México ",
+      precio_lista: "Consultar precio",
+      disponibilidad: "Consultar inventario (existencias sujetas a cambio) ",
+      url_producto: "https://doblevela.com/items/index/A2470",
+      imagenes_urls: [
+        "https://doblevela.com/images/large/A2470_lrg.jpg?v=1944171363",
+        "https://doblevela.com/images/large/A2470_naranja_lrg.jpg?v=114871370",
+        "https://doblevela.com/images/large/A2470_transparente_lrg.jpg?v=552440533",
+      ],
+      categoria: "cilindros",
+    },
+    {
+      id: "A2752",
+      nombre: "CILINDRO TADEO",
+      descripcion:
+        "Cilindro de plástico PET libre de BPA, con tapa de rosca y válvula. Cuerpo y tapa del mismo color. CAP. 500 ml. :contentReference[oaicite:0]{index=0}",
+      capacidad: "500 ml",
+      material: {
+        exterior: "Plástico PET",
+        interior: null,
+      },
+      medidas: {
+        diametro: "6.7 cm",
+        altura: "16 cm",
+      },
+      empaque: {
+        tipo: "Bolsa individual",
+      },
+      colores_disponibles: [
+        "Naranja",
+        "Rojo",
+        "Rosa",
+        "Verde",
+        "Amarillo",
+        "Azul",
+        "Humo",
+        "Transparente",
+      ],
+      origen: "Hecho en México",
+      precio_lista: "Consultar precio",
+      disponibilidad:
+        "Consultar inventario (existencias sujetas a cambio) :contentReference[oaicite:1]{index=1}",
+      url_producto: "https://doblevela.com/items/index/A2752",
+      imagenes_urls: [
+        "https://doblevela.com/images/large/A2752_lrg.jpg?v=545859074",
+        "https://doblevela.com/images/large/A2752_naranja_lrg.jpg?v=2137533303",
+        "https://doblevela.com/images/large/A2752_rosa_lrg.jpg?v=1090978310",
+      ],
+      categoria: "cilindros",
+    },
+    {
+      id: "A3150",
+      nombre: "ACUARIO",
+      descripcion:
+        "Cilindro de plástico PET con tapa de rosca abatible con boquilla para beber. CAP. 950 ml. *BPA FREE. ",
+      capacidad: "950 ml",
+      material: {
+        exterior: "Plástico PET",
+        interior: null,
+      },
+      medidas: {
+        diametro: "7 cm",
+        altura: "26 cm",
+        notas: "Ø 7 x 26 cm",
+      },
+      empaque: {
+        tipo: "Bolsa individual",
+      },
+      colores_disponibles: ["Rojo", "Azul", "Humo", "Transparente"],
+      origen: "Hecho en México",
+      precio_lista: "Consultar precio",
+      disponibilidad: "Verificar inventario (existencias sujetas a cambio) ",
+      url_producto: "https://doblevela.com/items/index/A3150",
+      imagenes_urls: [
+        "https://doblevela.com/images/large/A3150_lrg.jpg",
+        "https://doblevela.com/images/large/A3150_rojo_lrg.jpg?v=1535687674",
+        "https://doblevela.com/images/large/A3150_azul_lrg.jpg?v=365944318",
+      ],
+      categoria: "cilindros",
+    },
+    {
+      id: "A3151",
+      nombre: "CILINDRO DE PLÁSTICO TADEUS 500 ML",
+      descripcion:
+        "Cilindro de plástico PET con cuerpo transparente y tapa de rosca a color con válvula. CAP. 500 ml. *BPA FREE.",
+      capacidad: "500 ml",
+      material: {
+        exterior: "Plástico PET",
+        interior: null,
+      },
+      medidas: {
+        diametro: "6.7 cm",
+        altura: "16 cm",
+      },
+      empaque: {
+        tipo: "Bolsa individual",
+      },
+      colores_disponibles: [
+        "Negro",
+        "Naranja",
+        "Rojo",
+        "Rosa",
+        "Verde",
+        "Azul",
+      ],
+      origen: "Hecho en México",
+      precio_lista: "Consultar precio",
+      disponibilidad: "Verificar inventario (existencias sujetas a cambio)",
+      url_producto: "https://doblevela.com/items/index/A3151",
+      imagenes_urls: [
+        "https://doblevela.com/images/large/A3151_lrg.jpg",
+        "https://doblevela.com/images/large/A3151_negro_lrg.jpg?v=1489368968",
+        "https://doblevela.com/images/large/A3151_naranja_lrg.jpg?v=261424416",
+      ],
+      categoria: "cilindros",
+    },
   ],
   vasos: [
+    {
+      id: "A2939",
+      nombre: "PIPO",
+      descripcion:
+        "Vaso de vidrio de borosilicato de doble pared con cara de oso. Cuenta con tapa de bambú y sello de silicón. CAP. 220 ml.",
+      capacidad: "220 ml",
+      material: {
+        exterior: "Vidrio de borosilicato",
+        interior: null,
+      },
+      medidas: {
+        diametro: "Ø 9.3 cm",
+        altura: "9 cm",
+      },
+      empaque: {
+        tipo: "Caja individual en color blanco",
+      },
+      colores_disponibles: ["Transparente"],
+      origen: "Hecho en México ",
+      precio_lista: "Consultar precio",
+      disponibilidad: "Consultar inventario (existencias sujetas a cambio) ",
+      url_producto: "https://doblevela.com/items/index/A2939",
+      imagenes_urls: [
+        "https://doblevela.com/images/large/A2939_lrg.jpg?v=1073690386",
+        "https://doblevela.com/images/large/A2939_transparente_lrg.jpg?v=1713777277",
+        "https://doblevela.com/images/adicionales/_A2939_1.jpg"
+      ],
+      categoria: "vasos",
+    },
+    {
+      id: "A2964",
+      nombre: "KLAUS",
+      descripcion:
+        "Vaso de plástico de doble pared con diseño navideño y lentejuelas en su interior. Cuenta con tapa de cúpula con figura de Santa Claus con lentejuelas y popote. CAP. 500 ml. *BPA FREE. ",
+      capacidad: "500 ml",
+      material: {
+        exterior: "Plástico PS",
+        interior: null,
+      },
+      medidas: {
+        diametro: "10 cm",
+        altura: "20 cm",
+      },
+      empaque: {
+        tipo: "Caja individual (presentación de regalo)",
+      },
+      colores_disponibles: ["Rojo"],
+      origen: "Hecho en México",
+      precio_lista: "Consultar precio",
+      disponibilidad: "Verificar inventario (existencias sujetas a cambio)",
+      url_producto: "https://doblevela.com/items/index/A2964",
+      imagenes_urls: [
+        "https://doblevela.com/images/large/A2964_lrg.jpg?v=34977803",
+        "https://doblevela.com/images/large/A2964_rojo_lrg.jpg?v=1834458300",
+        "https://doblevela.com/images/adicionales/_A2964_1.jpg",
+      ],
+      categoria: "vasos",
+    },
+    {
+      id: "A2993",
+      nombre: "VASO LUMINOSO PHANTOM",
+      descripcion:
+        "Vaso de plástico transparente que brilla en la oscuridad, cuenta con tapa de presión y popote. CAP. 700 ml. *BPA FREE.",
+      capacidad: "700 ml",
+      material: {
+        exterior: "Plástico PP",
+        interior: null,
+      },
+      medidas: {
+        diametro: "10 cm",
+        altura: "18 cm",
+      },
+      empaque: {
+        tipo: "Bolsa individual",
+        color: "No especificado",
+      },
+      colores_disponibles: ["Transparente (brilla en la oscuridad)"],
+      origen: "Hecho en México",
+      precio_lista: "Consultar precio",
+      disponibilidad: "Verificar inventario (existencias sujetas a cambio)",
+      url_producto: "https://doblevela.com/items/index/A2993",
+      imagenes_urls: [
+        "https://doblevela.com/images/large/A2993_lrg.jpg?v=1774612864",
+        "https://doblevela.com/images/large/A2993_transparente_lrg.jpg?v=500993459",
+        "https://doblevela.com/images/adicionales/_A2993_3.jpg",
+      ],
+      categoria: "vasos",
+    },
+    {
+      id: "A2881",
+      nombre: "VASO LIB",
+      descripcion:
+        "Vaso de plástico PP traslúcido con glitter de colores, cuenta con tapa de presión a color y popote del color de la tapa. CAP. 750 ml. Libre de BPA. ",
+      capacidad: "750 ml",
+      material: {
+        exterior: "Plástico PP traslúcido con glitter",
+        interior: null,
+      },
+      medidas: {
+        diametro: "10.6 cm",
+        altura: "18 cm",
+      },
+      empaque: {
+        tipo: "Caja máster",
+        color: "No especificado",
+      },
+      colores_disponibles: [
+        "Negro",
+        "Naranja",
+        "Rojo",
+        "Rosa",
+        "Verde",
+        "Azul",
+        "Oro",
+        "Morado",
+      ],
+      origen: "Hecho en México",
+      precio_lista: "Consultar precio",
+      disponibilidad: "Verificar inventario (existencias sujetas a cambio)",
+      url_producto: "https://doblevela.com/items/index/A2881",
+      imagenes_urls: [
+        "https://doblevela.com/images/large/A2881_lrg.jpg?v=831500716",
+        "https://doblevela.com/images/large/A2881_negro_lrg.jpg?v=532395235",
+        "https://doblevela.com/images/large/A2881_rojo_lrg.jpg?v=233547767",
+      ],
+      categoria: "vasos",
+    },
+    {
+      id: "VST3946",
+      nombre: "VASO TÉRMICO DOBLE PARED TED",
+      descripcion:
+        "Vaso térmico de doble pared, cuenta con tapa que cierra a presión y seguro deslizable. CAP. 600 ml. *BPA FREE. ",
+      capacidad: "600 ml",
+      material: {
+        exterior: "Plástico PP",
+        interior: null,
+      },
+      medidas: {
+        diametro: "8.6 cm",
+        altura: "19.5 cm",
+      },
+      empaque: {
+        tipo: "Bolsa individual",
+        color: "No especificado",
+      },
+      colores_disponibles: ["Naranja"],
+      origen: "Hecho en México ",
+      precio_lista: "Consultar precio",
+      disponibilidad: "Consultar inventario (existencias sujetas a cambio)",
+      url_producto: "https://doblevela.com/items/index/VST3946",
+      imagenes_urls: [
+        "https://doblevela.com/images/large/VST3946_lrg.jpg?v=916953360",
+        "https://doblevela.com/images/large/VST3946_naranja_lrg.jpg?v=1054055402",
+      ],
+      categoria: "vasos",
+    },
+    {
+      id: "A2345",
+      nombre: "VASO EXPRESO",
+      descripcion:
+        "Vaso de plástico con tapa de presión y válvula de seguridad, cuenta con banda protectora de termoplástico en la parte inferior. CAP. 350 ml. *BPA FREE. ",
+      capacidad: "350 ml",
+      material: {
+        exterior: "Plástico PP",
+        interior: null,
+      },
+      medidas: {
+        diametro: "8.7 cm",
+        altura: "12.3 cm",
+      },
+      empaque: {
+        tipo: "Bolsa individual",
+        color: "No especificado",
+      },
+      colores_disponibles: ["Negro", "Rojo", "Azul"],
+      origen: "Hecho en México",
+      precio_lista: "Consultar precio",
+      disponibilidad: "Verificar inventario (existencias sujetas a cambio)",
+      url_producto: "https://doblevela.com/items/index/A2345",
+      imagenes_urls: [
+        "https://doblevela.com/images/large/A2345_lrg.jpg?v=726503398",
+        "https://doblevela.com/images/large/A2345_negro_lrg.jpg?v=70913838",
+        "https://doblevela.com/images/large/A2345_rojo_lrg.jpg?v=1304908909",
+      ],
+      categoria: "vasos",
+    },
+    {
+      id: "A2727",
+      nombre: "VASO ECOLÓGICO MOCCA",
+      descripcion:
+        "Vaso ecológico a base de fibra de trigo para bebidas calientes. Con tapa de rosca anti derrames. CAP. 325 ml.",
+      capacidad: "325 ml",
+      material: {
+        exterior: "Fibra de trigo",
+        interior: null,
+      },
+      medidas: {
+        diametro: "9.2 cm",
+        altura: "13.3 cm",
+      },
+      empaque: {
+        tipo: "Bolsa individual",
+      },
+      colores_disponibles: ["Verde claro", "Azul claro", "Beige"],
+      origen: "Hecho en México",
+      precio_lista: "Consultar precio",
+      disponibilidad:
+        "Verificar inventario (existencias sujetas a cambio) :contentReference[oaicite:1]{index=1}",
+      url_producto: "https://doblevela.com/items/index/A2727",
+      imagenes_urls: [
+        "https://doblevela.com/images/large/A2727_lrg.jpg?v=57188395",
+        "https://doblevela.com/images/large/A2727_verdeclaro_lrg.jpg?v=2087898041",
+        "https://doblevela.com/images/large/A2727_azulclaro_lrg.jpg?v=439091443",
+      ],
+      categoria: "vasos",
+    },
+    {
+      id: "A2342",
+      nombre: "VASO BACHELOR",
+      descripcion:
+        "Vaso de plástico con tapa a presión y popote. Variedad de colores. Para llevar en el auto. CAP. 930 ml. *BPA FREE.",
+      capacidad: "930 ml",
+      material: {
+        exterior: "Plástico PP",
+        interior: null,
+      },
+      medidas: {
+        diametro: "7 cm",
+        altura: "19 cm",
+      },
+      empaque: {
+        tipo: "Empaque individual / Presentación master",
+        color: "No especificado",
+      },
+      colores_disponibles: [
+        "Blanco",
+        "Negro",
+        "Rojo",
+        "Verde claro",
+        "Amarillo",
+        "Lila",
+        "Transparente",
+        "Naranja",
+        "Rosa",
+      ],
+      origen: "Hecho en México",
+      precio_lista: "Consultar precio",
+      disponibilidad: "Consultar inventario (existencias sujetas a cambio)",
+      url_producto: "https://doblevela.com/items/index/A2342",
+      imagenes_urls: [
+        "https://doblevela.com/images/large/A2342_lrg.jpg?v=1067246197",
+        "https://doblevela.com/images/large/A2342_blanco_lrg.jpg?v=1843358704",
+        "https://doblevela.com/images/large/A2342_negro_lrg.jpg?v=541470900",
+      ],
+      categoria: "vasos",
+    },
     {
       id: "TMPS255",
       nombre: "VASO LODY",
@@ -3137,7 +3631,7 @@ export const initialProducts: CategoryProducts = {
       id: "TMPS-237",
       nombre: "VASO BLUR",
       descripcion:
-        "Vaso de plástico de una pared. Añade fantasía y diversión, con este vaso que cambia de color al verter bebidas frías. Su tapa y popote coinciden con el tono que el vaso revelará al enfriarse. Perfecto para quienes buscan una experiencia refrescante y visualmente atractiva en cada bebida. :contentReference[oaicite:0]{index=0}",
+        "Vaso de plástico de una pared. Añade fantasía y diversión, con este vaso que cambia de color al verter bebidas frías. Su tapa y popote coinciden con el tono que el vaso revelará al enfriarse. Perfecto para quienes buscan una experiencia refrescante y visualmente atractiva en cada bebida.",
       capacidad: "800 ml",
       material: {
         exterior: "Plástico",
@@ -3170,7 +3664,7 @@ export const initialProducts: CategoryProducts = {
       id: "TMPS-744",
       nombre: "VASO JAS",
       descripcion:
-        "Vaso de plástico con tapa tipo push y popote. Capacidad 27 oz (≈800 ml). Base de 6.4 cm de diámetro. Área de impresión apta para serigrafía. :contentReference[oaicite:0]{index=0}",
+        "Vaso de plástico con tapa tipo push y popote. Capacidad 27 oz (≈800 ml). Base de 6.4 cm de diámetro. Área de impresión apta para serigrafía.",
       capacidad: "800 ml",
       material: {
         exterior: "Plástico",
@@ -3201,8 +3695,7 @@ export const initialProducts: CategoryProducts = {
       ],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
-      disponibilidad:
-        "Consultar inventario (existencias sujetas a cambio) :contentReference[oaicite:1]{index=1}",
+      disponibilidad: "Consultar inventario (existencias sujetas a cambio) ",
       url_producto: "https://www.promoopcion.com/tmps-744.html",
       imagenes_urls: [
         "https://www.promoopcion.com/media/catalog/product/t/m/tmps_744.jpg",
@@ -3214,8 +3707,7 @@ export const initialProducts: CategoryProducts = {
     {
       id: "TMPS-74",
       nombre: "VASO TIRICH",
-      descripcion:
-        "Vaso de plástico. Incluye tapa con ranura. :contentReference[oaicite:0]{index=0}",
+      descripcion: "Vaso de plástico. Incluye tapa con ranura. ",
       capacidad: "475 ml",
       material: {
         exterior: "Plástico",

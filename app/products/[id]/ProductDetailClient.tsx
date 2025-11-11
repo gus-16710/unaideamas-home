@@ -27,6 +27,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
+import FloatinButton from "@/components/FloatingButton";
 
 interface ProductDetailClientProps {
   product: any;
@@ -385,7 +386,7 @@ export default function ProductDetailClient({
                       <motion.div
                         key={key}
                         whileHover={{ scale: 1.02 }}
-                        className="text-center p-4 bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl border border-gray-200/50"
+                        className="text-center p-4 bg-linear-to-br from-gray-50 to-gray-100 rounded-xl border border-gray-200/50"
                       >
                         <div className="text-sm text-gray-500 font-medium capitalize mb-1">
                           {key.replace("_", " ")}
@@ -417,7 +418,8 @@ export default function ProductDetailClient({
           </motion.div>
         </motion.div>
       </div>
-      <WhatsAppButton />
+      <FloatinButton />
+      <WhatsAppButton />      
     </div>
   );
 }

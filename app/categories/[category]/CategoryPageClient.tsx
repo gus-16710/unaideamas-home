@@ -13,6 +13,7 @@ import { useRouter } from "next/navigation";
 import { FiExternalLink } from "react-icons/fi";
 import { useProductStore } from "@/store/product.store";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import FloatinButton from "@/components/FloatingButton";
 
 interface CategoryPageClientProps {
   category: string;
@@ -213,6 +214,7 @@ export default function CategoryPageClient({
         )}
       </div>
 
+      <FloatinButton />
       <WhatsAppButton />
     </div>
   );

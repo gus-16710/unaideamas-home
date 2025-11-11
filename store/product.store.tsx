@@ -70,4 +70,12 @@ export const useProductStore = create<ProductState>((set, get) => ({
     const state = get();
     return state.productsByCategory[category]?.length || 0;
   },
+
+  getRandomProducts: (count: number = 6) => {
+    const state = get();
+    const allProducts = Object.values(state.productsByCategory).flat();
+        
+    const shuffled = [...allProducts].sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, count);
+  },
 }));
