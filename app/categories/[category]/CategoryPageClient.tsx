@@ -12,8 +12,6 @@ import {
 import { useRouter } from "next/navigation";
 import { FiExternalLink } from "react-icons/fi";
 import { useProductStore } from "@/store/product.store";
-import WhatsAppButton from "@/components/WhatsAppButton";
-import FloatinButton from "@/components/FloatingButton";
 import ActionButtons from "@/components/ActionButtons";
 
 interface CategoryPageClientProps {
@@ -66,7 +64,7 @@ export default function CategoryPageClient({
             className="mb-4"
           >
             <div
-              className="p-3 rounded-2xl shadow-lg"
+              className="p-3 rounded-2xl shadow-lg text-white text-4xl"
               style={{
                 background: "linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%)",
               }}
