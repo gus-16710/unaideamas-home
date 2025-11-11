@@ -28,6 +28,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import FloatinButton from "@/components/FloatingButton";
+import ActionButtons from "@/components/ActionButtons";
 
 interface ProductDetailClientProps {
   product: any;
@@ -172,7 +173,7 @@ export default function ProductDetailClient({
                     />
                     <div className="absolute inset-0 bg-linear-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     <div className="absolute right-0 bottom-0 m-4 bg-gray-600/70 rounded-full p-2">
-                      <MdOutlineZoomOutMap size={24} className="text-white"/>
+                      <MdOutlineZoomOutMap size={24} className="text-white" />
                     </div>
                   </div>
                 </CardBody>
@@ -418,8 +419,7 @@ export default function ProductDetailClient({
           </motion.div>
         </motion.div>
       </div>
-      <FloatinButton />
-      <WhatsAppButton />      
+      <ActionButtons />
     </div>
   );
 }

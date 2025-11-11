@@ -1,22 +1,18 @@
 "use client";
 
-import { AiFillProduct } from "react-icons/ai";
 import { motion } from "framer-motion";
 import { Alert } from "@heroui/react";
-import { FiPackage, FiGrid, FiTag } from "react-icons/fi";
 import { useState } from "react";
 import { MdOutlineSell } from "react-icons/md";
-import WhatsAppButton from "@/components/WhatsAppButton";
 import Carousel from "./components/Carousel";
 import Footer from "./components/Footer";
 import Breadcrumb from "./components/Breadcrumb";
-import CategoriesImage from "./components/CategoriesImage";
 import ContactCostumize from "@/components/ContactCostumize";
 import FeaturesSection from "@/components/FeaturesSection";
 import ContactHelp from "@/components/ContactHelp";
 import CarouselCategories from "@/components/CarouselCategories";
 import RandomProducts from "@/components/RandomProducts";
-import FloatinButton from "@/components/FloatingButton";
+import ActionButtons from "@/components/ActionButtons";
 
 export default function Categories() {
   const [isVisible, setIsVisible] = useState(true);
@@ -119,24 +115,16 @@ export default function Categories() {
         ></motion.div>
 
         <Breadcrumb />
-
         <CarouselCategories />
-
         <RandomProducts />
-
-        <ContactCostumize />
-
-        {/* <CategoriesImage /> */}
-
+        <ContactCostumize />        
         <FeaturesSection />
-
         <ContactHelp />
 
         <Footer />
       </div>
 
-      <FloatinButton />
-      <WhatsAppButton />
+      <ActionButtons/>
     </div>
   );
 }

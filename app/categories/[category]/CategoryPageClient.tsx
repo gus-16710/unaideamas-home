@@ -14,6 +14,7 @@ import { FiExternalLink } from "react-icons/fi";
 import { useProductStore } from "@/store/product.store";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import FloatinButton from "@/components/FloatingButton";
+import ActionButtons from "@/components/ActionButtons";
 
 interface CategoryPageClientProps {
   category: string;
@@ -214,8 +215,7 @@ export default function CategoryPageClient({
         )}
       </div>
 
-      <FloatinButton />
-      <WhatsAppButton />
+      <ActionButtons />
     </div>
   );
 }

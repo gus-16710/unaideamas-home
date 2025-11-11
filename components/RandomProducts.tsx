@@ -293,16 +293,7 @@ export default function RandomProducts() {
   };
 
   useEffect(() => {
-    // Cargar productos iniciales
-    loadRandomProducts();
-
-    // Configurar el intervalo para auto-refresh cada 10 segundos
-    const interval = setInterval(() => {
-      loadRandomProducts();
-    }, 50000); // 50 segundos
-
-    // Limpiar el intervalo cuando el componente se desmonte
-    return () => clearInterval(interval);
+    loadRandomProducts();    
   }, []);
 
   const handleProductClick = (product: Product) => {

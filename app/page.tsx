@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import ActionButtons from "@/components/ActionButtons";
 
 export default function Home() {
   const router = useRouter();
@@ -146,7 +147,7 @@ export default function Home() {
         </motion.p>
       </motion.main>
 
-      <WhatsAppButton />
+      <ActionButtons/>
     </div>
   );
 }
