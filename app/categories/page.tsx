@@ -444,9 +444,8 @@ const Carousel = () => {
         </SwiperSlide>
 
         {/* Slide 4 - Beneficios y Ofertas */}
-        <SwiperSlide>
-          <div className="w-full h-full relative bg-linear-to-br from-emerald-50 via-teal-100 to-green-100 overflow-hidden">
-            {/* Decoración de ofertas animada */}
+        {/* <SwiperSlide>
+          <div className="w-full h-full relative bg-linear-to-br from-emerald-50 via-teal-100 to-green-100 overflow-hidden">            
             <motion.div
               className="absolute top-4 right-4 md:top-8 md:right-8"
               animate={{
@@ -589,7 +588,7 @@ const Carousel = () => {
               </div>
             </div>
           </div>
-        </SwiperSlide>
+        </SwiperSlide> */}
 
         {/* Slide 5 - Calidad y Servicio */}
         <SwiperSlide>
@@ -1118,7 +1117,7 @@ export default function Categories() {
           <button
             onClick={() =>
               window.open(
-                "https://wa.me/5212281255258?text=Hola! Quieriera hablar con un asesor.",
+                "https://wa.me/5212281255258?text=Hola! Quisiera hablar con un asesor.",
                 "_blank"
               )
             }
