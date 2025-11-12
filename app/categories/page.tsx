@@ -13,6 +13,7 @@ import ContactHelp from "@/components/ContactHelp";
 import CarouselCategories from "@/components/CarouselCategories";
 import RandomProducts from "@/components/RandomProducts";
 import ActionButtons from "@/components/ActionButtons";
+import ProductsByCategory from "@/components/ProductsByCategory";
 
 export default function Categories() {
   const [isVisible, setIsVisible] = useState(true);
@@ -115,17 +116,17 @@ export default function Categories() {
         ></motion.div>
 
         <Breadcrumb />
-        <CarouselCategories />     
-        
-        <RandomProducts />
-        <ContactCostumize />        
-        <FeaturesSection />
+        <ProductsByCategory />
         <ContactHelp />
+        <RandomProducts />
+        <FeaturesSection />
+        <CarouselCategories />
+        <ContactCostumize />        
 
         <Footer />
       </div>
 
-      <ActionButtons/>
+      <ActionButtons />
     </div>
   );
 }

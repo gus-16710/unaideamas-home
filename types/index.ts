@@ -29,7 +29,8 @@ export interface Category {
   url: string;
   description?: string;
   productCount?: number;
-  icon?: React.ReactNode;
+  icon?: React.ElementType;
+  color?: string; 
 }
 
 export interface CategoryProducts {

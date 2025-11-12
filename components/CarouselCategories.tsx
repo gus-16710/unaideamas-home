@@ -116,6 +116,7 @@ export default function CarouselCategories() {
       >
         {categories.map((category: Category) => {
           const productCount = getProductsCountByCategory(category.url);
+          const Icon = category.icon!;
 
           return (
             <SwiperSlide key={category.id}>
@@ -133,7 +134,7 @@ export default function CarouselCategories() {
                     <div className="relative z-10 flex flex-col items-center justify-center">
                       <div className="w-16 h-16 rounded-xl bg-linear-to-br from-blue-500 to-cyan-400 flex items-center justify-center shadow-lg mb-3 group-hover:scale-110 transition-transform duration-300">
                         <div className="text-white text-4xl">
-                          {category.icon && category.icon}
+                          <Icon />
                         </div>
                       </div>
 

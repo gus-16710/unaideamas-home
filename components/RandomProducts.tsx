@@ -2,9 +2,14 @@ import { useProductStore } from "@/store/product.store";
 import { Badge, Card, CardBody, Chip } from "@heroui/react";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FiArrowRight, FiRefreshCw } from "react-icons/fi";
 import { Product } from "@/types";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 export default function RandomProducts() {
   const { getRandomProducts, getCategoryInfo } = useProductStore();
@@ -12,19 +17,21 @@ export default function RandomProducts() {
   const [isLoading, setIsLoading] = useState(true);
   const router = useRouter();
 
+  const prevRef = useRef<HTMLButtonElement>(null);
+  const nextRef = useRef<HTMLButtonElement>(null);
+
   const loadRandomProducts = () => {
     setIsLoading(true);
-    const products = getRandomProducts(6);
+    const products = getRandomProducts(12);
     setRandomProducts(products);
     setIsLoading(false);
   };
 
   useEffect(() => {
-    loadRandomProducts();    
+    loadRandomProducts();
   }, []);
 
   const handleProductClick = (product: Product) => {
-    // Navegar al detalle del producto o a la categoría
     router.push(`/products/${product.id}`);
   };
 
@@ -37,24 +44,29 @@ export default function RandomProducts() {
     return (
       <div className="w-full mb-10">
         <div className="flex items-center justify-between mb-6">
-          <h2 className="text-2xl font-bold text-gray-800">
-            Productos Destacados
-          </h2>
+          <div>
+            <h2 className="text-2xl font-bold text-slate-800">
+              Productos Destacados
+            </h2>
+            <p className="text-slate-500 text-sm mt-1">
+              Descubre nuestros productos más populares
+            </p>
+          </div>
           <div className="animate-spin">
-            <FiRefreshCw size={20} className="text-gray-400" />
+            <FiRefreshCw size={20} className="text-slate-400" />
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {[...Array(6)].map((_, index) => (
-            <Card key={index} className="rounded-2xl shadow-md w-full h-full">
+            <Card key={index} className="rounded-2xl shadow-md w-full">
               <CardBody className="p-0">
                 <div className="animate-pulse">
-                  <div className="w-full h-56 bg-gray-200"></div>
+                  <div className="w-full h-48 bg-slate-200 rounded-t-2xl"></div>
                   <div className="p-4 space-y-3">
-                    <div className="h-4 bg-gray-200 rounded w-3/4"></div>
-                    <div className="h-3 bg-gray-200 rounded w-1/2"></div>
-                    <div className="h-3 bg-gray-200 rounded w-full"></div>
-                    <div className="h-3 bg-gray-200 rounded w-2/3"></div>
+                    <div className="h-4 bg-slate-200 rounded w-3/4"></div>
+                    <div className="h-3 bg-slate-200 rounded w-1/2"></div>
+                    <div className="h-3 bg-slate-200 rounded w-full"></div>
+                    <div className="h-3 bg-slate-200 rounded w-2/3"></div>
                   </div>
                 </div>
               </CardBody>
@@ -67,191 +79,206 @@ export default function RandomProducts() {
 
   return (
     <div className="w-full mb-10">
-      <div className="mb-6 flex-col">
-        <h2 className="text-2xl font-bold text-gray-800">
-          Productos Destacados
-        </h2>
-        <p className="text-slate-500 text-sm mt-1">
-          Más de 100 productos disponibles
-        </p>
+      {/* Header con controles */}
+      <div className="flex items-center justify-between w-full mb-6">
+        <div>
+          <h2 className="text-2xl font-bold text-slate-800">
+            Productos Destacados
+          </h2>
+          <p className="text-slate-500 text-sm mt-1">
+            {randomProducts.length}+ productos disponibles
+          </p>
+        </div>
+
+        {/* Controles de navegación */}
+        <div className="flex space-x-2">
+          <button
+            ref={prevRef}
+            className="button-prev w-10 h-10 rounded-full bg-white/80 backdrop-blur-sm border border-slate-200 flex items-center justify-center hover:bg-white hover:shadow-lg transition-all duration-300 group"
+          >
+            <svg
+              className="w-5 h-5 text-slate-600 group-hover:text-blue-600 transition-colors"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+          </button>
+          <button
+            ref={nextRef}
+            className="button-next w-10 h-10 rounded-full bg-white/80 backdrop-blur-sm border border-slate-200 flex items-center justify-center hover:bg-white hover:shadow-lg transition-all duration-300 group"
+          >
+            <svg
+              className="w-5 h-5 text-slate-600 group-hover:text-blue-600 transition-colors"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </button>
+        </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
-        {randomProducts.map((product, index) => {
-          const categoryName = getCategoryName(product.categoria!);
+      {/* Swiper Carousel */}
+      <div className="relative">
+        <Swiper
+          spaceBetween={24}
+          slidesPerView={1}
+          centeredSlides={false}
+          loop={true}
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
+          }}
+          speed={800}
+          breakpoints={{
+            320: {
+              slidesPerView: 2,
+              spaceBetween: 16,
+            },
+            640: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 24,
+            },
+            1280: {
+              slidesPerView: 4,
+              spaceBetween: 24,
+            },
+          }}
+          pagination={{
+            clickable: true,
+            el: ".products-pagination",
+            bulletClass: "product-bullet",
+            bulletActiveClass: "product-bullet-active",
+          }}
+          navigation={{
+            nextEl: nextRef.current,
+            prevEl: prevRef.current,
+          }}
+          modules={[Navigation, Pagination, Autoplay]}
+          className="w-full" // Importante: overflow visible para que las alturas se calculen correctamente
+          onInit={(swiper) => {
+            // @ts-ignore
+            swiper.params.navigation.prevEl = prevRef.current;
+            // @ts-ignore
+            swiper.params.navigation.nextEl = nextRef.current;
+            swiper.navigation.init();
+            swiper.navigation.update();
+          }}
+        >
+          {randomProducts.map((product, index) => {
+            const categoryName = getCategoryName(product.categoria!);
 
-          return (
-            <motion.div
-              key={`${product.id}-${index}`}
-              initial={{ opacity: 0, y: 30, scale: 0.95 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{
-                duration: 0.5,
-                ease: "easeOut",
-                delay: index * 0.1,
-              }}
-              whileHover={{
-                y: -6,
-                scale: 1.02,
-                transition: { duration: 0.3, ease: "easeOut" },
-              }}
-              className="w-full"
-            >
-              <Card
-                isPressable
-                onPress={() => handleProductClick(product)}
-                className="group rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden w-full h-full border border-gray-100 bg-white/90 backdrop-blur-sm"
-              >
-                <CardBody className="p-0 w-full">
-                  <div className="relative overflow-hidden w-full">
-                    {/* Imagen del producto */}
-                    <motion.img
-                      src={product.imagenes_urls[0]}
-                      alt={product.nombre}
-                      className="w-full h-56 object-cover"
-                      whileHover={{
-                        scale: 1.05,
-                        transition: { duration: 0.4, ease: "easeOut" },
-                      }}
-                      onError={(e) => {
-                        // Fallback image si la imagen no carga
-                        e.currentTarget.src = "/img/placeholder-product.jpg";
-                      }}
-                    />
-
-                    {/* Badge de categoría */}
-                    <div className="absolute top-4 left-4">
-                      <Chip
-                        variant="flat"
-                        className="bg-black/50 text-white backdrop-blur-sm text-xs"
-                      >
-                        {categoryName}
-                      </Chip>
-                    </div>
-
-                    {/* ID del producto */}
-                    <div className="absolute top-4 right-4">
-                      <Badge variant="flat" color="primary" size="sm">
-                        ID: {product.id}
-                      </Badge>
-                    </div>
-
-                    {/* Título del producto (siempre visible) */}
-                    <div className="absolute bottom-0 left-0 right-0 p4">
-                      <div
-                        className="p-3 transform transition-all duration-300 group-hover:bg-white/10 group-hover:backdrop-blur-sm"
-                        style={{
-                          background:
-                            "linear-gradient(135deg, rgba(59, 130, 246, 0.95) 0%, rgba(139, 92, 246, 0.9) 100%)",
-                          backdropFilter: "blur(0.5px)",
-                        }}
-                      >
-                        <h3 className="text-white font-semibold text-center drop-shadow-lg line-clamp-2">
-                          {product.nombre}
-                        </h3>
-                      </div>
-                    </div>
-
-                    {/* Indicador de hover */}
-                    <motion.div
-                      className="absolute top-16 right-4 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transform scale-0 group-hover:scale-100 transition-all duration-300"
-                      style={{
-                        width: "40px",
-                        height: "40px",
-                        background: "rgba(255, 255, 255, 0.9)",
-                        backdropFilter: "blur(8px)",
-                      }}
-                      whileHover={{ rotate: 90 }}
+            return (
+              <SwiperSlide key={`${product.id}-${index}`}>
+                <div className="w-full h-full flex items-stretch p-1"> {/* items-stretch para igualar alturas */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{
+                      duration: 0.5,
+                      delay: index * 0.1,
+                    }}
+                    className="w-full h-full flex" // flex para que ocupe toda la altura disponible
+                  >
+                    <Card
+                      isPressable
+                      onPress={() => handleProductClick(product)}
+                      className="group rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden w-full border border-slate-100 bg-white/90 backdrop-blur-sm flex flex-col h-full" // h-full para ocupar toda la altura del contenedor
                     >
-                      <div
-                        className="rounded-full"
-                        style={{
-                          width: "8px",
-                          height: "8px",
-                          background: "#ef4444",
-                        }}
-                      />
-                    </motion.div>
-                  </div>
+                      <CardBody className="p-0 w-full h-full flex flex-col">
+                        {/* Sección de imagen - Altura fija */}
+                        <div className="relative h-48 w-full shrink-0 overflow-hidden">
+                          <img
+                            src={product.imagenes_urls[0]}
+                            alt={product.nombre}
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            onError={(e) => {
+                              e.currentTarget.src = "/img/placeholder-product.jpg";
+                            }}
+                          />
 
-                  {/* Información adicional debajo de la imagen */}
-                  <div className="p-4">
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-xs font-medium text-gray-500 uppercase tracking-wide">
-                        Producto
-                      </span>
-                      <Badge variant="flat" color="secondary" size="sm">
-                        {product.categoria}
-                      </Badge>
-                    </div>
+                          {/* Overlay de gradiente */}
+                          <div className="absolute inset-0 bg-linear-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-                    <p className="text-gray-600 text-sm line-clamp-2 leading-relaxed mb-3">
-                      {product.descripcion}
-                    </p>
-
-                    {/* Especificaciones rápidas */}
-                    <div className="space-y-2 mb-3">
-                      {product.capacidad && (
-                        <div className="flex justify-between text-xs">
-                          <span className="text-gray-500">Capacidad:</span>
-                          <span className="font-medium">
-                            {product.capacidad}
-                          </span>
+                          {/* Badge de categoría */}
+                          <div className="absolute top-3 left-3">
+                            <Chip
+                              variant="flat"
+                              className="bg-black/60 text-white backdrop-blur-sm text-xs border-white/20"
+                            >
+                              {categoryName}
+                            </Chip>
+                          </div>
+                         
                         </div>
-                      )}
-                      {product.material?.exterior && (
-                        <div className="flex justify-between text-xs">
-                          <span className="text-gray-500">Material:</span>
-                          <span className="font-medium text-right line-clamp-1">
-                            {product.material.exterior}
-                          </span>
-                        </div>
-                      )}
-                    </div>
 
-                    {/* Colores disponibles */}
-                    {product.colores_disponibles &&
-                      product.colores_disponibles.length > 0 && (
-                        <div className="mb-3">
-                          <span className="text-xs text-gray-500 block mb-1">
-                            Colores:
-                          </span>
-                          <div className="flex flex-wrap gap-1">
-                            {product.colores_disponibles
-                              .slice(0, 3)
-                              .map((color, idx) => (
-                                <span
-                                  key={idx}
-                                  className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded"
-                                >
-                                  {color}
-                                </span>
-                              ))}
-                            {product.colores_disponibles.length > 3 && (
-                              <span className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">
-                                +{product.colores_disponibles.length - 3}
-                              </span>
-                            )}
+                        {/* Contenido - Se expande para ocupar espacio disponible */}
+                        <div className="p-4 grow flex flex-col">
+                          {/* Título */}
+                          <h3 className="font-semibold text-slate-800 line-clamp-2 mb-2 group-hover:text-blue-600 transition-colors">
+                            {product.nombre}
+                          </h3>
+
+                          {/* Descripción */}
+                          <p className="text-slate-600 text-sm line-clamp-3 leading-relaxed mb-3 grow">
+                            {product.descripcion}
+                          </p>
+                          
+                        </div>
+
+                        {/* Footer - Siempre al fondo */}
+                        <div className="p-4 border-t border-slate-100 mt-auto">
+                          <div className="flex items-center justify-end">                            
+                            <div className="flex items-center text-blue-600 text-xs font-medium group/link">
+                              Ver detalles
+                              <FiArrowRight size={12} className="ml-1 group-hover/link:translate-x-1 transition-transform" />
+                            </div>
                           </div>
                         </div>
-                      )}
 
-                    <div className="flex items-center justify-between pt-3 border-t border-gray-100">
-                      <span className="text-xs text-gray-500">
-                        {product.origen}
-                      </span>
-                      <div className="flex items-center text-red-600 text-xs font-medium">
-                        Ver más
-                        <FiArrowRight size={12} className="ml-1" />
-                      </div>
-                    </div>
-                  </div>
-                </CardBody>
-              </Card>
-            </motion.div>
-          );
-        })}
+                        {/* Efecto de brillo al hover */}
+                        <div className="absolute inset-0 rounded-2xl bg-linear-to-r from-blue-500/0 via-purple-500/0 to-cyan-500/0 group-hover:from-blue-500/5 group-hover:via-purple-500/5 group-hover:to-cyan-500/5 transition-all duration-500 pointer-events-none" />
+                      </CardBody>
+                    </Card>
+                  </motion.div>
+                </div>
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+
+        {/* Paginación personalizada */}        
       </div>
+
+      {/* Estilos para la paginación */}
+      <style jsx global>{`                
+        /* Asegurar que los slides tengan la misma altura */
+        .swiper-slide {
+          height: auto !important;
+          display: flex !important;
+        }
+        
+        .swiper-slide > div {
+          width: 100%;
+        }
+      `}</style>
     </div>
   );
 }

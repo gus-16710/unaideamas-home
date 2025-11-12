@@ -7,7 +7,7 @@ export default function ContactHelp() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className="mb-10 bg-linear-to-r from-blue-600 via-sky-500 to-cyan-400 text-white 
+      className="mb-10 mt-5 bg-linear-to-r from-blue-600 via-sky-500 to-cyan-400 text-white 
              p-6 rounded-2xl shadow-lg flex flex-col md:flex-row items-center 
              justify-between gap-4 md:gap-6 text-center md:text-left"
     >

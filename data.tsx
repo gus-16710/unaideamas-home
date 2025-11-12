@@ -14,7 +14,8 @@ export const categoriesList: Category[] = [
     url: "cilindros",
     description:
       "Refresca tu marca con cilindros personalizados. Ideales para eventos, promociones o regalos corporativos, disponibles en una amplia variedad de estilos y colores.",
-    icon: <GiWaterBottle size={32} className="text-white" />,
+    icon: GiWaterBottle,
+    color: "text-green-500"
   },
   {
     id: 2,
@@ -23,7 +24,8 @@ export const categoriesList: Category[] = [
     url: "termos",
     description:
       "Termos de alta calidad para mantener tus bebidas a la temperatura ideal",
-    icon: <FaMugHot size={32} className="text-white" />,
+    icon: FaMugHot,
+    color: "text-purple-500"
   },
   {
     id: 3,
@@ -31,8 +33,9 @@ export const categoriesList: Category[] = [
     img: "/img/categories/agendas.jpg",
     url: "agendas",
     description:
-      "Organiza tu tiempo con nuestras agendas y libretas de diseño único",
-    icon: <FaBook size={32} className="text-white" />,
+      "Organiza tu tiempo con nuestras agendas y libretas de diseño único",    
+    icon: FaBook,
+    color: "text-red-500"
   },
   {
     id: 4,
@@ -40,7 +43,8 @@ export const categoriesList: Category[] = [
     img: "/img/categories/bolsas.jpg",
     url: "bolsas",
     description: "Bolsas ecológicas y prácticas para el día a día",
-    icon: <IoBagOutline size={32} className="text-white" />,
+    icon: IoBagOutline,
+    color: "text-blue-500"
   },
   {
     id: 5,
@@ -48,7 +52,8 @@ export const categoriesList: Category[] = [
     img: "/img/categories/lapiceros.jpg",
     url: "lapiceros",
     description: "Bolígrafos de calidad premium para escribir con estilo",
-    icon: <FaPenClip size={32} className="text-white" />,
+    icon: FaPenClip,
+    color: "text-yellow-500"
   },
   {
     id: 6,
@@ -57,7 +62,8 @@ export const categoriesList: Category[] = [
     url: "vasos",
     description:
       "Vasos personalizados ideales para eventos, promociones y uso diario. Diseños modernos y resistentes.",
-    icon: <LuCupSoda size={32} className="text-white" />,
+    icon: LuCupSoda,
+    color: "text-orange-500"
   },
 ];
 

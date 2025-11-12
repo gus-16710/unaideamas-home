@@ -27,6 +27,8 @@ export default function CategoryPageClient({
   const products = getProductsByCategory(category);
   const categoryDetails = getCategoryByUrl(category);
 
+  const Icon = categoryDetails?.icon!;
+
   return (
     <div
       className="min-h-screen font-sans w-full relative overflow-hidden"
@@ -69,7 +71,7 @@ export default function CategoryPageClient({
                 background: "linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%)",
               }}
             >
-              {categoryDetails?.icon && categoryDetails.icon}
+              <Icon />
             </div>
           </motion.div>
 

@@ -15,7 +15,8 @@ export default function Breadcrumb() {
       <Breadcrumbs
         classNames={{
           list: "bg-white/70 backdrop-blur-sm rounded-lg px-4 py-2 shadow-sm border border-white/50",
-        }}                
+        }}      
+        size="lg"      
       >
         <BreadcrumbItem
           onPress={() => router.push("/")}
