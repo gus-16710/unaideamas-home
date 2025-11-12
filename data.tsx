@@ -15,7 +15,7 @@ export const categoriesList: Category[] = [
     description:
       "Refresca tu marca con cilindros personalizados. Ideales para eventos, promociones o regalos corporativos, disponibles en una amplia variedad de estilos y colores.",
     icon: GiWaterBottle,
-    color: "text-green-500"
+    color: "text-green-500",
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ export const categoriesList: Category[] = [
     description:
       "Termos de alta calidad para mantener tus bebidas a la temperatura ideal",
     icon: FaMugHot,
-    color: "text-purple-500"
+    color: "text-purple-500",
   },
   {
     id: 3,
@@ -33,9 +33,9 @@ export const categoriesList: Category[] = [
     img: "/img/categories/agendas.jpg",
     url: "agendas",
     description:
-      "Organiza tu tiempo con nuestras agendas y libretas de diseño único",    
+      "Organiza tu tiempo con nuestras agendas y libretas de diseño único",
     icon: FaBook,
-    color: "text-red-500"
+    color: "text-red-500",
   },
   {
     id: 4,
@@ -44,7 +44,7 @@ export const categoriesList: Category[] = [
     url: "bolsas",
     description: "Bolsas ecológicas y prácticas para el día a día",
     icon: IoBagOutline,
-    color: "text-blue-500"
+    color: "text-blue-500",
   },
   {
     id: 5,
@@ -53,7 +53,7 @@ export const categoriesList: Category[] = [
     url: "lapiceros",
     description: "Bolígrafos de calidad premium para escribir con estilo",
     icon: FaPenClip,
-    color: "text-yellow-500"
+    color: "text-yellow-500",
   },
   {
     id: 6,
@@ -63,7 +63,7 @@ export const categoriesList: Category[] = [
     description:
       "Vasos personalizados ideales para eventos, promociones y uso diario. Diseños modernos y resistentes.",
     icon: LuCupSoda,
-    color: "text-orange-500"
+    color: "text-orange-500",
   },
 ];
 
@@ -88,7 +88,7 @@ export const initialProducts: CategoryProducts = {
         individual: "Bolsa de plástico",
         mayorista: "Caja máster de 500 piezas (34 x 28 x 18 cm, 7.8 kg)",
       },
-      colores_disponibles: ["Blanco", "Negro", "Rojo", "Azul marino"],
+      colores_disponibles: ["#FFFFFF", "#000000", "#FF0000", "#000080"],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -117,7 +117,7 @@ export const initialProducts: CategoryProducts = {
         tipo: "Bolsa individual",
         color: "Transparente",
       },
-      colores_disponibles: ["Blanco", "Negro", "Rojo", "Azul marino"],
+      colores_disponibles: ["#FFFFFF", "#000000", "#FF0000", "#000080"],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -147,20 +147,20 @@ export const initialProducts: CategoryProducts = {
         color: "Transparente",
       },
       colores_disponibles: [
-        "Blanco",
-        "Negro",
-        "Rojo",
-        "Azul marino",
-        "Amarillo",
-        "Verde",
-        "Naranja",
-        "Rosa",
-        "Morado",
-        "Turquesa",
-        "Fucsia",
-        "Lima",
-        "Palo de rosa",
-        "Púrpura",
+        "#FFFFFF",
+        "#000000",
+        "#FF0000",
+        "#000080",
+        "#FFFF00",
+        "#008000",
+        "#FFA500",
+        "#FFC0CB",
+        "#800080",
+        "#40E0D0",
+        "#FF00FF",
+        "#00FF00",
+        "#F0C0C0",
+        "#800080",
       ],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
@@ -190,7 +190,7 @@ export const initialProducts: CategoryProducts = {
         tipo: "Caja individual",
         color: "Kraft",
       },
-      colores_disponibles: ["Verde", "Rojo"],
+      colores_disponibles: ["#008000", "#FF0000"],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -220,16 +220,16 @@ export const initialProducts: CategoryProducts = {
         color: "Transparente",
       },
       colores_disponibles: [
-        "Blanco",
-        "Negro",
-        "Naranja",
-        "Rojo",
-        "Rosa",
-        "Verde",
-        "Amarillo",
-        "Azul",
-        "Azul claro",
-        "Morado",
+        "#FFFFFF",
+        "#000000",
+        "#FFA500",
+        "#FF0000",
+        "#FFC0CB",
+        "#008000",
+        "#FFFF00",
+        "#0000FF",
+        "#87CEEB",
+        "#800080",
       ],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
@@ -259,7 +259,7 @@ export const initialProducts: CategoryProducts = {
         tipo: "Bolsa de plástico",
         color: "Transparente",
       },
-      colores_disponibles: ["Café"],
+      colores_disponibles: ["#A0522D"],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -288,7 +288,7 @@ export const initialProducts: CategoryProducts = {
         tipo: "Bolsa de plástico",
         color: "Transparente",
       },
-      colores_disponibles: ["Rojo", "Azul", "Negro", "Verde", "Naranja"],
+      colores_disponibles: ["#FF0000", "#0000FF", "#000000", "#008000", "#FFA500"],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -317,7 +317,7 @@ export const initialProducts: CategoryProducts = {
         tipo: "Bolsa de celofán",
         color: "Transparente",
       },
-      colores_disponibles: ["Verde claro", "Azul", "Beige"],
+      colores_disponibles: ["#90EE90", "#0000FF", "#F5F5DC"],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -347,11 +347,11 @@ export const initialProducts: CategoryProducts = {
         color: "Transparente",
       },
       colores_disponibles: [
-        "Rojo",
-        "Verde claro",
-        "Azul claro",
-        "Beige",
-        "Palo de rosa",
+        "#FF0000",
+        "#90EE90",
+        "#87CEEB",
+        "#F5F5DC",
+        "#F0C0C0",
       ],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
@@ -380,7 +380,7 @@ export const initialProducts: CategoryProducts = {
         individual: "Sí",
         mayorista: "Caja de 100 piezas (66.5 x 35 x 28.5 cm, 10 kg)",
       },
-      colores_disponibles: ["Negro (tinta)"],
+      colores_disponibles: ["#000000"],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "6218 disponibles (sujeto a cambios)",
@@ -410,15 +410,15 @@ export const initialProducts: CategoryProducts = {
         mayorista: "Caja de 500 piezas (32 x 15 x 26.5 cm, 8.5 kg)",
       },
       colores_disponibles: [
-        "Negro",
-        "Blanco",
-        "Rojo",
-        "Azul",
-        "Verde",
-        "Amarillo",
-        "Naranja",
-        "Rosa",
-        "Azul Cielo",
+        "#000000",
+        "#FFFFFF",
+        "#FF0000",
+        "#0000FF",
+        "#008000",
+        "#FFFF00",
+        "#FFA500",
+        "#FFC0CB",
+        "#87CEEB",
       ],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
@@ -448,7 +448,7 @@ export const initialProducts: CategoryProducts = {
         individual: "Sí",
         mayorista: "Caja de 500 piezas (58 x 24 x 17 cm, 9 kg)",
       },
-      colores_disponibles: ["Azul", "Blanco", "Negro", "Gris", "Rosa", "Rojo"],
+      colores_disponibles: ["#0000FF", "#FFFFFF", "#000000", "#808080", "#FFC0CB", "#FF0000"],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -478,14 +478,14 @@ export const initialProducts: CategoryProducts = {
         mayorista: "Caja con 2,000 piezas (54 x 23 x 32 cm, 12 kg)",
       },
       colores_disponibles: [
-        "Azul",
-        "Blanco",
-        "Rojo",
-        "Negro",
-        "Verde",
-        "Amarillo",
-        "Naranja",
-        "Azul Cielo",
+        "#0000FF",
+        "#FFFFFF",
+        "#FF0000",
+        "#000000",
+        "#008000",
+        "#FFFF00",
+        "#FFA500",
+        "#87CEEB",
       ],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
@@ -515,7 +515,7 @@ export const initialProducts: CategoryProducts = {
         individual: "No",
         mayorista: "Caja con 1,000 piezas (55 x 23 x 32 cm, 14 kg)",
       },
-      colores_disponibles: ["Rojo", "Azul", "Negro"],
+      colores_disponibles: ["#FF0000", "#0000FF", "#000000"],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -545,13 +545,13 @@ export const initialProducts: CategoryProducts = {
         mayorista: "Caja con 1,000 piezas (48 x 22 x 31 cm, 9 kg)",
       },
       colores_disponibles: [
-        "Rojo",
-        "Azul",
-        "Negro",
-        "Verde",
-        "Amarillo",
-        "Naranja",
-        "Morado",
+        "#FF0000",
+        "#0000FF",
+        "#000000",
+        "#008000",
+        "#FFFF00",
+        "#FFA500",
+        "#800080",
       ],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
@@ -581,7 +581,7 @@ export const initialProducts: CategoryProducts = {
         individual: "Bolsa de plástico",
         mayorista: "Caja con 1,000 piezas (52 x 22 x 33 cm, 12.5 kg)",
       },
-      colores_disponibles: ["Azul", "Rojo", "Negro", "Verde", "Naranja"],
+      colores_disponibles: ["#0000FF", "#FF0000", "#000000", "#008000", "#FFA500"],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -610,7 +610,7 @@ export const initialProducts: CategoryProducts = {
         individual: "Bolsa de plástico",
         mayorista: "Caja con 1,000 piezas (55 x 16 x 31 cm, 8 kg)",
       },
-      colores_disponibles: ["Azul", "Rojo", "Negro", "Verde", "Naranja"],
+      colores_disponibles: ["#0000FF", "#FF0000", "#000000", "#008000", "#FFA500"],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -640,16 +640,16 @@ export const initialProducts: CategoryProducts = {
         mayorista: "Caja con 1,000 piezas (48 x 20 x 31 cm, 9.5 kg)",
       },
       colores_disponibles: [
-        "Negro",
-        "Morado",
-        "Verde",
-        "Rojo",
-        "Azul",
-        "Amarillo",
-        "Naranja",
-        "Rosa",
-        "Turquesa",
-        "Blanco",
+        "#000000",
+        "#800080",
+        "#008000",
+        "#FF0000",
+        "#0000FF",
+        "#FFFF00",
+        "#FFA500",
+        "#FFC0CB",
+        "#40E0D0",
+        "#FFFFFF",
       ],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
@@ -679,7 +679,7 @@ export const initialProducts: CategoryProducts = {
         individual: "Bolsa de plástico",
         mayorista: "Caja con 1,000 piezas (48 x 22 x 33 cm, 13 kg)",
       },
-      colores_disponibles: ["Azul", "Rojo", "Verde"],
+      colores_disponibles: ["#0000FF", "#FF0000", "#008000"],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -709,12 +709,12 @@ export const initialProducts: CategoryProducts = {
         mayorista: "Caja con 500 piezas (55 x 22 x 32 cm, 10 kg)",
       },
       colores_disponibles: [
-        "Naranja",
-        "Verde",
-        "Azul",
-        "Rojo",
-        "Negro",
-        "Blanco",
+        "#FFA500",
+        "#008000",
+        "#0000FF",
+        "#FF0000",
+        "#000000",
+        "#FFFFFF",
       ],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
@@ -747,7 +747,7 @@ export const initialProducts: CategoryProducts = {
         tipo: "Caja individual",
         color: "Natural",
       },
-      colores_disponibles: ["Beige"],
+      colores_disponibles: ["#F5F5DC"], // Beige
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -776,7 +776,7 @@ export const initialProducts: CategoryProducts = {
         tipo: "Bolsa individual",
         color: "Beige",
       },
-      colores_disponibles: ["Beige"],
+      colores_disponibles: ["#F5F5DC"], // Beige
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -805,7 +805,7 @@ export const initialProducts: CategoryProducts = {
         tipo: "Bolsa individual",
         color: "Blanco",
       },
-      colores_disponibles: ["Blanco"],
+      colores_disponibles: ["#FFFFFF"], // Blanco
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -834,7 +834,7 @@ export const initialProducts: CategoryProducts = {
         tipo: "Bolsa individual",
         color: "Beige",
       },
-      colores_disponibles: ["Beige"],
+      colores_disponibles: ["#F5F5DC"], // Beige
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -863,7 +863,7 @@ export const initialProducts: CategoryProducts = {
         tipo: "Bolsa individual",
         color: "Negro",
       },
-      colores_disponibles: ["Negro"],
+      colores_disponibles: ["#000000"], // Negro
       origen: "Hecho en México",
       precio_lista: "$77.08 MXN",
       disponibilidad: "Consultar inventario",
@@ -892,7 +892,7 @@ export const initialProducts: CategoryProducts = {
         tipo: "Bolsa individual",
         color: "A juego con la libreta",
       },
-      colores_disponibles: ["Gris", "Rosa", "Azul", "Verde"],
+      colores_disponibles: ["#6B7280", "#EC4899", "#2563EB", "#16A34A"], // Gris, Rosa, Azul, Verde
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -921,7 +921,7 @@ export const initialProducts: CategoryProducts = {
         tipo: "Caja individual",
         color: "A juego con la libreta",
       },
-      colores_disponibles: ["Beige"],
+      colores_disponibles: ["#F5F5DC"], // Beige
       origen: "Hecho en México",
       precio_lista: "$89.07 MXN",
       disponibilidad: "Consultar inventario",
@@ -950,7 +950,7 @@ export const initialProducts: CategoryProducts = {
         tipo: "Bolsa individual",
         color: "Beige",
       },
-      colores_disponibles: ["Negro", "Gris", "Rojo", "Azul"],
+      colores_disponibles: ["#000000", "#6B7280", "#DC2626", "#2563EB"], // Negro, Gris, Rojo, Azul
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -979,7 +979,7 @@ export const initialProducts: CategoryProducts = {
         tipo: "Caja individual",
         color: "A juego con la libreta",
       },
-      colores_disponibles: ["Negro", "Azul", "Rojo", "Gris"],
+      colores_disponibles: ["#000000", "#2563EB", "#DC2626", "#6B7280"], // Negro, Azul, Rojo, Gris
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -1008,7 +1008,7 @@ export const initialProducts: CategoryProducts = {
         tipo: "Bolsa individual",
         color: "Beige",
       },
-      colores_disponibles: ["Beige"],
+      colores_disponibles: ["#F5F5DC"], // Beige
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -1037,7 +1037,7 @@ export const initialProducts: CategoryProducts = {
         tipo: "Caja de cartón",
         color: "Beige",
       },
-      colores_disponibles: ["Beige"],
+      colores_disponibles: ["#F5F5DC"], // Beige
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -1066,7 +1066,7 @@ export const initialProducts: CategoryProducts = {
         tipo: "Caja de cartón",
         color: "Beige",
       },
-      colores_disponibles: ["Beige"],
+      colores_disponibles: ["#F5F5DC"], // Beige
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -1095,7 +1095,7 @@ export const initialProducts: CategoryProducts = {
         tipo: "Bolsa individual",
         color: "A juego con la libreta",
       },
-      colores_disponibles: ["Negro"],
+      colores_disponibles: ["#000000"], // Negro
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -1124,7 +1124,7 @@ export const initialProducts: CategoryProducts = {
         tipo: "Caja individual tipo regalo",
         color: null,
       },
-      colores_disponibles: ["No especificado"],
+      colores_disponibles: ["#E5E7EB"], // No especificado (gris claro)
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -1153,7 +1153,7 @@ export const initialProducts: CategoryProducts = {
         tipo: "Bolsa individual",
         color: "A juego con el set",
       },
-      colores_disponibles: ["Negro"],
+      colores_disponibles: ["#000000"], // Negro
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -1184,12 +1184,12 @@ export const initialProducts: CategoryProducts = {
         color: "A juego con la agenda",
       },
       colores_disponibles: [
-        "Rojo",
-        "Naranja",
-        "Turquesa",
-        "Negro",
-        "Azul marino",
-      ],
+        "#DC2626",
+        "#EA580C",
+        "#06B6D4",
+        "#000000",
+        "#1E3A8A",
+      ], // Rojo, Naranja, Turquesa, Negro, Azul marino
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -1220,13 +1220,13 @@ export const initialProducts: CategoryProducts = {
         color: "Negro",
       },
       colores_disponibles: [
-        "Negro",
-        "Naranja",
-        "Rojo",
-        "Azul marino",
-        "Palo de rosa",
-        "Morado",
-      ],
+        "#000000",
+        "#EA580C",
+        "#DC2626",
+        "#1E3A8A",
+        "#FBCFE8",
+        "#9333EA",
+      ], // Negro, Naranja, Rojo, Azul marino, Palo de rosa, Morado
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -1257,13 +1257,13 @@ export const initialProducts: CategoryProducts = {
         color: "Blanco con cubierta transparente",
       },
       colores_disponibles: [
-        "Negro",
-        "Rojo",
-        "Azul",
-        "Azul claro",
-        "Lila",
-        "Palo de rosa",
-      ],
+        "#000000",
+        "#DC2626",
+        "#2563EB",
+        "#60A5FA",
+        "#C084FC",
+        "#FBCFE8",
+      ], // Negro, Rojo, Azul, Azul claro, Lila, Palo de rosa
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -1293,7 +1293,7 @@ export const initialProducts: CategoryProducts = {
         tipo: "Caja individual",
         color: "A juego con la agenda",
       },
-      colores_disponibles: ["Gris", "Azul claro", "Turquesa", "Beige"],
+      colores_disponibles: ["#6B7280", "#60A5FA", "#06B6D4", "#F5F5DC"], // Gris, Azul claro, Turquesa, Beige
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -1323,7 +1323,7 @@ export const initialProducts: CategoryProducts = {
         tipo: "Bolsa de Plástico",
         color: "Transparente",
       },
-      colores_disponibles: ["Negro", "Rojo", "Verde", "Azul"],
+      colores_disponibles: ["#000000", "#DC2626", "#16A34A", "#2563EB"], // Negro, Rojo, Verde, Azul
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -1353,7 +1353,7 @@ export const initialProducts: CategoryProducts = {
         tipo: "Bolsa de plástico",
         color: "Transparente",
       },
-      colores_disponibles: ["Rojo"],
+      colores_disponibles: ["#DC2626"], // Rojo
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -1368,7 +1368,7 @@ export const initialProducts: CategoryProducts = {
       id: "A2922",
       nombre: "Zipper",
       descripcion:
-        "Libreta vertical A5 de tela con bolsa al frente y detalle de cremallera en color. La libreta es de 80 hojas rayadas (160 páginas). Incluye listón separador del mismo color que el cierre. :contentReference[oaicite:1]{index=1}",
+        "Libreta vertical A5 de tela con bolsa al frente y detalle de cremallera en color. La libreta es de 80 hojas rayadas (160 páginas). Incluye listón separador del mismo color que el cierre.",
       capacidad: null,
       material: {
         exterior: "Poliéster / Papel",
@@ -1383,7 +1383,7 @@ export const initialProducts: CategoryProducts = {
         tipo: "Bolsa individual",
         color: "Transparente",
       },
-      colores_disponibles: ["Negro", "Rojo", "Azul"],
+      colores_disponibles: ["#000000", "#DC2626", "#2563EB"], // Negro, Rojo, Azul
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -1414,13 +1414,13 @@ export const initialProducts: CategoryProducts = {
         color: "Negro",
       },
       colores_disponibles: [
-        "Negro",
-        "Naranja",
-        "Rojo",
-        "Verde claro",
-        "Azul",
-        "Morado",
-      ],
+        "#000000",
+        "#EA580C",
+        "#DC2626",
+        "#22C55E",
+        "#2563EB",
+        "#9333EA",
+      ], // Negro, Naranja, Rojo, Verde claro, Azul, Morado
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -1451,7 +1451,7 @@ export const initialProducts: CategoryProducts = {
         tipo: "Caja individual",
         color: "Blanco",
       },
-      colores_disponibles: ["Rojo", "Negro", "Azul", "Oro"],
+      colores_disponibles: ["#DC2626", "#000000", "#2563EB", "#FFD700"], // Rojo, Negro, Azul, Oro
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -1480,7 +1480,13 @@ export const initialProducts: CategoryProducts = {
         tipo: "Caja individual",
         color: "Blanco",
       },
-      colores_disponibles: ["Negro", "Naranja", "Morado", "Verde", "Azul"],
+      colores_disponibles: [
+        "#000000",
+        "#EA580C",
+        "#9333EA",
+        "#16A34A",
+        "#2563EB",
+      ], // Negro, Naranja, Morado, Verde, Azul
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -1509,7 +1515,7 @@ export const initialProducts: CategoryProducts = {
         tipo: "Caja individual",
         color: "Blanco",
       },
-      colores_disponibles: ["Plata", "Rojo", "Negro", "Azul"],
+      colores_disponibles: ["#C0C0C0", "#DC2626", "#000000", "#2563EB"], // Plata, Rojo, Negro, Azul
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -1538,7 +1544,7 @@ export const initialProducts: CategoryProducts = {
         tipo: "Caja individual",
         color: "Blanco",
       },
-      colores_disponibles: ["Amarillo", "Naranja", "Rosa"],
+      colores_disponibles: ["#EAB308", "#EA580C", "#EC4899"], // Amarillo, Naranja, Rosa
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -1567,7 +1573,13 @@ export const initialProducts: CategoryProducts = {
         tipo: "Caja individual",
         color: "Blanco",
       },
-      colores_disponibles: ["Rojo", "Verde", "Naranja", "Azul", "Negro"],
+      colores_disponibles: [
+        "#DC2626",
+        "#16A34A",
+        "#EA580C",
+        "#2563EB",
+        "#000000",
+      ], // Rojo, Verde, Naranja, Azul, Negro
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -1596,7 +1608,7 @@ export const initialProducts: CategoryProducts = {
         tipo: "Bolsa de plástico",
         color: "Transparente",
       },
-      colores_disponibles: ["Negro", "Rojo", "Azul"],
+      colores_disponibles: ["#000000", "#DC2626", "#2563EB"], // Negro, Rojo, Azul
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -1625,7 +1637,7 @@ export const initialProducts: CategoryProducts = {
         tipo: "Caja individual",
         color: "Blanco",
       },
-      colores_disponibles: ["Negro", "Blanco"],
+      colores_disponibles: ["#000000", "#FFFFFF"], // Negro, Blanco
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -1655,12 +1667,12 @@ export const initialProducts: CategoryProducts = {
         color: "Blanco",
       },
       colores_disponibles: [
-        "Blanco",
-        "Negro",
-        "Rosa",
-        "Azul claro",
-        "Turquesa",
-      ],
+        "#FFFFFF",
+        "#000000",
+        "#EC4899",
+        "#60A5FA",
+        "#06B6D4",
+      ], // Blanco, Negro, Rosa, Azul claro, Turquesa
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -1690,17 +1702,17 @@ export const initialProducts: CategoryProducts = {
         color: "Blanco",
       },
       colores_disponibles: [
-        "Blanco",
-        "Negro",
-        "Naranja",
-        "Rojo",
-        "Rosa",
-        "Verde claro",
-        "Azul",
-        "Azul claro",
-        "Plata",
-        "Turquesa",
-      ],
+        "#FFFFFF",
+        "#000000",
+        "#EA580C",
+        "#DC2626",
+        "#EC4899",
+        "#22C55E",
+        "#2563EB",
+        "#60A5FA",
+        "#C0C0C0",
+        "#06B6D4",
+      ], // Blanco, Negro, Naranja, Rojo, Rosa, Verde claro, Azul, Azul claro, Plata, Turquesa
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -1729,7 +1741,7 @@ export const initialProducts: CategoryProducts = {
         tipo: "Caja individual",
         color: "Blanco",
       },
-      colores_disponibles: ["Natural (bambú)"],
+      colores_disponibles: ["#A1887F"], // Natural (bambú) - color café claro
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -1741,7 +1753,7 @@ export const initialProducts: CategoryProducts = {
       id: "SUB140",
       nombre: "Roxio",
       descripcion:
-        "Termo para auto de sublimación 15 oz. Interior de acero inoxidable, tapa de plástico con cierre y asa. Ideal para personalización. ",
+        "Termo para auto de sublimación 15 oz. Interior de acero inoxidable, tapa de plástico con cierre y asa. Ideal para personalización.",
       capacidad: "450 ml",
       material: {
         exterior: "Acero inoxidable",
@@ -1755,7 +1767,7 @@ export const initialProducts: CategoryProducts = {
         tipo: "48 piezas por caja",
         color: null,
       },
-      colores_disponibles: ["Plata", "Blanco"],
+      colores_disponibles: ["#C0C0C0", "#FFFFFF"], // Plata, Blanco
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -1770,7 +1782,7 @@ export const initialProducts: CategoryProducts = {
       id: "A2868",
       nombre: "Nayad Neo - Tapa Deslizable",
       descripcion:
-        "Termo NAYAD NEO de 16 Oz. de doble pared, la interna es de acero inoxidable y la externa de granos de café reciclado. Mantiene bebidas calientes por 3 hrs y frías por 5 hrs. Cuenta con tapa deslizable hacia atrás, botón dorado, cinta metálica color bronce y rosca hermética anti-derrames y anti-escurrimiento. ",
+        "Termo NAYAD NEO de 16 Oz. de doble pared, la interna es de acero inoxidable y la externa de granos de café reciclado. Mantiene bebidas calientes por 3 hrs y frías por 5 hrs. Cuenta con tapa deslizable hacia atrás, botón dorado, cinta metálica color bronce y rosca hermética anti-derrames y anti-escurrimiento.",
       capacidad: "480 ml",
       material: {
         exterior: "Granos de café reciclado",
@@ -1784,7 +1796,7 @@ export const initialProducts: CategoryProducts = {
         tipo: "Caja de color individual",
         color: null,
       },
-      colores_disponibles: ["Café"],
+      colores_disponibles: ["#8B4513"], // Café
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -1813,7 +1825,7 @@ export const initialProducts: CategoryProducts = {
         tipo: "Caja de color individual",
         color: null,
       },
-      colores_disponibles: ["Café"],
+      colores_disponibles: ["#8B4513"], // Café
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -1842,7 +1854,7 @@ export const initialProducts: CategoryProducts = {
         tipo: "Caja individual de color",
         color: null,
       },
-      colores_disponibles: ["Café"],
+      colores_disponibles: ["#8B4513"], // Café
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -1871,7 +1883,13 @@ export const initialProducts: CategoryProducts = {
         tipo: "Caja individual",
         color: "Blanca",
       },
-      colores_disponibles: ["Negro", "Rojo", "Amarillo", "Azul marino", "Lila"],
+      colores_disponibles: [
+        "#000000",
+        "#DC2626",
+        "#EAB308",
+        "#1E3A8A",
+        "#C084FC",
+      ], // Negro, Rojo, Amarillo, Azul marino, Lila
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -1901,15 +1919,15 @@ export const initialProducts: CategoryProducts = {
         color: null,
       },
       colores_disponibles: [
-        "Negro",
-        "Naranja",
-        "Rojo",
-        "Azul",
-        "Azul claro",
-        "Lila",
-        "Beige",
-        "Palo de rosa",
-      ],
+        "#000000",
+        "#EA580C",
+        "#DC2626",
+        "#2563EB",
+        "#60A5FA",
+        "#C084FC",
+        "#F5F5DC",
+        "#FBCFE8",
+      ], // Negro, Naranja, Rojo, Azul, Azul claro, Lila, Beige, Palo de rosa
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -1924,7 +1942,7 @@ export const initialProducts: CategoryProducts = {
       id: "A3119",
       nombre: "CARIBE",
       descripcion:
-        "Termo de plástico de doble pared con asa. Cuenta con tapa transparente con cierre de rosca y sobre tapa giratoria en color del termo, con ranura para popote. Incluye popote de color. ",
+        "Termo de plástico de doble pared con asa. Cuenta con tapa transparente con cierre de rosca y sobre tapa giratoria en color del termo, con ranura para popote. Incluye popote de color.",
       capacidad: "770 ml",
       material: {
         exterior: "Plástico PP / Plástico AS",
@@ -1938,7 +1956,7 @@ export const initialProducts: CategoryProducts = {
         tipo: "Caja individual",
         color: null,
       },
-      colores_disponibles: ["Negro", "Rojo", "Azul marino"],
+      colores_disponibles: ["#000000", "#DC2626", "#1E3A8A"], // Negro, Rojo, Azul marino
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -1953,7 +1971,7 @@ export const initialProducts: CategoryProducts = {
       id: "A3124",
       nombre: "VANILLA",
       descripcion:
-        "Termo con exterior de plástico e interior de acero inoxidable. Cuenta con tapa de rosca anti-derrames con seguro abatible. ",
+        "Termo con exterior de plástico e interior de acero inoxidable. Cuenta con tapa de rosca anti-derrames con seguro abatible.",
       capacidad: "350 ml",
       material: {
         exterior: "Plástico",
@@ -1968,16 +1986,16 @@ export const initialProducts: CategoryProducts = {
         color: null,
       },
       colores_disponibles: [
-        "Blanco",
-        "Negro",
-        "Naranja",
-        "Rojo",
-        "Verde",
-        "Amarillo",
-        "Azul marino",
-        "Palo de rosa",
-        "Morado",
-      ],
+        "#FFFFFF",
+        "#000000",
+        "#EA580C",
+        "#DC2626",
+        "#16A34A",
+        "#EAB308",
+        "#1E3A8A",
+        "#FBCFE8",
+        "#9333EA",
+      ], // Blanco, Negro, Naranja, Rojo, Verde, Amarillo, Azul marino, Palo de rosa, Morado
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -1988,7 +2006,6 @@ export const initialProducts: CategoryProducts = {
       ],
       categoria: "termos",
     },
-
     {
       id: "TMPS-94",
       nombre: "TERMO DIJON",
@@ -2008,13 +2025,13 @@ export const initialProducts: CategoryProducts = {
         color: null,
       },
       colores_disponibles: [
-        "Blanco",
-        "Plata",
-        "Negro",
-        "Gris",
-        "Rosa pastel",
-        "Verde pastel",
-      ],
+        "#FFFFFF",
+        "#C0C0C0",
+        "#000000",
+        "#6B7280",
+        "#FBCFE8",
+        "#BBF7D0",
+      ], // Blanco, Plata, Negro, Gris, Rosa pastel, Verde pastel
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -2042,7 +2059,7 @@ export const initialProducts: CategoryProducts = {
         tipo: "Caja individual",
         color: null,
       },
-      colores_disponibles: ["Negro", "Blanco", "Azul", "Rojo"],
+      colores_disponibles: ["#000000", "#FFFFFF", "#2563EB", "#DC2626"], // Negro, Blanco, Azul, Rojo
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -2071,7 +2088,7 @@ export const initialProducts: CategoryProducts = {
         tipo: "Caja individual",
         color: null,
       },
-      colores_disponibles: ["Plata"],
+      colores_disponibles: ["#C0C0C0"], // Plata
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -2100,7 +2117,13 @@ export const initialProducts: CategoryProducts = {
         tipo: "Caja individual",
         color: null,
       },
-      colores_disponibles: ["Negro", "Rojo", "Verde", "Naranja", "Azul marino"],
+      colores_disponibles: [
+        "#000000",
+        "#DC2626",
+        "#16A34A",
+        "#EA580C",
+        "#1E3A8A",
+      ], // Negro, Rojo, Verde, Naranja, Azul marino
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -2129,7 +2152,7 @@ export const initialProducts: CategoryProducts = {
         tipo: "Caja individual",
         color: null,
       },
-      colores_disponibles: ["Azul", "Negro", "Gris", "Verde"],
+      colores_disponibles: ["#2563EB", "#000000", "#6B7280", "#16A34A"], // Azul, Negro, Gris, Verde
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -2158,7 +2181,7 @@ export const initialProducts: CategoryProducts = {
         tipo: "Caja individual",
         color: null,
       },
-      colores_disponibles: ["Negro", "Blanco"],
+      colores_disponibles: ["#000000", "#FFFFFF"], // Negro, Blanco
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -2178,8 +2201,6 @@ export const initialProducts: CategoryProducts = {
       material: {
         exterior: "Acero inoxidable",
         interior: "Acero inoxidable",
-        //tapa: "Plástico",
-        //popote: "Silicón",
       },
       medidas: {
         alto: "15.8 cm",
@@ -2187,11 +2208,10 @@ export const initialProducts: CategoryProducts = {
       },
       empaque: {
         tipo: "Caja individual",
-        //cantidad_por_caja: 24,
         peso_bruto: "8.3 kg",
         medidas_caja: "56 x 18.8 x 52 cm",
       },
-      colores_disponibles: ["Rosa", "Azul"],
+      colores_disponibles: ["#EC4899", "#2563EB"], // Rosa, Azul
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -2218,20 +2238,19 @@ export const initialProducts: CategoryProducts = {
       },
       empaque: {
         tipo: "Caja individual",
-        //cantidad_por_caja: 50,
         peso_bruto: "10.40 kg",
         medidas_caja: "49 x 33 x 49 cm",
       },
       colores_disponibles: [
-        "Naranja",
-        "Azul marino",
-        "Verde",
-        "Amarillo",
-        "Rojo",
-        "Negro",
-        "Aqua",
-        "Fucsia",
-      ],
+        "#EA580C",
+        "#1E3A8A",
+        "#16A34A",
+        "#EAB308",
+        "#DC2626",
+        "#000000",
+        "#06B6D4",
+        "#EC4899",
+      ], // Naranja, Azul marino, Verde, Amarillo, Rojo, Negro, Aqua, Fucsia
       origen: "Hecho en México",
       precio_lista: "$65.02 MXN",
       disponibilidad: "Consultar inventario",
@@ -2251,7 +2270,6 @@ export const initialProducts: CategoryProducts = {
       material: {
         exterior: "Acero inoxidable",
         interior: "Acero inoxidable",
-        //tapa: "Plástico",
       },
       medidas: {
         alto: "12 cm",
@@ -2259,11 +2277,10 @@ export const initialProducts: CategoryProducts = {
       },
       empaque: {
         tipo: "Caja individual",
-        //cantidad_por_caja: 24,
         peso_bruto: "6.8 kg",
         medidas_caja: "57.5 x 15 x 39 cm",
       },
-      colores_disponibles: ["Tornasol"],
+      colores_disponibles: ["#FF6B6B"], // Tornasol (usando un color vibrante que representa el efecto tornasol)
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -2293,7 +2310,7 @@ export const initialProducts: CategoryProducts = {
         peso_bruto: "7.70 kg",
         medidas_caja: "42 x 27 x 39 cm",
       },
-      colores_disponibles: ["Azul", "Negro", "Rosa"],
+      colores_disponibles: ["#2563EB", "#000000", "#EC4899"], // Azul, Negro, Rosa
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -2325,7 +2342,7 @@ export const initialProducts: CategoryProducts = {
         tipo: null,
         color: null,
       },
-      colores_disponibles: ["Rojo", "Azul", "Verde", "Naranja", "Amarillo"],
+      colores_disponibles: ["#FF0000", "#0000FF", "#00FF00", "#FFA500", "#FFFF00"],
       origen: "Hecho en México",
       precio_lista: "",
       disponibilidad: "",
@@ -2355,7 +2372,7 @@ export const initialProducts: CategoryProducts = {
         tipo: null,
         color: null,
       },
-      colores_disponibles: ["Blanca"],
+      colores_disponibles: ["#FFFFFF"],
       origen: "Hecho en México",
       precio_lista: "",
       disponibilidad: "",
@@ -2385,12 +2402,12 @@ export const initialProducts: CategoryProducts = {
         color: null,
       },
       colores_disponibles: [
-        "Rojo",
-        "Negra",
-        "Azul",
-        "Blanca",
-        "Naranja",
-        "Amarillo",
+        "#FF0000",
+        "#000000",
+        "#0000FF",
+        "#FFFFFF",
+        "#FFA500",
+        "#FFFF00",
       ],
       origen: "Hecho en México",
       precio_lista: "",
@@ -2421,7 +2438,7 @@ export const initialProducts: CategoryProducts = {
         tipo: null,
         color: null,
       },
-      colores_disponibles: ["Rojo", "Azul", "Verde", "Negra", "Blanca", "Vino"],
+      colores_disponibles: ["#FF0000", "#0000FF", "#00FF00", "#000000", "#FFFFFF", "#800000"],
       origen: "Hecho en México",
       precio_lista: "",
       disponibilidad: "",
@@ -2450,7 +2467,7 @@ export const initialProducts: CategoryProducts = {
         tipo: null,
         color: null,
       },
-      colores_disponibles: ["Blanca"],
+      colores_disponibles: ["#FFFFFF"],
       origen: "Hecho en México",
       precio_lista: "",
       disponibilidad: "",
@@ -2481,15 +2498,15 @@ export const initialProducts: CategoryProducts = {
         color: null,
       },
       colores_disponibles: [
-        "Amarillo",
-        "Rojo",
-        "Morado",
-        "Azul",
-        "Verde",
-        "Negra",
-        "Blanca",
-        "Naranja",
-        "Marino",
+        "#FFFF00",
+        "#FF0000",
+        "#800080",
+        "#0000FF",
+        "#00FF00",
+        "#000000",
+        "#FFFFFF",
+        "#FFA500",
+        "#000080",
       ],
       origen: "Hecho en México",
       precio_lista: "",
@@ -2522,7 +2539,7 @@ export const initialProducts: CategoryProducts = {
         tipo: null,
         color: null,
       },
-      colores_disponibles: ["Plata", "Azul", "Dorada", "Oro Rosa"],
+      colores_disponibles: ["#C0C0C0", "#0000FF", "#FFD700", "#FF69B4"],
       origen: "Hecho en México",
       precio_lista: "",
       disponibilidad: "",
@@ -2553,7 +2570,7 @@ export const initialProducts: CategoryProducts = {
         tipo: null,
         color: null,
       },
-      colores_disponibles: ["Varios modelos"],
+      colores_disponibles: ["conic-gradient(from 0deg, #ff004d, #ff7a00, #ffd300, #00c853, #00aaff, #6a00ff, #ff004d)"],
       origen: "Hecho en México",
       precio_lista: "",
       disponibilidad: "",
@@ -2586,7 +2603,7 @@ export const initialProducts: CategoryProducts = {
         tipo: "Granel (200 piezas por caja)",
         color: null,
       },
-      colores_disponibles: ["Negro", "Plata", "Oro"],
+      colores_disponibles: ["#000000", "#C0C0C0", "#FFD700"],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -2616,7 +2633,7 @@ export const initialProducts: CategoryProducts = {
         tipo: "Granel (200 piezas por caja) :contentReference[oaicite:1]{index=1}",
         color: null,
       },
-      colores_disponibles: ["Negro", "Plata", "Oro"],
+      colores_disponibles: ["#000000", "#C0C0C0", "#FFD700"],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -2647,7 +2664,7 @@ export const initialProducts: CategoryProducts = {
         tipo: "Granel (200 piezas por caja)",
         color: null,
       },
-      colores_disponibles: ["Negro", "Naranja", "Rojo", "Verde claro", "Azul"],
+      colores_disponibles: ["#000000", "#FFA500", "#FF0000", "#90EE90", "#0000FF"],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -2678,16 +2695,16 @@ export const initialProducts: CategoryProducts = {
         color: null,
       },
       colores_disponibles: [
-        "Amarillo",
-        "Azul",
-        "Rojo",
-        "Blanco",
-        "Naranja",
-        "Verde",
-        "Negro",
-        "Verde claro",
-        "Rosa",
-        "Vino",
+        "#FFFF00",
+        "#0000FF",
+        "#FF0000",
+        "#FFFFFF",
+        "#FFA500",
+        "#00FF00",
+        "#000000",
+        "#90EE90",
+        "#FFC0CB",
+        "#800000",
       ],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
@@ -2717,7 +2734,7 @@ export const initialProducts: CategoryProducts = {
         tipo: "Granel (200 piezas por caja)",
         color: null,
       },
-      colores_disponibles: ["Amarillo"],
+      colores_disponibles: ["#FFFF00"],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -2746,7 +2763,7 @@ export const initialProducts: CategoryProducts = {
         tipo: "Granel",
         color: null,
       },
-      colores_disponibles: ["Rojo"],
+      colores_disponibles: ["#FF0000"],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -2776,14 +2793,14 @@ export const initialProducts: CategoryProducts = {
         color: null,
       },
       colores_disponibles: [
-        "Azul rey",
-        "Amarillo",
-        "Naranja",
-        "Blanco",
-        "Negro",
-        "Rojo",
-        "Morado",
-        "Verde",
+        "#000080",
+        "#FFFF00",
+        "#FFA500",
+        "#FFFFFF",
+        "#000000",
+        "#FF0000",
+        "#800080",
+        "#00FF00",
       ],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
@@ -2814,12 +2831,12 @@ export const initialProducts: CategoryProducts = {
         color: null,
       },
       colores_disponibles: [
-        "Azul rey",
-        "Amarillo",
-        "Naranja",
-        "Rojo",
-        "Morado",
-        "Verde",
+        "#000080",
+        "#FFFF00",
+        "#FFA500",
+        "#FF0000",
+        "#800080",
+        "#00FF00",
       ],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
@@ -2849,7 +2866,7 @@ export const initialProducts: CategoryProducts = {
         tipo: "Caja de 200 piezas",
         color: null,
       },
-      colores_disponibles: ["Azul", "Naranja", "Rojo", "Verde"],
+      colores_disponibles: ["#0000FF", "#FFA500", "#FF0000", "#00FF00"],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "3119 disponibles",
@@ -2879,7 +2896,7 @@ export const initialProducts: CategoryProducts = {
         tipo: "Caja de 60 piezas",
         color: null,
       },
-      colores_disponibles: ["Beige"],
+      colores_disponibles: ["#F5F5DC"],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -2909,7 +2926,7 @@ export const initialProducts: CategoryProducts = {
         tipo: "Caja de 200 piezas",
         color: null,
       },
-      colores_disponibles: ["Multicolor"],
+      colores_disponibles: ["conic-gradient(from 0deg, #ff004d, #ff7a00, #ffd300, #00c853, #00aaff, #6a00ff, #ff004d)"],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -2939,7 +2956,7 @@ export const initialProducts: CategoryProducts = {
         tipo: "Caja de 200 piezas",
         color: null,
       },
-      colores_disponibles: ["Blanco", "Negro", "Azul"],
+      colores_disponibles: ["#FFFFFF", "#000000", "#0000FF"],
       origen: "Hecho en México",
       precio_lista: "$16.83 MXN",
       disponibilidad: "2662 disponibles",
@@ -2971,14 +2988,14 @@ export const initialProducts: CategoryProducts = {
         color: "No especificado",
       },
       colores_disponibles: [
-        "Amarillo",
-        "Azul",
-        "Negro",
-        "Verde",
-        "Transparente",
-        "Naranja",
-        "Rosa",
-        "Morado",
+        "#EAB308", // Amarillo
+        "#2563EB", // Azul
+        "#000000", // Negro
+        "#16A34A", // Verde
+        "#FFFFFF", // Transparente (usando blanco como base)
+        "#EA580C", // Naranja
+        "#EC4899", // Rosa
+        "#9333EA", // Morado
       ],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
@@ -3010,14 +3027,17 @@ export const initialProducts: CategoryProducts = {
         color: "No especificado",
       },
       colores_disponibles: [
-        "Azul translúcido",
-        "Naranja translúcido",
-        "Blanco translúcido",
-        "Negro",
-        "Rojo translúcido",
-        "Amarillo translúcido",
-        "Plata sólido",
-        "Verde translúcido",
+        "#16A34A", // Verde
+        "#EA580C", // Naranja
+        "#2563EB", // Azul
+        "#DC2626", // Rojo
+        "#000000", // Negro
+        "#FFFFFF", // Blanco
+        "#C0C0C0", // Plata
+        "#EC4899", // Rosado
+        "#6B7280", // Gris
+        "#9333EA", // Morado
+        "#EAB308", // Amarillo
       ],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
@@ -3034,7 +3054,7 @@ export const initialProducts: CategoryProducts = {
       id: "ANF-041",
       nombre: "CILINDRO ODESA",
       descripcion:
-        "Sistema de rosca twist-off que permite abrir y cerrar la tapa en un giro. Incluye válvula de seguridad. Mantener el linner en el interior de la tapa en todo momento, se debe retirar hasta su uso final. No exponer el cilindro a temperaturas mayores a 40 °C y revisar que la tapa no esté cerrada completamente para su almacenamiento y transportación. Mantener en su empaque individual antes y después de su transformación. No apto para bebidas calientes. No introducir en microondas ni lavavajillas. ",
+        "Sistema de rosca twist-off que permite abrir y cerrar la tapa en un giro. Incluye válvula de seguridad. Mantener el linner en el interior de la tapa en todo momento, se debe retirar hasta su uso final. No exponer el cilindro a temperaturas mayores a 40 °C y revisar que la tapa no esté cerrada completamente para su almacenamiento y transportación. Mantener en su empaque individual antes y después de su transformación. No apto para bebidas calientes. No introducir en microondas ni lavavajillas.",
       capacidad: "500 ml",
       material: {
         exterior: "PET",
@@ -3048,7 +3068,19 @@ export const initialProducts: CategoryProducts = {
         tipo: "Bolsa individual",
         color: "No especificado",
       },
-      colores_disponibles: ["No especificado"],
+      colores_disponibles: [
+        "#16A34A", // Verde
+        "#EA580C", // Naranja
+        "#2563EB", // Azul
+        "#DC2626", // Rojo
+        "#000000", // Negro
+        "#FFFFFF", // Blanco
+        "#C0C0C0", // Plata
+        "#EC4899", // Rosado
+        "#6B7280", // Gris
+        "#9333EA", // Morado
+        "#EAB308", // Amarillo
+      ],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad:
@@ -3065,7 +3097,7 @@ export const initialProducts: CategoryProducts = {
       id: "ANF-072",
       nombre: "CILINDRO PARVO",
       descripcion:
-        "Sistema de rosca twist-off que permite abrir y cerrar la tapa en un giro. Mantener el linner en el interior de la tapa en todo momento, se debe retirar hasta su uso final. No exponer el cilindro a temperaturas mayores a 40 °C y revisar que la tapa no esté cerrada completamente para su almacenamiento y transportación. Mantener en su empaque individual antes y después de su transformación. No apto para bebidas calientes. No introducir en microondas ni lavavajillas. ",
+        "Sistema de rosca twist-off que permite abrir y cerrar la tapa en un giro. Mantener el linner en el interior de la tapa en todo momento, se debe retirar hasta su uso final. No exponer el cilindro a temperaturas mayores a 40 °C y revisar que la tapa no esté cerrada completamente para su almacenamiento y transportación. Mantener en su empaque individual antes y después de su transformación. No apto para bebidas calientes. No introducir en microondas ni lavavajillas.",
       capacidad: "750 ml",
       material: {
         exterior: "Plástico",
@@ -3080,12 +3112,14 @@ export const initialProducts: CategoryProducts = {
         color: "No especificado",
       },
       colores_disponibles: [
-        "Amarillo",
-        "Rosa pastel",
-        "Verde pastel",
-        "Negro",
-        "Azul marino",
-        "Blanco",
+        "#000000", // Negro
+        "#FFFFFF", // Blanco
+        "#EC4899", // Rosado
+        "#9333EA", // Morado
+        "#60A5FA", // Azul Cielo
+        "#1E3A8A", // Azul Marino
+        "#BBF7D0", // Verde Pastel
+        "#DC2626", // Rojo
       ],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
@@ -3107,7 +3141,6 @@ export const initialProducts: CategoryProducts = {
       material: {
         exterior: "Plástico",
         interior: null,
-        //tapa: "Bambú",
       },
       medidas: {
         diametro: "7 cm",
@@ -3117,12 +3150,12 @@ export const initialProducts: CategoryProducts = {
         tipo: "Unidad individual",
       },
       colores_disponibles: [
-        "Negro",
-        "Azul translúcido",
-        "Tinto translúcido",
-        "Blanco sólido",
-        "Verde translúcido",
-        "Rosa pastel sólido",
+        "#000000", // Negro
+        "#2563EB", // Azul
+        "#7F1D1D", // Tinto
+        "#FFFFFF", // Blanco
+        "#16A34A", // Verde
+        "#FBCFE8", // Rosa Pastel
       ],
       origen: "Importado",
       precio_lista: "Consultar precio",
@@ -3154,13 +3187,13 @@ export const initialProducts: CategoryProducts = {
         tipo: "Bolsa individual",
       },
       colores_disponibles: [
-        "Azul",
-        "Amarillo",
-        "Morado",
-        "Naranja",
-        "Negro",
-        "Rojo",
-        "Verde",
+        "#2563EB", // Azul
+        "#EAB308", // Amarillo
+        "#9333EA", // Morado
+        "#EA580C", // Naranja
+        "#000000", // Negro
+        "#DC2626", // Rojo
+        "#16A34A", // Verde
       ],
       origen: "Importado",
       precio_lista: "Consultar precio",
@@ -3190,7 +3223,12 @@ export const initialProducts: CategoryProducts = {
       empaque: {
         tipo: "Bolsa individual",
       },
-      colores_disponibles: ["Humo", "Rojo", "Verde", "Azul"],
+      colores_disponibles: [
+        "#6B7280", // Humo
+        "#DC2626", // Rojo
+        "#16A34A", // Verde
+        "#2563EB", // Azul
+      ],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario (existencias sujetas a cambio)",
@@ -3220,10 +3258,14 @@ export const initialProducts: CategoryProducts = {
       empaque: {
         tipo: "Bolsa individual",
       },
-      colores_disponibles: ["Naranja transparente", "Humo"],
-      origen: "Hecho en México ",
+      colores_disponibles: [
+        "#EA580C", // Naranja
+        "#FFFFFF", // Transparente
+        "#6B7280", // Humo
+      ],
+      origen: "Hecho en México",
       precio_lista: "Consultar precio",
-      disponibilidad: "Consultar inventario (existencias sujetas a cambio) ",
+      disponibilidad: "Consultar inventario (existencias sujetas a cambio)",
       url_producto: "https://doblevela.com/items/index/A2470",
       imagenes_urls: [
         "https://doblevela.com/images/large/A2470_lrg.jpg?v=1944171363",
@@ -3236,7 +3278,7 @@ export const initialProducts: CategoryProducts = {
       id: "A2752",
       nombre: "CILINDRO TADEO",
       descripcion:
-        "Cilindro de plástico PET libre de BPA, con tapa de rosca y válvula. Cuerpo y tapa del mismo color. CAP. 500 ml. :contentReference[oaicite:0]{index=0}",
+        "Cilindro de plástico PET libre de BPA, con tapa de rosca y válvula. Cuerpo y tapa del mismo color. CAP. 500 ml.",
       capacidad: "500 ml",
       material: {
         exterior: "Plástico PET",
@@ -3250,19 +3292,18 @@ export const initialProducts: CategoryProducts = {
         tipo: "Bolsa individual",
       },
       colores_disponibles: [
-        "Naranja",
-        "Rojo",
-        "Rosa",
-        "Verde",
-        "Amarillo",
-        "Azul",
-        "Humo",
-        "Transparente",
+        "#EA580C", // Naranja
+        "#DC2626", // Rojo
+        "#EC4899", // Rosa
+        "#16A34A", // Verde
+        "#EAB308", // Amarillo
+        "#2563EB", // Azul
+        "#6B7280", // Humo
+        "#FFFFFF", // Transparente
       ],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
-      disponibilidad:
-        "Consultar inventario (existencias sujetas a cambio) :contentReference[oaicite:1]{index=1}",
+      disponibilidad: "Consultar inventario (existencias sujetas a cambio)",
       url_producto: "https://doblevela.com/items/index/A2752",
       imagenes_urls: [
         "https://doblevela.com/images/large/A2752_lrg.jpg?v=545859074",
@@ -3275,7 +3316,7 @@ export const initialProducts: CategoryProducts = {
       id: "A3150",
       nombre: "ACUARIO",
       descripcion:
-        "Cilindro de plástico PET con tapa de rosca abatible con boquilla para beber. CAP. 950 ml. *BPA FREE. ",
+        "Cilindro de plástico PET con tapa de rosca abatible con boquilla para beber. CAP. 950 ml. *BPA FREE.",
       capacidad: "950 ml",
       material: {
         exterior: "Plástico PET",
@@ -3289,10 +3330,15 @@ export const initialProducts: CategoryProducts = {
       empaque: {
         tipo: "Bolsa individual",
       },
-      colores_disponibles: ["Rojo", "Azul", "Humo", "Transparente"],
+      colores_disponibles: [
+        "#DC2626", // Rojo
+        "#2563EB", // Azul
+        "#6B7280", // Humo
+        "#FFFFFF", // Transparente
+      ],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
-      disponibilidad: "Verificar inventario (existencias sujetas a cambio) ",
+      disponibilidad: "Verificar inventario (existencias sujetas a cambio)",
       url_producto: "https://doblevela.com/items/index/A3150",
       imagenes_urls: [
         "https://doblevela.com/images/large/A3150_lrg.jpg",
@@ -3319,12 +3365,12 @@ export const initialProducts: CategoryProducts = {
         tipo: "Bolsa individual",
       },
       colores_disponibles: [
-        "Negro",
-        "Naranja",
-        "Rojo",
-        "Rosa",
-        "Verde",
-        "Azul",
+        "#000000", // Negro
+        "#EA580C", // Naranja
+        "#DC2626", // Rojo
+        "#EC4899", // Rosa
+        "#16A34A", // Verde
+        "#2563EB", // Azul
       ],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
@@ -3356,7 +3402,7 @@ export const initialProducts: CategoryProducts = {
       empaque: {
         tipo: "Caja individual en color blanco",
       },
-      colores_disponibles: ["Transparente"],
+      colores_disponibles: ["#FFFFFF00"],
       origen: "Hecho en México ",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario (existencias sujetas a cambio) ",
@@ -3364,7 +3410,7 @@ export const initialProducts: CategoryProducts = {
       imagenes_urls: [
         "https://doblevela.com/images/large/A2939_lrg.jpg?v=1073690386",
         "https://doblevela.com/images/large/A2939_transparente_lrg.jpg?v=1713777277",
-        "https://doblevela.com/images/adicionales/_A2939_1.jpg"
+        "https://doblevela.com/images/adicionales/_A2939_1.jpg",
       ],
       categoria: "vasos",
     },
@@ -3385,7 +3431,7 @@ export const initialProducts: CategoryProducts = {
       empaque: {
         tipo: "Caja individual (presentación de regalo)",
       },
-      colores_disponibles: ["Rojo"],
+      colores_disponibles: ["#FF0000"],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Verificar inventario (existencias sujetas a cambio)",
@@ -3415,7 +3461,7 @@ export const initialProducts: CategoryProducts = {
         tipo: "Bolsa individual",
         color: "No especificado",
       },
-      colores_disponibles: ["Transparente (brilla en la oscuridad)"],
+      colores_disponibles: ["#FFFFFF00"],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Verificar inventario (existencias sujetas a cambio)",
@@ -3446,14 +3492,14 @@ export const initialProducts: CategoryProducts = {
         color: "No especificado",
       },
       colores_disponibles: [
-        "Negro",
-        "Naranja",
-        "Rojo",
-        "Rosa",
-        "Verde",
-        "Azul",
-        "Oro",
-        "Morado",
+        "#000000",
+        "#FFA500",
+        "#FF0000",
+        "#FFC0CB",
+        "#008000",
+        "#0000FF",
+        "#FFD700",
+        "#800080",
       ],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
@@ -3484,7 +3530,7 @@ export const initialProducts: CategoryProducts = {
         tipo: "Bolsa individual",
         color: "No especificado",
       },
-      colores_disponibles: ["Naranja"],
+      colores_disponibles: ["#FFA500"],
       origen: "Hecho en México ",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario (existencias sujetas a cambio)",
@@ -3513,7 +3559,7 @@ export const initialProducts: CategoryProducts = {
         tipo: "Bolsa individual",
         color: "No especificado",
       },
-      colores_disponibles: ["Negro", "Rojo", "Azul"],
+      colores_disponibles: ["#000000", "#FF0000", "#0000FF"],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Verificar inventario (existencias sujetas a cambio)",
@@ -3542,7 +3588,7 @@ export const initialProducts: CategoryProducts = {
       empaque: {
         tipo: "Bolsa individual",
       },
-      colores_disponibles: ["Verde claro", "Azul claro", "Beige"],
+      colores_disponibles: ["#90EE90", "#87CEEB", "#F5F5DC"],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad:
@@ -3574,15 +3620,15 @@ export const initialProducts: CategoryProducts = {
         color: "No especificado",
       },
       colores_disponibles: [
-        "Blanco",
-        "Negro",
-        "Rojo",
-        "Verde claro",
-        "Amarillo",
-        "Lila",
-        "Transparente",
-        "Naranja",
-        "Rosa",
+        "#FFFFFF",
+        "#000000",
+        "#FF0000",
+        "#90EE90",
+        "#FFFF00",
+        "#C8A2C8",
+        "#FFFFFF00",
+        "#FFA500",
+        "#FFC0CB",
       ],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
@@ -3614,13 +3660,13 @@ export const initialProducts: CategoryProducts = {
         color: "No especificado",
       },
       colores_disponibles: [
-        "Blanco",
-        "Rojo",
-        "Rosa",
-        "Naranja",
-        "Amarillo-Neón",
-        "Humo",
-        "Blanco Fiesta",
+        "#FFFFFF",
+        "#FF0000",
+        "#FFC0CB",
+        "#FFA500",
+        "#CCFF00",
+        "#848884",
+        "#FFFFF0",
       ],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
@@ -3654,7 +3700,7 @@ export const initialProducts: CategoryProducts = {
         medida_caja: "55 × 43 × 44 cm",
         peso_caja: "12.20 kg",
       },
-      colores_disponibles: ["Azul", "Rosa", "Amarillo", "Verde", "Morado"],
+      colores_disponibles: ["#0000FF", "#FFC0CB", "#FFFF00", "#008000", "#800080"],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -3685,23 +3731,23 @@ export const initialProducts: CategoryProducts = {
         color: "No especificado",
       },
       colores_disponibles: [
-        "Azul",
-        "Azul pastel",
-        "Blanco",
-        "Blanco fiesta",
-        "Morado",
-        "Negro",
-        "Naranja",
-        "Naranja neón",
-        "Rosa neón",
-        "Rosa pastel",
-        "Rojo",
-        "Verde neón",
-        "Amarillo neón",
+        "#0000FF",
+        "#AEC6CF",
+        "#FFFFFF",
+        "#FFFFF0",
+        "#800080",
+        "#000000",
+        "#FFA500",
+        "#FFA500",
+        "#FF69B4",
+        "#FFB6C1",
+        "#FF0000",
+        "#00FF00",
+        "#CCFF00",
       ],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
-      disponibilidad: "Consultar inventario (existencias sujetas a cambio) ",
+      disponibilidad: "Consultar inventario (existencias sujetas a change) ",
       url_producto: "https://www.promoopcion.com/tmps-744.html",
       imagenes_urls: [
         "https://www.promoopcion.com/media/catalog/product/t/m/tmps_744.jpg",
@@ -3729,14 +3775,14 @@ export const initialProducts: CategoryProducts = {
         color: "No especificado",
       },
       colores_disponibles: [
-        "Negro",
-        "Rosa",
-        "Rosa pastel",
-        "Blanco fiesta",
-        "Naranja",
-        "Rojo",
-        "Gris",
-        "Azul",
+        "#000000",
+        "#FFC0CB",
+        "#FFB6C1",
+        "#FFFFF0",
+        "#FFA500",
+        "#FF0000",
+        "#808080",
+        "#0000FF",
       ],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",

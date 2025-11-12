@@ -134,7 +134,7 @@ export default function RandomProducts() {
       {/* Swiper Carousel */}
       <div className="relative">
         <Swiper
-          spaceBetween={24}
+          spaceBetween={20}
           slidesPerView={1}
           centeredSlides={false}
           loop={true}
@@ -146,19 +146,19 @@ export default function RandomProducts() {
           breakpoints={{
             320: {
               slidesPerView: 2,
-              spaceBetween: 16,
+              spaceBetween: 0,
             },
             640: {
               slidesPerView: 3,
-              spaceBetween: 20,
+              spaceBetween: 10,
             },
             1024: {
               slidesPerView: 3,
-              spaceBetween: 24,
+              spaceBetween: 15,
             },
             1280: {
               slidesPerView: 4,
-              spaceBetween: 24,
+              spaceBetween: 20,
             },
           }}
           pagination={{
@@ -187,7 +187,9 @@ export default function RandomProducts() {
 
             return (
               <SwiperSlide key={`${product.id}-${index}`}>
-                <div className="w-full h-full flex items-stretch p-1"> {/* items-stretch para igualar alturas */}
+                <div className="w-full h-full flex items-stretch p-1">
+                  {" "}
+                  {/* items-stretch para igualar alturas */}
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -198,8 +200,6 @@ export default function RandomProducts() {
                     className="w-full h-full flex" // flex para que ocupe toda la altura disponible
                   >
                     <Card
-                      isPressable
-                      onPress={() => handleProductClick(product)}
                       className="group rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden w-full border border-slate-100 bg-white/90 backdrop-blur-sm flex flex-col h-full" // h-full para ocupar toda la altura del contenedor
                     >
                       <CardBody className="p-0 w-full h-full flex flex-col">
@@ -210,7 +210,8 @@ export default function RandomProducts() {
                             alt={product.nombre}
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                             onError={(e) => {
-                              e.currentTarget.src = "/img/placeholder-product.jpg";
+                              e.currentTarget.src =
+                                "/img/placeholder-product.jpg";
                             }}
                           />
 
@@ -226,30 +227,34 @@ export default function RandomProducts() {
                               {categoryName}
                             </Chip>
                           </div>
-                         
                         </div>
 
                         {/* Contenido - Se expande para ocupar espacio disponible */}
-                        <div className="p-4 grow flex flex-col">
+                        <div className="p-2 grow flex flex-col">
                           {/* Título */}
                           <h3 className="font-semibold text-slate-800 line-clamp-2 mb-2 group-hover:text-blue-600 transition-colors">
                             {product.nombre}
                           </h3>
 
                           {/* Descripción */}
-                          <p className="text-slate-600 text-sm line-clamp-3 leading-relaxed mb-3 grow">
+                          <p className="text-slate-600 text-sm line-clamp-2 leading-relaxed grow">
                             {product.descripcion}
                           </p>
-                          
                         </div>
 
                         {/* Footer - Siempre al fondo */}
                         <div className="p-4 border-t border-slate-100 mt-auto">
-                          <div className="flex items-center justify-end">                            
-                            <div className="flex items-center text-blue-600 text-xs font-medium group/link">
+                          <div className="flex items-center justify-end">
+                            <button
+                              className="flex items-center text-blue-600 text-xs font-medium group/link"
+                              onClick={() => handleProductClick(product)}
+                            >
                               Ver detalles
-                              <FiArrowRight size={12} className="ml-1 group-hover/link:translate-x-1 transition-transform" />
-                            </div>
+                              <FiArrowRight
+                                size={12}
+                                className="ml-1 group-hover/link:translate-x-1 transition-transform"
+                              />
+                            </button>
                           </div>
                         </div>
 
@@ -264,17 +269,17 @@ export default function RandomProducts() {
           })}
         </Swiper>
 
-        {/* Paginación personalizada */}        
+        {/* Paginación personalizada */}
       </div>
 
       {/* Estilos para la paginación */}
-      <style jsx global>{`                
+      <style jsx global>{`
         /* Asegurar que los slides tengan la misma altura */
         .swiper-slide {
           height: auto !important;
           display: flex !important;
         }
-        
+
         .swiper-slide > div {
           width: 100%;
         }

@@ -118,10 +118,10 @@ export default function Categories() {
         <Breadcrumb />
         <ProductsByCategory />
         <ContactHelp />
-        <RandomProducts />
-        <FeaturesSection />
+        <RandomProducts />        
         <CarouselCategories />
         <ContactCostumize />        
+        <FeaturesSection />
 
         <Footer />
       </div>

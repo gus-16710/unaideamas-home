@@ -355,12 +355,10 @@ export default function ProductDetailClient({
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                           >
-                            <Chip
-                              variant="flat"
-                              className="bg-purple-50 text-purple-700 border-purple-200 font-medium px-4 py-2"
-                            >
-                              {color}
-                            </Chip>
+                            <div
+                              className="w-6 h-6 rounded-full border border-gray-200 shadow-sm"
+                              style={{ background: color }}
+                            ></div>
                           </motion.div>
                         )
                       )}

@@ -1,10 +1,12 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Navigation, Pagination, Autoplay, EffectCoverflow } from "swiper/modules";
 import { useProductStore } from "@/store/product.store";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/effect-creative";
+import 'swiper/css/effect-coverflow';
+
 import { Category } from "@/types";
 import { useRef } from "react";
 import { useRouter } from "next/navigation";
