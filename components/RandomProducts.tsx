@@ -134,7 +134,7 @@ export default function RandomProducts() {
       {/* Swiper Carousel */}
       <div className="relative">
         <Swiper
-          spaceBetween={20}
+          spaceBetween={10}
           slidesPerView={1}
           centeredSlides={false}
           loop={true}

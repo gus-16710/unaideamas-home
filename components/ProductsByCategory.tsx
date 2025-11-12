@@ -427,7 +427,7 @@ export default function ProductsByCategory() {
         {showRightScroll && (
           <button
             onClick={() => scrollCategories("right")}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 z-30 bg-white/5 backdrop-blur-sm border border-gray-300 rounded-full w-10 h-10 flex items-center justify-center shadow-lg hover:bg-white hover:shadow-xl transition-all duration-200 hover:scale-110"
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 z-30 bg-white/5 backdrop-blur-xs border border-gray-300 rounded-full w-10 h-10 flex items-center justify-center shadow-lg hover:bg-white hover:shadow-xl transition-all duration-200 hover:scale-110"
             aria-label="Desplazar categorías a la derecha"
           >
             <svg
@@ -596,7 +596,7 @@ export default function ProductsByCategory() {
 
                             {/* Contenido */}
                             <CardBody className="p-2">
-                              <h3 className="font-bold text-lg text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">
+                              <h3 className="font-bold text-sm sm:text-lg text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">
                                 {product.nombre}
                               </h3>
 

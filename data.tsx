@@ -1,10 +1,10 @@
-import { FaMugHot } from "react-icons/fa";
-import { FaBook } from "react-icons/fa";
-import { FaPenClip } from "react-icons/fa6";
-import { IoBagOutline } from "react-icons/io5";
 import { Category, CategoryProducts } from "@/types";
-import { GiWaterBottle } from "react-icons/gi";
 import { LuCupSoda } from "react-icons/lu";
+import { TiPen } from "react-icons/ti";
+import { BsBagHeart } from "react-icons/bs";
+import { LuNotebookTabs } from "react-icons/lu";
+import { LuPillBottle } from "react-icons/lu";
+import { BsCupHot } from "react-icons/bs";
 
 export const categoriesList: Category[] = [
   {
@@ -14,7 +14,7 @@ export const categoriesList: Category[] = [
     url: "cilindros",
     description:
       "Refresca tu marca con cilindros personalizados. Ideales para eventos, promociones o regalos corporativos, disponibles en una amplia variedad de estilos y colores.",
-    icon: GiWaterBottle,
+    icon: LuPillBottle,
     color: "text-green-500",
   },
   {
@@ -24,7 +24,7 @@ export const categoriesList: Category[] = [
     url: "termos",
     description:
       "Termos de alta calidad para mantener tus bebidas a la temperatura ideal",
-    icon: FaMugHot,
+    icon: BsCupHot,
     color: "text-purple-500",
   },
   {
@@ -34,7 +34,7 @@ export const categoriesList: Category[] = [
     url: "agendas",
     description:
       "Organiza tu tiempo con nuestras agendas y libretas de diseño único",
-    icon: FaBook,
+    icon: LuNotebookTabs,
     color: "text-red-500",
   },
   {
@@ -43,7 +43,7 @@ export const categoriesList: Category[] = [
     img: "/img/categories/bolsas.jpg",
     url: "bolsas",
     description: "Bolsas ecológicas y prácticas para el día a día",
-    icon: IoBagOutline,
+    icon: BsBagHeart,
     color: "text-blue-500",
   },
   {
@@ -52,7 +52,7 @@ export const categoriesList: Category[] = [
     img: "/img/categories/lapiceros.jpg",
     url: "lapiceros",
     description: "Bolígrafos de calidad premium para escribir con estilo",
-    icon: FaPenClip,
+    icon: TiPen,
     color: "text-yellow-500",
   },
   {
