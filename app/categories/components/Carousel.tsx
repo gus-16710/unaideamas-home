@@ -35,7 +35,7 @@ export default function Carousel() {
   };
 
   return (
-    <div className="w-full h-[calc(100vh-100px)] lg:h-[650px] flex items-center justify-center relative overflow-hidden">
+    <div className="w-full h-screen lg:h-[650px] flex items-center justify-center relative overflow-hidden">
       <Swiper
         spaceBetween={0}
         slidesPerView={1}
@@ -43,7 +43,10 @@ export default function Carousel() {
         effect="cube"
         loop={true}
         cubeEffect={{
-          shadow: false,
+          shadow: true,
+          slideShadows: true,
+          shadowOffset: 20,
+          shadowScale: 0.70,
         }}
         autoplay={{
           delay: 5000,
@@ -58,8 +61,13 @@ export default function Carousel() {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         }}
-        modules={[Navigation, Pagination, Autoplay, EffectCube]}
-        className="w-full h-full"
+        modules={[
+          Navigation,
+          Pagination,
+          Autoplay,
+          EffectCube,
+        ]}
+        className="w-full h-full mb-12"
       >
         {/* Slide 1 - Personalización Empresarial */}
         <SwiperSlide>
@@ -236,38 +244,23 @@ export default function Carousel() {
                 </div>
 
                 {/* Nombre del producto */}
-                <motion.h2
-                  className="text-2xl md:text-4xl lg:text-5xl font-bold leading-tight"
-                  initial={{ x: -50, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  transition={{ duration: 0.8 }}
-                >
+                <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold leading-tight">
                   Bolsa Ecológica <br />
                   <span className="bg-linear-to-r from-green-400 to-yellow-400 bg-clip-text text-transparent">
                     STAR (Chica)
                   </span>
-                </motion.h2>
+                </h2>
 
                 {/* Descripción */}
-                <motion.p
-                  className="text-sm md:text-lg lg:text-xl text-gray-200 max-w-md"
-                  initial={{ x: -50, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
-                >
+                <p className="text-sm md:text-lg lg:text-xl text-gray-200 max-w-md">
                   Bolsa ecológica termosellada con asas y diseño brillante.
                   <span className="block mt-2 font-semibold text-yellow-300">
                     Peso máximo de carga: 10 kgs
                   </span>
-                </motion.p>
+                </p>
 
                 {/* Especificaciones */}
-                <motion.div
-                  className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm"
-                  initial={{ y: 50, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ duration: 0.8, delay: 0.4 }}
-                >
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
                   <div className="space-y-2">
                     <div className="flex items-center gap-2">
                       <div className="w-2 h-2 bg-green-400 rounded-full"></div>
@@ -291,15 +284,10 @@ export default function Carousel() {
                       <p>Profundidad: 10 cm</p>
                     </div>
                   </div>
-                </motion.div>
+                </div>
 
                 {/* Botón de acción */}
-                <motion.div
-                  className="flex flex-col sm:flex-row gap-3 pt-4"
-                  initial={{ y: 50, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ duration: 0.8, delay: 0.6 }}
-                >
+                <div className="flex flex-col sm:flex-row gap-3 pt-4">
                   <button
                     className="bg-linear-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white px-6 py-3 rounded-full font-bold shadow-lg transition-all duration-300 transform hover:scale-105"
                     onClick={() =>
@@ -322,7 +310,7 @@ export default function Carousel() {
                   >
                     Más Información
                   </button>
-                </motion.div>
+                </div>
               </div>
 
               {/* Elemento decorativo lateral */}
@@ -691,7 +679,7 @@ export default function Carousel() {
               >
                 <div className="relative">
                   <motion.div
-                    className="w-32 h-32 md:w-48 md:h-48 lg:w-72 lg:h-72 bg-white/90 rounded-full p-3 md:p-4 shadow-xl border-4 border-white"
+                    className="w-32 h-32 md:w-48 md:h-48 lg:w-72 lg:h-72 bg-white/90 rounded-full p-1 shadow-xl border-2 border-white"
                     animate={{
                       y: [0, -8, 0],
                       rotate: [0, 2, 0],
@@ -743,38 +731,23 @@ export default function Carousel() {
               {/* Contenido optimizado para móvil */}
               <div className="flex flex-col text-gray-800 space-y-3 md:space-y-4 lg:space-y-6 max-w-lg text-center lg:text-left">
                 {/* Badge compacto */}
-                <motion.div
-                  className="flex items-center justify-center lg:justify-start gap-2"
-                  initial={{ y: -30, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ duration: 0.6 }}
-                >
+                <div className="flex items-center justify-center lg:justify-start gap-2">
                   <span className="text-xs font-bold bg-white/70 px-3 py-1 rounded-full border border-white">
                     SET ECOLÓGICO
                   </span>
-                </motion.div>
+                </div>
 
                 {/* Título principal */}
-                <motion.h2
-                  className="text-xl md:text-3xl lg:text-4xl font-bold leading-tight"
-                  initial={{ x: 50, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
-                >
+                <h2 className="text-xl md:text-3xl lg:text-4xl font-bold leading-tight">
                   BioSet
                   <br />
                   <span className="bg-linear-to-r from-amber-700 to-rose-700 bg-clip-text text-transparent text-lg md:text-2xl lg:text-3xl">
                     Ecológico
                   </span>
-                </motion.h2>
+                </h2>
 
                 {/* Descripción corta para móvil */}
-                <motion.div
-                  className="text-gray-700"
-                  initial={{ x: 50, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  transition={{ duration: 0.8, delay: 0.4 }}
-                >
+                <div className="text-gray-700">
                   <p className="text-sm md:text-base leading-relaxed">
                     Set ecológico premium con libreta, bolsa de algodón y
                     bolígrafo.
@@ -792,15 +765,10 @@ export default function Carousel() {
                       ✏️ Bolígrafo cartón
                     </span>
                   </div>
-                </motion.div>
+                </div>
 
                 {/* Especificaciones solo las más importantes en móvil */}
-                <motion.div
-                  className="grid grid-cols-2 gap-3 text-xs md:text-sm"
-                  initial={{ y: 30, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ duration: 0.8, delay: 0.6 }}
-                >
+                <div className="grid grid-cols-2 gap-3 text-xs md:text-sm">
                   <div className="text-center lg:text-left">
                     <div className="flex items-center justify-center lg:justify-start gap-1 mb-1">
                       <div className="w-1.5 h-1.5 bg-amber-600 rounded-full"></div>
@@ -832,14 +800,11 @@ export default function Carousel() {
                     </div>
                     <p className="text-gray-700">Hecho en México</p>
                   </div>
-                </motion.div>
+                </div>
 
                 {/* Botones optimizados para móvil */}
-                <motion.div
-                  className="flex flex-col gap-2 pt-2 md:pt-4"
-                  initial={{ y: 30, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ duration: 0.8, delay: 0.8 }}
+                <div
+                  className="flex flex-col gap-2 pt-2 md:pt-4"                  
                 >
                   <button
                     className="bg-linear-to-r from-amber-600 to-rose-600 hover:from-amber-700 hover:to-rose-700 text-white px-4 py-2 md:px-6 md:py-3 rounded-full font-bold shadow-lg transition-all duration-300 text-sm md:text-base"
@@ -863,7 +828,7 @@ export default function Carousel() {
                   >
                     Más Información
                   </button>
-                </motion.div>
+                </div>
               </div>
             </div>
           </div>

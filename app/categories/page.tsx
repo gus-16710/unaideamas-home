@@ -104,7 +104,7 @@ export default function Categories() {
 
       {/* Contenido */}
       <div
-        className="relative z-10 max-w-4xl mx-auto px-4 py-8"
+        className="relative z-10 max-w-4xl mx-auto px-4 pb-4"
         id="grid-categories"
       >
         {/* Header */}
