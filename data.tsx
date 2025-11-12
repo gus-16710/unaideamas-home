@@ -6,6 +6,8 @@ import { LuNotebookTabs } from "react-icons/lu";
 import { LuPillBottle } from "react-icons/lu";
 import { BsCupHot } from "react-icons/bs";
 
+//1900x800
+
 export const categoriesList: Category[] = [
   {
     id: 1,
