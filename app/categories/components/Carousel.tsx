@@ -1,24 +1,15 @@
 import { SwiperSlide, Swiper } from "swiper/react";
-import { Navigation, Pagination, Autoplay, EffectCube } from "swiper/modules";
-import {
-  FaBusinessTime,
-  FaPen,
-  FaGift,
-  FaRocket,
-  FaShippingFast,
-} from "react-icons/fa";
-import { IoShirt, IoBook, IoBag, IoStar, IoDiamond } from "react-icons/io5";
-import {
-  RiTeamFill,
-  RiCalendarEventFill,
-  RiCustomerService2Fill,
-} from "react-icons/ri";
+import { Navigation, Pagination, Autoplay, EffectCube, EffectFlip } from "swiper/modules";
+import { FaBusinessTime, FaPen, FaGift } from "react-icons/fa";
+import { IoShirt, IoBook, IoBag } from "react-icons/io5";
+import { RiTeamFill, RiCalendarEventFill } from "react-icons/ri";
 import { motion } from "framer-motion";
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/effect-cube";
+import 'swiper/css/effect-flip';
 
 export default function Carousel() {
   // Animaciones reutilizables
@@ -36,7 +27,7 @@ export default function Carousel() {
 
   return (
     <motion.div
-      className="w-full h-screen lg:h-[650px] flex items-center justify-center relative overflow-hidden"
+      className="w-full h-screen lg:h-[650px] flex items-center justify-center relative overflow-hidden pb-15"
       initial={{ opacity: 0, y: -40 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
@@ -45,14 +36,14 @@ export default function Carousel() {
         spaceBetween={0}
         slidesPerView={1}
         centeredSlides={true}
-        effect="cube"
+        effect="flip"
         loop={true}
-        cubeEffect={{
-          shadow: true,
-          slideShadows: true,
-          shadowOffset: 20,
-          shadowScale: 0.7,
-        }}
+        // cubeEffect={{
+        //   shadow: true,
+        //   slideShadows: true,
+        //   shadowOffset: 20,
+        //   shadowScale: 0.7,
+        // }}
         autoplay={{
           delay: 10000,
           disableOnInteraction: false,
@@ -66,13 +57,8 @@ export default function Carousel() {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         }}
-        modules={[
-          Navigation,
-          Pagination,
-          Autoplay,
-          EffectCube,
-        ]}
-        className="w-full h-full mb-12"
+        modules={[Navigation, Pagination, Autoplay, EffectFlip]}
+        className="w-full h-full"
       >
         {/* Slide 1 - Personalización Empresarial */}
         <SwiperSlide>
@@ -1083,9 +1069,7 @@ export default function Carousel() {
               </div>
             </div>
           </div>
-        </SwiperSlide>       
-
-        
+        </SwiperSlide>
       </Swiper>
 
       {/* Navegación personalizada para mejor responsividad */}
