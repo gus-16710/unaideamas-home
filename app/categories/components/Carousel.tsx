@@ -518,492 +518,6 @@ export default function Carousel() {
             </div>
           </div>
         </SwiperSlide>
-
-        {/* Slide 3 - Eventos Especiales */}
-        <SwiperSlide>
-          <div className="w-full h-full relative bg-linear-to-br from-orange-100 via-amber-100 to-yellow-100 overflow-hidden">
-            {/* Elementos de celebración animados */}
-            <motion.div
-              className="absolute top-0 right-0 w-32 h-32 md:w-48 md:h-48 lg:w-64 lg:h-64 bg-yellow-400/70 rounded-full"
-              animate={{
-                scale: [1, 1.2, 1],
-                opacity: [0.2, 0.3, 0.2],
-              }}
-              transition={{
-                duration: 8,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            />
-            <motion.div
-              className="absolute bottom-0 left-0 w-40 h-40 md:w-60 md:h-60 lg:w-80 lg:h-80 bg-orange-400/20 rounded-full"
-              animate={{
-                scale: [1, 1.1, 1],
-                opacity: [0.2, 0.4, 0.2],
-              }}
-              transition={{
-                duration: 10,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: 1,
-              }}
-            />
-
-            <div className="relative z-10 w-full h-full flex flex-col items-center justify-center text-center px-4 md:px-8 lg:px-16 py-6">
-              <div className="mb-4 md:mb-6 lg:mb-8">
-                <div>
-                  <RiCalendarEventFill className="text-4xl md:text-5xl lg:text-6xl text-orange-500 mb-2 md:mb-3 lg:mb-4 mx-auto" />
-                </div>
-                <motion.div
-                  className="bg-linear-to-r from-orange-500 to-amber-500 text-white px-4 py-1 md:px-6 md:py-2 rounded-full text-xs md:text-sm font-bold inline-block"
-                  variants={fadeInUp}
-                >
-                  EVENTOS Y CELEBRACIONES
-                </motion.div>
-              </div>
-
-              <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-800 mb-4 md:mb-6 ">
-                Personaliza Tus <br className="hidden" />
-                <span className="bg-linear-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent">
-                  Eventos
-                </span>
-              </h2>
-
-              <p className="text-sm lg:text-lg xl:text-xl text-gray-600 mb-6 md:mb-8 max-w-2xl">
-                Bodas, aniversarios, conferencias - creamos productos únicos
-                para cada ocasión especial
-              </p>
-
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 md:gap-6 lg:gap-8 mb-6 md:mb-8 w-full max-w-md sm:max-w-2xl">
-                {[
-                  {
-                    emoji: "🎉",
-                    title: "Bodas",
-                    desc: "Recuerdos especiales",
-                    color: "orange",
-                    colorClass: "border-orange-200",
-                  },
-                  {
-                    emoji: "🏢",
-                    title: "Corporativos",
-                    desc: "Eventos empresariales",
-                    color: "amber",
-                    colorClass: "border-amber-200",
-                  },
-                  {
-                    emoji: "🎓",
-                    title: "Graduaciones",
-                    desc: "Logros memorables",
-                    color: "yellow",
-                    colorClass: "border-yellow-200",
-                  },
-                  {
-                    emoji: "🏆",
-                    title: "Deportivos",
-                    desc: "Torneos y competencias",
-                    color: "green",
-                    colorClass: "border-green-200",
-                  },
-                ].map((item, index) => (
-                  <div key={index}>
-                    <div
-                      className={`bg-white rounded-xl md:rounded-2xl p-4 md:p-5 shadow-lg border ${item.colorClass} hover:shadow-xl transition-shadow`}
-                    >
-                      <motion.div
-                        className="text-2xl md:text-3xl mb-2"
-                        animate={{
-                          scale: [1, 1.2, 1],
-                          rotate: [0, 10, 0],
-                        }}
-                        transition={{
-                          duration: 5,
-                          repeat: Infinity,
-                          ease: "easeInOut",
-                          delay: index * 0.5,
-                        }}
-                      >
-                        {item.emoji}
-                      </motion.div>
-                      <div className="font-semibold text-gray-800 text-sm md:text-base">
-                        {item.title}
-                      </div>
-                      <div className="text-xs md:text-sm text-gray-600">
-                        {item.desc}
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </SwiperSlide>
-
-        {/* Slide - Set Ecológico BioSet (Mobile Optimized) */}
-        <SwiperSlide>
-          <div className="w-full h-full relative bg-linear-to-br from-amber-400 via-orange-300 to-rose-400 overflow-hidden">
-            {/* Elementos decorativos de fondo más sutiles en móvil */}
-            <motion.div
-              className="absolute inset-0 opacity-15 md:opacity-20"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 0.15 }}
-              transition={{ duration: 1 }}
-            >
-              <motion.div
-                className="absolute top-10 left-4 md:left-10 w-12 h-12 md:w-20 md:h-20 bg-white rounded-lg rotate-45"
-                animate={{
-                  rotate: [45, 90, 45],
-                  scale: [1, 1.1, 1],
-                }}
-                transition={{
-                  duration: 8,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-              />
-              <motion.div
-                className="absolute bottom-10 right-4 md:right-10 w-10 h-10 md:w-16 md:h-16 bg-green-200 rounded-full"
-                animate={{
-                  y: [0, -10, 0],
-                  scale: [1, 1.05, 1],
-                }}
-                transition={{
-                  duration: 6,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-              />
-            </motion.div>
-
-            <div className="relative z-10 w-full h-full flex flex-col lg:flex-row items-center justify-center lg:justify-between px-4 md:px-8 lg:px-16 py-4 md:py-8">
-              {/* Imagen del producto - Más compacta en móvil */}
-              <div className="flex justify-center mb-4 lg:mb-0 lg:flex-1">
-                <div className="relative">
-                  <motion.div
-                    className="w-48 h-48 md:w-52 md:h-52 lg:w-80 lg:h-80 bg-white/90 shadow-xl border-2 border-white rounded-full"
-                    animate={{
-                      y: [0, -8, 0],
-                      rotate: [0, 2, 0],
-                    }}
-                    transition={{
-                      duration: 6,
-                      repeat: Infinity,
-                      ease: "easeInOut",
-                    }}
-                  >
-                    <div className="w-full h-full bg-linear-to-br from-amber-100 to-rose-100 flex items-center justify-center overflow-hidden rounded-full">
-                      {/* Reemplaza el SVG con la imagen real */}
-                      <motion.img
-                        src="/img/sliders/set-027-be.jpg"
-                        alt="Set Ecológico BioSet"
-                        className="w-full h-full object-cover"
-                        animate={{ scale: [1, 1.05, 1] }}
-                        transition={{ duration: 4, repeat: Infinity }}
-                      />
-
-                      {/* Texto superpuesto (opcional) */}
-                      <motion.span
-                        className="absolute bottom-2 bg-white/90 px-2 py-1 rounded-full text-amber-700 font-bold text-xs md:text-sm"
-                        animate={{ opacity: [0.7, 1, 0.7] }}
-                        transition={{ duration: 3, repeat: Infinity }}
-                      >
-                        3 PIEZAS
-                      </motion.span>
-                    </div>
-                  </motion.div>
-
-                  {/* Badges más pequeños en móvil */}
-                  <motion.div
-                    className="absolute -top-1 -right-1 md:-top-2 md:-right-2 bg-green-500 text-white px-2 py-1 rounded-full text-xs font-bold rotate-12 shadow-lg"
-                    animate={{
-                      rotate: [12, -8, 12],
-                      scale: [1, 1.1, 1],
-                    }}
-                    transition={{
-                      duration: 4,
-                      repeat: Infinity,
-                    }}
-                  >
-                    🌱 ECO
-                  </motion.div>
-                </div>
-              </div>
-
-              {/* Contenido optimizado para móvil */}
-              <div className="flex flex-col text-gray-800 space-y-3 md:space-y-4 lg:space-y-6 max-w-lg text-center lg:text-left">
-                {/* Badge compacto */}
-                <div className="flex items-center justify-center lg:justify-start gap-2">
-                  <span className="text-xs font-bold bg-white/70 px-3 py-1 rounded-full border border-white">
-                    SET ECOLÓGICO
-                  </span>
-                </div>
-
-                {/* Título principal */}
-                <h2 className="text-xl md:text-3xl lg:text-4xl font-bold leading-tight">
-                  BioSet
-                  <br />
-                  <span className="bg-linear-to-r from-amber-700 to-rose-700 bg-clip-text text-transparent text-lg md:text-2xl lg:text-3xl">
-                    Ecológico
-                  </span>
-                </h2>
-
-                {/* Descripción corta para móvil */}
-                <div className="text-gray-700">
-                  <p className="text-sm md:text-base leading-relaxed">
-                    Set ecológico premium con libreta, bolsa de algodón y
-                    bolígrafo.
-                  </p>
-
-                  {/* Información clave en badges */}
-                  <div className="flex flex-wrap justify-center lg:justify-start gap-2 mt-3">
-                    <span className="bg-white/60 px-2 py-1 rounded-full text-xs font-semibold">
-                      📓 Libreta 80 hojas
-                    </span>
-                    <span className="bg-white/60 px-2 py-1 rounded-full text-xs font-semibold">
-                      🛍️ Bolsa algodón
-                    </span>
-                    <span className="bg-white/60 px-2 py-1 rounded-full text-xs font-semibold">
-                      ✏️ Bolígrafo cartón
-                    </span>
-                  </div>
-                </div>
-
-                {/* Especificaciones solo las más importantes en móvil */}
-                <div className="grid grid-cols-2 gap-3 text-xs md:text-sm">
-                  <div className="text-center lg:text-left">
-                    <div className="flex items-center justify-center lg:justify-start gap-1 mb-1">
-                      <div className="w-1.5 h-1.5 bg-amber-600 rounded-full"></div>
-                      <span className="font-bold text-amber-700">Material</span>
-                    </div>
-                    <p className="text-gray-700">Cartón / Algodón</p>
-                  </div>
-
-                  <div className="text-center lg:text-left">
-                    <div className="flex items-center justify-center lg:justify-start gap-1 mb-1">
-                      <div className="w-1.5 h-1.5 bg-green-600 rounded-full"></div>
-                      <span className="font-bold text-green-700">Medidas</span>
-                    </div>
-                    <p className="text-gray-700">29 × 22 × 5 cm</p>
-                  </div>
-
-                  <div className="text-center lg:text-left">
-                    <div className="flex items-center justify-center lg:justify-start gap-1 mb-1">
-                      <div className="w-1.5 h-1.5 bg-blue-600 rounded-full"></div>
-                      <span className="font-bold text-blue-700">Color</span>
-                    </div>
-                    <p className="text-gray-700">Beige Natural</p>
-                  </div>
-
-                  <div className="text-center lg:text-left">
-                    <div className="flex items-center justify-center lg:justify-start gap-1 mb-1">
-                      <div className="w-1.5 h-1.5 bg-rose-600 rounded-full"></div>
-                      <span className="font-bold text-rose-700">Origen</span>
-                    </div>
-                    <p className="text-gray-700">Hecho en México</p>
-                  </div>
-                </div>
-
-                {/* Botones optimizados para móvil */}
-                <div className="flex flex-col gap-2 pt-2 md:pt-4">
-                  <button
-                    className="bg-linear-to-r from-amber-600 to-rose-600 hover:from-amber-700 hover:to-rose-700 text-white px-4 py-2 md:px-6 md:py-3 rounded-full font-bold shadow-lg text-sm md:text-base"
-                    onClick={() =>
-                      window.open(
-                        "https://wa.me/5212281255258?text=Hola! Me interesa el Set Ecológico BioSet.",
-                        "_blank"
-                      )
-                    }
-                  >
-                    Cotizar Set Completo
-                  </button>
-                  <button
-                    className="hidden md:block border border-amber-600 text-amber-700 hover:bg-amber-600/20 px-4 py-2 md:px-6 md:py-3 rounded-full font-semibold text-sm md:text-base"
-                    onClick={() =>
-                      window.open(
-                        "https://wa.me/5212281255258?text=Hola! Quiero más información sobre el BioSet.",
-                        "_blank"
-                      )
-                    }
-                  >
-                    Más Información
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </SwiperSlide>
-
-        {/* Slide 5 - Calidad y Servicio */}
-        <SwiperSlide>
-          <div className="w-full h-full relative bg-linear-to-br from-slate-900 via-gray-800 to-slate-900 overflow-hidden">
-            {/* Elementos de calidad animados */}
-            <motion.div
-              className="absolute inset-0 opacity-5"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 0.05 }}
-              transition={{ duration: 1 }}
-            >
-              <motion.div
-                className="absolute top-20 left-20 w-16 h-16 bg-white rounded-full"
-                animate={{
-                  scale: [1, 1.5, 1],
-                  opacity: [0.1, 0.3, 0.1],
-                }}
-                transition={{
-                  duration: 8,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-              />
-              <motion.div
-                className="absolute bottom-20 right-20 w-20 h-20 bg-cyan-400 rounded-lg rotate-45"
-                animate={{
-                  rotate: [45, 90, 45],
-                  scale: [1, 1.2, 1],
-                }}
-                transition={{
-                  duration: 10,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: 2,
-                }}
-              />
-            </motion.div>
-
-            <div className="relative z-10 w-full h-full flex flex-col lg:flex-row items-center justify-around px-4 md:px-8 lg:px-16 py-6">
-              <div className="text-white space-y-4 lg:space-y-6 text-center lg:text-left mb-6 lg:mb-0 ">
-                <div className="flex items-center justify-center lg:justify-start gap-2 md:gap-3">
-                  <motion.div
-                    animate={{
-                      scale: [1, 1.2, 1],
-                      opacity: [1, 0.7, 1],
-                    }}
-                    transition={{
-                      duration: 3,
-                      repeat: Infinity,
-                      ease: "easeInOut",
-                    }}
-                  >
-                    <IoDiamond className="text-2xl md:text-3xl lg:text-4xl text-cyan-400" />
-                  </motion.div>
-                  <span className="text-xs md:text-sm font-semibold bg-cyan-500/30 px-3 py-1 md:px-4 md:py-2 rounded-full border border-cyan-400/50">
-                    CALIDAD PREMIUM
-                  </span>
-                </div>
-
-                <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold leading-tight">
-                  Excelencia en <br className="hidden sm:block" />
-                  <span className="bg-linear-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                    Cada Detalle
-                  </span>
-                </h2>
-
-                <p className="text-sm md:text-lg lg:text-xl text-gray-300 max-w-md mx-auto lg:mx-0">
-                  Materiales de primera calidad y procesos artesanales que
-                  garantizan durabilidad y satisfacción.
-                </p>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-md lg:max-w-none">
-                  {[
-                    {
-                      icon: IoStar,
-                      text: "Materiales Duraderos",
-                      color: "yellow",
-                    },
-                    {
-                      icon: FaShippingFast,
-                      text: "Entrega Puntual",
-                      color: "green",
-                    },
-                    {
-                      icon: RiCustomerService2Fill,
-                      text: "Soporte Personalizado",
-                      color: "blue",
-                    },
-                    {
-                      icon: FaRocket,
-                      text: "Procesos Eficientes",
-                      color: "purple",
-                    },
-                  ].map((item, index) => (
-                    <div
-                      key={index}
-                      className="flex items-center gap-3 p-3 bg-white/10 rounded-xl backdrop-blur-sm border border-white/20"
-                    >
-                      <div>
-                        <item.icon
-                          className={`text-${item.color}-400 text-xl md:text-2xl`}
-                        />
-                      </div>
-                      <span className="text-white text-sm md:text-base">
-                        {item.text}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <motion.div
-                className="flex justify-center lg:justify-end"
-                variants={fadeInRight}
-                initial="initial"
-                animate="animate"
-              >
-                <div className="relative">
-                  <motion.div
-                    className="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 bg-linear-to-br from-cyan-400/20 to-blue-500/20 rounded-full flex items-center justify-center backdrop-blur-sm border border-cyan-400/30"
-                    animate={{
-                      rotate: [0, 360],
-                      scale: [1, 1.05, 1],
-                    }}
-                    transition={{
-                      rotate: {
-                        duration: 20,
-                        repeat: Infinity,
-                        ease: "linear",
-                      },
-                      scale: {
-                        duration: 4,
-                        repeat: Infinity,
-                        ease: "easeInOut",
-                      },
-                    }}
-                  >
-                    <motion.div
-                      animate={{
-                        scale: [1, 1.1, 1],
-                        opacity: [1, 0.8, 1],
-                      }}
-                      transition={{
-                        duration: 3,
-                        repeat: Infinity,
-                        ease: "easeInOut",
-                      }}
-                    >
-                      <IoStar className="text-4xl md:text-6xl lg:text-8xl text-yellow-400" />
-                    </motion.div>
-                  </motion.div>
-                  <motion.div
-                    className="absolute -bottom-4 -left-4 bg-white text-slate-900 px-3 py-2 rounded-full font-bold shadow-lg text-xs md:text-sm"
-                    initial={{ scale: 0, y: 20 }}
-                    animate={{ scale: 1, y: 0 }}
-                    transition={{
-                      delay: 0.7,
-                      type: "spring",
-                      stiffness: 200,
-                    }}
-                    whileHover={{
-                      scale: 1.1,
-                      rotate: [0, -5, 0],
-                    }}
-                  >
-                    ⭐ 5/5 Calificación
-                  </motion.div>
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </SwiperSlide>
-
         {/* Slide - Calendarios de Varilla */}
         <SwiperSlide>
           <div className="w-full h-full relative bg-linear-to-br from-blue-500 via-purple-500 to-indigo-600 overflow-hidden">
@@ -1257,6 +771,321 @@ export default function Carousel() {
             </div>
           </div>
         </SwiperSlide>
+
+        {/* Slide 3 - Eventos Especiales */}
+        <SwiperSlide>
+          <div className="w-full h-full relative bg-linear-to-br from-orange-100 via-amber-100 to-yellow-100 overflow-hidden">
+            {/* Elementos de celebración animados */}
+            <motion.div
+              className="absolute top-0 right-0 w-32 h-32 md:w-48 md:h-48 lg:w-64 lg:h-64 bg-yellow-400/70 rounded-full"
+              animate={{
+                scale: [1, 1.2, 1],
+                opacity: [0.2, 0.3, 0.2],
+              }}
+              transition={{
+                duration: 8,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            />
+            <motion.div
+              className="absolute bottom-0 left-0 w-40 h-40 md:w-60 md:h-60 lg:w-80 lg:h-80 bg-orange-400/20 rounded-full"
+              animate={{
+                scale: [1, 1.1, 1],
+                opacity: [0.2, 0.4, 0.2],
+              }}
+              transition={{
+                duration: 10,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 1,
+              }}
+            />
+
+            <div className="relative z-10 w-full h-full flex flex-col items-center justify-center text-center px-4 md:px-8 lg:px-16 py-6">
+              <div className="mb-4 md:mb-6 lg:mb-8">
+                <div>
+                  <RiCalendarEventFill className="text-4xl md:text-5xl lg:text-6xl text-orange-500 mb-2 md:mb-3 lg:mb-4 mx-auto" />
+                </div>
+                <motion.div
+                  className="bg-linear-to-r from-orange-500 to-amber-500 text-white px-4 py-1 md:px-6 md:py-2 rounded-full text-xs md:text-sm font-bold inline-block"
+                  variants={fadeInUp}
+                >
+                  EVENTOS Y CELEBRACIONES
+                </motion.div>
+              </div>
+
+              <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-800 mb-4 md:mb-6 ">
+                Personaliza Tus <br className="hidden" />
+                <span className="bg-linear-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent">
+                  Eventos
+                </span>
+              </h2>
+
+              <p className="text-sm lg:text-lg xl:text-xl text-gray-600 mb-6 md:mb-8 max-w-2xl">
+                Bodas, aniversarios, conferencias - creamos productos únicos
+                para cada ocasión especial
+              </p>
+
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 md:gap-6 lg:gap-8 mb-6 md:mb-8 w-full max-w-md sm:max-w-2xl">
+                {[
+                  {
+                    emoji: "🎉",
+                    title: "Bodas",
+                    desc: "Recuerdos especiales",
+                    color: "orange",
+                    colorClass: "border-orange-200",
+                  },
+                  {
+                    emoji: "🏢",
+                    title: "Corporativos",
+                    desc: "Eventos empresariales",
+                    color: "amber",
+                    colorClass: "border-amber-200",
+                  },
+                  {
+                    emoji: "🎓",
+                    title: "Graduaciones",
+                    desc: "Logros memorables",
+                    color: "yellow",
+                    colorClass: "border-yellow-200",
+                  },
+                  {
+                    emoji: "🏆",
+                    title: "Deportivos",
+                    desc: "Torneos y competencias",
+                    color: "green",
+                    colorClass: "border-green-200",
+                  },
+                ].map((item, index) => (
+                  <div key={index}>
+                    <div
+                      className={`bg-white rounded-xl md:rounded-2xl p-4 md:p-5 shadow-lg border ${item.colorClass} hover:shadow-xl transition-shadow`}
+                    >
+                      <motion.div
+                        className="text-2xl md:text-3xl mb-2"
+                        animate={{
+                          scale: [1, 1.2, 1],
+                          rotate: [0, 10, 0],
+                        }}
+                        transition={{
+                          duration: 5,
+                          repeat: Infinity,
+                          ease: "easeInOut",
+                          delay: index * 0.5,
+                        }}
+                      >
+                        {item.emoji}
+                      </motion.div>
+                      <div className="font-semibold text-gray-800 text-sm md:text-base">
+                        {item.title}
+                      </div>
+                      <div className="text-xs md:text-sm text-gray-600">
+                        {item.desc}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
+
+        {/* Slide - Set Ecológico BioSet (Mobile Optimized) */}
+        <SwiperSlide>
+          <div className="w-full h-full relative bg-linear-to-br from-amber-400 via-orange-300 to-rose-400 overflow-hidden">
+            {/* Elementos decorativos de fondo más sutiles en móvil */}
+            <motion.div
+              className="absolute inset-0 opacity-15 md:opacity-20"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 0.15 }}
+              transition={{ duration: 1 }}
+            >
+              <motion.div
+                className="absolute top-10 left-4 md:left-10 w-12 h-12 md:w-20 md:h-20 bg-white rounded-lg rotate-45"
+                animate={{
+                  rotate: [45, 90, 45],
+                  scale: [1, 1.1, 1],
+                }}
+                transition={{
+                  duration: 8,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              />
+              <motion.div
+                className="absolute bottom-10 right-4 md:right-10 w-10 h-10 md:w-16 md:h-16 bg-green-200 rounded-full"
+                animate={{
+                  y: [0, -10, 0],
+                  scale: [1, 1.05, 1],
+                }}
+                transition={{
+                  duration: 6,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              />
+            </motion.div>
+
+            <div className="relative z-10 w-full h-full flex flex-col lg:flex-row items-center justify-center lg:gap-40 px-4 md:px-8 lg:px-16 py-4 md:py-8">
+              {/* Imagen del producto - Más compacta en móvil */}
+              <div className="flex justify-center mb-4 lg:mb-0">
+                <div className="relative">
+                  <motion.div
+                    className="w-48 h-48 md:w-52 md:h-52 lg:w-80 lg:h-80 bg-white/90 shadow-xl border-2 border-white rounded-full"
+                    animate={{
+                      y: [0, -8, 0],
+                      rotate: [0, 2, 0],
+                    }}
+                    transition={{
+                      duration: 6,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    }}
+                  >
+                    <div className="w-full h-full bg-linear-to-br from-amber-100 to-rose-100 flex items-center justify-center overflow-hidden rounded-full">
+                      {/* Reemplaza el SVG con la imagen real */}
+                      <motion.img
+                        src="/img/sliders/set-027-be.jpg"
+                        alt="Set Ecológico BioSet"
+                        className="w-full h-full object-cover"
+                        animate={{ scale: [1, 1.05, 1] }}
+                        transition={{ duration: 4, repeat: Infinity }}
+                      />
+
+                      {/* Texto superpuesto (opcional) */}
+                      <motion.span
+                        className="absolute bottom-2 bg-white/90 px-2 py-1 rounded-full text-amber-700 font-bold text-xs md:text-sm"
+                        animate={{ opacity: [0.7, 1, 0.7] }}
+                        transition={{ duration: 3, repeat: Infinity }}
+                      >
+                        3 PIEZAS
+                      </motion.span>
+                    </div>
+                  </motion.div>
+
+                  {/* Badges más pequeños en móvil */}
+                  <motion.div
+                    className="absolute -top-1 -right-1 md:-top-2 md:-right-2 bg-green-500 text-white px-2 py-1 rounded-full text-xs font-bold rotate-12 shadow-lg"
+                    animate={{
+                      rotate: [12, -8, 12],
+                      scale: [1, 1.1, 1],
+                    }}
+                    transition={{
+                      duration: 4,
+                      repeat: Infinity,
+                    }}
+                  >
+                    🌱 ECO
+                  </motion.div>
+                </div>
+              </div>
+
+              {/* Contenido optimizado para móvil */}
+              <div className="flex flex-col text-gray-800 space-y-3 md:space-y-4 lg:space-y-6 max-w-lg text-center lg:text-left">
+                {/* Badge compacto */}
+                <div className="flex items-center justify-center lg:justify-start gap-2">
+                  <span className="text-xs font-bold bg-white/70 px-3 py-1 rounded-full border border-white">
+                    SET ECOLÓGICO
+                  </span>
+                </div>
+
+                {/* Título principal */}
+                <h2 className="text-xl md:text-3xl lg:text-4xl font-bold leading-tight">
+                  BioSet
+                  <br />
+                  <span className="bg-linear-to-r from-amber-700 to-rose-700 bg-clip-text text-transparent text-lg md:text-2xl lg:text-3xl">
+                    Ecológico
+                  </span>
+                </h2>
+
+                {/* Descripción corta para móvil */}
+                <div className="text-gray-700">
+                  <p className="text-sm md:text-base leading-relaxed">
+                    Set ecológico premium con libreta, bolsa de algodón y
+                    bolígrafo.
+                  </p>
+
+                  {/* Información clave en badges */}
+                  <div className="flex flex-wrap justify-center lg:justify-start gap-2 mt-3">
+                    <span className="bg-white/60 px-2 py-1 rounded-full text-xs font-semibold">
+                      📓 Libreta 80 hojas
+                    </span>
+                    <span className="bg-white/60 px-2 py-1 rounded-full text-xs font-semibold">
+                      🛍️ Bolsa algodón
+                    </span>
+                    <span className="bg-white/60 px-2 py-1 rounded-full text-xs font-semibold">
+                      ✏️ Bolígrafo cartón
+                    </span>
+                  </div>
+                </div>
+
+                {/* Especificaciones solo las más importantes en móvil */}
+                <div className="grid grid-cols-2 gap-3 text-xs md:text-sm">
+                  <div className="text-center lg:text-left">
+                    <div className="flex items-center justify-center lg:justify-start gap-1 mb-1">
+                      <div className="w-1.5 h-1.5 bg-amber-600 rounded-full"></div>
+                      <span className="font-bold text-amber-700">Material</span>
+                    </div>
+                    <p className="text-gray-700">Cartón / Algodón</p>
+                  </div>
+
+                  <div className="text-center lg:text-left">
+                    <div className="flex items-center justify-center lg:justify-start gap-1 mb-1">
+                      <div className="w-1.5 h-1.5 bg-green-600 rounded-full"></div>
+                      <span className="font-bold text-green-700">Medidas</span>
+                    </div>
+                    <p className="text-gray-700">29 × 22 × 5 cm</p>
+                  </div>
+
+                  <div className="text-center lg:text-left">
+                    <div className="flex items-center justify-center lg:justify-start gap-1 mb-1">
+                      <div className="w-1.5 h-1.5 bg-blue-600 rounded-full"></div>
+                      <span className="font-bold text-blue-700">Color</span>
+                    </div>
+                    <p className="text-gray-700">Beige Natural</p>
+                  </div>
+
+                  <div className="text-center lg:text-left">
+                    <div className="flex items-center justify-center lg:justify-start gap-1 mb-1">
+                      <div className="w-1.5 h-1.5 bg-rose-600 rounded-full"></div>
+                      <span className="font-bold text-rose-700">Origen</span>
+                    </div>
+                    <p className="text-gray-700">Hecho en México</p>
+                  </div>
+                </div>
+
+                {/* Botones optimizados para móvil */}
+                <div className="flex flex-col gap-2 pt-2 md:pt-4">
+                  <button
+                    className="bg-linear-to-r from-amber-600 to-rose-600 hover:from-amber-700 hover:to-rose-700 text-white px-4 py-2 md:px-6 md:py-3 rounded-full font-bold shadow-lg text-sm md:text-base"
+                    onClick={() =>
+                      window.open(
+                        "https://wa.me/5212281255258?text=Hola! Me interesa el Set Ecológico BioSet.",
+                        "_blank"
+                      )
+                    }
+                  >
+                    Cotizar Set Completo
+                  </button>
+                  <button
+                    className="hidden md:block border border-amber-600 text-amber-700 hover:bg-amber-600/20 px-4 py-2 md:px-6 md:py-3 rounded-full font-semibold text-sm md:text-base"
+                    onClick={() =>
+                      window.open(
+                        "https://wa.me/5212281255258?text=Hola! Quiero más información sobre el BioSet.",
+                        "_blank"
+                      )
+                    }
+                  >
+                    Más Información
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>       
+
+        
       </Swiper>
 
       {/* Navegación personalizada para mejor responsividad */}
