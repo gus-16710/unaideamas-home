@@ -14,6 +14,7 @@ import CarouselCategories from "@/components/CarouselCategories";
 import RandomProducts from "@/components/RandomProducts";
 import ActionButtons from "@/components/ActionButtons";
 import ProductsByCategory from "@/components/ProductsByCategory";
+import BannerHorizontal from "@/components/BannerHorizontal";
 
 export default function Categories() {
   const [isVisible, setIsVisible] = useState(true);
@@ -124,6 +125,20 @@ export default function Categories() {
         <ProductsByCategory />
         <ContactHelp />
         <RandomProducts />
+      </div>
+
+      <BannerHorizontal />
+
+      <div className="relative z-10 max-w-4xl mx-auto px-4 pb-4">
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="flex flex-col items-center text-center"
+        ></motion.div>
+
+        
         <CarouselCategories />
         <ContactCostumize />
         <FeaturesSection />

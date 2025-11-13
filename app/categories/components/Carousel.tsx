@@ -17,17 +17,11 @@ export default function Carousel() {
     initial: { opacity: 0, y: 30 },
     animate: { opacity: 1, y: 0 },
     transition: { duration: 0.6, ease: "easeOut" },
-  };
-
-  const fadeInRight = {
-    initial: { opacity: 0, x: 30 },
-    animate: { opacity: 1, x: 0 },
-    transition: { duration: 0.6, ease: "easeOut" },
-  };
+  }; 
 
   return (
     <motion.div
-      className="w-full h-screen lg:h-[650px] flex items-center justify-center relative overflow-hidden pb-15"
+      className="w-full h-screen lg:h-[700px] flex items-center justify-center relative overflow-hidden pb-15"
       initial={{ opacity: 0, y: -40 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
@@ -57,7 +51,9 @@ export default function Carousel() {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         }}
-        modules={[Navigation, Pagination, Autoplay, EffectFlip]}
+        modules={[Navigation, Pagination, 
+          //Autoplay, 
+          EffectFlip]}
         className="w-full h-full"
       >
         {/* Slide 1 - Personalización Empresarial */}
@@ -209,7 +205,7 @@ export default function Carousel() {
             </motion.div>
 
             {/* Contenido principal */}
-            <div className="relative z-10 w-full h-full flex flex-col lg:flex-row items-center justify-between px-4 md:px-8 lg:px-16 py-8">
+            <div className="relative z-10 w-full h-full flex flex-col lg:flex-row items-center justify-around  px-4 md:px-8 lg:px-16 py-8">
               {/* Información del producto */}
               <div className="text-white space-y-4 lg:space-y-6 max-w-lg flex flex-col justify-center h-full">
                 {/* Badge ecológico */}
@@ -504,6 +500,7 @@ export default function Carousel() {
             </div>
           </div>
         </SwiperSlide>
+
         {/* Slide - Calendarios de Varilla */}
         <SwiperSlide>
           <div className="w-full h-full relative bg-linear-to-br from-blue-500 via-purple-500 to-indigo-600 overflow-hidden">
