@@ -6,7 +6,6 @@ import { AiFillProduct } from "react-icons/ai";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import WhatsAppButton from "@/components/WhatsAppButton";
 import ActionButtons from "@/components/ActionButtons";
 
 export default function Home() {
