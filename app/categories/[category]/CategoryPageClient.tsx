@@ -8,11 +8,14 @@ import {
   Card,
   CardBody,
   CardFooter,
+  Chip,
+  Link,
 } from "@heroui/react";
 import { useRouter } from "next/navigation";
 import { FiExternalLink } from "react-icons/fi";
 import { useProductStore } from "@/store/product.store";
 import ActionButtons from "@/components/ActionButtons";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 interface CategoryPageClientProps {
   category: string;
@@ -155,7 +158,7 @@ export default function CategoryPageClient({
           </motion.div>
         ) : (
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6"
+            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-2 sm:gap-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -176,37 +179,96 @@ export default function CategoryPageClient({
                       className="w-full h-48 object-cover transition-transform duration-500 hover:scale-105"
                     />
                     <div className="absolute top-3 left-3">
-                      <span className="px-2 py-1 bg-black/70 text-white text-xs font-medium rounded-full backdrop-blur-sm">
-                        ID: {product.id}
-                      </span>
+                      <Chip
+                        variant="flat"
+                        className="bg-black/60 text-white backdrop-blur-sm text-xs border-white/20"
+                      >
+                        {product.id}
+                      </Chip>
                     </div>
                     <div className="absolute inset-0 bg-linear-to-t from-black/10 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
                   </div>
 
                   <CardBody className="p-4">
-                    <h3 className="font-bold text-lg text-gray-800 line-clamp-2 mb-2">
+                    <h3 className="font-bold text-sm sm:text-lg text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">
                       {product.nombre}
                     </h3>
-                    <p className="text-gray-600 text-sm line-clamp-3 leading-relaxed">
+
+                    <p className="text-gray-600 text-sm line-clamp-2 md:line-clamp-3 leading-relaxed ">
                       {product.descripcion}
                     </p>
+
+                    {/* Especificaciones */}
+                    <div className="space-y-2 mt-2">
+                      {product.capacidad && (
+                        <div className="flex items-center gap-2 text-sm text-gray-500">
+                          <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
+                          <span className="hidden sm:flex md:flex">
+                            Capacidad:
+                          </span>
+                          <span>{product.capacidad}</span>
+                        </div>
+                      )}
+                      {product.material?.exterior && (
+                        <div className="flex items-center gap-2 text-sm text-gray-500">
+                          <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
+                          <span className="hidden sm:flex md:flex">
+                            Material:
+                          </span>
+                          <span className="line-clamp-1">
+                            {product.material.exterior}
+                          </span>
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Colores disponibles */}
+                    {product.colores_disponibles &&
+                      product.colores_disponibles.length > 0 && (
+                        <div className="flex mt-4">
+                          <div className="flex items-center gap-2 mb-2">
+                            <span className="text-xs font-medium text-gray-500 hidden sm:flex md:flex">
+                              Colores:
+                            </span>
+                            <div className="flex gap-1">
+                              {product.colores_disponibles
+                                .slice(0, 4)
+                                .map((color, idx) => (
+                                  <div
+                                    key={idx}
+                                    className="w-4 h-4 rounded-full border border-gray-200 shadow-sm"
+                                    style={{
+                                      background: color,
+                                    }}
+                                    title={color}
+                                  />
+                                ))}
+                              {product.colores_disponibles.length > 4 && (
+                                <div className="w-4 h-4 rounded-full bg-gray-100 border border-gray-200 flex items-center justify-center">
+                                  <span className="text-xs text-gray-500">
+                                    +{product.colores_disponibles.length - 4}
+                                  </span>
+                                </div>
+                              )}
+                            </div>
+                          </div>
+                        </div>
+                      )}
                   </CardBody>
 
-                  <CardFooter className="p-4 pt-0">
-                    <div className="w-full">
-                      <div className="flex justify-between items-center mb-3">
-                        <span className="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">
-                          {product.capacidad}
-                        </span>
-                        <span className="text-xs text-gray-500">
-                          {product.colores_disponibles.length} colores
-                        </span>
-                      </div>
-                      <div className="w-full text-sm bg-linear-to-r from-blue-500 to-cyan-500 text-white font-medium py-2 px-4 rounded-lg shadow-lg shadow-blue-500/25 flex items-center justify-center gap-2">
-                        Ver detalles
-                        <FiExternalLink size={14} />
-                      </div>
-                    </div>
+                  <CardFooter className="flex items-center justify-between border-t border-gray-100 bg-gray-50/40 px-5 py-3">
+                    <span className="text-xs font-medium text-gray-500 hidden sm:flex md:flex">
+                      {product.origen}
+                    </span>
+                    <Link
+                      size="sm"
+                      color="primary"
+                      className="font-medium flex items-center gap-1"
+                      onPress={() => router.push(`/products/${product.id}`)}
+                    >
+                      Más detalles
+                      <FaExternalLinkAlt className="text-xs" />
+                    </Link>
                   </CardFooter>
                 </Card>
               </div>
