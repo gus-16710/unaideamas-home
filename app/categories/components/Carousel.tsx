@@ -69,7 +69,7 @@ export default function Carousel() {
         modules={[
           Navigation,
           Pagination,
-          //Autoplay,
+          Autoplay,
           EffectCube,
         ]}
         className="w-full h-full mb-12"
