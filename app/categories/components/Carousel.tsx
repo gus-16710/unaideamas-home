@@ -46,10 +46,10 @@ export default function Carousel() {
           shadow: true,
           slideShadows: true,
           shadowOffset: 20,
-          shadowScale: 0.70,
+          shadowScale: 0.7,
         }}
         autoplay={{
-          delay: 5000,
+          delay: 10000,
           disableOnInteraction: false,
         }}
         speed={800}
@@ -61,12 +61,7 @@ export default function Carousel() {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         }}
-        modules={[
-          Navigation,
-          Pagination,
-          Autoplay,
-          EffectCube,
-        ]}
+        modules={[Navigation, Pagination, Autoplay, EffectCube]}
         className="w-full h-full mb-12"
       >
         {/* Slide 1 - Personalización Empresarial */}
@@ -671,15 +666,10 @@ export default function Carousel() {
 
             <div className="relative z-10 w-full h-full flex flex-col lg:flex-row items-center justify-center lg:justify-between px-4 md:px-8 lg:px-16 py-4 md:py-8">
               {/* Imagen del producto - Más compacta en móvil */}
-              <motion.div
-                className="flex justify-center mb-4 lg:mb-0 lg:flex-1"
-                initial={{ x: -100, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.8 }}
-              >
+              <div className="flex justify-center mb-4 lg:mb-0 lg:flex-1">
                 <div className="relative">
                   <motion.div
-                    className="w-32 h-32 md:w-48 md:h-48 lg:w-72 lg:h-72 bg-white/90 rounded-full p-1 shadow-xl border-2 border-white"
+                    className="w-48 h-48 md:w-52 md:h-52 lg:w-80 lg:h-80 bg-white/90 shadow-xl border-2 border-white rounded-full"
                     animate={{
                       y: [0, -8, 0],
                       rotate: [0, 2, 0],
@@ -690,12 +680,12 @@ export default function Carousel() {
                       ease: "easeInOut",
                     }}
                   >
-                    <div className="w-full h-full bg-linear-to-br from-amber-100 to-rose-100 rounded-full flex items-center justify-center overflow-hidden">
+                    <div className="w-full h-full bg-linear-to-br from-amber-100 to-rose-100 flex items-center justify-center overflow-hidden rounded-full">
                       {/* Reemplaza el SVG con la imagen real */}
                       <motion.img
                         src="/img/sliders/set-027-be.jpg"
                         alt="Set Ecológico BioSet"
-                        className="w-full h-full object-cover rounded-full"
+                        className="w-full h-full object-cover"
                         animate={{ scale: [1, 1.05, 1] }}
                         transition={{ duration: 4, repeat: Infinity }}
                       />
@@ -726,7 +716,7 @@ export default function Carousel() {
                     🌱 ECO
                   </motion.div>
                 </div>
-              </motion.div>
+              </div>
 
               {/* Contenido optimizado para móvil */}
               <div className="flex flex-col text-gray-800 space-y-3 md:space-y-4 lg:space-y-6 max-w-lg text-center lg:text-left">
@@ -803,11 +793,9 @@ export default function Carousel() {
                 </div>
 
                 {/* Botones optimizados para móvil */}
-                <div
-                  className="flex flex-col gap-2 pt-2 md:pt-4"                  
-                >
+                <div className="flex flex-col gap-2 pt-2 md:pt-4">
                   <button
-                    className="bg-linear-to-r from-amber-600 to-rose-600 hover:from-amber-700 hover:to-rose-700 text-white px-4 py-2 md:px-6 md:py-3 rounded-full font-bold shadow-lg transition-all duration-300 text-sm md:text-base"
+                    className="bg-linear-to-r from-amber-600 to-rose-600 hover:from-amber-700 hover:to-rose-700 text-white px-4 py-2 md:px-6 md:py-3 rounded-full font-bold shadow-lg text-sm md:text-base"
                     onClick={() =>
                       window.open(
                         "https://wa.me/5212281255258?text=Hola! Me interesa el Set Ecológico BioSet.",
@@ -818,7 +806,7 @@ export default function Carousel() {
                     Cotizar Set Completo
                   </button>
                   <button
-                    className="hidden md:block border border-amber-600 text-amber-700 hover:bg-amber-600/20 px-4 py-2 md:px-6 md:py-3 rounded-full font-semibold transition-all duration-300 text-sm md:text-base"
+                    className="hidden md:block border border-amber-600 text-amber-700 hover:bg-amber-600/20 px-4 py-2 md:px-6 md:py-3 rounded-full font-semibold text-sm md:text-base"
                     onClick={() =>
                       window.open(
                         "https://wa.me/5212281255258?text=Hola! Quiero más información sobre el BioSet.",
