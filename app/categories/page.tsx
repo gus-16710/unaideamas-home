@@ -41,7 +41,12 @@ export default function Categories() {
         }}
       ></div>
 
-      <div className="relative bg-linear-to-r from-amber-500 to-orange-500 shadow-lg">
+      <motion.div
+        className="relative bg-linear-to-r from-amber-500 to-orange-500 shadow-lg"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
         <Alert
           description={
             <div className="items-center gap-2 text-amber-900 flex">
@@ -98,7 +103,7 @@ export default function Categories() {
           <div className="absolute top-2 right-10 text-2xl">🎯</div>
           <div className="absolute bottom-2 left-10 text-xl">✨</div>
         </div>
-      </div>
+      </motion.div>
 
       <Carousel />
 
@@ -118,9 +123,9 @@ export default function Categories() {
         <Breadcrumb />
         <ProductsByCategory />
         <ContactHelp />
-        <RandomProducts />        
+        <RandomProducts />
         <CarouselCategories />
-        <ContactCostumize />        
+        <ContactCostumize />
         <FeaturesSection />
 
         <Footer />
