@@ -23,11 +23,8 @@ import {
 import { TbRulerMeasure2 } from "react-icons/tb";
 import { MdOutlineColorLens, MdOutlineZoomOutMap } from "react-icons/md";
 import { useEffect, useState } from "react";
-import WhatsAppButton from "@/components/WhatsAppButton";
-
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
-import FloatinButton from "@/components/FloatingButton";
 import ActionButtons from "@/components/ActionButtons";
 
 interface ProductDetailClientProps {
