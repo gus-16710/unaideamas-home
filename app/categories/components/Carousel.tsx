@@ -1,5 +1,11 @@
 import { SwiperSlide, Swiper } from "swiper/react";
-import { Navigation, Pagination, Autoplay, EffectCube, EffectFlip } from "swiper/modules";
+import {
+  Navigation,
+  Pagination,
+  Autoplay,
+  EffectCube,
+  EffectFlip,
+} from "swiper/modules";
 import { FaBusinessTime, FaPen, FaGift } from "react-icons/fa";
 import { IoShirt, IoBook, IoBag } from "react-icons/io5";
 import { RiTeamFill, RiCalendarEventFill } from "react-icons/ri";
@@ -9,7 +15,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/effect-cube";
-import 'swiper/css/effect-flip';
+import "swiper/css/effect-flip";
+import { useEffect, useState } from "react";
 
 export default function Carousel() {
   // Animaciones reutilizables
@@ -17,7 +24,25 @@ export default function Carousel() {
     initial: { opacity: 0, y: 30 },
     animate: { opacity: 1, y: 0 },
     transition: { duration: 0.6, ease: "easeOut" },
-  }; 
+  };
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const images = [
+    "/img/sliders/set-027-be.jpg",
+    "/img/sliders/set-027-be_4_1.jpg",
+    "/img/sliders/set-027-be_5_1.jpg",
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) =>
+        prevIndex === images.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 5000); // 5000 ms = 5 segundos
+
+    return () => clearInterval(interval);
+  }, [images.length]);
 
   return (
     <motion.div
@@ -51,9 +76,12 @@ export default function Carousel() {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         }}
-        modules={[Navigation, Pagination, 
-          //Autoplay, 
-          EffectFlip]}
+        modules={[
+          Navigation,
+          Pagination,
+          Autoplay,
+          EffectFlip,
+        ]}
         className="w-full h-full"
       >
         {/* Slide 1 - Personalización Empresarial */}
@@ -929,11 +957,20 @@ export default function Carousel() {
                     <div className="w-full h-full bg-linear-to-br from-amber-100 to-rose-100 flex items-center justify-center overflow-hidden rounded-full">
                       {/* Reemplaza el SVG con la imagen real */}
                       <motion.img
-                        src="/img/sliders/set-027-be.jpg"
+                        key={currentImageIndex} // Key importante para forzar re-render
+                        src={images[currentImageIndex]}
                         alt="Set Ecológico BioSet"
                         className="w-full h-full object-cover"
-                        animate={{ scale: [1, 1.05, 1] }}
-                        transition={{ duration: 4, repeat: Infinity }}
+                        initial={{ opacity: 0 }}
+                        animate={{
+                          opacity: 1,
+                          scale: [1, 1.05, 1],
+                        }}
+                        transition={{
+                          duration: 4,
+                          repeat: Infinity,
+                          opacity: { duration: 0.5 }, // Transición suave al cambiar imagen
+                        }}
                       />
 
                       {/* Texto superpuesto (opcional) */}
@@ -949,7 +986,7 @@ export default function Carousel() {
 
                   {/* Badges más pequeños en móvil */}
                   <motion.div
-                    className="absolute -top-1 -right-1 md:-top-2 md:-right-2 bg-green-500 text-white px-2 py-1 rounded-full text-xs font-bold rotate-12 shadow-lg"
+                    className="absolute -top-1 -right-1 md:top-10 md:-right-2 bg-green-500 text-white px-2 py-1 rounded-full text-xs font-bold rotate-12 shadow-lg"
                     animate={{
                       rotate: [12, -8, 12],
                       scale: [1, 1.1, 1],
