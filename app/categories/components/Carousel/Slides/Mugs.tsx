@@ -1,0 +1,395 @@
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+
+export default function Mugs() {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const images = [
+    "/img/sliders/taza-navidad-01.png",
+    "/img/sliders/taza-navidad-02.png",
+    "/img/sliders/taza-navidad-03.png",
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) =>
+        prevIndex === images.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 5000); // 5000 ms = 5 segundos
+
+    return () => clearInterval(interval);
+  }, [images.length]);
+
+  const starAnimation = {
+    initial: { scale: 0, rotate: 0 },
+    animate: {
+      scale: [0, 1, 0.8, 1],
+      rotate: [0, 180, 360],
+      opacity: [0, 1, 0.7, 1],
+    },
+    transition: {
+      duration: 4,
+      repeat: Infinity,
+      ease: "easeInOut" as const,
+    },
+  };
+
+  const floatingStarAnimation = {
+    animate: {
+      y: [0, -15, 0],
+      x: [0, 10, 0],
+      rotate: [0, 10, 0],
+      scale: [1, 1.1, 1],
+    },
+    transition: {
+      duration: 6,
+      repeat: Infinity,
+      ease: "easeInOut" as const,
+    },
+  };
+
+  const pulseStarAnimation = {
+    animate: {
+      scale: [1, 1.3, 1],
+      opacity: [0.6, 1, 0.6],
+    },
+    transition: {
+      duration: 3,
+      repeat: Infinity,
+      ease: "easeInOut" as const,
+    },
+  };
+
+  return (
+    <div
+      className="w-full h-full relative bg-linear-to-br overflow-hidden"
+      style={{
+        background:
+          "linear-gradient(160deg, #0a3931 0%, #0f4b43 50%, #1a8c78 100%)",
+      }}
+    >
+      {/* Luces navideñas - optimizadas para mobile */}
+      <div className="absolute top-0 left-0 right-0 h-3 md:h-4 flex justify-around px-2">
+        {[...Array(8)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="w-2 h-2 md:w-3 md:h-3 rounded-full"
+            animate={{
+              opacity: [0.3, 1, 0.3],
+              scale: [1, 1.2, 1],
+            }}
+            transition={{
+              duration: 1.5,
+              repeat: Infinity,
+              delay: i * 0.2,
+            }}
+            style={{
+              backgroundColor: ["#ff0000", "#00ff00", "#ffff00"][i % 3],
+            }}
+          />
+        ))}
+      </div>
+
+      {/* Elementos decorativos de fondo más sutiles en móvil */}
+      <motion.div
+        className="absolute inset-0 opacity-15 md:opacity-20"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.15 }}
+        transition={{ duration: 1 }}
+      >
+        <motion.div
+          className="absolute top-10 left-4 md:left-10 w-12 h-12 md:w-20 md:h-20 bg-white rounded-lg rotate-45"
+          animate={{
+            rotate: [45, 90, 45],
+            scale: [1, 1.1, 1],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+        <motion.div
+          className="absolute bottom-10 right-4 md:right-10 w-10 h-10 md:w-16 md:h-16 bg-red-200 rounded-full"
+          animate={{
+            y: [0, -10, 0],
+            scale: [1, 1.05, 1],
+          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+      </motion.div>
+
+      <div className="relative z-10 w-full h-full flex flex-col lg:flex-row items-center justify-center lg:gap-40 px-4 md:px-8 lg:px-16 py-4 md:py-8">
+        {/* Imagen del producto - Más compacta en móvil */}
+        <div className="flex justify-center mb-4 lg:mb-0">
+          <div className="relative">
+            <motion.div
+              className="w-72 h-52 md:w-64 md:h-64 lg:w-96 lg:h-80 "
+              animate={{
+                y: [0, -8, 0],
+                rotate: [0, 2, 0],
+              }}
+              transition={{
+                duration: 6,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            >
+              <div className="w-full h-full flex items-center justify-center ">
+                {/* Imagen de taza navideña - puedes reemplazar con tu imagen real */}
+                <motion.img
+                  key={currentImageIndex} // Key importante para forzar re-render
+                  src={images[currentImageIndex]}
+                  alt="Tazas Navideñas Personalizadas"
+                  className="w-4/4 h-4/4 object-contain"
+                  initial={{ opacity: 0 }}
+                  animate={{
+                    opacity: 1,
+                    scale: [1, 1.05, 1],
+                  }}
+                  transition={{
+                    duration: 4,
+                    repeat: Infinity,
+                    opacity: { duration: 0.5 },
+                  }}
+                />
+              </div>
+            </motion.div>
+
+            {/* Badge de oferta */}
+            <motion.div
+              className="absolute -top-1 -right-1 md:top-10 md:-right-2 bg-red-500 text-white px-2 py-1 rounded-full  font-bold rotate-12 shadow-lg"
+              animate={{
+                rotate: [12, -8, 12],
+                scale: [1, 1.1, 1],
+              }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+              }}
+            >
+              🏷️ $26.90 c/u
+            </motion.div>
+          </div>
+        </div>
+
+        {/* Contenido optimizado para móvil */}
+        <div className="flex flex-col text-gray-800 space-y-3 md:space-y-4 lg:space-y-6 max-w-lg text-center lg:text-left">
+          {/* Badge compacto */}
+          <div className="flex  items-center justify-center lg:justify-start gap-2">
+            <span className="text-xs font-bold bg-white/70 px-3 py-1 rounded-full border border-white">
+              PROMOCIÓN NAVIDEÑA
+            </span>
+          </div>
+
+          {/* Título principal */}
+          <h2 className="text-xl md:text-3xl lg:text-4xl font-bold leading-tight text-zinc-100">
+            Tazas Navideñas
+            <br />
+            <span className="text-lg md:text-2xl lg:text-3xl">
+              Personalizadas
+            </span>
+          </h2>
+
+          {/* Descripción corta para móvil */}
+          <div className="text-zinc-100">
+            <p className="text-sm md:text-base leading-relaxed">
+              Perfectas para regalos corporativos y eventos familiares. ¡Solo
+              por temporada!
+            </p>
+
+            {/* Información clave en badges */}
+            <div className="flex flex-wrap justify-center lg:justify-start gap-2 mt-3 text-zinc-800">
+              <span className="bg-white/60 px-2 py-1 rounded-full text-xs font-semibold">
+                🎨 Diseños personalizados
+              </span>
+              <span className="bg-white/60 px-2 py-1 rounded-full text-xs font-semibold">
+                🏢 Ideal para empresas
+              </span>
+              <span className="bg-white/60 px-2 py-1 rounded-full text-xs font-semibold">
+                ⏱️ Por tiempo limitado
+              </span>
+            </div>
+          </div>
+
+          {/* Especificaciones */}
+          <div className="grid grid-cols-2 gap-3 text-xs md:text-sm">
+            <div className="text-center lg:text-left">
+              <div className="flex items-center justify-center lg:justify-start gap-1 mb-1">
+                <div className="w-1.5 h-1.5 bg-zinc-100 rounded-full"></div>
+                <span className="font-bold text-zinc-100">Entrega</span>
+              </div>
+              <p className="text-zinc-100">3-5 días hábiles</p>
+            </div>
+
+            <div className="text-center lg:text-left">
+              <div className="flex items-center justify-center lg:justify-start gap-1 mb-1">
+                <div className="w-1.5 h-1.5 bg-zinc-100 rounded-full"></div>
+                <span className="font-bold text-zinc-100">Material</span>
+              </div>
+              <p className="text-zinc-100">Cerámica premium</p>
+            </div>
+          </div>
+
+          {/* Botones optimizados para móvil */}
+          <div className="flex flex-col gap-2 pt-2 md:pt-4">
+            <button
+              className="bg-red-600 text-white px-4 py-2 md:px-6 md:py-3 rounded-full font-bold shadow-lg text-sm md:text-base"
+              onClick={() =>
+                window.open(
+                  "https://wa.me/5212281255258?text=Hola! Me interesa cotizar las Tazas Navideñas Personalizadas.",
+                  "_blank"
+                )
+              }
+            >
+              Cotizar Tazas
+            </button>
+            <button
+              className="border border-zinc-100 text-zinc-100 hover:bg-red-600/20 px-4 py-2 md:px-6 md:py-3 rounded-full font-semibold text-sm md:text-base"
+              onClick={() =>
+                window.open(
+                  "https://wa.me/5212281255258?text=Hola! Quiero más información sobre las Tazas Navideñas.",
+                  "_blank"
+                )
+              }
+            >
+              Ver Diseños Disponibles
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Estrellas animadas verdes */}
+      <motion.svg
+        width="32"
+        height="32"
+        viewBox="0 0 68 68"
+        fill="none"
+        className="absolute top-4 left-8 sm:left-12 w-6 h-6 sm:w-8 sm:h-8"
+        {...starAnimation}
+      >
+        <path
+          d="M34.3088 0.55798L36.1455 23.5444C36.4756 27.6642 39.7445 30.933 43.8642 31.2632L66.8507 33.0999C67.5947 33.1603 67.5947 34.2507 66.8507 34.3088L43.8642 36.1455C39.7445 36.4756 36.4756 39.7445 36.1455 43.8642L34.3088 66.8507C34.2484 67.5947 33.158 67.5947 33.0999 66.8507L31.2632 43.8642C30.933 39.7445 27.6642 36.4756 23.5444 36.1455L0.55798 34.3088C-0.185993 34.2484 -0.185993 33.158 0.55798 33.0999L23.5444 31.2632C27.6642 30.933 30.933 27.6642 31.2632 23.5444L33.0999 0.55798C33.158 -0.185993 34.2484 -0.185993 34.3088 0.55798Z"
+          fill="#64A783"
+        />
+      </motion.svg>
+
+      <motion.svg
+        width="24"
+        height="24"
+        viewBox="0 0 68 68"
+        fill="none"
+        className="absolute top-1/4 left-1/4 w-5 h-5 sm:w-6 sm:h-6"
+        {...floatingStarAnimation}
+      >
+        <path
+          d="M34.3088 0.55798L36.1455 23.5444C36.4756 27.6642 39.7445 30.933 43.8642 31.2632L66.8507 33.0999C67.5947 33.1603 67.5947 34.2507 66.8507 34.3088L43.8642 36.1455C39.7445 36.4756 36.4756 39.7445 36.1455 43.8642L34.3088 66.8507C34.2484 67.5947 33.158 67.5947 33.0999 66.8507L31.2632 43.8642C30.933 39.7445 27.6642 36.4756 23.5444 36.1455L0.55798 34.3088C-0.185993 34.2484 -0.185993 33.158 0.55798 33.0999L23.5444 31.2632C27.6642 30.933 30.933 27.6642 31.2632 23.5444L33.0999 0.55798C33.158 -0.185993 34.2484 -0.185993 34.3088 0.55798Z"
+          fill="#64A783"
+        />
+      </motion.svg>
+
+      <motion.svg
+        width="20"
+        height="20"
+        viewBox="0 0 68 68"
+        fill="none"
+        className="absolute bottom-8 left-12 sm:left-20 w-4 h-4 sm:w-5 sm:h-5"
+        {...pulseStarAnimation}
+      >
+        <path
+          d="M34.3088 0.55798L36.1455 23.5444C36.4756 27.6642 39.7445 30.933 43.8642 31.2632L66.8507 33.0999C67.5947 33.1603 67.5947 34.2507 66.8507 34.3088L43.8642 36.1455C39.7445 36.4756 36.4756 39.7445 36.1455 43.8642L34.3088 66.8507C34.2484 67.5947 33.158 67.5947 33.0999 66.8507L31.2632 43.8642C30.933 39.7445 27.6642 36.4756 23.5444 36.1455L0.55798 34.3088C-0.185993 34.2484 -0.185993 33.158 0.55798 33.0999L23.5444 31.2632C27.6642 30.933 30.933 27.6642 31.2632 23.5444L33.0999 0.55798C33.158 -0.185993 34.2484 -0.185993 34.3088 0.55798Z"
+          fill="#64A783"
+        />
+      </motion.svg>
+
+      <motion.svg
+        width="28"
+        height="28"
+        viewBox="0 0 68 68"
+        fill="none"
+        className="absolute top-1/3 right-1/4 w-6 h-6 sm:w-7 sm:h-7"
+        {...floatingStarAnimation}
+      >
+        <path
+          d="M34.3088 0.55798L36.1455 23.5444C36.4756 27.6642 39.7445 30.933 43.8642 31.2632L66.8507 33.0999C67.5947 33.1603 67.5947 34.2507 66.8507 34.3088L43.8642 36.1455C39.7445 36.4756 36.4756 39.7445 36.1455 43.8642L34.3088 66.8507C34.2484 67.5947 33.158 67.5947 33.0999 66.8507L31.2632 43.8642C30.933 39.7445 27.6642 36.4756 23.5444 36.1455L0.55798 34.3088C-0.185993 34.2484 -0.185993 33.158 0.55798 33.0999L23.5444 31.2632C27.6642 30.933 30.933 27.6642 31.2632 23.5444L33.0999 0.55798C33.158 -0.185993 34.2484 -0.185993 34.3088 0.55798Z"
+          fill="#64A783"
+        />
+      </motion.svg>
+
+      {/* Estrellas animadas blancas */}
+      <motion.svg
+        width="36"
+        height="36"
+        viewBox="0 0 68 68"
+        fill="none"
+        className="absolute top-8 right-8 sm:right-12 w-7 h-7 sm:w-9 sm:h-9"
+        {...starAnimation}
+      >
+        <path
+          d="M34.3088 0.55798L36.1455 23.5444C36.4756 27.6642 39.7445 30.933 43.8642 31.2632L66.8507 33.0999C67.5947 33.1603 67.5947 34.2507 66.8507 34.3088L43.8642 36.1455C39.7445 36.4756 36.4756 39.7445 36.1455 43.8642L34.3088 66.8507C34.2484 67.5947 33.158 67.5947 33.0999 66.8507L31.2632 43.8642C30.933 39.7445 27.6642 36.4756 23.5444 36.1455L0.55798 34.3088C-0.185993 34.2484 -0.185993 33.158 0.55798 33.0999L23.5444 31.2632C27.6642 30.933 30.933 27.6642 31.2632 23.5444L33.0999 0.55798C33.158 -0.185993 34.2484 -0.185993 34.3088 0.55798Z"
+          fill="#FFFFFF"
+        />
+      </motion.svg>
+
+      <motion.svg
+        width="22"
+        height="22"
+        viewBox="0 0 68 68"
+        fill="none"
+        className="absolute bottom-12 right-1/3 w-5 h-5 sm:w-6 sm:h-6"
+        {...pulseStarAnimation}
+      >
+        <path
+          d="M34.3088 0.55798L36.1455 23.5444C36.4756 27.6642 39.7445 30.933 43.8642 31.2632L66.8507 33.0999C67.5947 33.1603 67.5947 34.2507 66.8507 34.3088L43.8642 36.1455C39.7445 36.4756 36.4756 39.7445 36.1455 43.8642L34.3088 66.8507C34.2484 67.5947 33.158 67.5947 33.0999 66.8507L31.2632 43.8642C30.933 39.7445 27.6642 36.4756 23.5444 36.1455L0.55798 34.3088C-0.185993 34.2484 -0.185993 33.158 0.55798 33.0999L23.5444 31.2632C27.6642 30.933 30.933 27.6642 31.2632 23.5444L33.0999 0.55798C33.158 -0.185993 34.2484 -0.185993 34.3088 0.55798Z"
+          fill="#FFFFFF"
+        />
+      </motion.svg>
+
+      <motion.svg
+        width="30"
+        height="30"
+        viewBox="0 0 68 68"
+        fill="none"
+        className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-6 h-6 sm:w-8 sm:h-8"
+        {...floatingStarAnimation}
+      >
+        <path
+          d="M34.3088 0.55798L36.1455 23.5444C36.4756 27.6642 39.7445 30.933 43.8642 31.2632L66.8507 33.0999C67.5947 33.1603 67.5947 34.2507 66.8507 34.3088L43.8642 36.1455C39.7445 36.4756 36.4756 39.7445 36.1455 43.8642L34.3088 66.8507C34.2484 67.5947 33.158 67.5947 33.0999 66.8507L31.2632 43.8642C30.933 39.7445 27.6642 36.4756 23.5444 36.1455L0.55798 34.3088C-0.185993 34.2484 -0.185993 33.158 0.55798 33.0999L23.5444 31.2632C27.6642 30.933 30.933 27.6642 31.2632 23.5444L33.0999 0.55798C33.158 -0.185993 34.2484 -0.185993 34.3088 0.55798Z"
+          fill="#FFFFFF"
+        />
+      </motion.svg>
+
+      <motion.svg
+        width="18"
+        height="18"
+        viewBox="0 0 68 68"
+        fill="none"
+        className="absolute top-12 right-20 w-4 h-4 sm:w-5 sm:h-5"
+        {...pulseStarAnimation}
+      >
+        <path
+          d="M34.3088 0.55798L36.1455 23.5444C36.4756 27.6642 39.7445 30.933 43.8642 31.2632L66.8507 33.0999C67.5947 33.1603 67.5947 34.2507 66.8507 34.3088L43.8642 36.1455C39.7445 36.4756 36.4756 39.7445 36.1455 43.8642L34.3088 66.8507C34.2484 67.5947 33.158 67.5947 33.0999 66.8507L31.2632 43.8642C30.933 39.7445 27.6642 36.4756 23.5444 36.1455L0.55798 34.3088C-0.185993 34.2484 -0.185993 33.158 0.55798 33.0999L23.5444 31.2632C27.6642 30.933 30.933 27.6642 31.2632 23.5444L33.0999 0.55798C33.158 -0.185993 34.2484 -0.185993 34.3088 0.55798Z"
+          fill="#64A783"
+        />
+      </motion.svg>
+
+      <motion.svg
+        width="26"
+        height="26"
+        viewBox="0 0 68 68"
+        fill="none"
+        className="absolute top-1/2 left-10 w-5 h-5 sm:w-7 sm:h-7"
+        {...starAnimation}
+      >
+        <path
+          d="M34.3088 0.55798L36.1455 23.5444C36.4756 27.6642 39.7445 30.933 43.8642 31.2632L66.8507 33.0999C67.5947 33.1603 67.5947 34.2507 66.8507 34.3088L43.8642 36.1455C39.7445 36.4756 36.4756 39.7445 36.1455 43.8642L34.3088 66.8507C34.2484 67.5947 33.158 67.5947 33.0999 66.8507L31.2632 43.8642C30.933 39.7445 27.6642 36.4756 23.5444 36.1455L0.55798 34.3088C-0.185993 34.2484 -0.185993 33.158 0.55798 33.0999L23.5444 31.2632C27.6642 30.933 30.933 27.6642 31.2632 23.5444L33.0999 0.55798C33.158 -0.185993 34.2484 -0.185993 34.3088 0.55798Z"
+          fill="#FFFFFF"
+        />
+      </motion.svg>
+    </div>
+  );
+}
