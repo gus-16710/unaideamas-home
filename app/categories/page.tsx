@@ -15,6 +15,7 @@ import RandomProducts from "@/components/RandomProducts";
 import ActionButtons from "@/components/ActionButtons";
 import ProductsByCategory from "@/components/ProductsByCategory";
 import BannerHorizontal from "@/components/BannerHorizontal";
+import CategoriesImage from "./components/CategoriesImage";
 
 export default function Categories() {
   const [isVisible, setIsVisible] = useState(true);
@@ -122,7 +123,8 @@ export default function Categories() {
         ></motion.div>
 
         <Breadcrumb />
-        <ProductsByCategory />
+        <CategoriesImage />
+        {/* <ProductsByCategory /> */}
         <ContactHelp />
         <RandomProducts />
       </div>

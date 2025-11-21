@@ -11,9 +11,10 @@ export default function CategoriesImage() {
 
   return (
     <div className="w-full mb-10">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6 w-full">
+      <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-2 md:gap-6 w-full">
         {categories.map((category, index) => {
           const productCount = getProductsCountByCategory(category.url);
+          const Icon = category.icon!;
 
           return (
             <motion.div
@@ -48,7 +49,7 @@ export default function CategoriesImage() {
                         scale: 1.05,
                         transition: { duration: 0.4, ease: "easeOut" },
                       }}
-                    />
+                    />                
 
                     {/* Badge de cantidad de productos */}
                     <div className="absolute top-4 left-4">
@@ -102,23 +103,11 @@ export default function CategoriesImage() {
 
                   {/* Información adicional debajo de la imagen */}
                   <div className="p-4">
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-xs font-medium text-gray-500 uppercase tracking-wide">
-                        Categoría
-                      </span>
-                      <Badge variant="flat" color="primary" size="sm">
-                        ID: {category.id}
-                      </Badge>
-                    </div>
-
                     <p className="text-gray-600 text-sm line-clamp-2 leading-relaxed">
                       {category.description}
                     </p>
 
                     <div className="flex items-center justify-between mt-3 pt-3 border-t border-gray-100">
-                      <span className="text-xs text-gray-500">
-                        {productCount} productos
-                      </span>
                       <div className="flex items-center text-blue-600 text-xs font-medium">
                         Explorar
                         <FiArrowRight size={12} className="ml-1" />
