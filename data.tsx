@@ -3866,6 +3866,247 @@ export const initialProducts: CategoryProducts = {
   ],
   otros: [
     {
+      id: "A3069",
+      nombre: "Licorera de Bolsillo MEZCALITO",
+      descripcion:
+        "Licorera de bolsillo con broche para colgar y tapa de rosca, de acero inoxidable. Capacidad de 1 oz (30 ml). Presentación en caja individual de cartón kraft — ideal como artículo promocional o regalo corporativo.",
+      capacidad: "30 ml",
+      material: {
+        exterior: "Acero inoxidable",
+        interior: null,
+      },
+      medidas: {
+        alto: "6 cm",
+        ancho: "4 cm",
+        profundidad: null,
+      },
+      empaque: {
+        tipo: "Caja individual (kraft)",
+        color: null,
+      },
+      colores_disponibles: [
+        "#C0C0C0", // Plata
+        "#000000", // Negro
+      ],
+      origen: "Importado",
+      precio_lista: "Consultar precio",
+      disponibilidad: "Consultar inventario",
+      url_producto: "https://doblevela.com/items/index/A3069",
+      imagenes_urls: [
+        "https://doblevela.com/images/large/A3069_lrg.jpg",
+        "https://doblevela.com/images/large/A3069_negro_lrg.jpg",
+        "https://doblevela.com/images/adicionales/_A3069_2.jpg",
+      ],
+      categoria: "otros",
+    },
+    {
+      id: "LM9",
+      nombre: "Llavero metálico Camión LM9",
+      descripcion:
+        "Llavero metálico en forma de tráiler/camión con llantas giratorias. Presentación en caja individual de cartón kraft, ideal como artículo promocional.",
+      capacidad: null,
+      material: {
+        exterior: "Metal",
+        interior: null,
+      },
+      medidas: {
+        alto: "7.1 cm",
+        ancho: "2.6 cm",
+        profundidad: null,
+      },
+      empaque: {
+        tipo: "Caja individual (kraft)",
+        color: null,
+      },
+      colores_disponibles: [
+        "#C0C0C0", // Plata (metal)
+      ],
+      origen: "Hecho en México",
+      precio_lista: "Consultar precio",
+      disponibilidad: "Verificar inventario",
+      url_producto: "https://doblevela.com/items/index/LM9",
+      imagenes_urls: [
+        "https://doblevela.com/images/large/LM9_lrg.jpg",
+        "https://doblevela.com/images/large/LM9_plata_lrg.jpg",
+        "https://doblevela.com/images/adicionales/_LM9_1.jpg",
+      ],
+      categoria: "otros",
+    },
+    {
+      id: "B1175",
+      nombre: "Llavero con flexómetro 1 m (llanta)",
+      descripcion:
+        "Llavero de plástico con flexómetro retráctil de 1 metro, en forma de llanta. Compacto y práctico — ideal como artículo promocional o para regalos corporativos. Presentación individual en bolsa de plástico. Empaque mayorista: caja máster de 240 piezas. Modelo B1175 de DobleVela. :contentReference[oaicite:1]{index=1}",
+      capacidad: null,
+      material: {
+        exterior: "Plástico",
+        interior: null,
+      },
+      medidas: {
+        alto: null,
+        ancho: null,
+        profundidad: null,
+        diámetro: "4 cm",
+        grosor: "1.6 cm",
+      },
+      empaque: {
+        tipo: "Bolsa individual + Caja máster (240 piezas)",
+        color: null,
+      },
+      colores_disponibles: ["#000000"],
+      origen: "México",
+      precio_lista: "Consultar precio",
+      disponibilidad: "Consultar inventario",
+      url_producto: "https://doblevela.com/items/index/B1175",
+      imagenes_urls: [
+        "https://doblevela.com/images/large/B1175_lrg.jpg",
+        "https://doblevela.com/images/large/B1175_negro_lrg.jpg",
+        "https://doblevela.com/images/adicionales/_B1175_1.jpg",
+      ],
+      categoria: "otros",
+    },
+
+    {
+      id: "A2847",
+      nombre: "Hielera/Lonchera Térmica de Yute CAMPIRANA",
+      descripcion:
+        "Lonchera / hielera con exterior de yute y forro interior plástico anti-escurrimiento (PEVA). Cuenta con cierre superior y asas de algodón. Ideal para transportar alimentos y conservar temperatura moderada.",
+      capacidad: null,
+      material: {
+        exterior: "Yute",
+        interior: "PEVA (plástico anti-escurrimiento)",
+      },
+      medidas: {
+        alto: "20 cm",
+        ancho: "15 cm",
+        profundidad: "16 cm",
+      },
+      empaque: {
+        tipo: "Bolsa individual",
+        color: null,
+      },
+      colores_disponibles: [
+        "#A0522D", // Café (yute natural / café)
+      ],
+      origen: "Hecho en México",
+      precio_lista: "Consultar precio",
+      disponibilidad: "Consultar inventario",
+      url_producto: "https://doblevela.com/items/index/A2847",
+      imagenes_urls: [
+        "https://doblevela.com/images/large/A2847_lrg.jpg",
+        "https://doblevela.com/images/large/A2847_cafe_lrg.jpg",
+        "https://doblevela.com/images/adicionales/_A2847_2.jpg",
+      ],
+      categoria: "otros",
+    },
+    {
+      id: "A3035",
+      nombre: "Lonchera HEIDI A3035",
+      descripcion:
+        "Lonchera con interior térmico con capacidad de 5 L, con un compartimento frontal con broche de contacto y 2 asas para transportar. Ideal para conservar alimentos fríos o calientes en salidas o uso diario.",
+      capacidad: "5 L",
+      material: {
+        exterior: "Poliéster",
+        interior: "Alufoil / termo-aislante",
+      },
+      medidas: {
+        alto: "29 cm",
+        ancho: "23 cm",
+        profundidad: "16 cm",
+      },
+      empaque: {
+        tipo: "Bolsa individual",
+        color: null,
+      },
+      colores_disponibles: [
+        "#000000", // Negro
+        "#0000FF", // Azul
+        "#FF0000", // Rojo
+      ],
+      origen: "Hecho en México",
+      precio_lista: "Consultar precio",
+      disponibilidad: "Consultar inventario",
+      url_producto: "https://doblevela.com/items/index/A3035",
+      imagenes_urls: [
+        "https://doblevela.com/images/large/A3035_lrg.jpg",
+        "https://doblevela.com/images/large/A3035_negro_lrg.jpg",
+        "https://doblevela.com/images/large/A3035_rojo_lrg.jpg",
+      ],
+      categoria: "otros",
+    },
+    {
+      id: "TXH2254",
+      nombre: "Hielera / Lonchera EVEREST",
+      descripcion:
+        "Lonchera / hielera económica con cubierta cosida, interior termosellado en plástico anti-escurrimiento, compartimento frontal y correa ajustable. Capacidad para 6 latas. Ideal para uso diario o como artículo promocional. Modelo EVEREST de DobleVela.",
+      capacidad: "6 latas",
+      material: {
+        exterior: "Poliéster 210D",
+        interior: "PEVA (plástico antiescurrimiento)",
+      },
+      medidas: {
+        alto: "20 cm",
+        ancho: "15 cm",
+        profundidad: "15 cm",
+      },
+      empaque: {
+        tipo: "Bolsa individual",
+        color: null,
+      },
+      colores_disponibles: [
+        "#FF0000", // Rojo
+        "#0000FF", // Azul
+        "#000000", // Negro
+      ],
+      origen: "Hecho en México",
+      precio_lista: "Consultar precio",
+      disponibilidad: "Verificar inventario",
+      url_producto: "https://doblevela.com/items/index/TXH2254",
+      imagenes_urls: [
+        "https://doblevela.com/images/large/TXH2254_lrg.jpg",
+        "https://doblevela.com/images/large/TXH2254_rojo_lrg.jpg",
+        "https://doblevela.com/images/large/TXH2254_azul_lrg.jpg",
+      ],
+      categoria: "otros",
+    },
+    {
+      id: "A2534",
+      nombre: "Hielera/Lonchera térmica BREAK",
+      descripcion:
+        "Lonchera térmica con cubierta e interior cosido en plástico anti-escurrimiento. Cuenta con dos compartimentos con cierre, compartimento superior adicional, bolsa lateral de malla y asa de transporte. Ideal como hielera/lonchera promocional o uso diario.",
+      capacidad: null,
+      material: {
+        exterior: "Poliéster 210D",
+        interior: "Plástico anti-escurrimiento",
+      },
+      medidas: {
+        alto: "26.5 cm",
+        ancho: "26.5 cm",
+        profundidad: "19 cm",
+      },
+      empaque: {
+        tipo: "Granel (individual)",
+        color: null,
+      },
+      colores_disponibles: [
+        "#000000", // Negro
+        "#FFA500", // Naranja
+        "#FF0000", // Rojo
+        "#008000", // Verde claro
+        "#0000FF", // Azul
+      ],
+      origen: "Hecho en México",
+      precio_lista: "Consultar precio",
+      disponibilidad: "Consultar inventario",
+      url_producto: "https://doblevela.com/items/index/A2534",
+      imagenes_urls: [
+        "https://doblevela.com/images/large/A2534_lrg.jpg",
+        "https://doblevela.com/images/large/A2534_negro_lrg.jpg",
+        "https://doblevela.com/images/large/A2534_naranja_lrg.jpg",
+      ],
+      categoria: "otros",
+    },
+    {
       id: "CAP-004",
       nombre: "Gorra Trucker",
       descripcion:
@@ -4307,7 +4548,7 @@ export const initialProducts: CategoryProducts = {
       id: "SLJ102",
       nombre: "Llavero con flexómetro y nivel LEVEL",
       descripcion:
-        "Llavero de plástico con nivelador incorporado y flexómetro de 1 metro. Compacto y funcional, ideal como artículo promocional o para llevar en llavero. Empaque individual en bolsa de plástico; caja máster de 240 piezas. Modelo SLJ102 de la marca LEVEL. :contentReference[oaicite:0]{index=0}",
+        "Llavero de plástico con nivelador incorporado y flexómetro de 1 metro. Compacto y funcional, ideal como artículo promocional o para llevar en llavero. Empaque individual en bolsa de plástico; caja máster de 240 piezas. Modelo SLJ102 de la marca LEVEL. ",
       capacidad: null,
       material: {
         exterior: "Plástico",
@@ -4559,7 +4800,7 @@ export const initialProducts: CategoryProducts = {
       id: "A2407",
       nombre: "Gorra Urban A2407",
       descripcion:
-        "Gorra de poliéster con cuerpo y visera del mismo color. Frente acolchado y 4 gajos traseros de malla. Ajuste mediante broche de plástico. Circunferencia interna ~58 cm. Ideal como gorra casual o promocional. Modelo URBAN de marca DobleVela / DV.  Presentación mayorista: caja master de 200 piezas. :contentReference[oaicite:0]{index=0}",
+        "Gorra de poliéster con cuerpo y visera del mismo color. Frente acolchado y 4 gajos traseros de malla. Ajuste mediante broche de plástico. Circunferencia interna ~58 cm. Ideal como gorra casual o promocional. Modelo URBAN de marca DobleVela / DV.  Presentación mayorista: caja master de 200 piezas. ",
       capacidad: null,
       material: {
         exterior: "Poliéster",
@@ -4614,14 +4855,383 @@ export const initialProducts: CategoryProducts = {
         color: null,
       },
       colores_disponibles: [],
-      origen: "",
+      origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
       url_producto: "https://doblevela.com/items/index/GL6101",
       imagenes_urls: [
         "https://doblevela.com/images/large/GL6101_lrg.jpg",
         "https://doblevela.com/images/large/GL6101_azul_lrg.jpg",
-        "https://doblevela.com/images/large/GL6101_rojo_lrg.jpg"
+        "https://doblevela.com/images/large/GL6101_rojo_lrg.jpg",
+      ],
+      categoria: "otros",
+    },
+    {
+      id: "A3073",
+      nombre: "Llavero en forma de auto de carreras DIEGO",
+      descripcion:
+        "Llavero metálico con diseño de auto de carreras, fabricado en aleación de zinc. Incluye arillo reforzado. Presentación en caja individual de kraft — ideal como artículo promocional o corporativo. Modelo DIEGO A3073 de DobleVela. ",
+      capacidad: null,
+      material: {
+        exterior: "Aleación de zinc",
+        interior: null,
+      },
+      medidas: {
+        alto: "3 cm",
+        ancho: "12 cm",
+        profundidad: null,
+      },
+      empaque: {
+        tipo: "Caja individual (kraft)",
+        color: null,
+      },
+      colores_disponibles: [
+        "#C0C0C0", // Plata (metal)
+      ],
+      origen: "Hecho en México",
+      precio_lista: "Consultar precio",
+      disponibilidad: "Consultar inventario",
+      url_producto: "https://doblevela.com/items/index/A3073",
+      imagenes_urls: [
+        "https://doblevela.com/images/large/A3073_lrg.jpg",
+        "https://doblevela.com/images/large/A3073_plata_lrg.jpg",
+        "https://doblevela.com/images/adicionales/_A3073_1.jpg",
+      ],
+      categoria: "otros",
+    },
+    {
+      id: "A2673",
+      nombre: "Estuche ecológico WOOD A2673",
+      descripcion:
+        "Estuche ecológico de cartón con cierre por resorte. Incluye block de 40 hojas rayadas, regla de 15 cm, bolígrafo de cartón, goma blanca, sacapuntas y 2 lápices. Ideal para uso escolar o promocional. Modelo WOOD A2673 de DobleVela. :contentReference[oaicite:0]{index=0}",
+      capacidad: null,
+      material: {
+        exterior: "Cartón",
+        interior: null,
+      },
+      medidas: {
+        alto: "21.2 cm",
+        ancho: "15.4 cm",
+        profundidad: "1.8 cm",
+      },
+      empaque: {
+        tipo: "Bolsa de plástico (individual)",
+        color: null,
+      },
+      colores_disponibles: [
+        "#D2B48C", // Beige (color especificado en ficha como “Beige”) :contentReference[oaicite:1]{index=1}
+      ],
+      origen: "Hecho en México",
+      precio_lista: "Consultar precio",
+      disponibilidad: "Verificar inventario",
+      url_producto: "https://doblevela.com/items/index/A2673",
+      imagenes_urls: [
+        "https://doblevela.com/images/large/A2673_lrg.jpg",
+        "https://doblevela.com/images/large/A2673_beige_lrg.jpg",
+        "https://doblevela.com/images/adicionales/_A2673_1.jpg",
+      ],
+      categoria: "otros",
+    },
+    {
+      id: "A2410",
+      nombre: "Mochila ligera MOLTON A2410",
+      descripcion:
+        "Mochila ligera con cierre lateral en el frente. Cuenta con 2 compartimentos, tirantes y respaldo acolchado, correas ajustables y asa superior para transportar. Material resistente, ideal para uso diario o promocional.",
+      capacidad: null,
+      material: {
+        exterior: "Poliéster 600D / 210D",
+        interior: null,
+      },
+      medidas: {
+        alto: "39 cm",
+        ancho: "22 cm",
+        profundidad: "13.5 cm",
+      },
+      empaque: {
+        tipo: "Bolsa de plástico (individual)",
+        color: null,
+      },
+      colores_disponibles: [
+        "#FFFFFF", // Blanco
+        "#000000", // Negro
+        "#FFA500", // Naranja
+        "#FF0000", // Rojo
+        "#0000FF", // Azul
+      ],
+      origen: "Hecho en México",
+      precio_lista: "Consultar precio",
+      disponibilidad: "Consultar inventario",
+      url_producto: "https://doblevela.com/items/index/A2410",
+      imagenes_urls: [
+        "https://doblevela.com/images/large/A2410_lrg.jpg",
+        "https://doblevela.com/images/large/A2410_negro_lrg.jpg",
+        "https://doblevela.com/images/large/A2410_naranja_lrg.jpg",
+      ],
+      categoria: "otros",
+    },
+    {
+      id: "A3184",
+      nombre: "Set de Guante y Agarrador para Cocina (PONCHO)",
+      descripcion:
+        "Set de cocina compuesto por un guante para hornear y un agarrador de tela capitonada, diseñados para proteger del calor. Incluye presilla para colgar. Ideal como artículo promocional o para uso doméstico.",
+      capacidad: null,
+      material: {
+        exterior: "Poliéster",
+        interior: null,
+      },
+      medidas: {
+        guante_alto: "29.5 cm",
+        guante_ancho: "17.5 cm",
+        agarrador_lado: "17.5 cm",
+      },
+      empaque: {
+        tipo: "Bolsa individual",
+        color: null,
+      },
+      colores_disponibles: ["#FFFFFF", "#000000", "#FF0000"], // Blanco, Negro, Rojo (según opciones de color listadas)
+      origen: "Hecho en México",
+      precio_lista: "Consultar precio",
+      disponibilidad: "Consultar inventario",
+      url_producto: "https://doblevela.com/items/index/A3184",
+      imagenes_urls: [
+        "https://doblevela.com/images/large/A3184_lrg.jpg",
+        "https://doblevela.com/images/large/A3184_blanco_lrg.jpg",
+        "https://doblevela.com/images/large/A3184_negro_lrg.jpg",
+      ],
+      categoria: "otros",
+    },
+    {
+      id: "A3023",
+      nombre: "Tabla de Quesos con Arillo CHEDDAR A3023",
+      descripcion:
+        "Tabla de madera de bambú para quesos o carnes frías que incluye un cuchillo y un tenedor de acero inoxidable con mango de madera. La tabla tiene 2 imanes, 2 compartimentos para los utensilios, y un aro de silicón para sostener o colgar. Presentada en caja individual blanca — ideal como regalo o artículo promocional gourmet.",
+      capacidad: null,
+      material: {
+        exterior: "Bambú",
+        interior: "Acero inoxidable (utensilios)",
+      },
+      medidas: {
+        alto: "28 cm",
+        ancho: "21 cm",
+        profundidad: null,
+      },
+      empaque: {
+        tipo: "Caja individual",
+        color: "Blanca",
+      },
+      colores_disponibles: ["#D2B48C"], // color natural bambú
+      origen: "Hecho en México",
+      precio_lista: "$115.00 MXN + IVA (precio de referencia en mayoreo)",
+      disponibilidad:
+        "Disponible (según distribuidor: 2994 piezas) :contentReference[oaicite:2]{index=2}",
+      url_producto: "https://doblevela.com/items/index/A3023",
+      imagenes_urls: [
+        "https://doblevela.com/images/large/A3023_lrg.jpg",
+        "https://doblevela.com/images/large/A3023_unico_lrg.jpg",
+        "https://doblevela.com/images/adicionales/_A3023_1.jpg",
+      ],
+      categoria: "otros",
+    },
+    {
+      id: "A2895",
+      nombre: "Recipiente para Mascotas HUELLITAS A2895",
+      descripcion:
+        "Recipiente de plástico PP para alimentos de mascotas, con detalle decorativo de patitas, base con gomas antideslizantes y orificio de agarre. Capacidad 950 ml. Ideal para perros o gatos como comedero o dispensador de alimento. Modelo HUELLITAS A2895.",
+      capacidad: "950 ml",
+      material: {
+        exterior: "Plástico PP",
+        interior: null,
+      },
+      medidas: {
+        alto: "24 cm",
+        ancho: "24 cm",
+        profundidad: "8 cm",
+      },
+      empaque: {
+        tipo: "Bolsa individual",
+        color: null,
+      },
+      colores_disponibles: [
+        "#C0C0C0", // Plata
+        "#8B4513", // Café (aproximado)
+      ],
+      origen: "Hecho en México",
+      precio_lista: "Consultar precio",
+      disponibilidad: "Verificar inventario",
+      url_producto: "https://doblevela.com/items/index/A2895",
+      imagenes_urls: [
+        "https://doblevela.com/images/large/A2895_lrg.jpg",
+        "https://doblevela.com/images/large/A2895_plata_lrg.jpg",
+        "https://doblevela.com/images/large/A2895_cafe_lrg.jpg",
+      ],
+      categoria: "otros",
+    },
+    {
+      id: "A3034",
+      nombre: "Recipiente con base para mascotas DOGGY A3034",
+      descripcion:
+        "Recipiente de plástico para mascotas con base plegable que funciona como bebedero, boquilla de rosca y asa de silicón para transportar. Capacidad de 500 ml. Ideal como recipiente portátil para agua o alimento cuando se pasea con mascotas. Modelo DOGGY A3034 — PET / accesorios para mascotas.",
+      capacidad: "500 ml",
+      material: {
+        exterior: "Plástico PP",
+        interior: null,
+      },
+      medidas: {
+        alto: "19.5 cm",
+        ancho: null,
+        profundidad: null,
+        diámetro: "15 cm",
+      },
+      empaque: {
+        tipo: "Unidad individual (bolsa/pack)",
+        color: null,
+      },
+      colores_disponibles: [
+        "#FFA500", // Naranja (según la variante pública listada)
+      ],
+      origen: "Hecho en México",
+      precio_lista: "Consultar precio",
+      disponibilidad:
+        "Disponible — 1329 piezas (distribuidor mayorista) :contentReference[oaicite:1]{index=1}",
+      url_producto: "https://doblevela.com/items/index/A3034",
+      imagenes_urls: [
+        "https://doblevela.com/images/large/A3034_lrg.jpg",
+        "https://doblevela.com/images/large/A3034_naranja_lrg.jpg",
+        "https://doblevela.com/images/adicionales/_A3034_1.jpg",
+        "https://doblevela.com/images/adicionales/_A3034_4.jpg",
+      ],
+      categoria: "otros",
+    },
+    {
+      id: "MNY5189",
+      nombre: "Alcancía plástico BARRY",
+      descripcion:
+        "Alcancía de plástico en forma de cerdito. Cuenta con tapón flexible en la nariz con cierre de presión, ideal para guardar monedas o billetes. Presentación individual, práctica como objeto promocional o para uso infantil/adultos.",
+      capacidad: null,
+      material: {
+        exterior: "Plástico",
+        interior: null,
+      },
+      medidas: {
+        alto: "10 cm",
+        ancho: "7.6 cm",
+        profundidad: "8 cm",
+      },
+      empaque: {
+        tipo: "Bolsa individual",
+        color: null,
+      },
+      colores_disponibles: [
+        "#0000FF", // Azul
+        "#FF0000", // Rojo
+        "#FFFFFF", // Blanco
+        "#FFC0CB", // Rosa (aproximado)
+      ],
+      origen: "Hecho en México",
+      precio_lista: "Consultar precio",
+      disponibilidad: "Consultar inventario",
+      url_producto: "https://doblevela.com/items/index/MNY5189",
+      imagenes_urls: [
+        "https://doblevela.com/images/large/MNY5189_lrg.jpg",
+        "https://doblevela.com/images/large/MNY5189_rojo_lrg.jpg",
+        "https://doblevela.com/images/large/MNY5189_azul_lrg.jpg",
+      ],
+      categoria: "otros",
+    },
+    {
+      id: "A2369",
+      nombre: "Portavasos TRUMAN A2369",
+      descripcion:
+        "Portavasos de plástico de forma cuadrada con destapador de acero inoxidable. Cuenta con base antideslizante en el reverso, para que se adhiera mejor a la superficie — ideal como accesorio promocional o para uso doméstico/bar.",
+      capacidad: null,
+      material: {
+        exterior: "Plástico ABS",
+        interior: "Acero inoxidable (destapador)",
+      },
+      medidas: {
+        alto: "0.4 cm",
+        ancho: "8.2 cm",
+        profundidad: "8.2 cm",
+      },
+      empaque: {
+        tipo: "Bolsa individual",
+        color: null,
+      },
+      colores_disponibles: [
+        "#FFFFFF", // Blanco
+        "#000000", // Negro
+        "#FF0000", // Rojo
+        "#0000FF", // Azul
+      ],
+      origen: "Hecho en México",
+      precio_lista: "Consultar precio",
+      disponibilidad: "Consultar inventario",
+      url_producto: "https://doblevela.com/items/index/A2369",
+      imagenes_urls: [
+        "https://doblevela.com/images/large/A2369_lrg.jpg",
+        "https://doblevela.com/images/large/A2369_blanco_lrg.jpg",
+        "https://doblevela.com/images/large/A2369_negro_lrg.jpg",
+      ],
+      categoria: "otros",
+    },
+    {
+      id: "VNB4115",
+      nombre: "Set para vino SAGRETO",
+      descripcion:
+        "Set de vino con sacacorchos manual, servidor con tapón y boquilla, y anillo antiderrames. Presentado en estuche tipo caja individual — ideal como accesorio para vino o regalo promocional.",
+      capacidad: null,
+      material: {
+        exterior: "Plástico (estuche)",
+        interior: "Acero inoxidable (accesorios)",
+      },
+      medidas: {
+        alto: "24 cm",
+        ancho: "6.2 cm",
+        profundidad: null,
+      },
+      empaque: {
+        tipo: "Caja individual",
+        color: "Blanca",
+      },
+      colores_disponibles: ["#000000"], // Negro (opción según ficha)
+      origen: "Hecho en México",
+      precio_lista: "Consultar precio",
+      disponibilidad: "Consultar inventario",
+      url_producto: "https://doblevela.com/items/index/VNB4115",
+      imagenes_urls: [
+        "https://doblevela.com/images/large/VNB4115_lrg.jpg",
+        "https://doblevela.com/images/large/VNB4115_negro_lrg.jpg",
+      ],
+      categoria: "otros",
+    },
+    {
+      id: "A3014",
+      nombre: "Set de accesorios para vino GOLFITO A3014",
+      descripcion:
+        "Set de herramientas para vino con temática de golf — incluye destapador, tapón para botellas y sacacorchos. Presentado en estuche negro tipo caja individual, ideal para uso promocional o regalo.",
+      capacidad: null,
+      material: {
+        exterior: "Aleación de zinc / Plástico (accesorios) / Cartón (estuche)",
+        interior: null,
+      },
+      medidas: {
+        alto: "19.5 cm",
+        ancho: "16.5 cm",
+        profundidad: null,
+      },
+      empaque: {
+        tipo: "Caja individual (estuche de cartón)",
+        color: "Negro",
+      },
+      colores_disponibles: ["#000000"], // Estuche negro
+      origen: "Hecho en México",
+      precio_lista: "Consultar precio",
+      disponibilidad: "Verificar inventario",
+      url_producto: "https://doblevela.com/items/index/A3014",
+      imagenes_urls: [
+        "https://doblevela.com/images/large/A3014_lrg.jpg",
+        "https://doblevela.com/images/large/A3014_negro_lrg.jpg",
+        "https://doblevela.com/images/adicionales/_A3014_1.jpg",
       ],
       categoria: "otros",
     },

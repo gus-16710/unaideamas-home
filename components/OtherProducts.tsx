@@ -207,11 +207,7 @@ export default function OtherProducts() {
                           <img
                             src={product.imagenes_urls[0]}
                             alt={product.nombre}
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                            onError={(e) => {
-                              e.currentTarget.src =
-                                "/img/placeholder-product.jpg";
-                            }}
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"                            
                           />
 
                           {/* Overlay de gradiente */}
