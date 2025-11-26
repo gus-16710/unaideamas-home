@@ -277,7 +277,7 @@ export default function CategoryPageClient({
               ))}
             </motion.div>
 
-            <div className="flex gap-4 pt-2">
+            <div className="flex gap-4 pt-10">
               <Button
                 onPress={() => router.back()}
                 variant="flat"

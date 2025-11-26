@@ -5,6 +5,7 @@ import { BsBagHeart } from "react-icons/bs";
 import { LuNotebookTabs } from "react-icons/lu";
 import { LuPillBottle } from "react-icons/lu";
 import { BsCupHot } from "react-icons/bs";
+import { MdCategory } from "react-icons/md";
 
 //1900x800
 
@@ -66,6 +67,16 @@ export const categoriesList: Category[] = [
       "Vasos personalizados ideales para eventos, promociones y uso diario. Diseños modernos y resistentes.",
     icon: LuCupSoda,
     color: "text-orange-500",
+  },
+  {
+    id: 7,
+    name: "Otros",
+    img: "/img/categories/vasos.jpg",
+    url: "otros",
+    description:
+      "Otros productos promocionales para complementar tu estrategia de marketing.",
+    icon: MdCategory,
+    color: "text-pink-500",
   },
 ];
 
@@ -290,7 +301,13 @@ export const initialProducts: CategoryProducts = {
         tipo: "Bolsa de plástico",
         color: "Transparente",
       },
-      colores_disponibles: ["#FF0000", "#0000FF", "#000000", "#008000", "#FFA500"],
+      colores_disponibles: [
+        "#FF0000",
+        "#0000FF",
+        "#000000",
+        "#008000",
+        "#FFA500",
+      ],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -450,7 +467,14 @@ export const initialProducts: CategoryProducts = {
         individual: "Sí",
         mayorista: "Caja de 500 piezas (58 x 24 x 17 cm, 9 kg)",
       },
-      colores_disponibles: ["#0000FF", "#FFFFFF", "#000000", "#808080", "#FFC0CB", "#FF0000"],
+      colores_disponibles: [
+        "#0000FF",
+        "#FFFFFF",
+        "#000000",
+        "#808080",
+        "#FFC0CB",
+        "#FF0000",
+      ],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -583,7 +607,13 @@ export const initialProducts: CategoryProducts = {
         individual: "Bolsa de plástico",
         mayorista: "Caja con 1,000 piezas (52 x 22 x 33 cm, 12.5 kg)",
       },
-      colores_disponibles: ["#0000FF", "#FF0000", "#000000", "#008000", "#FFA500"],
+      colores_disponibles: [
+        "#0000FF",
+        "#FF0000",
+        "#000000",
+        "#008000",
+        "#FFA500",
+      ],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -612,7 +642,13 @@ export const initialProducts: CategoryProducts = {
         individual: "Bolsa de plástico",
         mayorista: "Caja con 1,000 piezas (55 x 16 x 31 cm, 8 kg)",
       },
-      colores_disponibles: ["#0000FF", "#FF0000", "#000000", "#008000", "#FFA500"],
+      colores_disponibles: [
+        "#0000FF",
+        "#FF0000",
+        "#000000",
+        "#008000",
+        "#FFA500",
+      ],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -2344,7 +2380,13 @@ export const initialProducts: CategoryProducts = {
         tipo: null,
         color: null,
       },
-      colores_disponibles: ["#FF0000", "#0000FF", "#00FF00", "#FFA500", "#FFFF00"],
+      colores_disponibles: [
+        "#FF0000",
+        "#0000FF",
+        "#00FF00",
+        "#FFA500",
+        "#FFFF00",
+      ],
       origen: "Hecho en México",
       precio_lista: "",
       disponibilidad: "",
@@ -2440,7 +2482,14 @@ export const initialProducts: CategoryProducts = {
         tipo: null,
         color: null,
       },
-      colores_disponibles: ["#FF0000", "#0000FF", "#00FF00", "#000000", "#FFFFFF", "#800000"],
+      colores_disponibles: [
+        "#FF0000",
+        "#0000FF",
+        "#00FF00",
+        "#000000",
+        "#FFFFFF",
+        "#800000",
+      ],
       origen: "Hecho en México",
       precio_lista: "",
       disponibilidad: "",
@@ -2572,7 +2621,9 @@ export const initialProducts: CategoryProducts = {
         tipo: null,
         color: null,
       },
-      colores_disponibles: ["conic-gradient(from 0deg, #ff004d, #ff7a00, #ffd300, #00c853, #00aaff, #6a00ff, #ff004d)"],
+      colores_disponibles: [
+        "conic-gradient(from 0deg, #ff004d, #ff7a00, #ffd300, #00c853, #00aaff, #6a00ff, #ff004d)",
+      ],
       origen: "Hecho en México",
       precio_lista: "",
       disponibilidad: "",
@@ -2666,7 +2717,13 @@ export const initialProducts: CategoryProducts = {
         tipo: "Granel (200 piezas por caja)",
         color: null,
       },
-      colores_disponibles: ["#000000", "#FFA500", "#FF0000", "#90EE90", "#0000FF"],
+      colores_disponibles: [
+        "#000000",
+        "#FFA500",
+        "#FF0000",
+        "#90EE90",
+        "#0000FF",
+      ],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -2928,7 +2985,9 @@ export const initialProducts: CategoryProducts = {
         tipo: "Caja de 200 piezas",
         color: null,
       },
-      colores_disponibles: ["conic-gradient(from 0deg, #ff004d, #ff7a00, #ffd300, #00c853, #00aaff, #6a00ff, #ff004d)"],
+      colores_disponibles: [
+        "conic-gradient(from 0deg, #ff004d, #ff7a00, #ffd300, #00c853, #00aaff, #6a00ff, #ff004d)",
+      ],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -3702,7 +3761,13 @@ export const initialProducts: CategoryProducts = {
         medida_caja: "55 × 43 × 44 cm",
         peso_caja: "12.20 kg",
       },
-      colores_disponibles: ["#0000FF", "#FFC0CB", "#FFFF00", "#008000", "#800080"],
+      colores_disponibles: [
+        "#0000FF",
+        "#FFC0CB",
+        "#FFFF00",
+        "#008000",
+        "#800080",
+      ],
       origen: "Hecho en México",
       precio_lista: "Consultar precio",
       disponibilidad: "Consultar inventario",
@@ -3797,6 +3862,768 @@ export const initialProducts: CategoryProducts = {
         "https://www.promoopcion.com/media/catalog/product/t/m/tmps-74-a_1.jpg",
       ],
       categoria: "vasos",
+    },
+  ],
+  otros: [
+    {
+      id: "CAP-004",
+      nombre: "Gorra Trucker",
+      descripcion:
+        "Gorra con broche ajustable de plástico. 5 gajos. Botón forrado. Cómoda e ideal para protegerse del sol. Material poliéster con red de polipropileno.",
+      capacidad: null,
+      material: {
+        exterior: "Poliéster / Red de Polipropileno",
+        interior: null,
+      },
+      medidas: {
+        alto: null,
+        ancho: null,
+        profundidad: null,
+      },
+      empaque: {
+        tipo: "Caja master (envío / mayoreo)",
+        color: null,
+      },
+      colores_disponibles: [
+        "#0057B8", // Azul
+        "#FFFFFF", // Blanco
+        "#000000", // Negro
+        "#FF6A00", // Naranja
+        "#FF5F1F", // Naranja neón
+        "#FF4DA6", // Rosa neón
+        "#D1001F", // Rojo
+        "#008F39", // Verde
+        "#39FF14", // Verde neón
+        "#FFD300", // Amarillo
+        "#FFFF33", // Amarillo neón
+      ],
+      origen: "Hecho en México",
+      precio_lista: "Consultar precio",
+      disponibilidad: "Stock disponible (1082 piezas en inventario registrado)",
+      url_producto: "https://www.promoopcion.com/cap-004.html",
+      imagenes_urls: [
+        "https://www.promoopcion.com/media/catalog/product/c/a/cap-004_1.jpg?store=default&image-type=image",
+        "https://www.promoopcion.com/media/catalog/product/C/A/CAP-004_1.jpg?store=default&image-type=image",
+        "https://www.promoopcion.com/media/catalog/product/C/A/CAP-004_2.jpg?store=default&image-type=image",
+        "https://www.promoopcion.com/media/catalog/product/C/A/CAP-004_20_1.jpg?store=default&image-type=image",
+      ],
+      categoria: "otros",
+    },
+    {
+      id: "GEP-005",
+      nombre: "Gorra Mosella",
+      descripcion:
+        "Gorra con broche de velcro ajustable. Botón forrado. Ojillos bordados. Cómoda e ideal para protegerse del sol. Material poliéster. Circunferencia interna 57 cm. Área de impresión 10 x 4 cm. Empaque por caja master de 300 piezas. Medidas de empaque 55 × 43 × 43 cm. Peso de caja 15.00 Kg. Presentación para mayoreo. SKU padre GEP 005. Varios colores disponibles.",
+      capacidad: null,
+      material: {
+        exterior: "Poliéster",
+        interior: null,
+      },
+      medidas: {
+        alto: null,
+        ancho: null,
+        profundidad: null,
+      },
+      empaque: {
+        tipo: "Caja master (300 piezas)",
+        color: null,
+      },
+      colores_disponibles: [
+        "#FFFFFF", // Blanco
+        "#800000", // Tinto (~vino/maroon)
+      ],
+      origen: "Hecho en México",
+      precio_lista: "Consultar precio",
+      disponibilidad: "Consultar inventario",
+      url_producto: "https://www.promoopcion.com/gep-005.html",
+      imagenes_urls: [
+        "https://www.promoopcion.com/media/catalog/product/g/e/gep-005-.jpg?store=default&image-type=image",
+        "https://www.promoopcion.com/media/catalog/product/g/e/gep-005-talento_soccer.jpg?store=default&image-type=image",
+        "https://www.promoopcion.com/media/catalog/product/g/e/gep-005--.jpg?store=default&image-type=image",
+      ],
+      categoria: "otros",
+    },
+    {
+      id: "KTC-026",
+      nombre: "Mandil Neit",
+      descripcion:
+        "Mandil promocional de material Non Woven. Incluye 2 bolsas frontales. Ideal como delantal para cocina o uso promocional. Área de impresión 25 x 15 cm para personalización. Presentación para mayoreo. SKU KTC 026. De venta en tiendas de artículos promocionales. ",
+      capacidad: null,
+      material: {
+        exterior: "Non Woven",
+        interior: null,
+      },
+      medidas: {
+        alto: "68 cm",
+        ancho: "57 cm",
+        profundidad: null,
+      },
+      empaque: {
+        tipo: "Caja master (200 piezas)",
+        color: null,
+      },
+      colores_disponibles: [
+        "#0000FF", // Azul
+        "#FFFFFF", // Blanco
+        "#FF0000", // Rojo
+        "#000000", //
+      ],
+      origen: "Hecho en México",
+      precio_lista: "Consultar precio",
+      disponibilidad:
+        "Stock disponible (9304 piezas registradas) :contentReference[oaicite:1]{index=1}",
+      url_producto: "https://www.promoopcion.com/ktc-026.html",
+      imagenes_urls: [
+        "https://www.promoopcion.com/media/catalog/product/k/t/ktc-026-nuev.jpg?store=default&image-type=image",
+        "https://www.promoopcion.com/media/catalog/product/k/t/ktc-026-a.jpg?store=default&image-type=image",
+        "https://www.promoopcion.com/media/catalog/product/K/T/KTC-026_20_1.jpg?store=default&image-type=image",
+      ],
+      categoria: "otros",
+    },
+    {
+      id: "PET-001",
+      nombre: "Dispensador Bone",
+      descripcion:
+        "Dispensador para bolsas de desechos de mascota en forma de “bone”. Incluye rollo con 20 bolsas plásticas y gancho para sujetar. Tapadera lateral. Ideal para paseos o limpieza rápida.",
+      capacidad: null,
+      material: {
+        exterior: "Plástico",
+        interior: null,
+      },
+      medidas: {
+        alto: "8.1 cm",
+        ancho: "4.4 cm",
+        profundidad: null,
+      },
+      empaque: {
+        tipo: "Caja master (200 piezas)",
+        color: null,
+      },
+      colores_disponibles: ["#FFFFFF"],
+      origen: "Importado",
+      precio_lista: "Consultar precio",
+      disponibilidad: "Consultar inventario",
+      url_producto: "https://www.promoopcion.com/pet-001.html",
+      imagenes_urls: [
+        "https://www.promoopcion.com/media/catalog/product/P/E/PET_001_1_1_3c86.jpg?store=default&image-type=image",
+        "https://www.promoopcion.com/media/catalog/product/P/E/PET_001_2_9376.jpg?store=default&image-type=image",
+        "https://www.promoopcion.com/media/catalog/product/P/E/PET_001_20_1_3789.jpg?store=default&image-type=image",
+      ],
+      categoria: "otros",
+    },
+    {
+      id: "DPO-031",
+      nombre: "Llavero Destapador con Luz Arán",
+      descripcion:
+        "Llavero casco con destapador y lámpara de 1 LED. Incluye 3 baterías de botón. Tamaño compacto ideal para llavero, con función de destapador y luz — práctico para promociones o regalos corporativos. Material: plástico. Medidas: 5.7 × 3.1 cm. Área de impresión 3.5 × 2.3 cm. Empaque por caja master de 500 piezas. Presentación para mayoreo. SKU DPO 031. Stock disponible.",
+      capacidad: null,
+      material: {
+        exterior: "Plástico",
+        interior: null,
+      },
+      medidas: {
+        alto: "5.7 cm",
+        ancho: "3.1 cm",
+        profundidad: null,
+      },
+      empaque: {
+        tipo: "Caja master (500 piezas)",
+        color: null,
+      },
+      colores_disponibles: [
+        "#0000FF", // Azul
+        "#FFFFFF", // Blanco
+        "#000000", // Negro
+        "#FF0000", // Rojo
+        "#FFFF00", // Amarillo
+        "#FFA500", // Naranja
+      ],
+      origen: "Hecho en México",
+      precio_lista: "Consultar precio",
+      disponibilidad: "Stock disponible (15696 piezas registradas)",
+      url_producto: "https://www.promoopcion.com/dpo-031.html",
+      imagenes_urls: [
+        "https://www.promoopcion.com/media/catalog/product/d/p/dpo-031-pleca.jpg?store=default&image-type=image",
+        "https://www.promoopcion.com/media/catalog/product/d/p/dpo-031-n_2_2.jpg?store=default&image-type=image",
+        "https://www.promoopcion.com/media/catalog/product/d/p/dpo-031--.jpg?store=default&image-type=image",
+        "https://www.promoopcion.com/media/catalog/product/d/p/dpo-031-o_2_2.jpg?store=default&image-type=image",
+      ],
+      categoria: "otros",
+    },
+    {
+      id: "PAR-027",
+      nombre: "Paraguas Ranzen",
+      descripcion:
+        "Paraguas de 8 paneles, sistema manual, con mango de esponja. Ideal para lluvia o como accesorio promocional. Material poliéster. Diámetro: 92 cm.",
+      capacidad: null,
+      material: {
+        exterior: "Poliéster",
+        interior: null,
+      },
+      medidas: {
+        alto: null,
+        ancho: "92 cm (diámetro)",
+        profundidad: null,
+      },
+      empaque: {
+        tipo: "Bolsa individual / Caja master (50 piezas)",
+        color: null,
+      },
+      colores_disponibles: [
+        "#0000FF", // Azul
+        "#00FFFF", // Aqua
+        "#008000", // Verde (asumiendo verde estándar)
+        "#FFA500", // Naranja
+        "#FF0000", // Rojo
+        "#800080", // Morado/Púrpura (si aplica)
+        "#FFFF00", // Amarillo
+        "#FFFFFF", // Blanco
+      ],
+      origen: "Hecho en México",
+      precio_lista: "Consultar precio",
+      disponibilidad: "En stock",
+      url_producto: "https://www.promoopcion.com/par-027.html",
+      imagenes_urls: [
+        "https://www.promoopcion.com/media/catalog/product/p/a/par-027-nuev_1.jpg?store=default&image-type=image",
+        "https://www.promoopcion.com/media/catalog/product/p/a/par-027-r_4.jpg?store=default&image-type=image",
+        "https://www.promoopcion.com/media/catalog/product/p/a/par-027-o_7.jpg?store=default&image-type=image",
+        "https://www.promoopcion.com/media/catalog/product/p/a/par-027_1.jpg?store=default&image-type=image",
+      ],
+      categoria: "otros",
+    },
+    {
+      id: "CAL-005-1",
+      nombre: "Calendario Montecarlo",
+      descripcion:
+        "Calendario perpetuo de escritorio en aluminio, ideal como artículo promocional u oficina. Modelo compacto metálico, con medida de 10.5 × 8.9 cm. Permite grabado/vivado mediante láser o pantógrafo, con área de impresión de 8 × 1.5 cm. Presentación individual, empaquetado con bolsa o caja individual; caja master de 200 piezas. Marca PROMO / PromoOpción. SKU CAL 005-1. Color principal plata. Material aluminio. Diseño sobrio y funcional para oficinas o regalos corporativos. ",
+      capacidad: null,
+      material: {
+        exterior: "Aluminio",
+        interior: null,
+      },
+      medidas: {
+        alto: "10.5 cm",
+        ancho: "8.9 cm",
+        profundidad: null,
+      },
+      empaque: {
+        tipo: "Individual + Caja master (200 piezas)",
+        color: "Plata",
+      },
+      colores_disponibles: ["#C0C0C0"],
+      origen: "Hecho en México",
+      precio_lista: "Consultar precio",
+      disponibilidad: "En inventario (stock disponible) — verificar existencia",
+      url_producto: "https://www.promoopcion.com/cal-005-1.html",
+      imagenes_urls: [
+        "https://www.promoopcion.com/media/catalog/product/c/a/cal_005_1.jpg?store=default&image-type=image",
+        "https://www.promoopcion.com/media/catalog/product/c/a/cal-005_1.jpg?store=default&image-type=image",
+        "https://www.promoopcion.com/media/catalog/product/c/a/cal-005_20.jpg?store=default&image-type=image",
+      ],
+      categoria: "otros",
+    },
+    {
+      id: "INF-013",
+      nombre: "Estuche Ural",
+      descripcion:
+        "Estuche porta lápices doble de plástico. Cuenta con ranura para monedas en la tapa para funcionar como alcancía. Ideal para uso escolar o promocional. Área de impresión de 2 × 13 cm. Medidas del producto: 5.9 × 25.5 cm. Presentación en mayoreo; empaque por caja master de 100 piezas. SKU base INF 013. Varios colores disponibles.",
+      capacidad: null,
+      material: {
+        exterior: "Plástico",
+        interior: null,
+      },
+      medidas: {
+        alto: "5.9 cm",
+        ancho: "25.5 cm",
+        profundidad: null,
+      },
+      empaque: {
+        tipo: "Caja master (100 piezas)",
+        color: null,
+      },
+      colores_disponibles: [
+        "#0000FF", // Azul
+        "#FFFFFF", // Blanco
+        "#800080", // Morado
+        "#FFA500", // Naranja
+        "#FF0000", // Rojo
+        "#008000", // Verde
+        "#FFFF00", // Amarillo
+        "#FFC0CB", // Rosa
+      ],
+      origen: "Importado",
+      precio_lista: "Consultar precio",
+      disponibilidad: "Consultar inventario",
+      url_producto: "https://www.promoopcion.com/inf-013.html",
+      imagenes_urls: [
+        "https://www.promoopcion.com/media/catalog/product/i/n/inf-013-colores.jpg?store=default&image-type=image",
+        "https://www.promoopcion.com/media/catalog/product/I/N/INF-013_8.jpg?store=default&image-type=image",
+        "https://www.promoopcion.com/media/catalog/product/i/n/inf-013-r_2.jpg?store=default&image-type=image",
+        "https://www.promoopcion.com/media/catalog/product/i/n/inf-013-o_1.jpg?store=default&image-type=image",
+        "https://www.promoopcion.com/media/catalog/product/I/N/INF-013_20_1.jpg?store=default&image-type=image",
+      ],
+      categoria: "otros",
+    },
+    {
+      id: "INF-040",
+      nombre: "Alcancía Puerquito",
+      descripcion:
+        "Alcancía en forma de puerquito de material plástico. Ideal como artículo promocional o para niños. Medidas: 9.7 × 9.7 cm. Área de impresión: 4.7 × 4.7 cm. Presentación individual, empaque en caja master de 50 piezas. SKU base INF 040. Varios colores translúcidos y sólidos disponibles.",
+      capacidad: null,
+      material: {
+        exterior: "Plástico",
+        interior: null,
+      },
+      medidas: {
+        alto: "9.7 cm",
+        ancho: "9.7 cm",
+        profundidad: null,
+      },
+      empaque: {
+        tipo: "Caja master (50 piezas)",
+        color: null,
+      },
+      colores_disponibles: [
+        "#0000FF", // Azul translúcido
+        "#FFFFFF", // Blanco / translúcido
+        "#FF0000", // Rojo translúcido
+        "#FFA500", // Naranja translúcido
+        "#800080", // Morado translúcido
+        "#00FF00", // Verde translúcido — si aplica
+        "#FFFF00", // Amarillo translúcido
+        "#FFC0CB", // Rosa translúcido
+      ],
+      origen: "Hecho en México",
+      precio_lista: "Consultar precio",
+      disponibilidad: "Consultar inventario / stock disponible según variante",
+      url_producto: "https://www.promoopcion.com/inf-040.html",
+      imagenes_urls: [
+        "https://www.promoopcion.com/media/catalog/product/I/N/INF-040_1.jpg?store=default&image-type=image",
+        "https://www.promoopcion.com/media/catalog/product/i/n/inf-040-m.jpg?store=default&image-type=image",
+        "https://www.promoopcion.com/media/catalog/product/i/n/inf-040-y_1_1.jpg?store=default&image-type=image",
+        "https://www.promoopcion.com/media/catalog/product/I/N/INF-040_20_1.jpg?store=default&image-type=image",
+      ],
+      categoria: "otros",
+    },
+    {
+      id: "KTC-007",
+      nombre: "Lonchera KLEUR",
+      descripcion:
+        "Contenedor para almacenar alimentos. Cuenta con pestañas de cierre a presión. Incluye un cilindro plástico con tapa roscable y válvula de seguridad. No apto para bebidas calientes ni microondas. Ideal como artículo promocional o para uso diario. Material plástico / PET. Medidas: 23.5 × 17.5 × 7 cm. Área de impresión: Lonchera 9 × 6 cm / Cilindro 5 × 8 cm. Presentación por pieza (bolsa individual); empaque mayorista por caja master de 24 piezas. Categoría: Hieleras y loncheras. SKU base KTC 007.",
+      capacidad: null,
+      material: {
+        exterior: "Plástico / PET",
+        interior: null,
+      },
+      medidas: {
+        alto: "23.5 cm",
+        ancho: "17.5 cm",
+        profundidad: "7 cm",
+      },
+      empaque: {
+        tipo: "Bolsa individual + Caja master (24 piezas)",
+        color: null,
+      },
+      colores_disponibles: [
+        "#0000FF", // Azul
+        "#FFA500", // Naranja
+        "#FFC0CB", // Rosa
+        "#008000", // Verde
+      ],
+      origen: "Hecho en México",
+      precio_lista: "Consultar precio",
+      disponibilidad: "En stock",
+      url_producto: "https://www.promoopcion.com/ktc-007.html",
+      imagenes_urls: [
+        "https://www.promoopcion.com/media/catalog/product/k/t/ktc-007-e.jpg",
+        "https://www.promoopcion.com/media/catalog/product/k/t/ktc-007-a_2.jpg",
+        "https://www.promoopcion.com/media/catalog/product/k/t/ktc-007-p_2_1.jpg",
+        "https://www.promoopcion.com/media/catalog/product/k/t/ktc-007_1.jpg",
+      ],
+      categoria: "otros",
+    },
+    {
+      id: "PSO9263",
+      nombre: "Parasol Doble para Auto Elipsis",
+      descripcion:
+        "Juego de dos protectores de sol para ventanas laterales de auto, incluye 4 ganchos de plástico con ventosa para su fijación. Viene con funda para guardar. Ideal como accesorio promocional automotriz o protección solar durante viajes en coche.",
+      capacidad: null,
+      material: {
+        exterior: "Poliéster",
+        interior: null,
+      },
+      medidas: {
+        alto: "44 cm",
+        ancho: "38 cm",
+        profundidad: null,
+      },
+      empaque: {
+        tipo: "Bolsa individual",
+        color: null,
+      },
+      colores_disponibles: ["#C0C0C0"], // Plata
+      origen: "Importado",
+      precio_lista: "Consultar precio",
+      disponibilidad: "Consultar inventario",
+      url_producto: "https://doblevela.com/items/index/PSO9263",
+      imagenes_urls: [
+        "https://doblevela.com/images/large/PSO9263_lrg.jpg",
+        "https://doblevela.com/images/large/PSO9263_plata_lrg.jpg",
+      ],
+      categoria: "otros",
+    },
+    {
+      id: "HE987",
+      nombre: "Flexómetro WOODS 2 m",
+      descripcion:
+        "Flexómetro industrial de 2 metros de longitud, incluye seguro de retracción, nivelador, notas adhesivas (post-it) y mini bolígrafo — ideal como artículo promocional o para uso práctico en mediciones. Carcasa de plástico resistente. Presentado en empaque individual (bolsa de plástico). Caja máster de 200 piezas. SKU HE987. Marca WOODS / DobleVela. Modelo HE987.",
+      capacidad: null,
+      material: {
+        exterior: "Plástico",
+        interior: null,
+      },
+      medidas: {
+        alto: "5.5 cm",
+        ancho: "8 cm",
+        profundidad: "2.4 cm",
+      },
+      empaque: {
+        tipo: "Bolsa individual",
+        color: null,
+      },
+      colores_disponibles: ["#000000"], // negro (carcasa estándar, según versiones comerciales)
+      origen: "México",
+      precio_lista: "Consultar precio",
+      disponibilidad: "Stock disponible — verificar existencia",
+      url_producto: "https://doblevela.com/items/index/HE987",
+      imagenes_urls: [
+        "https://doblevela.com/images/large/HE987_lrg.jpg",
+        "https://doblevela.com/images/large/HE987_blanco_lrg.jpg",
+        "https://doblevela.com/images/adicionales/_HE987_3.jpg",
+      ],
+      categoria: "otros",
+    },
+    {
+      id: "SLJ102",
+      nombre: "Llavero con flexómetro y nivel LEVEL",
+      descripcion:
+        "Llavero de plástico con nivelador incorporado y flexómetro de 1 metro. Compacto y funcional, ideal como artículo promocional o para llevar en llavero. Empaque individual en bolsa de plástico; caja máster de 240 piezas. Modelo SLJ102 de la marca LEVEL. :contentReference[oaicite:0]{index=0}",
+      capacidad: null,
+      material: {
+        exterior: "Plástico",
+        interior: null,
+      },
+      medidas: {
+        alto: "4.2 cm",
+        ancho: "4.2 cm",
+        profundidad: "1 cm",
+      },
+      empaque: {
+        tipo: "Bolsa individual + Caja máster (240 piezas)",
+        color: null,
+      },
+      colores_disponibles: [
+        "#FFFFFF", // Blanco
+        "#0000FF", // Azul
+      ],
+      origen: "Importado",
+      precio_lista: "Consultar precio",
+      disponibilidad: "Consultar inventario",
+      url_producto: "https://doblevela.com/items/index/SLJ102",
+      imagenes_urls: [
+        "https://doblevela.com/images/large/SLJ102_lrg.jpg",
+        "https://doblevela.com/images/large/SLJ102_blanco_lrg.jpg",
+        "https://doblevela.com/images/large/SLJ102_azul_lrg.jpg",
+      ],
+      categoria: "otros",
+    },
+    {
+      id: "A2523",
+      nombre: "Mini lámpara LED TRAKER A2523",
+      descripcion:
+        "Mini lámpara LED con sistema giratorio y clip para sostener, ideal como artículo promocional o linterna compacta. Material plástico, tamaño compacto que permite llevarla como llavero o herramienta portátil.",
+      capacidad: null,
+      material: {
+        exterior: "Plástico",
+        interior: null,
+      },
+      medidas: {
+        alto: "6 cm",
+        ancho: "6 cm",
+        profundidad: "1.4 cm",
+      },
+      empaque: {
+        tipo: "Bolsa individual + Caja master (250 piezas)",
+        color: null,
+      },
+      colores_disponibles: [
+        "#000000", // Negro
+        "#FFFFFF", // Blanco
+      ],
+      origen: "Hecho en México",
+      precio_lista: "Consultar precio",
+      disponibilidad: "Stock disponible — verificar existencia",
+      url_producto: "https://doblevela.com/items/index/A2523",
+      imagenes_urls: [
+        "https://doblevela.com/images/large/A2523_lrg.jpg",
+        "https://doblevela.com/images/adicionales/_A2523_1.jpg",
+        "https://doblevela.com/images/large/A2523_negro_lrg.jpg",
+      ],
+      categoria: "otros",
+    },
+    {
+      id: "A2991",
+      nombre: "Paraguas GEORGIE A2991",
+      descripcion:
+        "Paraguas de bolsillo de 8 gajos, con botón de apertura manual, eje de metal y varillas de fibra de vidrio. Mango de plástico con gancho para colgar. Incluye funda individual. Ideal como accesorio promocional o personal.",
+      capacidad: null,
+      material: {
+        exterior: "Poliéster",
+        interior: null,
+      },
+      medidas: {
+        alto: "35 cm (cerrado)",
+        ancho: "Ø 96 × 69 cm (abierto)",
+        profundidad: null,
+      },
+      empaque: {
+        tipo: "Bolsa individual",
+        color: null,
+      },
+      colores_disponibles: [
+        "#FFFFFF", // Blanco
+        "#000000", // Negro
+        "#FF0000", // Rojo
+        "#0000FF", // Azul
+      ],
+      origen: "Hecho en México",
+      precio_lista: "Consultar precio",
+      disponibilidad: "Consultar inventario",
+      url_producto: "https://doblevela.com/items/index/A2991",
+      imagenes_urls: [
+        "https://doblevela.com/images/large/A2991_lrg.jpg",
+        "https://doblevela.com/images/large/A2991_blanco_lrg.jpg",
+        "https://doblevela.com/images/large/A2991_negro_lrg.jpg",
+        "https://doblevela.com/images/large/A2991_rojo_lrg.jpg",
+      ],
+      categoria: "otros",
+    },
+    {
+      id: "SEG4308",
+      nombre: "Chaleco reflectante ZURICH",
+      descripcion:
+        "Chaleco de seguridad fabricado en tela reflectante. Ideal para protección civil, personal de seguridad, moto o bicicleta.",
+      capacidad: null,
+      material: {
+        exterior: "Poliéster reflectante",
+        interior: null,
+      },
+      medidas: {
+        alto: "68 cm",
+        ancho: "64 cm",
+        profundidad: null,
+      },
+      empaque: {
+        tipo: "Granel / Presentación individual",
+        color: null,
+      },
+      colores_disponibles: ["#FFFF00"],
+      origen: "Hecho en México",
+      precio_lista: "Consultar precio",
+      disponibilidad: "Verificar inventario",
+      url_producto: "https://doblevela.com/items/index/SEG4308",
+      imagenes_urls: [
+        "https://doblevela.com/images/large/SEG4308_lrg.jpg",
+        "https://doblevela.com/images/large/SEG4308_amarillo_lrg.jpg",
+      ],
+      categoria: "otros",
+    },
+    {
+      id: "TXM2261",
+      nombre: "Morral con jareta VALENCIA",
+      descripcion:
+        "Morral con jareta y cordón negro, de poliéster 210D. Ideal como mochila ligera o bolsa promocional. Modelo VALENCIA de DobleVela.",
+      capacidad: null,
+      material: {
+        exterior: "Poliéster 210D",
+        interior: null,
+      },
+      medidas: {
+        alto: "42 cm",
+        ancho: "33 cm",
+        profundidad: null,
+      },
+      empaque: {
+        tipo: "Granel",
+        color: null,
+      },
+      colores_disponibles: [
+        "#FF0000", // Rojo
+        "#0000FF", // Azul
+        "#FFFFFF", // Blanco
+        "#FFFF00", // Amarillo
+        "#FFA500", // Naranja
+        "#90EE90", // Verde claro (aprox.)
+        "#FFC0CB", // Rosa
+        "#800020", // Vino (aprox.)
+        "#000000", // Negro
+      ],
+      origen: "Hecho en México",
+      precio_lista: "Consultar precio",
+      disponibilidad: "Consultar inventario",
+      url_producto: "https://doblevela.com/items/index/TXM2261",
+      imagenes_urls: [
+        "https://doblevela.com/images/large/TXM2261_lrg.jpg",
+        "https://doblevela.com/images/large/TXM2261_rojo_lrg.jpg",
+        "https://doblevela.com/images/large/TXM2261_amarillo_lrg.jpg",
+        "https://doblevela.com/images/large/TXM2261_rosa_lrg.jpg",
+      ],
+      categoria: "otros",
+    },
+    {
+      id: "A2147",
+      nombre: "Gorra Venture A2147",
+      descripcion:
+        "Gorra en poliéster, 5 gajos, con cinta ajustable de velcro. Modelo fluorescente con cintas reflectantes en visera/borde — ideal para ciclistas y corredores, o actividades al exterior con baja visibilidad. SKU A2147 de DobleVela.",
+      capacidad: null,
+      material: {
+        exterior: "Poliéster",
+        interior: null,
+      },
+      medidas: {
+        alto: null,
+        ancho: null,
+        profundidad: null,
+        circunferencia_interna: "58 cm",
+      },
+      empaque: {
+        tipo: "Caja master (200 piezas)",
+        color: null,
+      },
+      colores_disponibles: [
+        "#FFFF00", // Amarillo fluorescente
+        "#FFA500", // Naranja fluorescente
+        "#00FF00", // Verde fluorescente — si aplica
+        "#00FFFF", // Turquesa / Aqua fluorescente — si aplica
+      ],
+      origen: "Hecho en México",
+      precio_lista: "Consultar precio",
+      disponibilidad: "Consultar inventario / mayoreo",
+      url_producto: "https://doblevela.com/items/index/A2147",
+      imagenes_urls: [
+        "https://doblevela.com/images/large/A2147_lrg.jpg",
+        "https://doblevela.com/images/adicionales/_A2147_1.jpg",
+        "https://doblevela.com/images/adicionales/_A2147_3.jpg",
+      ],
+      categoria: "otros",
+    },
+    {
+      id: "A2178",
+      nombre: "Gorra Truck A2178",
+      descripcion:
+        "Gorra en poliéster con visera de algodón. Con frente acolchado y 4 gajos traseros en malla, de estilo tipo 'truck'. Ajuste mediante broche de plástico. Talla única con circunferencia aproximada de 58 cm. Ideal para uso casual o promocional.",
+      capacidad: null,
+      material: {
+        exterior: "Poliéster / Algodón (visera)",
+        interior: null,
+      },
+      medidas: {
+        alto: null,
+        ancho: null,
+        profundidad: null,
+        circunferencia_interna: "58 cm",
+      },
+      empaque: {
+        tipo: "Caja master",
+        color: null,
+      },
+      colores_disponibles: [
+        "#FFFF00", // Amarillo (fosforescente)
+        "#000000", // Negro — posible variante
+        "#0000FF", // Azul — posible variante
+        "#FF0000", // Rojo — posible variante
+        "#FFFFFF", // Blanco — posible variante
+      ],
+      origen: "Hecho en México",
+      precio_lista: "Consultar precio",
+      disponibilidad: "Consultar inventario",
+      url_producto: "https://doblevela.com/items/index/A2178",
+      imagenes_urls: [
+        "https://doblevela.com/images/large/A2178_lrg.jpg",
+        "https://doblevela.com/images/large/A2178_amarillo_lrg.jpg",
+        "https://doblevela.com/images/adicionales/_A2178_1.jpg",
+      ],
+      categoria: "otros",
+    },
+    {
+      id: "A2407",
+      nombre: "Gorra Urban A2407",
+      descripcion:
+        "Gorra de poliéster con cuerpo y visera del mismo color. Frente acolchado y 4 gajos traseros de malla. Ajuste mediante broche de plástico. Circunferencia interna ~58 cm. Ideal como gorra casual o promocional. Modelo URBAN de marca DobleVela / DV.  Presentación mayorista: caja master de 200 piezas. :contentReference[oaicite:0]{index=0}",
+      capacidad: null,
+      material: {
+        exterior: "Poliéster",
+        interior: null,
+      },
+      medidas: {
+        alto: null,
+        ancho: null,
+        profundidad: null,
+        circunferencia_interna: "58 cm",
+      },
+      empaque: {
+        tipo: "Caja master (200 piezas)",
+        color: null,
+      },
+      colores_disponibles: [
+        "#000000", // Negro :contentReference[oaicite:1]{index=1}
+        "#0000FF", // Azul :contentReference[oaicite:2]{index=2}
+        "#FF0000", // Rojo :contentReference[oaicite:3]{index=3}
+        "#FFFF00", // Amarillo fosforescente :contentReference[oaicite:4]{index=4}
+        "#008000", // Verde (variante disponible según listado de colores) :contentReference[oaicite:5]{index=5}
+        "#FFC0CB", // Rosa / rosado :contentReference[oaicite:6]{index=6}
+      ],
+      origen: "Hecho en México",
+      precio_lista: "Consultar precio",
+      disponibilidad: "Consultar inventario",
+      url_producto: "https://doblevela.com/items/index/A2407",
+      imagenes_urls: [
+        "https://doblevela.com/images/large/A2407_lrg.jpg",
+        "https://doblevela.com/images/large/A2407_negro_lrg.jpg",
+        "https://doblevela.com/images/large/A2407_rojo_lrg.jpg",
+      ],
+      categoria: "otros",
+    },
+    {
+      id: "GL6101",
+      nombre: "Gorra lisa SANDWICH GL6101",
+      descripcion:
+        "Gorra lisa tipo “Sandwich” de Doble Vela. Modelo básico; puede personalizarse mediante serigrafía, vinil textil, transfer o bordado. Area de impresión posible de 9 × 5 cm. Ideal como gorra promocional o casual.",
+      capacidad: null,
+      material: {
+        exterior: "Algodón",
+        interior: null,
+      },
+      medidas: {
+        alto: null,
+        ancho: null,
+        profundidad: null,
+      },
+      empaque: {
+        tipo: null,
+        color: null,
+      },
+      colores_disponibles: [],
+      origen: "",
+      precio_lista: "Consultar precio",
+      disponibilidad: "Consultar inventario",
+      url_producto: "https://doblevela.com/items/index/GL6101",
+      imagenes_urls: [
+        "https://doblevela.com/images/large/GL6101_lrg.jpg",
+        "https://doblevela.com/images/large/GL6101_azul_lrg.jpg",
+        "https://doblevela.com/images/large/GL6101_rojo_lrg.jpg"
+      ],
+      categoria: "otros",
     },
   ],
 };

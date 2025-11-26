@@ -9,10 +9,12 @@ export default function CategoriesImage() {
   const { categories, getProductsCountByCategory } = useProductStore();
   const router = useRouter();
 
+  const showedCategories = categories.filter((cat) => cat.id !== 7);
+
   return (
     <div className="w-full mb-10">
       <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-2 md:gap-6 w-full">
-        {categories.map((category, index) => {
+        {showedCategories.map((category: any, index: number) => {
           const productCount = getProductsCountByCategory(category.url);
           const Icon = category.icon!;
 
@@ -49,7 +51,7 @@ export default function CategoriesImage() {
                         scale: 1.05,
                         transition: { duration: 0.4, ease: "easeOut" },
                       }}
-                    />                
+                    />
 
                     {/* Badge de cantidad de productos */}
                     <div className="absolute top-4 left-4">

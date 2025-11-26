@@ -26,6 +26,7 @@ import { useEffect, useState } from "react";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import ActionButtons from "@/components/ActionButtons";
+import OtherProducts from "@/components/OtherProducts";
 
 interface ProductDetailClientProps {
   product: any;
@@ -144,7 +145,7 @@ export default function ProductDetailClient({
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-10"
         >
           {/* Sección de imágenes - Mejorada */}
           <motion.div variants={itemVariants as any} className="space-y-6">
@@ -396,22 +397,20 @@ export default function ProductDetailClient({
                 </CardBody>
               </Card>
             </motion.div>
-
-            {/* Acciones mejoradas */}
-            <motion.div
-              variants={itemVariants as any}
-              className="flex gap-4 pt-2"
-            >
-              <Button
-                onPress={() => router.back()}
-                variant="flat"
-                startContent={<FiArrowLeft size={18} />}
-                className="flex-1 h-14 text-base font-semibold rounded-xl bg-white/80 backdrop-blur-sm border border-gray-300/50 hover:bg-white transition-all duration-300"
-              >
-                Volver
-              </Button>
-            </motion.div>
           </motion.div>
+        </motion.div>
+
+        <OtherProducts />
+        {/* Acciones mejoradas */}
+        <motion.div variants={itemVariants as any} className="flex gap-4 pt-2">
+          <Button
+            onPress={() => router.back()}
+            variant="flat"
+            startContent={<FiArrowLeft size={18} />}
+            className="flex-1 h-14 text-base font-semibold rounded-xl bg-white/80 backdrop-blur-sm border border-gray-300/50 hover:bg-white transition-all duration-300"
+          >
+            Volver
+          </Button>
         </motion.div>
       </div>
       <ActionButtons />

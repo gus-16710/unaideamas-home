@@ -74,8 +74,18 @@ export const useProductStore = create<ProductState>((set, get) => ({
   getRandomProducts: (count: number = 6) => {
     const state = get();
     const allProducts = Object.values(state.productsByCategory).flat();
-        
+
     const shuffled = [...allProducts].sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, count);
+  },
+
+  getOtherProducts: (count: number = 6) => {
+    const state = get();
+    const otherProducts = Object.values(state.productsByCategory)
+      .flat()
+      .filter((product) => product.categoria === "otros");
+
+    const shuffled = [...otherProducts].sort(() => 0.5 - Math.random());
     return shuffled.slice(0, count);
   },
 }));

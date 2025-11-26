@@ -58,4 +58,5 @@ export interface ProductState {
   getCategoryInfo: (category: string) => Category | undefined;
   getProductsCountByCategory: (category: string) => number;
   getRandomProducts: (count: number) => Product[]
+  getOtherProducts: (count: number) => Product[]
 }

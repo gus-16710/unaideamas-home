@@ -11,8 +11,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-export default function RandomProducts() {
-  const { getRandomProducts, getCategoryInfo } = useProductStore();
+export default function OtherProducts() {
+  const { getOtherProducts, getCategoryInfo } = useProductStore();
   const [randomProducts, setRandomProducts] = useState<Product[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const router = useRouter();
@@ -22,7 +22,7 @@ export default function RandomProducts() {
 
   const loadRandomProducts = () => {
     setIsLoading(true);
-    const products = getRandomProducts(12);
+    const products = getOtherProducts(12);
     setRandomProducts(products);
     setIsLoading(false);
   };
@@ -42,14 +42,14 @@ export default function RandomProducts() {
 
   if (isLoading) {
     return (
-      <div className="w-full mb-10">
+      <div className="w-full my-5">
         <div className="flex items-center justify-between mb-6">
           <div>
             <h2 className="text-2xl font-bold text-slate-800">
-              Productos Destacados
+              Otros Productos
             </h2>
             <p className="text-slate-500 text-sm mt-1">
-              Descubre nuestros productos más populares
+              Contamos con una variedad de productos adicionales para ti
             </p>
           </div>
           <div className="animate-spin">
@@ -78,12 +78,12 @@ export default function RandomProducts() {
   }
 
   return (
-    <div className="w-full mb-10">
+    <div className="w-full my-5">
       {/* Header con controles */}
       <div className="flex items-center justify-between w-full mb-6">
         <div>
           <h2 className="text-2xl font-bold text-slate-800">
-            Productos Destacados
+            Otros Productos
           </h2>
           <p className="text-slate-500 text-sm mt-1">
             {randomProducts.length}+ productos disponibles
@@ -182,8 +182,7 @@ export default function RandomProducts() {
             swiper.navigation.update();
           }}
         >
-          {randomProducts.map((product, index) => {
-            const categoryName = getCategoryName(product.categoria!);
+          {randomProducts.map((product, index) => {            
 
             return (
               <SwiperSlide key={`${product.id}-${index}`}>
@@ -208,7 +207,11 @@ export default function RandomProducts() {
                           <img
                             src={product.imagenes_urls[0]}
                             alt={product.nombre}
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"                           
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            onError={(e) => {
+                              e.currentTarget.src =
+                                "/img/placeholder-product.jpg";
+                            }}
                           />
 
                           {/* Overlay de gradiente */}
@@ -220,7 +223,7 @@ export default function RandomProducts() {
                               variant="flat"
                               className="bg-black/60 text-white backdrop-blur-sm text-xs border-white/20"
                             >
-                              {categoryName}
+                              {product.id}
                             </Chip>
                           </div>
                         </div>

@@ -16,6 +16,7 @@ import ActionButtons from "@/components/ActionButtons";
 import ProductsByCategory from "@/components/ProductsByCategory";
 import BannerHorizontal from "@/components/BannerHorizontal";
 import CategoriesImage from "./components/CategoriesImage";
+import OtherProducts from "@/components/OtherProducts";
 
 export default function Categories() {
   const [isVisible, setIsVisible] = useState(true);
@@ -140,8 +141,8 @@ export default function Categories() {
           className="flex flex-col items-center text-center"
         ></motion.div>
 
-        
         <CarouselCategories />
+        <OtherProducts />
         <ContactCostumize />
         <FeaturesSection />
 

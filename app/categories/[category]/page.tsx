@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import CategoryPageClient from "./CategoryPageClient";
 
-const categories = ["lapiceros", "agendas", "termos", "bolsas", "cilindros", "vasos"];
+const categories = ["lapiceros", "agendas", "termos", "bolsas", "cilindros", "vasos", "otros"];
 
 export async function generateStaticParams() {
   return categories.map((category) => ({ category }));
