@@ -15,6 +15,7 @@ import Calendars from "./Slides/Calendars";
 import Events from "./Slides/Events";
 import BioSet from "./Slides/BioSet";
 import Mugs from "./Slides/Mugs";
+import PromoShirts from "./Slides/PromoShirts";
 
 export default function Carousel() {
   return (
@@ -31,7 +32,7 @@ export default function Carousel() {
         effect="flip"
         loop={true}
         autoplay={{
-          delay: 10000,
+          delay: 15000,
           disableOnInteraction: false,
         }}
         speed={800}
@@ -48,10 +49,14 @@ export default function Carousel() {
       >
         <SwiperSlide>
           <Mugs />
-        </SwiperSlide>
+        </SwiperSlide>        
 
         <SwiperSlide>
           <Enterprise />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <PromoShirts />
         </SwiperSlide>
 
         <SwiperSlide>
@@ -73,7 +78,6 @@ export default function Carousel() {
         <SwiperSlide>
           <BioSet />
         </SwiperSlide>
-        
       </Swiper>
 
       {/* Navegación personalizada para mejor responsividad */}
