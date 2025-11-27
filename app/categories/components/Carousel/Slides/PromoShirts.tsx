@@ -48,7 +48,7 @@ export default function PromoShirts() {
       className="w-full h-full flex flex-col lg:flex-row items-center justify-center px-8 py-10 text-white relative overflow-hidden gap-10 lg:gap-40"
       style={{
         background:
-          "linear-gradient(160deg, rgb(127, 29, 29) 0%, rgb(185, 28, 28) 45%, rgb(220, 38, 38) 75%, rgb(233 23 23) 100%)",
+          "linear-linear(160deg, rgb(127, 29, 29) 0%, rgb(185, 28, 28) 45%, rgb(220, 38, 38) 75%, rgb(233 23 23) 100%)",
       }}
       initial={{ opacity: 0, scale: 0.9 }}
       whileInView={{ opacity: 1, scale: 1 }}
@@ -156,9 +156,15 @@ export default function PromoShirts() {
       {/* TEXTO */}
       <div className="relative z-10 flex flex-col lg:flex-row items-center justify-center">
         <div className="flex flex-col gap-4 max-w-lg text-center lg:text-left relative z-10">
-          <h2 className="text-3xl lg:text-5xl font-extrabold drop-shadow-md">
+          {/* <h2 className="text-3xl lg:text-5xl font-extrabold drop-shadow-md">
             🎄 Playeras Navideñas Personalizadas
-          </h2>
+          </h2> */}
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+            Playeras Navideñas{" "}
+            <span className="text-yellow-300 drop-shadow-lg">
+              Personalizadas
+            </span>
+          </h1>
 
           <p className="text-base lg:text-xl font-light leading-relaxed">
             Diseña tu playera navideña a tu gusto. Colores vivos, tela ligera,
@@ -192,7 +198,7 @@ export default function PromoShirts() {
           </button>
         </div>
       </div>
-      
+
       {/* Sección de imagen */}
       <motion.div
         className=""
@@ -201,7 +207,7 @@ export default function PromoShirts() {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <div className="relative w-64 h-80 sm:w-80 sm:h-96 lg:w-96 lg:h-[500px]">
+        <div className="relative w-64 h-72 sm:w-80 sm:h-96 lg:w-96 lg:h-[500px]">
           {/* Imagen principal */}
           <motion.div
             key={currentImageIndex}
@@ -229,7 +235,7 @@ export default function PromoShirts() {
             />
 
             {/* Efecto de brillo */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/10 to-transparent" />
           </motion.div>
 
           {/* Etiqueta de oferta */}
@@ -281,7 +287,6 @@ export default function PromoShirts() {
           </motion.div>
         </div>
       </motion.div>
-
     </motion.div>
   );
 }
@@ -341,7 +346,7 @@ export default function PromoShirts() {
 
 //   return (
 //     <motion.div
-//       className="w-full  flex flex-col lg:flex-row items-center justify-center px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16 text-white relative overflow-hidden bg-gradient-to-br from-red-700 via-red-600 to-red-800"
+//       className="w-full  flex flex-col lg:flex-row items-center justify-center px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16 text-white relative overflow-hidden bg-linear-to-br from-red-700 via-red-600 to-red-800"
 //       initial={{ opacity: 0 }}
 //       whileInView={{ opacity: 1 }}
 //       transition={{ duration: 0.8 }}
@@ -390,7 +395,7 @@ export default function PromoShirts() {
 
 //       {/* Fondo con patrón navideño sutil */}
 //       <div className="absolute inset-0 opacity-10">
-//         <div className="absolute inset-0 bg-[radial-gradient(circle_at_25px_25px,rgba(255,255,255,0.2)_2px,transparent_0)] bg-[length:50px_50px]"></div>
+//         <div className="absolute inset-0 bg-[radial-linear(circle_at_25px_25px,rgba(255,255,255,0.2)_2px,transparent_0)] bg-[length:50px_50px]"></div>
 //       </div>
 
 //       {/* Copos de nieve optimizados */}
@@ -480,7 +485,7 @@ export default function PromoShirts() {
 
 //           {/* Precio destacado */}
 //           <motion.div
-//             className="inline-block bg-gradient-to-r from-yellow-400 to-yellow-500 text-red-900 px-6 py-3 rounded-2xl font-bold text-base sm:text-2xl shadow-lg"
+//             className="inline-block bg-linear-to-r from-yellow-400 to-yellow-500 text-red-900 px-6 py-3 rounded-2xl font-bold text-base sm:text-2xl shadow-lg"
 //             animate={{
 //               scale: [1, 1.05, 1],
 //             }}
@@ -512,7 +517,7 @@ export default function PromoShirts() {
 
 //           {/* Botón CTA */}
 //           <motion.button
-//             className="w-full sm:w-auto bg-gradient-to-r from-green-600 to-green-500 hover:from-green-700 hover:to-green-600
+//             className="w-full sm:w-auto bg-linear-to-r from-green-600 to-green-500 hover:from-green-700 hover:to-green-600
 //                      text-white font-bold py-4 px-8 rounded-2xl shadow-lg border-2 border-yellow-400/50
 //                      transition-all duration-300 transform hover:scale-105 hover:shadow-xl
 //                      flex items-center justify-center gap-3 text-lg"
@@ -569,7 +574,7 @@ export default function PromoShirts() {
 //               />
 
 //               {/* Efecto de brillo */}
-//               <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent" />
+//               <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/10 to-transparent" />
 //             </motion.div>
 
 //             {/* Etiqueta de oferta */}
@@ -624,7 +629,7 @@ export default function PromoShirts() {
 //       </div>
 
 //       {/* Efecto de brillo inferior */}
-//       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white/10 to-transparent pointer-events-none" />
+//       <div className="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-white/10 to-transparent pointer-events-none" />
 //     </motion.div>
 //   );
 // }
