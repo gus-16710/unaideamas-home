@@ -31,10 +31,10 @@ export default function Carousel() {
         centeredSlides={true}
         effect="flip"
         loop={true}
-        // autoplay={{
-        //   delay: 15000,
-        //   disableOnInteraction: false,
-        // }}
+        autoplay={{
+          delay: 15000,
+          disableOnInteraction: false,
+        }}
         speed={800}
         pagination={{
           clickable: true,
