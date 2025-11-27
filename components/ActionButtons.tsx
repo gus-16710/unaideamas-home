@@ -79,7 +79,7 @@ export default function ActionButtons() {
       // Ocultar después de 3 segundos
       setTimeout(() => {
         setShowBubble(false);
-      }, 3000);
+      }, 5000);
       
     }, 15000); // Mostrar cada 15 segundos
 
@@ -141,12 +141,12 @@ export default function ActionButtons() {
           }}
           transition={{ duration: 0.4, ease: "easeOut" }}
         >
-          <div className="bg-white/50 text-gray-800 px-3 py-2 rounded-lg shadow-lg border border-gray-200 relative whitespace-nowrap backdrop-blur-sm">
+          <div className="bg-white text-gray-800 px-3 py-2 rounded-lg shadow-lg border border-gray-200 relative whitespace-nowrap">
             <span className="text-sm font-medium">{currentMessage}</span>
             
             {/* Puntito de la burbuja */}
             <div className="absolute right-0 top-1/2 transform translate-x-1 -translate-y-1/2">
-              <div className="w-2 h-2 bg-white/50 rotate-45 border-r border-b border-gray-200 backdrop-blur-sm"></div>
+              <div className="w-2 h-2 bg-white rotate-45 border-r border-b border-gray-200 "></div>
             </div>
           </div>
         </motion.div>
