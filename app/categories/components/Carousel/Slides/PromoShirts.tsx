@@ -48,11 +48,8 @@ export default function PromoShirts() {
       className="w-full h-full flex flex-col lg:flex-row items-center justify-center px-8 py-10 text-white relative overflow-hidden gap-10 lg:gap-40"
       style={{
         background:
-          "linear-linear(160deg, rgb(127, 29, 29) 0%, rgb(185, 28, 28) 45%, rgb(220, 38, 38) 75%, rgb(233 23 23) 100%)",
-      }}
-      initial={{ opacity: 0, scale: 0.9 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.8 }}
+          "linear-gradient(160deg, rgb(127, 29, 29) 0%, rgb(185, 28, 28) 45%, rgb(220, 38, 38) 75%, rgb(233 23 23) 100%)",
+      }}    
     >
       {/* Copos de nieve animados - solo se renderizan en cliente */}
       {snowflakes.map((snowflake) => (
