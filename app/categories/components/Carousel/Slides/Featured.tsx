@@ -186,10 +186,10 @@ export default function Featured() {
   ];
 
   return (
-    <div className="w-full bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 relative overflow-hidden">
+    <div className="w-full bg-linear-to-br from-purple-50 via-pink-50 to-blue-50 relative overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(0,0,0,0.15)_1px,transparent_0)] bg-[length:20px_20px]"></div>
+        <div className="absolute inset-0 bg-[radial-linear(circle_at_1px_1px,rgba(0,0,0,0.15)_1px,transparent_0)] bg-size-[20px_20px]"></div>
       </div>
 
       {/* Floating animated icons */}
@@ -276,7 +276,7 @@ export default function Featured() {
               >
                 <FaGift className="text-2xl sm:text-3xl text-purple-500" />
               </motion.div>
-              <span className="text-xs sm:text-sm font-semibold bg-gradient-to-r from-purple-500/20 to-pink-500/20 text-purple-700 px-3 sm:px-4 py-2 rounded-full border border-purple-200">
+              <span className="text-xs sm:text-sm font-semibold bg-linear-to-r from-purple-500/20 to-pink-500/20 text-purple-700 px-3 sm:px-4 py-2 rounded-full border border-purple-200">
                 PRODUCTOS DESTACADOS
               </span>
             </div>
@@ -285,7 +285,7 @@ export default function Featured() {
             <div className="space-y-4">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
                 Todo en{" "}
-                <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+                <span className="bg-linear-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
                   Promocionales
                 </span>
               </h2>
@@ -302,21 +302,21 @@ export default function Featured() {
                 boxShadow: "0 20px 40px rgba(168, 85, 247, 0.3)"
               }}
               whileTap={{ scale: 0.95 }}
-              className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 sm:px-10 py-3 sm:py-4 rounded-2xl font-semibold transition-all duration-300 shadow-lg shadow-purple-500/25 text-base sm:text-lg relative overflow-hidden group"
+              className="bg-linear-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 sm:px-10 py-3 sm:py-4 rounded-2xl font-semibold transition-all duration-300 shadow-lg shadow-purple-500/25 text-base sm:text-lg relative overflow-hidden group"
               onClick={() => {
                 const element = document.getElementById("grid-categories");
                 element?.scrollIntoView({ behavior: "smooth" });
               }}
             >
               <span className="relative z-10">Explorar Productos</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-700 to-pink-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-linear-to-r from-purple-700 to-pink-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </motion.button>
           </motion.div>
         </div>
       </div>
 
       {/* Decorative elements */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white/50 to-transparent pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-white/50 to-transparent pointer-events-none"></div>
     </div>
   );
 }
