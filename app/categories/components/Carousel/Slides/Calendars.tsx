@@ -203,18 +203,10 @@ export default function Calendars() {
                     }}
                   >
                     {/* Imagen PNG del calendario */}
-                    <motion.img
+                    <img
                       src="/img/sliders/calendars.png"
                       alt="Calendario de Varilla con Santoral"
-                      className="w-72 h-56 md:w-64 md:h-56 lg:w-80 lg:h-96 object-contain drop-shadow-2xl"
-                      animate={{
-                        scale: [1, 1.02, 1],
-                      }}
-                      transition={{
-                        duration: 5,
-                        repeat: Infinity,
-                        ease: "easeInOut",
-                      }}
+                      className="w-72 h-56 md:w-64 md:h-56 lg:w-80 lg:h-96 object-contain drop-shadow-2xl"                      
                     />
 
                     {/* Elementos decorativos alrededor de la imagen */}

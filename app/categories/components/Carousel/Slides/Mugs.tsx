@@ -96,19 +96,7 @@ export default function Mugs() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.15 }}
         transition={{ duration: 1 }}
-      >
-        {/* <motion.div
-          className="absolute top-10 left-4 md:left-10 w-12 h-12 md:w-20 md:h-20 bg-white rounded-lg rotate-45"
-          animate={{
-            rotate: [45, 90, 45],
-            scale: [1, 1.1, 1],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        /> */}
+      >    
 
         <motion.svg
           xmlns="http://www.w3.org/2000/svg"
@@ -234,17 +222,17 @@ export default function Mugs() {
           </div>
 
           {/* Título principal */}
-          <h2 className="text-xl md:text-3xl lg:text-4xl font-bold leading-tight text-zinc-100">
+          <h2 className="text-xl md:text-3xl lg:text-6xl font-bold leading-tight text-zinc-100">
             Tazas Navideñas
             <br />
-            <span className="text-lg md:text-2xl lg:text-3xl">
+            <span className="text-lg md:text-2xl lg:text-6xl">
               Personalizadas
             </span>
           </h2>
 
           {/* Descripción corta para móvil */}
           <div className="text-zinc-100">
-            <p className="text-sm md:text-base leading-relaxed">
+            <p className="text-sm md:text-2xl leading-relaxed">
               Perfectas para regalos corporativos y eventos familiares. ¡Solo
               por temporada!
             </p>
@@ -264,7 +252,7 @@ export default function Mugs() {
           </div>
 
           {/* Especificaciones */}
-          <div className="grid grid-cols-2 gap-3 text-xs md:text-sm">
+          <div className="grid grid-cols-2 gap-3 text-xs md:text-lg">
             <div className="text-center lg:text-left">
               <div className="flex items-center justify-center lg:justify-start gap-1 mb-1">
                 <div className="w-1.5 h-1.5 bg-zinc-100 rounded-full"></div>
@@ -283,7 +271,7 @@ export default function Mugs() {
           </div>
 
           {/* Botones optimizados para móvil */}
-          <div className="flex flex-col gap-2 pt-2 md:pt-4">
+          <div className="flex flex-col gap-2 pt-2 md:pt-2">
             <button
               className="bg-red-600 text-white px-4 py-2 md:px-6 md:py-3 rounded-full font-bold shadow-lg text-sm md:text-base"
               onClick={() =>

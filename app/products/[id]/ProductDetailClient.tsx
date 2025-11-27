@@ -179,13 +179,12 @@ export default function ProductDetailClient({
 
               {/* Badge flotante */}
               <div className="absolute top-4 left-4 z-10">
-                <Badge
-                  color="primary"
-                  variant="solid"
-                  className="backdrop-blur-sm bg-white/20 text-white border-none shadow-lg"
+                <Chip
+                  variant="flat"
+                  className="backdrop-blur-sm bg-black/50 text-white border-none shadow-lg"
                 >
-                  ID: {product.id}
-                </Badge>
+                  {product.id}
+                </Chip>
               </div>
             </motion.div>
 
