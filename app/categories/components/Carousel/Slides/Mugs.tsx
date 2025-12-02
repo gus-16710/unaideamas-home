@@ -207,7 +207,7 @@ export default function Mugs() {
                 repeat: Infinity,
               }}
             >
-              🏷️ $26.90 c/u
+              🏷️ $29.90 c/u
             </motion.div>
           </div>
         </div>
@@ -233,8 +233,7 @@ export default function Mugs() {
           {/* Descripción corta para móvil */}
           <div className="text-zinc-100">
             <p className="text-sm md:text-2xl leading-relaxed">
-              Perfectas para regalos corporativos y eventos familiares. ¡Solo
-              por temporada!
+              Perfectas para regalos corporativos y eventos familiares. ¡A partir de 100 pzs!
             </p>
 
             {/* Información clave en badges */}
