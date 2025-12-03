@@ -142,7 +142,11 @@ export default function Categories() {
               backgroundClip: "text",
             }}
           >
-            Portfolio - Una Idea Más
+            Portafolio -
+            <span className="bg-linear-to-r from-cyan-500 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+              {" "}
+              Una Idea Más
+            </span>
           </motion.h1>
 
           <motion.p
@@ -219,17 +223,16 @@ export default function Categories() {
         />
 
         <div className="flex gap-4 mt-10">
-        <Button
-          onPress={() => router.back()}
-          variant="flat"
-          startContent={<FiArrowLeft size={18} />}
-          className="flex-1 h-14 text-base font-semibold rounded-xl bg-white/80 backdrop-blur-sm border border-gray-300/50 hover:bg-white transition-all duration-300"
-        >
-          Volver
-        </Button>
+          <Button
+            onPress={() => router.back()}
+            variant="flat"
+            startContent={<FiArrowLeft size={18} />}
+            className="flex-1 h-14 text-base font-semibold rounded-xl bg-white/80 backdrop-blur-sm border border-gray-300/50 hover:bg-white transition-all duration-300"
+          >
+            Volver
+          </Button>
+        </div>
       </div>
-      </div>
-      
 
       <ActionButtons />
     </div>

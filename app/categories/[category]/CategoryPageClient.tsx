@@ -91,7 +91,10 @@ export default function CategoryPageClient({
               backgroundClip: "text",
             }}
           >
-            Categoría - {category.charAt(0).toUpperCase() + category.slice(1)}
+            Categoría -{" "}
+            <span className="bg-linear-to-r from-cyan-500 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+              {category.charAt(0).toUpperCase() + category.slice(1)}
+            </span>
           </motion.h1>
 
           <motion.p
