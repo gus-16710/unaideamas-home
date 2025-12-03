@@ -23,12 +23,7 @@ export default function BioSet() {
   return (
     <div className="w-full h-full relative bg-linear-to-br from-amber-400 via-orange-300 to-rose-400 overflow-hidden">
       {/* Elementos decorativos de fondo más sutiles en móvil */}
-      <motion.div
-        className="absolute inset-0 opacity-15 md:opacity-20"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.15 }}
-        transition={{ duration: 1 }}
-      >
+      <div className="absolute inset-0 opacity-15 md:opacity-20">
         <motion.div
           className="absolute top-10 left-4 md:left-10 w-12 h-12 md:w-20 md:h-20 bg-white rounded-lg rotate-45"
           animate={{
@@ -53,7 +48,7 @@ export default function BioSet() {
             ease: "easeInOut",
           }}
         />
-      </motion.div>
+      </div>
 
       <div className="relative z-10 w-full h-full flex flex-col lg:flex-row items-center justify-center lg:gap-40 px-4 md:px-8 lg:px-16 py-4 md:py-8">
         {/* Imagen del producto - Más compacta en móvil */}

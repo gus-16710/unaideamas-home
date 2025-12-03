@@ -90,11 +90,9 @@ export default function Enterprise() {
         {/* Contenido principal */}
         <div className="text-white space-y-6 lg:space-y-8 text-center lg:text-left mb-8 lg:mb-0 max-w-2xl">
           {/* Badge mejorado */}
-          <motion.div
+          <div
             className="flex items-center justify-center lg:justify-start gap-3"
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
+            
           >
             <div className="p-2 bg-cyan-500/20 rounded-lg">
               <FaBusinessTime className="text-2xl md:text-3xl text-cyan-400" />
@@ -102,14 +100,11 @@ export default function Enterprise() {
             <span className="text-sm md:text-base font-bold bg-linear-to-r from-cyan-500 to-blue-600 px-4 py-2 rounded-full border border-cyan-400/50 shadow-lg">
               SOLUCIONES CORPORATIVAS
             </span>
-          </motion.div>
+          </div>
 
           {/* Título principal */}
-          <motion.h2
-            className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
+          <h2
+            className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight"            
           >
             Impulsa Tu{" "}
             <span className="bg-linear-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
@@ -117,26 +112,20 @@ export default function Enterprise() {
             </span>
             <br />
             Al Siguiente Nivel
-          </motion.h2>
+          </h2>
 
           {/* Descripción */}
-          <motion.p
-            className="text-lg md:text-xl lg:text-2xl text-gray-200 max-w-2xl leading-relaxed"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.4 }}
+          <p
+            className="text-lg md:text-xl lg:text-2xl text-gray-200 max-w-2xl leading-relaxed"            
           >
             Productos promocionales <span className="text-cyan-300">personalizados</span> que 
             fortalecen tu identidad corporativa, fidelizan clientes y 
             <span className="text-blue-300"> aumentan tu visibilidad</span>.
-          </motion.p>
+          </p>
 
           {/* Características */}
-          <motion.div
-            className="flex flex-wrap gap-3 md:gap-4 justify-center lg:justify-start"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.6 }}
+          <div
+            className="flex flex-wrap gap-3 md:gap-4 justify-center lg:justify-start"           
           >
             {[
               { icon: RiStarFill, text: "Alta Calidad", color: "text-yellow-400" },
@@ -148,14 +137,12 @@ export default function Enterprise() {
                 <span className="text-xs md:text-sm font-medium text-white">{item.text}</span>
               </div>
             ))}
-          </motion.div>
+          </div>
 
           {/* Botones de acción - OPTIMIZADOS PARA MÓVIL */}
-          <motion.div
+          <div
             className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center lg:justify-start"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.8 }}
+           
           >
             <motion.button
               className="bg-linear-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-4 py-3 md:px-8 md:py-4 rounded-full font-bold text-sm md:text-lg shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 flex items-center gap-2 md:gap-3 justify-center"
@@ -185,15 +172,13 @@ export default function Enterprise() {
             >
               Más Información
             </motion.button>
-          </motion.div>
+          </div>
         </div>
 
         {/* Elemento visual derecho */}
-        <motion.div
+        <div
           className="relative"
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
+          
         >
           {/* Círculo principal */}
           <div className="relative w-48 h-48 md:w-80 md:h-80 lg:w-96 lg:h-96">
@@ -274,7 +259,7 @@ export default function Enterprise() {
               }}
             />
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

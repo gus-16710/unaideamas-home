@@ -44,12 +44,12 @@ export default function PromoShirts() {
   }, [images.length]);
 
   return (
-    <motion.div
+    <div
       className="w-full h-full flex flex-col lg:flex-row items-center justify-center px-8 py-10 text-white relative overflow-hidden gap-10 lg:gap-40"
       style={{
         background:
           "linear-gradient(160deg, rgb(127, 29, 29) 0%, rgb(185, 28, 28) 45%, rgb(220, 38, 38) 75%, rgb(233 23 23) 100%)",
-      }}    
+      }}
     >
       {/* Copos de nieve animados - solo se renderizan en cliente */}
       {snowflakes.map((snowflake) => (
@@ -153,9 +153,6 @@ export default function PromoShirts() {
       {/* TEXTO */}
       <div className="relative z-10 flex flex-col lg:flex-row items-center justify-center">
         <div className="flex flex-col gap-4 max-w-lg text-center lg:text-left relative z-10">
-          {/* <h2 className="text-3xl lg:text-5xl font-extrabold drop-shadow-md">
-            🎄 Playeras Navideñas Personalizadas
-          </h2> */}
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
             Playeras Navideñas{" "}
             <span className="text-yellow-300 drop-shadow-lg">
@@ -197,13 +194,7 @@ export default function PromoShirts() {
       </div>
 
       {/* Sección de imagen */}
-      <motion.div
-        className=""
-        initial={{ x: 50, opacity: 0 }}
-        whileInView={{ x: 0, opacity: 1 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-      >
+      <div>
         <div className="relative w-64 h-72 sm:w-80 sm:h-96 lg:w-96 lg:h-[500px]">
           {/* Imagen principal */}
           <motion.div
@@ -283,8 +274,7 @@ export default function PromoShirts() {
             ⭐
           </motion.div>
         </div>
-      </motion.div>
-    </motion.div>
+      </div>
+    </div>
   );
 }
-

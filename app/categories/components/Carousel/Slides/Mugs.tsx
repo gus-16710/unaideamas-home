@@ -91,16 +91,10 @@ export default function Mugs() {
       </div>
 
       {/* Elementos decorativos de fondo más sutiles en móvil */}
-      <motion.div
-        className="absolute inset-0 opacity-15 md:opacity-20"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.15 }}
-        transition={{ duration: 1 }}
-      >    
-
+      <div className="absolute inset-0 opacity-15 md:opacity-20">
         <motion.svg
           xmlns="http://www.w3.org/2000/svg"
-          xmlnsXlink="http://www.w3.org/1999/xlink"         
+          xmlnsXlink="http://www.w3.org/1999/xlink"
           version="1.1"
           id="_x32_"
           viewBox="0 0 512 512"
@@ -156,7 +150,7 @@ export default function Mugs() {
             ease: "easeInOut",
           }}
         />
-      </motion.div>
+      </div>
 
       <div className="relative z-10 w-full h-full flex flex-col lg:flex-row items-center justify-center lg:gap-40 px-4 md:px-8 lg:px-16 py-4 md:py-8">
         {/* Imagen del producto - Más compacta en móvil */}
@@ -233,7 +227,8 @@ export default function Mugs() {
           {/* Descripción corta para móvil */}
           <div className="text-zinc-100">
             <p className="text-sm md:text-2xl leading-relaxed">
-              Perfectas para regalos corporativos y eventos familiares. ¡A partir de 100 pzs!
+              Perfectas para regalos corporativos y eventos familiares. ¡A
+              partir de 100 pzs!
             </p>
 
             {/* Información clave en badges */}

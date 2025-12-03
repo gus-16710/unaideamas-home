@@ -97,12 +97,7 @@ export default function Events() {
 
       <div className="relative container mx-auto px-4 lg:px-6 py-6 lg:py-8 h-full flex flex-col justify-center mt-10">
         {/* HEADER con efecto 3D */}
-        <motion.div
-          initial={{ opacity: 0, rotateX: -20 }}
-          animate={{ opacity: 1, rotateX: 0 }}
-          transition={{ duration: 1 }}
-          className="text-center mb-4 lg:mb-6"
-        >
+        <div className="text-center mb-4 lg:mb-6">
           <motion.div
             animate={{
               rotate: [0, 5, -5, 0],
@@ -144,12 +139,7 @@ export default function Events() {
             EVENTOS
           </motion.h1>
 
-          <motion.div
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
-            className="w-20 h-1 lg:w-24 lg:h-1.5 bg-white mx-auto rounded-full mb-2 lg:mb-3"
-          />
+          <div className="w-20 h-1 lg:w-24 lg:h-1.5 bg-white mx-auto rounded-full mb-2 lg:mb-3" />
 
           <p className="text-base md:text-base lg:text-lg text-white font-medium max-w-2xl mx-auto leading-relaxed px-4">
             Creación de experiencias llenas de{" "}
@@ -165,7 +155,7 @@ export default function Events() {
               estilo
             </span>
           </p>
-        </motion.div>
+        </div>
 
         {/* GRID con diseño de tarjetas inclinadas */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-6 max-w-4xl mx-auto w-full">
@@ -212,16 +202,9 @@ export default function Events() {
                   }}
                 />
 
-                <motion.div
-                  animate={{
-                    y: [0, -8, 0],
-                    rotate: [0, 5, -5, 0],
-                  }}
-                  transition={{ duration: 3, repeat: Infinity }}
-                  className="text-4xl lg:text-6xl mb-3 lg:mb-4 relative z-10 drop-shadow-lg"
-                >
+                <div className="text-4xl lg:text-6xl mb-3 lg:mb-4 relative z-10 drop-shadow-lg">
                   {event.emoji}
-                </motion.div>
+                </div>
 
                 <div>
                   <h3 className="text-lg lg:text-2xl font-black text-gray-900 mb-1 lg:mb-2 relative z-10">
@@ -246,12 +229,7 @@ export default function Events() {
         </div>
 
         {/* Footer con botón */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8 }}
-          className="mt-4 lg:mt-6 text-center"
-        >
+        <div className="mt-4 lg:mt-6 text-center">
           <motion.div
             animate={{ opacity: [0.5, 1, 0.5] }}
             transition={{ duration: 5, repeat: Infinity }}
@@ -275,7 +253,7 @@ export default function Events() {
               <span className="text-white">Ver Portafolio de Trabajo</span>
             </div>
           </button>
-        </motion.div>
+        </div>
       </div>
     </div>
   );
