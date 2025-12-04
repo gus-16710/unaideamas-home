@@ -22,7 +22,7 @@ const testimonials: Testimonial[] = [
     id: 1,
     name: "María González",
     avatar: "https://i.pravatar.cc/150?img=45", // Avatar femenino
-    testimonial: "Las playeras personalizadas que pedí para mi empresa son de excelente calidad. Los bordados son impecables y el material muy cómodo. ¡Superaron mis expectativas!",
+    testimonial: "Las playeras personalizadas que pedí para mi empresa son de excelente calidad. Los sublimados son impecables y el material muy cómodo. ¡Superaron mis expectativas!",
     location: "Xalapa",
     date: "15 Nov 2024",
     rating: 5,

@@ -17,39 +17,39 @@ import "yet-another-react-lightbox/plugins/thumbnails.css";
 
 const images = [
   {
-    src: "/img/portfolio/01.jpg",
-    width: 1280,
-    height: 853,
+    src: "/img/portfolio/08.jpeg",
+    width: 1292,
+    height: 1600,
   },
   {
-    src: "/img/portfolio/02.jpg",
-    width: 1280,
-    height: 1916,
+    src: "/img/portfolio/09.jpeg",
+    width: 900,
+    height: 1600,
   },
   {
-    src: "/img/portfolio/03.jpg",
-    width: 1280,
-    height: 854,
+    src: "/img/portfolio/10.jpeg",
+    width: 1600,
+    height: 898,
   },
   {
-    src: "/img/portfolio/04.jpg",
-    width: 1280,
-    height: 1920,
+    src: "/img/portfolio/11.jpeg",
+    width: 1197,
+    height: 1600,
   },
   {
-    src: "/img/portfolio/05.jpg",
-    width: 1280,
-    height: 1920,
+    src: "/img/portfolio/12.jpeg",
+    width: 1493,
+    height: 1440,
   },
   {
-    src: "/img/portfolio/06.jpg",
-    width: 1280,
-    height: 853,
+    src: "/img/portfolio/13.jpeg",
+    width: 1600,
+    height: 1346,
   },
   {
-    src: "/img/portfolio/07.jpg",
-    width: 1280,
-    height: 1920,
+    src: "/img/portfolio/14.jpeg",
+    width: 1271,
+    height: 1600,
   },
 ];
 
