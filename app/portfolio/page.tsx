@@ -51,6 +51,16 @@ const images = [
     width: 1271,
     height: 1600,
   },
+  {
+    src: "/img/portfolio/15.jpeg",
+    width: 900,
+    height: 1600,
+  },
+  {
+    src: "/img/portfolio/16.jpeg",
+    width: 1440,
+    height: 1421,
+  },
 ];
 
 // Componente del icono de zoom

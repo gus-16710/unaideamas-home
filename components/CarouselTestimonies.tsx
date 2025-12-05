@@ -189,7 +189,7 @@ export default function CarouselTestimonials() {
                 {/* Tarjeta de testimonio */}
                 <div className="relative bg-white/20 backdrop-blur-lg rounded-2xl p-6 border border-white/30 shadow transition-all duration-300 hover:scale-[1.02] hover:bg-white/30 hover:shadow-xl w-full h-full flex flex-col">
                   {/* Gradiente animado */}
-                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-500/10 to-cyan-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute inset-0 rounded-2xl bg-linear-to-br from-blue-500/10 to-cyan-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                   {/* Contenido */}
                   <div className="relative z-10 flex flex-col h-full">
