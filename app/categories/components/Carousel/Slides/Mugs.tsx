@@ -252,7 +252,7 @@ export default function Mugs() {
                 <div className="w-1.5 h-1.5 bg-zinc-100 rounded-full"></div>
                 <span className="font-bold text-zinc-100">Entrega</span>
               </div>
-              <p className="text-zinc-100">3-5 días hábiles</p>
+              <p className="text-zinc-100">Al siguiente día 🙌🏻</p>
             </div>
 
             <div className="text-center lg:text-left">

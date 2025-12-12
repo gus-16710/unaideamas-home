@@ -166,7 +166,7 @@ export default function PromoShirts() {
           </p>
 
           <div className="text-2xl lg:text-4xl font-bold text-yellow-300 drop-shadow-md">
-            ✨ Desde $149.90 MXN ✨
+            ✨ Desde $179.00 MXN ✨
           </div>
 
           <ul className="hidden lg:block text-md lg:text-lg mt-2 space-y-2">
