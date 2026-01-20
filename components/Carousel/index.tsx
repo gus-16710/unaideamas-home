@@ -14,16 +14,12 @@ import Featured from "./Slides/Featured";
 import Calendars from "./Slides/Calendars";
 import Events from "./Slides/Events";
 import BioSet from "./Slides/BioSet";
-import Mugs from "./Slides/Mugs";
-import PromoShirts from "./Slides/PromoShirts";
+import WorldCup from "./Slides/WorldCup";
 
 export default function Carousel() {
   return (
-    <motion.div
-      className="w-full h-screen lg:h-[700px] flex items-center justify-center relative overflow-hidden pb-15"
-      // initial={{ opacity: 0, y: -40 }}
-      // whileInView={{ opacity: 1, y: 0 }}
-      // transition={{ duration: 0.8 }}
+    <div
+      className="w-full h-screen lg:h-[700px] flex items-center justify-center relative overflow-hidden pb-15"     
     >
       <Swiper
         spaceBetween={0}
@@ -48,16 +44,12 @@ export default function Carousel() {
         className="w-full h-full"
       >
         <SwiperSlide>
-          <Mugs />
-        </SwiperSlide>        
-
+          <WorldCup />
+        </SwiperSlide> 
+       
         <SwiperSlide>
           <Enterprise />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <PromoShirts />
-        </SwiperSlide>
+        </SwiperSlide>       
 
         <SwiperSlide>
           <EcoBag />
@@ -83,6 +75,6 @@ export default function Carousel() {
       {/* Navegación personalizada para mejor responsividad */}
       <div className="swiper-button-prev hidden! md:flex! after:text-white! after:text-lg! md:after:text-xl!"></div>
       <div className="swiper-button-next hidden! md:flex! after:text-white! after:text-lg! md:after:text-xl!"></div>
-    </motion.div>
+    </div>
   );
 }
