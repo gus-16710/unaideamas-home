@@ -120,13 +120,7 @@ export default function ProductDetailClient({
               className="text-gray-500 hover:text-blue-600 transition-colors duration-200 text-sm font-medium"
             >
               Inicio
-            </BreadcrumbItem>
-            <BreadcrumbItem
-              onPress={() => router.push("/categories")}
-              className="text-gray-500 hover:text-blue-600 transition-colors duration-200 text-sm font-medium"
-            >
-              Categorías
-            </BreadcrumbItem>
+            </BreadcrumbItem>            
             <BreadcrumbItem
               onPress={() => router.push(`/categories/${product.categoria}`)}
               className="text-gray-500 hover:text-blue-600 transition-colors duration-200 text-sm font-medium"

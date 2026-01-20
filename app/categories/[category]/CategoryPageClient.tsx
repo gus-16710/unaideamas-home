@@ -127,13 +127,7 @@ export default function CategoryPageClient({
               className="text-gray-600 hover:text-blue-500 transition-colors"
             >
               Inicio
-            </BreadcrumbItem>
-            <BreadcrumbItem
-              className="text-gray-800"
-              onPress={() => router.push("/categories")}
-            >
-              Categorías
-            </BreadcrumbItem>
+            </BreadcrumbItem>            
             <BreadcrumbItem
               className="text-gray-800 font-medium"
               onPress={() => router.push("/categories")}

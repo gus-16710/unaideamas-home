@@ -21,9 +21,9 @@ export default function Carousel() {
   return (
     <motion.div
       className="w-full h-screen lg:h-[700px] flex items-center justify-center relative overflow-hidden pb-15"
-      initial={{ opacity: 0, y: -40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
+      // initial={{ opacity: 0, y: -40 }}
+      // whileInView={{ opacity: 1, y: 0 }}
+      // transition={{ duration: 0.8 }}
     >
       <Swiper
         spaceBetween={0}

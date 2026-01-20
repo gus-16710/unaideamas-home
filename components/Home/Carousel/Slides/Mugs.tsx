@@ -175,7 +175,7 @@ export default function Mugs() {
                   src={images[currentImageIndex]}
                   alt="Tazas Navideñas Personalizadas"
                   className="w-4/4 h-4/4 object-contain"
-                  initial={{ opacity: 0 }}
+                  initial={{ opacity: 1 }}
                   animate={{
                     opacity: 1,
                     scale: [1, 1.05, 1],

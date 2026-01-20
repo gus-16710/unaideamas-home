@@ -14,10 +14,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Una idea más",
+  title: "Una idea más - Diversidad publicitaria",
   description: "Diversidad publicitaria",
   openGraph: {
-    title: "Una idea más",
+    title: "Una idea más - Diversidad publicitaria",
     description:
       "Diversidad publicitaria",
     images: [
