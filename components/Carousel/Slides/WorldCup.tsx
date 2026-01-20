@@ -7,9 +7,7 @@ import {
   GiWhistle,
   GiTrophy,
   GiBackpack,
-  GiSunglasses,
-  GiShoppingBag,
-  GiBaseballBat,
+  GiSunglasses,  
   GiBilledCap,
   GiGymBag,
 } from "react-icons/gi";
@@ -22,6 +20,7 @@ import {
   FaBolt,
   FaCrown,
 } from "react-icons/fa";
+import { IoShirt } from "react-icons/io5";
 
 export default function WorldCup() {
   const [currentProductIndex, setCurrentProductIndex] = useState(0);
@@ -293,13 +292,13 @@ export default function WorldCup() {
                   <span>Mochilas Soccer</span>
                 </p>
                 <p className="text-sm md:text-base flex items-center gap-2">
-                  <GiSoccerBall className="text-yellow-400 text-lg" />
+                  <IoShirt className="text-yellow-400 text-lg" />
                   <span>Camisetas</span>
                 </p>
               </div>
               <div className="text-left space-y-2">
                 <p className="text-sm md:text-base flex items-center gap-2">
-                  <GiBaseballBat className="text-yellow-400 text-lg" />
+                  <GiBilledCap className="text-yellow-400 text-lg" />
                   <span>Gorras</span>
                 </p>
                 <p className="text-sm md:text-base flex items-center gap-2">
@@ -307,7 +306,7 @@ export default function WorldCup() {
                   <span>Lentes</span>
                 </p>
                 <p className="text-sm md:text-base flex items-center gap-2">
-                  <GiShoppingBag className="text-yellow-400 text-lg" />
+                  <GiGymBag className="text-yellow-400 text-lg" />
                   <span>Cangureras</span>
                 </p>
               </div>
