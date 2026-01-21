@@ -405,7 +405,7 @@ export const initialProducts: CategoryProducts = {
       disponibilidad: "6218 disponibles (sujeto a cambios)",
       url_producto: "https://www.promoopcion.com/sh-1295.html",
       imagenes_urls: [
-        "https://www.promoopcion.com/media/catalog/product/-/_/-_sh-1295.jpg?store=default&image-type=image",
+        "https://www.promoopcion.com/media/catalog/product/s/h/sh-1295_1.jpg?store=default&image-type=image",
         "https://www.promoopcion.com/media/catalog/product/S/H/SH-1295_1_1.jpg?store=default&image-type=image",
       ],
       categoria: "lapiceros",
@@ -2457,10 +2457,7 @@ export const initialProducts: CategoryProducts = {
       precio_lista: "",
       disponibilidad: "",
       url_producto: "#",
-      imagenes_urls: [
-        "https://calendariosymas.com/wp-content/uploads/2024/07/Tu-publicidad-Aqui-2024-07-15T165425.114.png",
-        "https://calendariosymas.com/wp-content/uploads/2024/07/Diseno-sin-titulo-83.png",
-      ],
+      imagenes_urls: ["https://calendariosymas.com/images/productos/BMC.jpg"],
       categoria: "bolsas",
     },
     {
@@ -2495,8 +2492,7 @@ export const initialProducts: CategoryProducts = {
       disponibilidad: "",
       url_producto: "#",
       imagenes_urls: [
-        "https://calendariosymas.com/wp-content/uploads/2023/07/BC02.jpg",
-        "https://calendariosymas.com/wp-content/uploads/2024/07/Diseno-sin-titulo-82.png",
+        "https://calendariosymas.com/images/productos/BCS.png",
       ],
       categoria: "bolsas",
     },
@@ -2564,10 +2560,7 @@ export const initialProducts: CategoryProducts = {
       disponibilidad: "",
       url_producto: "#",
       imagenes_urls: [
-        "https://calendariosymas.com/wp-content/uploads/2020/08/BE05.jpg",
-        "https://calendariosymas.com/wp-content/uploads/2020/08/BE02.jpg",
-        "https://calendariosymas.com/wp-content/uploads/2020/08/BE03-600x600.jpg",
-        "https://calendariosymas.com/wp-content/uploads/2023/07/BE01-1.jpg",
+        "https://calendariosymas.com/images/productos/BE.jpg",
       ],
       categoria: "bolsas",
     },
@@ -2596,26 +2589,24 @@ export const initialProducts: CategoryProducts = {
       disponibilidad: "",
       url_producto: "#",
       imagenes_urls: [
-        "https://calendariosymas.com/wp-content/uploads/2024/08/M22-69.png",
-        "https://calendariosymas.com/wp-content/uploads/2024/09/M22-70.png",
-        "https://calendariosymas.com/wp-content/uploads/2024/09/Escanee-para-ver-a-detalle-los-colores.png",
+        "https://ae01.alicdn.com/kf/S143e2b7e2f5942fd8313d74967aeae396.jpg",
       ],
       categoria: "bolsas",
     },
     {
       id: "BO2",
-      nombre: "Bolsa Mandadera Plus",
+      nombre: "Bolsa Mandadera",
       descripcion:
-        "Bolsa mandadera promocional de polipropelino reutilizable, con asa de Non Woven, resistente al agua con una resistencia 7 Kg.",
+        "Bolsa de Canasta Asa Tejida. Material: Canasta 420D Recubierto de PVC. Asa larga tejida.",
       capacidad: null,
       material: {
         exterior: "Polipropileno",
         interior: null,
       },
       medidas: {
-        alto: "30 cm",
-        ancho: "34.5 cm",
-        profundidad: "15 cm",
+        alto: "36 cm",
+        ancho: "39 cm",
+        profundidad: "12 cm",
       },
       empaque: {
         tipo: null,
@@ -2629,11 +2620,7 @@ export const initialProducts: CategoryProducts = {
       disponibilidad: "",
       url_producto: "#",
       imagenes_urls: [
-        "https://calendariosymas.com/wp-content/uploads/2023/07/BMP07.jpg",
-        "https://calendariosymas.com/wp-content/uploads/2024/07/Diseno-sin-titulo-78.png",
-        "https://calendariosymas.com/wp-content/uploads/2024/07/Diseno-sin-titulo-79.png",
-        "https://calendariosymas.com/wp-content/uploads/2024/07/Diseno-sin-titulo-80.png",
-        "https://calendariosymas.com/wp-content/uploads/2024/07/Diseno-sin-titulo-81.png",
+        "https://calendariosymas.com/images/productos/BCT.jpg",
       ],
       categoria: "bolsas",
     },

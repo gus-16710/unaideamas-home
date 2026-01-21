@@ -331,7 +331,7 @@ export default function WorldCup() {
           </div>
 
           {/* Especificaciones con iconos */}
-          <div className="md:grid grid-cols-2 gap-4 text-sm md:text-base hidden">
+          {/* <div className="md:grid grid-cols-2 gap-4 text-sm md:text-base hidden">
             <div className="text-center lg:text-left">
               <div className="flex items-center justify-center lg:justify-start gap-2 mb-1">
                 <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
@@ -352,7 +352,7 @@ export default function WorldCup() {
               </div>
               <p className="text-yellow-100">50 pzs para empresas</p>
             </div>
-          </div>
+          </div> */}
 
           {/* Botones con iconos */}
           <div className="flex flex-col sm:flex-row gap-3 pt-4 md:pt-4">

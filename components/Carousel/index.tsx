@@ -1,6 +1,5 @@
 import { SwiperSlide, Swiper } from "swiper/react";
 import { Navigation, Pagination, Autoplay, EffectFlip } from "swiper/modules";
-import { motion } from "framer-motion";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -11,7 +10,6 @@ import "swiper/css/effect-flip";
 import Enterprise from "./Slides/Enterprise";
 import EcoBag from "./Slides/EcoBag";
 import Featured from "./Slides/Featured";
-import Calendars from "./Slides/Calendars";
 import Events from "./Slides/Events";
 import BioSet from "./Slides/BioSet";
 import WorldCup from "./Slides/WorldCup";
@@ -27,10 +25,10 @@ export default function Carousel() {
         centeredSlides={true}
         effect="flip"
         loop={true}
-        autoplay={{
-          delay: 15000,
-          disableOnInteraction: false,
-        }}
+        // autoplay={{
+        //   delay: 20000,
+        //   disableOnInteraction: false,
+        // }}
         speed={800}
         pagination={{
           clickable: true,
@@ -57,11 +55,7 @@ export default function Carousel() {
 
         <SwiperSlide>
           <Featured />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Calendars />
-        </SwiperSlide>
+        </SwiperSlide>        
 
         <SwiperSlide>
           <Events />
