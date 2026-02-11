@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-export default function BannerHorizontal() {
+export default function BannerHorizontalChristmas() {
   // Configuración de animación para las estrellas
   const starAnimation = {
     initial: { scale: 0, rotate: 0 },

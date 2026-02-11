@@ -10,14 +10,13 @@ import Breadcrumb from "../components/Breadcrumb";
 import ContactCostumize from "@/components/ContactCostumize";
 import FeaturesSection from "@/components/FeaturesSection";
 import ContactHelp from "@/components/ContactHelp";
-import CarouselCategories from "@/components/CarouselCategories";
 import RandomProducts from "@/components/RandomProducts";
 import ActionButtons from "@/components/ActionButtons";
-import ProductsByCategory from "@/components/ProductsByCategory";
-import BannerHorizontal from "@/components/BannerHorizontal";
+import BannerHorizontalChristmas from "@/components/Banner/BannerHorizontalChristmas";
 import CategoriesImage from "../components/CategoriesImage";
 import OtherProducts from "@/components/OtherProducts";
 import CarouselTestimonials from "@/components/CarouselTestimonies";
+import BannerHorizontalLove from "@/components/Banner/BannerHorizontalLove";
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(true);
@@ -121,7 +120,7 @@ export default function Home() {
         <RandomProducts />
       </div>
 
-      <BannerHorizontal />
+      <BannerHorizontalLove />
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 pb-4">
         {/* Header */}
