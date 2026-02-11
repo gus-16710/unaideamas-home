@@ -13,6 +13,8 @@ import Featured from "./Slides/Featured";
 import Events from "./Slides/Events";
 import BioSet from "./Slides/BioSet";
 import WorldCup from "./Slides/WorldCup";
+import PromoShirts from "./Slides/PromoShirts";
+import PromoLoveMonth from "./Slides/PromoLoveMonth";
 
 export default function Carousel() {
   return (
@@ -25,10 +27,10 @@ export default function Carousel() {
         centeredSlides={true}
         effect="flip"
         loop={true}
-        // autoplay={{
-        //   delay: 20000,
-        //   disableOnInteraction: false,
-        // }}
+        autoplay={{
+          delay: 25000,
+          disableOnInteraction: false,
+        }}
         speed={800}
         pagination={{
           clickable: true,
@@ -41,6 +43,10 @@ export default function Carousel() {
         modules={[Navigation, Pagination, Autoplay, EffectFlip]}
         className="w-full h-full"
       >
+        <SwiperSlide>
+          <PromoLoveMonth />
+        </SwiperSlide> 
+
         <SwiperSlide>
           <WorldCup />
         </SwiperSlide> 
