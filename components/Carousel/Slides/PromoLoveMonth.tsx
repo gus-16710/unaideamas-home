@@ -365,11 +365,11 @@ import {
   FaTshirt,
   FaCouch,
   FaMugHot,
-  FaToilet,  
+  FaToilet,
   FaWhatsapp,
   FaRibbon,
   FaStar,
-  FaRegHeart,  
+  FaRegHeart,
   FaBoxes,
 } from "react-icons/fa";
 import {
@@ -464,10 +464,16 @@ export default function PromoLoveMonth() {
               animate={{
                 opacity: 1,
                 scale: 1,
+                rotate: [0, -1, 1, -1, 0],
               }}
               transition={{
                 opacity: { duration: 0.8 },
                 scale: { duration: 0.8 },
+                rotate: {
+                  duration: 8,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                },
               }}
               whileHover={{ scale: 1.02 }}
             >
@@ -538,14 +544,16 @@ export default function PromoLoveMonth() {
                 <FaTshirt className="text-pink-600/50 text-xs" /> Playeras
               </span>
               <span className="inline-flex items-center gap-1 bg-white/20 px-2 py-0.5 rounded-full mr-1 mb-1 text-pink-800">
-                <GiUnderwearShorts className="text-pink-600/50 text-xs" /> Boxers
+                <GiUnderwearShorts className="text-pink-600/50 text-xs" />{" "}
+                Boxers
               </span>
               <span className="inline-flex items-center gap-1 bg-white/20 px-2 py-0.5 rounded-full mr-1 mb-1 text-pink-800">
                 <FaToilet className="text-pink-600/50 text-xs" /> Rollos
                 grabados
               </span>
               <span className="inline-flex items-center gap-1 bg-white/20 px-2 py-0.5 rounded-full mr-1 mb-1 text-pink-800">
-                <LuMessageCircleMore className="text-pink-600/50 text-xs" /> Detalles
+                <LuMessageCircleMore className="text-pink-600/50 text-xs" />{" "}
+                Detalles
               </span>
               <span className="inline-flex items-center gap-1 bg-pink-500/50 px-2 py-0.5 rounded-full mr-1 mb-1 font-medium">
                 ✨ ¡y mucho más!
